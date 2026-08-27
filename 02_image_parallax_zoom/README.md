@@ -6,7 +6,7 @@
 
 All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
 
-### 📂 Included 8 Sub-Modules & AI Prompts
+### 📂 Included 12 Sub-Modules & AI Prompts
 
 | # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
 |---|---|---|---|---|
@@ -18,6 +18,10 @@ All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../a
 | 6 | 🌀 **Infinite 3D Tunnel Zoom** | [`infinite_tunnel_parallax_zoom/`](infinite_tunnel_parallax_zoom/) | [`prompt.md`](infinite_tunnel_parallax_zoom/prompt.md) | Sci-Fi concentric image Z-space camera tunnel travel |
 | 7 | 🪞 **Split Screen Mirror** | [`split_screen_mirror_parallax/`](split_screen_mirror_parallax/) | [`prompt.md`](split_screen_mirror_parallax/prompt.md) | Editorial magazine split 2-column counter parallax (Left UP / Right DOWN) |
 | 8 | ⭕ **Circle Mask Parallax Zoom** | [`circular_mask_scale_zoom/`](circular_mask_scale_zoom/) | [`prompt.md`](circular_mask_scale_zoom/prompt.md) | Luxury circle clip-path aperture expand (12% ➔ 100%) with 2.2 ➔ 1.0 image zoom |
+| 9 | 🚀 **Depth 3D Card Fly-Through** | [`depth_3d_card_stack_flythrough/`](depth_3d_card_stack_flythrough/) | [`prompt.md`](depth_3d_card_stack_flythrough/prompt.md) | Apple Keynote 3D card stack fly-past camera lens |
+| 10 | 🧱 **Matrix Counter-Grid** | [`parallax_image_grid_distortion/`](parallax_image_grid_distortion/) | [`prompt.md`](parallax_image_grid_distortion/prompt.md) | 3-Column counter grid parallax (Odd UP / Even DOWN) |
+| 11 | 🔍 **Scroll Magnifying Lens** | [`pinned_zoom_lens_spotlight/`](pinned_zoom_lens_spotlight/) | [`prompt.md`](pinned_zoom_lens_spotlight/prompt.md) | 2.5x HD detail magnifying spotlight traversal lens |
+| 12 | 📐 **Isometric 3D Plane** | [`isometric_3d_plane_parallax/`](isometric_3d_plane_parallax/) | [`prompt.md`](isometric_3d_plane_parallax/prompt.md) | Web3 isometric 3D plane height elevation (translateZ: 180px) |
 
 ---
 

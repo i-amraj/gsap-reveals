@@ -192,9 +192,9 @@ gsap.registerPlugin(ScrollTrigger);
 🌐 **Global GitHub `README.md` Created (`canvas-reveals`):**
 - Root directory par Awwwards-grade Global **`README.md`** create kar diya gaya hai jisme GitHub Shields, 16 Demos Catalog Table, `prompt.md` usage guide, Repository Tree Structure, Quick Start setup instructions, aur MIT License badge included hai.
 
-🚀 **Style 1.2: `02_image_parallax_zoom/` Suite Completed (8 Sub-Demos Pushed):**
-- Updated all 8 demos to use `nature1.jpeg` and `nature2.jpeg` from `../../assets/`.
-- Created 8 dedicated sub-demo folders each with `index.html`, `styles.css`, `script.js`, `README.md`, and `prompt.md` (Rule 9):
+🚀 **Style 1.2: `02_image_parallax_zoom/` Suite Completed (12 Sub-Demos Pushed):**
+- Updated all 12 demos to use `nature1.jpeg` and `nature2.jpeg` from `../../assets/`.
+- Created 12 dedicated sub-demo folders each with `index.html`, `styles.css`, `script.js`, `README.md`, and `prompt.md` (Rule 9):
   1. `multi_layer_3d_parallax/` ➔ Multi-Speed Spatial Depth Camera Engine
   2. `inner_counter_zoom_reveal/` ➔ Nike/Porsche Card 45vw ➔ 100vw Expand + Inner 1.6 ➔ 1.0 Counter Zoom
   3. `mouse_tilt_3d_parallax/` ➔ Interactive 3D Cursor Tilt Perspective + Glass Reflection Glare
@@ -203,6 +203,11 @@ gsap.registerPlugin(ScrollTrigger);
   6. `infinite_tunnel_parallax_zoom/` ➔ Sci-Fi Concentric Image Z-Space Camera Tunnel Travel
   7. `split_screen_mirror_parallax/` ➔ Editorial Split 2-Column Counter Parallax (Left UP / Right DOWN)
   8. `circular_mask_scale_zoom/` ➔ Luxury Circle Aperture Expand (12% ➔ 100%) + Counter Image Zoom (2.2 ➔ 1.0)
+  9. `depth_3d_card_stack_flythrough/` ➔ Apple Keynote 3D Card Stack Fly-Past Camera Lens
+  10. `parallax_image_grid_distortion/` ➔ 3-Column Counter Grid Parallax (Odd UP / Even DOWN)
+  11. `pinned_zoom_lens_spotlight/` ➔ 2.5x HD Detail Magnifying Spotlight Traversal Lens
+  12. `isometric_3d_plane_parallax/` ➔ Web3 Isometric 3D Plane Height Elevation (translateZ: 180px)
+
 
 
 

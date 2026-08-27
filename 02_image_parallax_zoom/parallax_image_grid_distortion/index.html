@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix Counter-Grid Parallax</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-header">
+    <span class="badge">MATRIX COUNTER-GRID</span>
+    <h1>DISPERSION GRID MOTION</h1>
+    <p>Scroll down to see odd columns move UP while even column moves DOWN</p>
+  </header>
+
+  <section class="grid-section">
+    <div class="matrix-grid">
+      <!-- Column 1 (Moves UP) -->
+      <div class="grid-col col-1">
+        <div class="grid-card"><img src="../../assets/nature1.jpeg" alt="Grid 1"></div>
+        <div class="grid-card"><img src="../../assets/nature2.jpeg" alt="Grid 2"></div>
+      </div>
+
+      <!-- Column 2 (Moves DOWN) -->
+      <div class="grid-col col-2">
+        <div class="grid-card"><img src="../../assets/nature2.jpeg" alt="Grid 3"></div>
+        <div class="grid-card"><img src="../../assets/nature1.jpeg" alt="Grid 4"></div>
+      </div>
+
+      <!-- Column 3 (Moves UP) -->
+      <div class="grid-col col-3">
+        <div class="grid-card"><img src="../../assets/nature1.jpeg" alt="Grid 5"></div>
+        <div class="grid-card"><img src="../../assets/nature2.jpeg" alt="Grid 6"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Matrix Counter-Grid Parallax Engine</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
