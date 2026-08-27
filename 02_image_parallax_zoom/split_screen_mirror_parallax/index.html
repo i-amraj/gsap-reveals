@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Screen Mirror Parallax</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-header">
+    <span class="badge">MIRRORED PARALLAX</span>
+    <h1>SPLIT COUNTER-MOTION</h1>
+    <p>Scroll down to see left column move up while right column moves down</p>
+  </header>
+
+  <section class="split-section">
+    <!-- Left Column (Moves UP) -->
+    <div class="split-col col-left">
+      <div class="col-card">
+        <img src="../../assets/nature1.jpeg" alt="Nature Left" class="col-img left-img">
+        <div class="col-caption">
+          <h2>LEFT ASCENT</h2>
+          <p>Moving UP (yPercent: -35%)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column (Moves DOWN) -->
+    <div class="split-col col-right">
+      <div class="col-card">
+        <img src="../../assets/nature2.jpeg" alt="Nature Right" class="col-img right-img">
+        <div class="col-caption">
+          <h2>RIGHT DESCENT</h2>
+          <p>Moving DOWN (yPercent: 35%)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Split Screen Mirror Parallax Engine</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

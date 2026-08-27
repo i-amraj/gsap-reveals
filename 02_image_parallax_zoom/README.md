@@ -6,7 +6,7 @@
 
 All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
 
-### 📂 Included Sub-Modules & AI Prompts
+### 📂 Included 8 Sub-Modules & AI Prompts
 
 | # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
 |---|---|---|---|---|
@@ -14,6 +14,10 @@ All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../a
 | 2 | 🔍 **Card Expand & Counter Zoom** | [`inner_counter_zoom_reveal/`](inner_counter_zoom_reveal/) | [`prompt.md`](inner_counter_zoom_reveal/prompt.md) | Nike/Porsche card 45vw ➔ 100vw expand with inner 1.6 ➔ 1.0 counter zoom |
 | 3 | 🎮 **Mouse 3D Tilt + Parallax** | [`mouse_tilt_3d_parallax/`](mouse_tilt_3d_parallax/) | [`prompt.md`](mouse_tilt_3d_parallax/prompt.md) | 3D cursor tilt perspective + glass glare layer |
 | 4 | ↔️ **Horizontal Track Zoom** | [`horizontal_parallax_track_zoom/`](horizontal_parallax_track_zoom/) | [`prompt.md`](horizontal_parallax_track_zoom/prompt.md) | Dual-axis horizontal pinned track with inner counter image shift |
+| 5 | ⚡ **Scroll Velocity Skew** | [`scroll_velocity_zoom_inertia/`](scroll_velocity_zoom_inertia/) | [`prompt.md`](scroll_velocity_zoom_inertia/prompt.md) | Streetwear scroll speed velocity skew & inertia stretch |
+| 6 | 🌀 **Infinite 3D Tunnel Zoom** | [`infinite_tunnel_parallax_zoom/`](infinite_tunnel_parallax_zoom/) | [`prompt.md`](infinite_tunnel_parallax_zoom/prompt.md) | Sci-Fi concentric image Z-space camera tunnel travel |
+| 7 | 🪞 **Split Screen Mirror** | [`split_screen_mirror_parallax/`](split_screen_mirror_parallax/) | [`prompt.md`](split_screen_mirror_parallax/prompt.md) | Editorial magazine split 2-column counter parallax (Left UP / Right DOWN) |
+| 8 | ⭕ **Circle Mask Parallax Zoom** | [`circular_mask_scale_zoom/`](circular_mask_scale_zoom/) | [`prompt.md`](circular_mask_scale_zoom/prompt.md) | Luxury circle clip-path aperture expand (12% ➔ 100%) with 2.2 ➔ 1.0 image zoom |
 
 ---
 

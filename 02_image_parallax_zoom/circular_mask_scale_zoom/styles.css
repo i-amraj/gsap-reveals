@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #0b0711;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero-header {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.badge {
+  background: rgba(147, 51, 234, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-header h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #e9d5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-header p {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.circle-pin {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-mask-layer {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: circle(12% at 50% 50%);
+  will-change: clip-path;
+}
+
+.circle-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(2.2);
+  will-change: transform;
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 60px;
+  z-index: 5;
+  text-align: center;
+  pointer-events: none;
+  background: rgba(11, 7, 17, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 20px 50px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-caption h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.card-caption p {
+  color: #c084fc;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.footer {
+  padding: 60px;
+  text-align: center;
+  color: #64748b;
+}
