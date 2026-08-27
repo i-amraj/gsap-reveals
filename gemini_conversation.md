@@ -192,6 +192,11 @@ gsap.registerPlugin(ScrollTrigger);
 🌐 **Global GitHub `README.md` Created (`canvas-reveals`):**
 - Root directory par Awwwards-grade Global **`README.md`** create kar diya gaya hai jisme GitHub Shields, 16 Demos Catalog Table, `prompt.md` usage guide, Repository Tree Structure, Quick Start setup instructions, aur MIT License badge included hai.
 
+🚀 **Style 1.2: `02_image_parallax_zoom/` Completed & Pushed:**
+- Inner Image Scale Zoom (`scale: 1.0` ➔ `1.35`) and Y-parallax translation (`yPercent: 18`) bound to ScrollTrigger scrub.
+- Includes `index.html`, `styles.css`, `script.js`, `README.md`, and dedicated `prompt.md`.
+
+
 
 
 
