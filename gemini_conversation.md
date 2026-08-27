@@ -192,9 +192,9 @@ gsap.registerPlugin(ScrollTrigger);
 🌐 **Global GitHub `README.md` Created (`canvas-reveals`):**
 - Root directory par Awwwards-grade Global **`README.md`** create kar diya gaya hai jisme GitHub Shields, 16 Demos Catalog Table, `prompt.md` usage guide, Repository Tree Structure, Quick Start setup instructions, aur MIT License badge included hai.
 
-🚀 **Style 1.2: `02_image_parallax_zoom/` Suite Completed (12 Sub-Demos Pushed):**
-- Updated all 12 demos to use `nature1.jpeg` and `nature2.jpeg` from `../../assets/`.
-- Created 12 dedicated sub-demo folders each with `index.html`, `styles.css`, `script.js`, `README.md`, and `prompt.md` (Rule 9):
+🚀 **Style 1.2: `02_image_parallax_zoom/` Master Suite Completed (16 Sub-Demos Pushed):**
+- Updated all 16 demos to use `nature1.jpeg` and `nature2.jpeg` from `../../assets/`.
+- Created 16 dedicated sub-demo folders each with `index.html`, `styles.css`, `script.js`, `README.md`, and `prompt.md` (Rule 9):
   1. `multi_layer_3d_parallax/` ➔ Multi-Speed Spatial Depth Camera Engine
   2. `inner_counter_zoom_reveal/` ➔ Nike/Porsche Card 45vw ➔ 100vw Expand + Inner 1.6 ➔ 1.0 Counter Zoom
   3. `mouse_tilt_3d_parallax/` ➔ Interactive 3D Cursor Tilt Perspective + Glass Reflection Glare
@@ -207,6 +207,11 @@ gsap.registerPlugin(ScrollTrigger);
   10. `parallax_image_grid_distortion/` ➔ 3-Column Counter Grid Parallax (Odd UP / Even DOWN)
   11. `pinned_zoom_lens_spotlight/` ➔ 2.5x HD Detail Magnifying Spotlight Traversal Lens
   12. `isometric_3d_plane_parallax/` ➔ Web3 Isometric 3D Plane Height Elevation (translateZ: 180px)
+  13. `spiral_vortex_3d_zoom/` ➔ Music Video 3D Spiral Rotational Depth Travel
+  14. `overlapping_slat_venetian_parallax/` ➔ 5-Strip Vertical Shutter Slice Staggered Parallax
+  15. `spherical_globe_parallax_zoom/` ➔ 3D Spherical Globe Lens Sphere Unfold into Flat Viewport
+  16. `prism_kaleidoscope_3d_zoom/` ➔ Cyberpunk 4-Facet Triangular Prism 3D Geometric Unfold
+
 
 
 

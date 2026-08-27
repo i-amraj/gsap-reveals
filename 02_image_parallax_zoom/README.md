@@ -4,9 +4,9 @@
 
 ## 🎯 Overview & Sub-Demos
 
-All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
+All 16 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
 
-### 📂 Included 12 Sub-Modules & AI Prompts
+### 📂 Included 16 Sub-Modules & AI Prompts
 
 | # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
 |---|---|---|---|---|
@@ -22,6 +22,10 @@ All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../a
 | 10 | 🧱 **Matrix Counter-Grid** | [`parallax_image_grid_distortion/`](parallax_image_grid_distortion/) | [`prompt.md`](parallax_image_grid_distortion/prompt.md) | 3-Column counter grid parallax (Odd UP / Even DOWN) |
 | 11 | 🔍 **Scroll Magnifying Lens** | [`pinned_zoom_lens_spotlight/`](pinned_zoom_lens_spotlight/) | [`prompt.md`](pinned_zoom_lens_spotlight/prompt.md) | 2.5x HD detail magnifying spotlight traversal lens |
 | 12 | 📐 **Isometric 3D Plane** | [`isometric_3d_plane_parallax/`](isometric_3d_plane_parallax/) | [`prompt.md`](isometric_3d_plane_parallax/prompt.md) | Web3 isometric 3D plane height elevation (translateZ: 180px) |
+| 13 | 🌀 **Spiral Vortex 3D Zoom** | [`spiral_vortex_3d_zoom/`](spiral_vortex_3d_zoom/) | [`prompt.md`](spiral_vortex_3d_zoom/prompt.md) | Music video 3D spiral rotational depth travel |
+| 14 | 🎞️ **Venetian Strip Parallax** | [`overlapping_slat_venetian_parallax/`](overlapping_slat_venetian_parallax/) | [`prompt.md`](overlapping_slat_venetian_parallax/prompt.md) | 5-Strip vertical shutter slice staggered parallax |
+| 15 | 🌐 **Fisheye Globe Un-Distort** | [`spherical_globe_parallax_zoom/`](spherical_globe_parallax_zoom/) | [`prompt.md`](spherical_globe_parallax_zoom/prompt.md) | 3D spherical globe lens sphere unfold into flat viewport |
+| 16 | 🔷 **3D Prism Kaleidoscope** | [`prism_kaleidoscope_3d_zoom/`](prism_kaleidoscope_3d_zoom/) | [`prompt.md`](prism_kaleidoscope_3d_zoom/prompt.md) | Cyberpunk 4-facet triangular prism 3D geometric unfold |
 
 ---
 
