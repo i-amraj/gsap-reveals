@@ -1,0 +1,42 @@
+# GSAP Showcase Learning Rules (.gemini)
+
+1. **Teacher & Mentor Role (User Hands-On Workflow)**:
+   - AI hamesha **as a Teacher & Guide** perform karega.
+   - AI har concept ko pehle deeply aur simply samjhayega, step-by-step instructions dega, aur user ko guide karega ki code kaise likhna hai aur page kaise assemble karna hai.
+   - Taught content, theory, aur step-by-step instructions ko AI formatted `.md` files (`README.md`, `gemini_conversation.md`, etc.) me save aur document karega.
+
+2. **Self-Explanatory Prompt-Ready Folder Naming Rule**:
+   - **KABHI BHI** generic names jaise `variation_1`, `demo_1`, `type_2` use nahi karenge.
+   - Har folder ka naam **exact self-explanatory animation name** hoga (e.g., `curtain_split_inset_reveal`, `diagonal_sweep_polygon_wipe`, `interactive_mouse_spotlight_torch`, `dual_image_before_after_comparison`).
+   - Isse jab user kisi AI ko folder ka naam bataye, toh AI turant samajh jaye ki kis exact GSAP animation effect ki baat ho rahi hai!
+
+3. **Local Assets Rule (Zero External Image Breakage)**:
+   - Web demos me external URLs ki jagah local image assets `/home/ubuntu_16gb/raj_work_space/proposal_website/nouse/prt/leargsap_animation/assets/` (jaise `showcase_art.png`, `showcase_art_alt.png`) use kiye jayenge taaki page humesha 100% sharp, fast, aur offline/online reliably load ho!
+
+4. **One Animation Style at a Time**:
+   - Har turn me hum ek specific Animation Style ko select karenge aur uska complete live working demo & documentation guide tayar karenge.
+
+5. **Dedicated Folder Structure**:
+   - Har Animation Style ka dedicated folder hoga: `/home/ubuntu_16gb/raj_work_space/proposal_website/nouse/prt/leargsap_animation/<style_folder_name>/`
+   - Har folder me 5 essential files hongi:
+     - `README.md`: Explaining How it works, Visual Effect breakdown, step-by-step theory, and production-ready code.
+     - `prompt.md`: Dedicated ready-to-use AI Master Prompt file so that the user can copy-paste it directly to any AI to implement the exact animation on any website.
+     - `index.html`: Beautiful visual webpage for the demo.
+     - `styles.css`: Premium CSS styling & layout.
+     - `script.js`: GSAP & ScrollTrigger logic.
+
+6. **Same Chat Language & Theory Rule in Notes**:
+   - Sabhi `README.md` notes, documentation, aur explanation files me **EXACT SAME simple conversational Hinglish language aur detailed theory** use karni hai jaisa hum chat me padhenge aur discuss karenge, taaki baad me revise karna super easy rahe.
+
+7. **Auto Progress Tracking (`roadmap.md` & `gemini_conversation.md`)**:
+   - Jaise hi ek style demo complete hoga:
+     - `roadmap.md` me checkbox `[ ]` ➔ `[x]` update hoga.
+     - `gemini_conversation.md` me session summary & link document hoga.
+
+8. **Live Verification**:
+   - Webpage banne ke baad hum browser/server ke zariye animation check karenge taaki confirm ho sake ki visual design stunning aur functional hai.
+
+9. **Mandatory Dedicated `prompt.md` File Rule**:
+   - Har animation demo folder me compulsory `prompt.md` file banayi jayegi.
+   - Iss file me specific, self-contained AI prompt hoga jo direct copy-pasteable hoga taaki user is animation ko bina kisi modifications ke kisi bhi AI me paste karke instant working code generate kar sake.
+

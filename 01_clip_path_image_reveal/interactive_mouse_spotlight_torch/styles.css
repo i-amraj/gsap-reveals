@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #020305;
+  color: #fff;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.spotlight-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+/* Base Ambient Image Underneath */
+.base-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.2) grayscale(70%) blur(4px);
+}
+
+.bg-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 3, 5, 0.6);
+  z-index: 2;
+}
+
+.bg-dark-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  width: 90%;
+}
+
+.badge {
+  background: rgba(0, 229, 255, 0.15);
+  color: #00e5ff;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.bg-dark-text h2 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.9);
+}
+
+.bg-dark-text p {
+  color: #8a99ad;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Top Neon HD Image (Hidden from DOM display, used ONLY inside Canvas Composite Engine) */
+#target-img {
+  display: none;
+}
+
+/* Main Screen Canvas Composite Layer */
+#smoke-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}

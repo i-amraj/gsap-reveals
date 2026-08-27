@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Fluid Moving Smoke Particle Mask Reveal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="spotlight-container">
+    <!-- 1. Underneath Ambient Base Image Layer -->
+    <img src="../../assets/showcase_art_alt.png" alt="Base Ambient Artwork" class="base-bg-img">
+
+    <!-- 2. Dark Tint Overlay & Text -->
+    <div class="bg-dark-overlay"></div>
+    <div class="bg-dark-text">
+      <span class="badge">FLUID CANVAS SMOKE PHYSICS</span>
+      <h2>MOVE MOUSE FOR LIVING SMOKE REVEAL</h2>
+      <p>Real-Time Swirling & Dissolving Smoke Clouds</p>
+    </div>
+    
+    <!-- 3. Top HD Neon Image Layer -->
+    <img src="../../assets/showcase_art.png" alt="Top Neon Artwork" id="target-img" class="spotlight-img">
+
+    <!-- 4. HTML Canvas Mask Engine Layer -->
+    <canvas id="smoke-canvas"></canvas>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

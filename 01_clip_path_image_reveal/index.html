@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style 1.1 - Clip Path Image Reveal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Intro Header -->
+  <header class="header">
+    <span class="badge">STYLE 1.1 SHOWCASE</span>
+    <h1>Scroll To Reveal Image</h1>
+    <p>GSAP Clip-Path Masking & Pinned Scrub Animation</p>
+    <div class="scroll-indicator">↓ Scroll Down</div>
+  </header>
+
+  <!-- Pinned Reveal Container -->
+  <section class="reveal-container">
+    <div class="mask-wrapper">
+      <img src="../assets/showcase_art.png" alt="Abstract Vision Art" class="reveal-img">
+      <div class="content-overlay">
+
+        <h2>UNVEIL THE VISION</h2>
+        <p>Dynamic CSS Clip-Path Expanding Circle Mask linked with GSAP ScrollTrigger</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Section -->
+  <section class="next-section">
+    <h2>Section Reveal Complete 🎉</h2>
+    <p>You have mastered Style 1.1: Clip-Path Image Reveal</p>
+  </section>
+
+  <!-- GSAP CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
