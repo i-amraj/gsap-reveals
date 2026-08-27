@@ -192,9 +192,14 @@ gsap.registerPlugin(ScrollTrigger);
 🌐 **Global GitHub `README.md` Created (`canvas-reveals`):**
 - Root directory par Awwwards-grade Global **`README.md`** create kar diya gaya hai jisme GitHub Shields, 16 Demos Catalog Table, `prompt.md` usage guide, Repository Tree Structure, Quick Start setup instructions, aur MIT License badge included hai.
 
-🚀 **Style 1.2: `02_image_parallax_zoom/` Completed & Pushed:**
-- Inner Image Scale Zoom (`scale: 1.0` ➔ `1.35`) and Y-parallax translation (`yPercent: 18`) bound to ScrollTrigger scrub.
-- Includes `index.html`, `styles.css`, `script.js`, `README.md`, and dedicated `prompt.md`.
+🚀 **Style 1.2: `02_image_parallax_zoom/` Suite Completed (4 Sub-Demos Pushed):**
+- Updated all demos to use `nature1.jpeg` and `nature2.jpeg` from `../../assets/`.
+- Created 4 dedicated sub-demo folders each with `index.html`, `styles.css`, `script.js`, `README.md`, and `prompt.md` (Rule 9):
+  1. `multi_layer_3d_parallax/` ➔ Multi-Speed Spatial Depth Camera Engine
+  2. `inner_counter_zoom_reveal/` ➔ Nike/Porsche Card 45vw ➔ 100vw Expand + Inner 1.6 ➔ 1.0 Counter Zoom
+  3. `mouse_tilt_3d_parallax/` ➔ Interactive 3D Cursor Tilt Perspective + Glass Reflection Glare
+  4. `horizontal_parallax_track_zoom/` ➔ Dual-Axis Pinned Horizontal Track + Counter Image Shift
+
 
 
 

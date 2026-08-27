@@ -1,18 +1,25 @@
-# 🏔️ Style 1.2: Image Parallax Depth & Scale Zoom (`02_image_parallax_zoom`)
+# 🏔️ Style 1.2: Image Parallax Depth & Scale Zoom Engine Suite (`02_image_parallax_zoom`)
 
 ---
 
-## 🎯 Ye Visual Effect Kya Karta Hai?
+## 🎯 Overview & Sub-Demos
 
-Apple.com aur Awwwards websites ka sabse popular effect: **Parallax Scale Zoom & Depth Motion on Scroll**!
-Jab user page ko niche scroll karta hai, toh image container ke andar image smooth scale-up (`scale: 1.0` ➔ `1.4`) hoti hai aur slow speed (`yPercent: -20`) par vertical direction me shift hoti hai. Isse flat image me 3D depth aur cinematic camera zoom feel aata hai.
+All demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
+
+### 📂 Included Sub-Modules & AI Prompts
+
+| # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
+|---|---|---|---|---|
+| 1 | 🏔️ **Multi-Layer 3D Depth** | [`multi_layer_3d_parallax/`](multi_layer_3d_parallax/) | [`prompt.md`](multi_layer_3d_parallax/prompt.md) | Multi-speed layer parallax (BG slow, card medium, text fast) |
+| 2 | 🔍 **Card Expand & Counter Zoom** | [`inner_counter_zoom_reveal/`](inner_counter_zoom_reveal/) | [`prompt.md`](inner_counter_zoom_reveal/prompt.md) | Nike/Porsche card 45vw ➔ 100vw expand with inner 1.6 ➔ 1.0 counter zoom |
+| 3 | 🎮 **Mouse 3D Tilt + Parallax** | [`mouse_tilt_3d_parallax/`](mouse_tilt_3d_parallax/) | [`prompt.md`](mouse_tilt_3d_parallax/prompt.md) | 3D cursor tilt perspective + glass glare layer |
+| 4 | ↔️ **Horizontal Track Zoom** | [`horizontal_parallax_track_zoom/`](horizontal_parallax_track_zoom/) | [`prompt.md`](horizontal_parallax_track_zoom/prompt.md) | Dual-axis horizontal pinned track with inner counter image shift |
 
 ---
 
 ## 🧠 Core GSAP & CSS Concepts
 
 ### 1. CSS Outer Mask Container
-Outer image container me `overflow: hidden` hota hai taaki image container ke bahar na nikle:
 ```css
 .parallax-card {
   width: 100%;
@@ -23,9 +30,8 @@ Outer image container me `overflow: hidden` hota hai taaki image container ke ba
 }
 .parallax-img {
   width: 100%;
-  height: 120%; /* Extra height for smooth parallax movement */
+  height: 130%;
   object-fit: cover;
-  transform-origin: center center;
 }
 ```
 
@@ -33,7 +39,6 @@ Outer image container me `overflow: hidden` hota hai taaki image container ke ba
 ```javascript
 gsap.registerPlugin(ScrollTrigger);
 
-// Inner Image Zoom & Parallax Movement
 gsap.to(".parallax-img", {
   scale: 1.35,
   yPercent: -20,
@@ -42,20 +47,7 @@ gsap.to(".parallax-img", {
     trigger: ".parallax-card",
     start: "top bottom",
     end: "bottom top",
-    scrub: 1 // Smooth physics lag on scroll
+    scrub: 1
   }
 });
 ```
-
----
-
-## 🤖 AI Master Prompt
-> Dedicated ready-to-use prompt file: [`prompt.md`](prompt.md)
-
----
-
-## 📁 Files Included
-- `index.html`: Showcase page with parallax cards.
-- `styles.css`: Dark luxury typography & parallax layout.
-- `script.js`: GSAP ScrollTrigger parallax & scale zoom logic.
-- `prompt.md`: AI prompt for direct integration.
