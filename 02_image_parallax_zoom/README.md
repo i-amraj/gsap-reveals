@@ -4,9 +4,9 @@
 
 ## 🎯 Overview & Sub-Demos
 
-All 16 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
+All 22 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
 
-### 📂 Included 16 Sub-Modules & AI Prompts
+### 📂 Included 22 Sub-Modules & AI Prompts
 
 | # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
 |---|---|---|---|---|
@@ -26,6 +26,12 @@ All 16 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `
 | 14 | 🎞️ **Venetian Strip Parallax** | [`overlapping_slat_venetian_parallax/`](overlapping_slat_venetian_parallax/) | [`prompt.md`](overlapping_slat_venetian_parallax/prompt.md) | 5-Strip vertical shutter slice staggered parallax |
 | 15 | 🌐 **Fisheye Globe Un-Distort** | [`spherical_globe_parallax_zoom/`](spherical_globe_parallax_zoom/) | [`prompt.md`](spherical_globe_parallax_zoom/prompt.md) | 3D spherical globe lens sphere unfold into flat viewport |
 | 16 | 🔷 **3D Prism Kaleidoscope** | [`prism_kaleidoscope_3d_zoom/`](prism_kaleidoscope_3d_zoom/) | [`prompt.md`](prism_kaleidoscope_3d_zoom/prompt.md) | Cyberpunk 4-facet triangular prism 3D geometric unfold |
+| 17 | 🔄 **Cylindrical 3D Carousel** | [`cylindrical_3d_carousel_parallax/`](cylindrical_3d_carousel_parallax/) | [`prompt.md`](cylindrical_3d_carousel_parallax/prompt.md) | Revolving 3D cylinder image ring interactive carousel |
+| 18 | 🌫️ **Depth Blur Aperture Focus** | [`depth_blur_aperture_focus/`](depth_blur_aperture_focus/) | [`prompt.md`](depth_blur_aperture_focus/prompt.md) | Gaussian blur (28px ➔ 0px) camera depth-of-field lens focus |
+| 19 | 📐 **Diagonal Slice Cascade** | [`diagonal_slice_parallax_cascade/`](diagonal_slice_parallax_cascade/) | [`prompt.md`](diagonal_slice_parallax_cascade/prompt.md) | 45-Degree diagonal sloped polygon strip cascade slide |
+| 20 | 🧲 **Magnetic Cursor Zoom** | [`interactive_magnetic_cursor_zoom/`](interactive_magnetic_cursor_zoom/) | [`prompt.md`](interactive_magnetic_cursor_zoom/prompt.md) | Mouse proximity magnetic pull + spring physics depth scale |
+| 21 | 🌊 **Scroll Velocity Wave Ripple** | [`scroll_velocity_ripple_wave/`](scroll_velocity_ripple_wave/) | [`prompt.md`](scroll_velocity_ripple_wave/prompt.md) | Scroll speed SVG displacement wave distortion & skew |
+| 22 | 🔀 **Counter Crossfade Parallax** | [`crossfade_dual_layer_parallax/`](crossfade_dual_layer_parallax/) | [`prompt.md`](crossfade_dual_layer_parallax/prompt.md) | Dual-asset nature1 ➔ nature2 counter-slide opacity morph |
 
 ---
 

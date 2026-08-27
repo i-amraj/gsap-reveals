@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Velocity Wave Ripple Parallax</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-header">
+    <span class="badge">SCROLL VELOCITY RIPPLE</span>
+    <h1>DYNAMIC WAVE DISPLACEMENT</h1>
+    <p>Scroll fast up or down to distort the image with physical wave ripples</p>
+  </header>
+
+  <!-- SVG Displacement Filter -->
+  <svg style="display: none;">
+    <filter id="rippleFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" result="noise" />
+      <feDisplacementMap id="dispMap" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <section class="ripple-stage">
+    <div class="ripple-card">
+      <img src="../../assets/nature2.jpeg" alt="Wave Nature" class="ripple-img">
+    </div>
+    <div class="card-caption">
+      <h2>VELOCITY WAVE RIPPLE</h2>
+      <p>Scroll Speed Dynamic Displacement Engine</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Scroll Velocity Wave Ripple Parallax Engine</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
