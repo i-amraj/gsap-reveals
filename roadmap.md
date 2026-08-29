@@ -8,7 +8,7 @@
 ## 🖼️ Category 1: Image & Visual Reveal Animation Styles
 - [x] **Style 1.1:** Canvas Image Mask Reveals (`01_clip_path_image_reveal`) — *(Completed 16 Sub-Demos)*
 - [x] **Style 1.2:** Image Parallax & Scale Depth Zoom (`02_image_parallax_zoom`) — *(Completed 22 Sub-Demos)*
-- [/] **Style 1.3:** WebGL & GSAP Liquid Distortion Hover (`03_hover_liquid_distortion`) — *(In Progress)*
+- [x] **Style 1.3:** WebGL & GSAP Liquid Distortion Hover (`03_hover_liquid_distortion`) — *(Completed 12 Sub-Demos)*
 - [ ] **Style 1.4:** Interactive Mouse Trail Multi-Image Sequence (`04_image_trail_cursor`)
 
 

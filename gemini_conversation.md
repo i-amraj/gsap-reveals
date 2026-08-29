@@ -208,13 +208,22 @@ gsap.registerPlugin(ScrollTrigger);
   11. `pinned_zoom_lens_spotlight/` ➔ 2.5x HD Detail Magnifying Spotlight Traversal Lens
   12. `isometric_3d_plane_parallax/` ➔ Web3 Isometric 3D Plane Height Elevation (translateZ: 180px)
   13. `spiral_vortex_3d_zoom/` ➔ Music Video 3D Spiral Rotational Depth Travel
-🌊 **Style 1.3: `03_hover_liquid_distortion/` WebGL & Liquid Suite Launched:**
-- Created 4 initial sub-demo engine folders using `nature1.jpeg` and `nature2.jpeg` from `../../assets/`:
+🌊 **Style 1.3: `03_hover_liquid_distortion/` WebGL & Liquid Suite Completed (12 Sub-Demos):**
+- Created 12 sub-demo engine folders using `nature1.jpeg` and `nature2.jpeg` from `../../assets/`:
   1. `water_ripple_displacement/` ➔ Interactive SVG Turbulence Water Wave Displacement Hover
   2. `rgb_split_glitch_liquid/` ➔ Cyberpunk RGB Color Channel Split & Wave Turbulence Hover
   3. `fluid_glass_refraction/` ➔ Luxury Circular Fluid Glass Lens Cursor Refraction & Zoom
   4. `directional_wave_slide/` ➔ Nature 1 ➔ Nature 2 Directional Liquid Wave Morph Transition
+  5. `gelatin_jelly_wobble/` ➔ Soft elastic SVG displacement jelly bounce with GSAP spring
+  6. `heat_wave_shimmer/` ➔ Continuous high-frequency heat haze desert distortion
+  7. `magnetic_fluid_drag/` ➔ Thick liquid surface smears and drags towards the cursor
+  8. `ink_drop_reveal/` ➔ Radial SVG gooey filter ink blob expands to reveal image 2
+  9. `underwater_caustics_ripples/` ➔ Deep water current wave speed acceleration and color dodge
+  10. `pixel_sort_melt/` ➔ Cyberpunk vertical stretching pixel sort displacement
+  11. `liquid_blob_cursor_mask/` ➔ Organic shape-shifting mouse blob cursor masking image 2
+  12. `sonic_boom_shockwave/` ➔ Rapid radial 0 ➔ 100 ➔ 0 displacement ripple blast on enter
 - Every folder contains `index.html`, `styles.css`, `script.js`, `README.md`, and dedicated AI prompt `prompt.md` (Rule 9).
+
 
 
 

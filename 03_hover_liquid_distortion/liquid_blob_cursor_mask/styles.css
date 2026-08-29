@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero-header {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.badge {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-header h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #ddd6fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-header p {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  margin-top: 10px;
+}
+
+.card-stage {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blob-card {
+  width: 60vw;
+  height: 60vh;
+  border-radius: 32px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  cursor: pointer;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.base-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blob-mask-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Using SVG filter on mask via CSS is complex, we will use a dynamically morphing SVG path as a clip-path for true shape-shifting, or a gooey radial gradient */
+  /* Here we use a pseudo-element masking trick or radial gradient animation */
+  --x: 50%;
+  --y: 50%;
+  --size: 0px;
+  mask-image: radial-gradient(circle at var(--x) var(--y), black var(--size), transparent calc(var(--size) + 30px));
+  -webkit-mask-image: radial-gradient(circle at var(--x) var(--y), black var(--size), transparent calc(var(--size) + 30px));
+  will-change: mask-image, -webkit-mask-image;
+}
+
+.reveal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0) 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.card-caption h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.card-caption p {
+  color: #a78bfa;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.footer {
+  padding: 60px;
+  text-align: center;
+  color: #64748b;
+}
