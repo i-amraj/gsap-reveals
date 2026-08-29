@@ -4,9 +4,9 @@
 
 ## 🎯 Overview & Sub-Demos
 
-All 12 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
+This module now contains a massive collection of **22 advanced interactive WebGL, SVG Filter, and Canvas Distortion Hover Engines**. All 22 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `../../assets/`.
 
-### 📂 Included 12 Sub-Modules & AI Prompts
+### 📂 Included 22 Sub-Modules & AI Prompts
 
 | # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
 |---|---|---|---|---|
@@ -22,25 +22,33 @@ All 12 sub-demos use local nature media (`nature1.jpeg` & `nature2.jpeg`) from `
 | 10 | 👾 **Pixel Sort Glitch Melt** | [`pixel_sort_melt/`](pixel_sort_melt/) | [`prompt.md`](pixel_sort_melt/prompt.md) | Cyberpunk vertical stretching pixel sort displacement |
 | 11 | 🕳️ **Liquid Blob Cursor Mask** | [`liquid_blob_cursor_mask/`](liquid_blob_cursor_mask/) | [`prompt.md`](liquid_blob_cursor_mask/prompt.md) | Organic shape-shifting mouse blob cursor masking image 2 |
 | 12 | 💥 **Sonic Boom Shockwave** | [`sonic_boom_shockwave/`](sonic_boom_shockwave/) | [`prompt.md`](sonic_boom_shockwave/prompt.md) | Rapid radial 0 ➔ 100 ➔ 0 displacement ripple blast on enter |
+| 13 | 📺 **CRT VHS Scanline Glitch** | [`crt_scanline_glitch/`](crt_scanline_glitch/) | [`prompt.md`](crt_scanline_glitch/prompt.md) | Retro CRT TV scanline signal jagged horizontal displacement |
+| 14 | 💎 **Crystal Prism Shatter** | [`crystal_prism_shatter/`](crystal_prism_shatter/) | [`prompt.md`](crystal_prism_shatter/prompt.md) | Geometric multi-polygon glass shattered explosion |
+| 15 | 🕳️ **Black Hole Warp Vortex** | [`black_hole_warp_vortex/`](black_hole_warp_vortex/) | [`prompt.md`](black_hole_warp_vortex/prompt.md) | Extreme inward radial warp singularity scale suck |
+| 16 | 🌈 **Psychedelic Color Cycle** | [`psychedelic_color_cycle/`](psychedelic_color_cycle/) | [`prompt.md`](psychedelic_color_cycle/prompt.md) | Trippy hue-rotation color matrix loop with liquid waves |
+| 17 | ❄️ **Frosted Condensation Wipe** | [`frosted_condensation_wipe/`](frosted_condensation_wipe/) | [`prompt.md`](frosted_condensation_wipe/prompt.md) | Cursor wiping away winter frosted blur via dynamic radial mask |
+| 18 | 🎨 **Oil Paint Swirl** | [`oil_paint_swirl/`](oil_paint_swirl/) | [`prompt.md`](oil_paint_swirl/prompt.md) | High-octave thick Van Gogh style wet paint smudging |
+| 19 | 📰 **Comic Halftone Distortion** | [`comic_halftone_distortion/`](comic_halftone_distortion/) | [`prompt.md`](comic_halftone_distortion/prompt.md) | SVG patterned Pop-Art comic dot liquid warping |
+| 20 | 📡 **Echo Ripple Trail** | [`echo_ripple_trail/`](echo_ripple_trail/) | [`prompt.md`](echo_ripple_trail/prompt.md) | Dynamic GSAP DOM concentric circular wave spawning trails |
+| 21 | 🔥 **Molten Lava Drip** | [`molten_lava_drip/`](molten_lava_drip/) | [`prompt.md`](molten_lava_drip/prompt.md) | Intense red color matrix heat filter with vertical dripping |
+| 22 | 🔲 **Geometric Mosaic Pixelation** | [`geometric_mosaic_pixelation/`](geometric_mosaic_pixelation/) | [`prompt.md`](geometric_mosaic_pixelation/prompt.md) | Instant 8-bit chunky geometric blocks via `feMorphology` |
 
 ---
 
-## 🧠 Core WebGL & SVG Displacement Concepts
+## 🧠 Core WebGL & SVG Distortion Concepts
 
-### 1. Inline SVG Displacement Filter
+### 1. The Core Filter Structure
 ```html
 <filter id="liquidFilter">
-  <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
-  <feDisplacementMap id="dispMap" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+  <!-- Turbulence generates noise -->
+  <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+  <!-- Displacement maps the noise to stretch pixels -->
+  <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
 </filter>
 ```
 
-### 2. GSAP Interactive Mouse Tracking
+### 2. GSAP Filter Animation
 ```javascript
-card.addEventListener("mouseenter", () => {
-  gsap.to("#dispMap", { attr: { scale: 50 }, duration: 0.6, ease: "power2.out" });
-});
-card.addEventListener("mouseleave", () => {
-  gsap.to("#dispMap", { attr: { scale: 0 }, duration: 0.8, ease: "power3.out" });
-});
+// Animating the 'scale' attribute of an SVG tag
+gsap.to("#dispMap", { attr: { scale: 50 }, duration: 0.6, ease: "power2.out" });
 ```

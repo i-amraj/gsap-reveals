@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #f1f5f9;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+.hero-header {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.badge {
+  background: rgba(14, 165, 233, 0.15);
+  color: #0284c7;
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-header h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.hero-header p {
+  color: #64748b;
+  font-size: 1.15rem;
+  margin-top: 10px;
+}
+
+.card-stage {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frost-card {
+  width: 60vw;
+  height: 60vh;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.base-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frost-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px) brightness(1.2);
+  -webkit-backdrop-filter: blur(15px) brightness(1.2);
+  
+  /* Masking setup */
+  --x: 50%;
+  --y: 50%;
+  --size: 0px; /* Radius of the wiped area */
+  
+  /* Black means frosted overlay is visible, transparent means it is wiped away */
+  mask-image: radial-gradient(circle at var(--x) var(--y), transparent var(--size), black calc(var(--size) + 40px));
+  -webkit-mask-image: radial-gradient(circle at var(--x) var(--y), transparent var(--size), black calc(var(--size) + 40px));
+  will-change: mask-image, -webkit-mask-image;
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.card-caption h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.card-caption p {
+  color: #0284c7;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.footer {
+  padding: 60px;
+  text-align: center;
+  color: #64748b;
+}

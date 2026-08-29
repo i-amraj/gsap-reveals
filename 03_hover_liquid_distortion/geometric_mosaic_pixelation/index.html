@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometric Mosaic Pixelation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-header">
+    <span class="badge">BLOCKY GRID</span>
+    <h1>GEOMETRIC PIXELATION</h1>
+    <p>Hover over the card to break the image down into an 8-bit blocky mosaic</p>
+  </header>
+
+  <!-- SVG Morphology Pixel Filter -->
+  <svg style="display: none;">
+    <filter id="mosaicFilter">
+      <!-- dilate or erode makes blocky/chunky pixels based on radius -->
+      <feMorphology id="morph" operator="dilate" radius="0" in="SourceGraphic" result="morphed" />
+    </filter>
+  </svg>
+
+  <main class="card-stage">
+    <div class="mosaic-card">
+      <img src="../../assets/nature1.jpeg" alt="Nature Web3" class="mosaic-img">
+      <div class="card-caption">
+        <h2>DIGITAL MOSAIC</h2>
+        <p>Dynamic SVG feMorphology Radius Shift</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Geometric Mosaic Pixelation Engine</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
