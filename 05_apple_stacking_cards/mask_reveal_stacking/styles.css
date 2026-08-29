@@ -1,0 +1,34 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body { background: #000; color: #fff; overflow-x: hidden; }
+
+.spacer-hero, .spacer-footer { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.badge { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 20px;}
+.spacer-hero h1 { font-size: 4rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 15px;}
+
+/* 4 cards * 100vh to give enough scroll distance */
+.scroll-track { height: 400vh; position: relative; }
+
+.cards-pin-wrapper {
+  height: 100vh; 
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 90%; max-width: 1000px; height: 75vh;
+  border-radius: 40px; display: flex; justify-content: center; align-items: center;
+  /* Start hidden with clip-path, except card 1 */
+  clip-path: circle(0% at 50% 50%);
+  will-change: clip-path;
+}
+
+.card-1 { clip-path: circle(150% at 50% 50%); /* Base card is fully visible */ }
+
+.card-content { text-align: center; }
+.card-content h2 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; }
+.card-content p { font-size: 1.25rem; opacity: 0.8; }

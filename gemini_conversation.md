@@ -328,20 +328,38 @@ The user requested more variations, so we built 14 additional advanced trail con
 
 ---
 
-## Session Update: Style 2.1 (Apple Stacking Cards)
-**Objective:** Kick off Category 2 by building out the first module: `05_apple_stacking_cards`.
+## Session Update: Style 2.1 (Apple Stacking Cards) Expanded to 22 Variations
+**Objective:** Push the `05_apple_stacking_cards` module to its maximum potential by building 18 additional variations, bringing the total to 22.
 
 **Accomplished:**
-Engineered 4 premium Awwwards-winning variations of the sticky stacking cards effect using `ScrollTrigger`:
-1. **Classic Stacking Cards (`classic_stacking_cards`)**: The standard Apple effect where cards pin and stack vertically, scaling and darkening as they are covered.
-2. **3D Perspective Stacking (`3d_perspective_stacking`)**: Cards tilt backwards on the X-axis into true 3D space as they stack, creating a physical "deck" feel.
-3. **Horizontal Side Stacking (`horizontal_side_stacking`)**: Vertical scrolling moves cards horizontally into a stack on the left side of the screen.
-4. **Parallax Image Stacking (`parallax_image_stacking`)**: While the card is pinned, the oversized background image inside it continues to scrub on the Y-axis, creating intense internal depth.
+Engineered 22 premium Awwwards-winning variations of the sticky stacking cards effect using `ScrollTrigger`:
+1. **Classic Stacking Cards**: Standard Apple effect where cards pin and stack vertically, scaling/darkening.
+2. **3D Perspective Stacking**: Cards tilt backwards on the X-axis into true 3D space (`rotateX`).
+3. **Horizontal Side Stacking**: Vertical scrolling moves cards horizontally into a stack on the side.
+4. **Parallax Image Stacking**: Pinned cards feature oversized background images that scrub on the Y-axis.
+5. **Blur Depth Stacking**: Cards lose focus (`blur()` filter) heavily as they are covered.
+6. **Glassmorphism Stacking**: Translucent glass cards stack, multiplying the backdrop blur.
+7. **Fold Down Stacking**: Card folds backward from the bottom hinge like a laptop screen closing.
+8. **Mask Reveal Stacking**: New card is revealed via an expanding circular `clip-path` mask.
+9. **Accordion Stacking**: Cards pin with an offset, leaving a visible "tab" header.
+10. **Circular Fan Stacking**: Cards swing in from alternating left/right sides to stack like a fan.
+11. **Video Autoplay Stacking**: GSAP automatically plays the video ONLY on the active topmost card.
+12. **Color Invert Stacking**: The entire website background/theme smoothly inverts based on the active card.
+13. **Scale Up Reveal Stacking**: New card grows from `scale: 0` in the center to overtake the pinned card.
+14. **Diagonal Slide Stacking**: Cards slide in diagonally from the bottom-right corner to stack.
+15. **Split Screen Stacking**: Left side pins dynamic text, while right side stacks image cards.
+16. **Drag Throw Stacking**: Interactive `GSAP Draggable` where user throws top card away to reveal the next.
+17. **Text Marquee Stacking**: Internal marquee text speeds up based on the user's scroll velocity.
+18. **Staggered Grid Stacking**: A grid of smaller cards pins and then breaks down piece-by-piece.
+19. **Infinite Loop Stacking**: Seamless scroll reset illusion making the stack feel infinite.
+20. **Snap Scroll Stacking**: Native CSS `scroll-snap` forces the browser to perfectly align on each card.
+21. **Lottie Scroll Sync Stacking**: Scroll progress perfectly scrubs a Lottie animation frame-by-frame.
+22. **Explode Away Stacking**: The old card doesn't stay underneath; it scales up and bursts (blurs) away.
 
 **Status:**
-- Created all 4 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
-- `05_apple_stacking_cards/README.md` created as index.
-- `roadmap.md` updated: Style 2.1 marked complete.
+- Created all 22 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `05_apple_stacking_cards/README.md` updated with the full list.
+- `roadmap.md` updated: Style 2.1 marked complete (22 Sub-Demos).
 - Code committed and pushed to GitHub repo `i-amraj/gsap-reveals`.
 
 **Next Phase:** Style 2.2: Interactive 3D Perspective Tilt & Lighting Card Hover (`06_card_3d_tilt_hover`).

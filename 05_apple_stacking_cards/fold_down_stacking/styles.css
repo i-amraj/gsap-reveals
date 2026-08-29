@@ -1,0 +1,29 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body { background: #262626; color: #fff; overflow-x: hidden; }
+
+.spacer-hero, .spacer-footer { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.badge { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 20px;}
+.spacer-hero h1 { font-size: 4rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 15px;}
+
+.cards-wrapper { 
+  position: relative; width: 100%; padding-bottom: 100px; 
+  perspective: 2000px; /* High perspective for subtle 3D */
+}
+
+.card-container {
+  height: 100vh; display: flex; justify-content: center; align-items: center; position: sticky; top: 0; width: 100%;
+  transform-style: preserve-3d;
+}
+
+.card {
+  width: 90%; max-width: 1000px; height: 75vh;
+  border-radius: 32px; display: flex; justify-content: center; align-items: center;
+  box-shadow: 0 -20px 40px rgba(0,0,0,0.4); /* Shadow cast upwards */
+  /* CRITICAL: Hinge at the bottom */
+  transform-origin: bottom center;
+  will-change: transform, opacity;
+}
+
+.card-content { text-align: center; }
+.card-content h2 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; }
+.card-content p { font-size: 1.25rem; opacity: 0.8; }

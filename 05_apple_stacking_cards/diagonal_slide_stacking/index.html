@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagonal Slide Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">CORNER ENTRANCE</span>
+    <h1>DIAGONAL SLIDE</h1>
+    <p>Cards enter from the bottom-right corner diagonally</p>
+  </header>
+
+  <div class="scroll-track">
+    <div class="cards-pin-wrapper">
+      
+      <div class="card card-1" style="background-color: #f8fafc; color: #0f172a; z-index: 1;">
+        <div class="card-content">
+          <h2>Base Card</h2>
+        </div>
+      </div>
+      
+      <div class="card card-2" style="background-color: #8b5cf6; color: #fff; z-index: 2;">
+        <div class="card-content">
+          <h2>Slide One</h2>
+        </div>
+      </div>
+
+      <div class="card card-3" style="background-color: #14b8a6; color: #fff; z-index: 3;">
+        <div class="card-content">
+          <h2>Slide Two</h2>
+        </div>
+      </div>
+
+      <div class="card card-4" style="background-color: #f59e0b; color: #fff; z-index: 4;">
+        <div class="card-content">
+          <h2>Slide Three</h2>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Diagonal</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -15,7 +15,7 @@
 ---
 
 ## 🃏 Category 2: Card & Grid Visual Animation Styles
-- [x] **Style 2.1:** `05_apple_stacking_cards` — Apple-Style Sticky Pinned Stacking Cards on Scroll — *(Completed 4 Sub-Demos)*
+- [x] **Style 2.1:** `05_apple_stacking_cards` — Apple-Style Sticky Pinned Stacking Cards on Scroll — *(Completed 22 Sub-Demos)*
 - [ ] **Style 2.2:** `06_card_3d_tilt_hover` — Interactive 3D Perspective Tilt & Lighting Card Hover
 - [ ] **Style 2.3:** `07_flip_grid_transition` — GSAP Flip Plugin Lag-Free Grid Rearrange & Filtering
 - [ ] **Style 2.4:** `08_horizontal_card_track` — Mousewheel & Touch Linked Horizontal Card Slider Track

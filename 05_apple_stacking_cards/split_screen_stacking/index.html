@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Screen Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">ASYMMETRIC LAYOUT</span>
+    <h1>SPLIT SCREEN STACK</h1>
+    <p>Left side pins text, right side stacks cards</p>
+  </header>
+
+  <div class="split-layout">
+    <!-- Left side: Pinned Text -->
+    <div class="left-col">
+      <div class="sticky-text">
+        <h2>Features</h2>
+        <p>Scroll down to see the features stack up on the right.</p>
+      </div>
+    </div>
+    
+    <!-- Right side: Stacking Cards -->
+    <div class="right-col">
+      <div class="cards-wrapper">
+        <div class="card-container">
+          <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+            <h3>Feature 1</h3>
+            <img src="../../assets/nature1.jpeg">
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card" style="background-color: #3b82f6; color: #fff;">
+            <h3>Feature 2</h3>
+            <img src="../../assets/nature2.jpeg">
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card" style="background-color: #10b981; color: #fff;">
+            <h3>Feature 3</h3>
+            <img src="../../assets/nature1.jpeg">
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card" style="background-color: #f43f5e; color: #fff;">
+            <h3>Final Feature</h3>
+            <img src="../../assets/nature2.jpeg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Split Screen</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

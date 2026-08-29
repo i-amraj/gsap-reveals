@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Invert Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #000; color: #fff; transition: background-color 0.5s ease, color 0.5s ease;">
+  
+  <header class="spacer-hero">
+    <span class="badge">GLOBAL THEME</span>
+    <h1>THEME INVERT STACK</h1>
+    <p>The entire website theme flips based on the active card</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <!-- Dark Card -->
+    <div class="card-container" data-theme="dark">
+      <div class="card" style="background-color: #18181b; color: #fff;">
+        <div class="card-content">
+          <h2>Dark Mode Active</h2>
+          <p>The background matches this card.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Light Card -->
+    <div class="card-container" data-theme="light">
+      <div class="card" style="background-color: #f8fafc; color: #000;">
+        <div class="card-content">
+          <h2>Light Mode Active</h2>
+          <p>The entire page theme flips to white.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dark Card -->
+    <div class="card-container" data-theme="dark">
+      <div class="card" style="background-color: #020617; color: #fff;">
+        <div class="card-content">
+          <h2>Back to Dark</h2>
+          <p>Smooth global transition triggers dynamically.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Light Card -->
+    <div class="card-container" data-theme="light">
+      <div class="card" style="background-color: #fef08a; color: #854d0e;">
+        <div class="card-content">
+          <h2>Vibrant Light</h2>
+          <p>Any color combo works perfectly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Invert</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

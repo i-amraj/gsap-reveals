@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">OFFSET PINNING</span>
+    <h1>ACCORDION TABS</h1>
+    <p>Cards stack leaving a visible tab header at the top</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+        <div class="card-tab">Section 1</div>
+        <div class="card-content">
+          <h2>The First Tab</h2>
+          <p>Pins exactly at the top of the viewport.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #3b82f6; color: #fff;">
+        <div class="card-tab" style="background-color: #2563eb;">Section 2</div>
+        <div class="card-content">
+          <h2>Offset 80px</h2>
+          <p>Leaves the tab of the previous card visible.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #0f172a; color: #fff;">
+        <div class="card-tab" style="background-color: #1e293b;">Section 3</div>
+        <div class="card-content">
+          <h2>Offset 160px</h2>
+          <p>Building the accordion UI through precise ScrollTrigger starts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #ec4899; color: #fff;">
+        <div class="card-tab" style="background-color: #db2777;">Section 4</div>
+        <div class="card-content">
+          <h2>Final Tab</h2>
+          <p>The accordion is fully open.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Accordion</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottie Scroll Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">LOTTIE INTEGRATION</span>
+    <h1>LOTTIE SCROLL SYNC</h1>
+    <p>Scroll to scrub Lottie animations inside stacking cards</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+        <div class="card-content">
+          <h2>Animation 1</h2>
+        </div>
+        <div class="lottie-wrapper">
+          <lottie-player class="lottie" src="https://assets2.lottiefiles.com/packages/lf20_UJNc2t.json" background="transparent" speed="1"></lottie-player>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #3b82f6; color: #fff;">
+        <div class="card-content">
+          <h2>Animation 2</h2>
+        </div>
+        <div class="lottie-wrapper">
+          <lottie-player class="lottie" src="https://assets10.lottiefiles.com/packages/lf20_p8bfn5to.json" background="transparent" speed="1"></lottie-player>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #10b981; color: #fff;">
+        <div class="card-content">
+          <h2>Animation 3</h2>
+        </div>
+        <div class="lottie-wrapper">
+          <lottie-player class="lottie" src="https://assets3.lottiefiles.com/packages/lf20_bpqri9y8.json" background="transparent" speed="1"></lottie-player>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Lottie</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lottie Player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

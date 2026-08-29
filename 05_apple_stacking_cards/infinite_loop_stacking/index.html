@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Loop Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- No hero spacer, start immediately so loop is seamless -->
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+        <div class="card-content">
+          <span class="badge" style="border-color:#0f172a; color:#0f172a;">CARD 1</span>
+          <h2>The Loop Begins</h2>
+          <p>Scroll down.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #3b82f6; color: #fff;">
+        <div class="card-content">
+          <span class="badge">CARD 2</span>
+          <h2>Keep Going</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #10b981; color: #fff;">
+        <div class="card-content">
+          <span class="badge">CARD 3</span>
+          <h2>Almost There</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 (Clone of 1) -->
+    <div class="card-container trigger-reset">
+      <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+        <div class="card-content">
+          <span class="badge" style="border-color:#0f172a; color:#0f172a;">CARD 1</span>
+          <h2>The Loop Begins</h2>
+          <p>This is a clone to hide the snap back.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

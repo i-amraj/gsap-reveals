@@ -1,39 +1,33 @@
-# 🃏 Style 2.1: Apple-Style Stacking Cards (`05_apple_stacking_cards`)
+# Style 2.1: Apple-Style Stacking Cards (`05_apple_stacking_cards`)
 
----
+This folder contains **22 advanced variations** of the popular Apple-style pinning and stacking card effect using GSAP `ScrollTrigger`.
 
-## 🎯 Overview
+## 📦 The 22 Sub-Demos
 
-Welcome to the **Apple-Style Sticky Stacking Cards** module! This is the first module of **Category 2 (Card & Grid Visual Animation Styles)**.
-This effect is highly popular on product landing pages (like Apple's iPad or Mac pages) where scrolling down causes content cards to pin to the screen and stack on top of each other, usually accompanied by subtle scaling and darkening of the cards underneath to create a sense of 3D depth.
+| # | Module Name | Description | Status |
+|---|---|---|---|
+| 01 | `classic_stacking_cards` | Standard Apple-style vertical scroll where cards pin and stack, scaling down slightly. | ✅ |
+| 02 | `3d_perspective_stacking` | Cards tilt backward on the X-axis into true 3D space (`rotateX`) as they stack. | ✅ |
+| 03 | `horizontal_side_stacking` | Vertical scroll moves cards horizontally into a stack on the side of the screen. | ✅ |
+| 04 | `parallax_image_stacking` | Pinned cards feature oversized background images that heavily scrub on the Y-axis. | ✅ |
+| 05 | `blur_depth_stacking` | Cards lose focus (`blur()` filter) heavily as they are covered by the next card. | ✅ |
+| 06 | `glassmorphism_stacking` | Translucent glass cards stack, multiplying the backdrop blur of the layers underneath. | ✅ |
+| 07 | `fold_down_stacking` | Purana card peeche fold ho jata hai like a laptop screen closing. | ✅ |
+| 08 | `mask_reveal_stacking` | New card is revealed via an expanding circular `clip-path` mask instead of sliding up. | ✅ |
+| 09 | `accordion_stacking` | Cards pin with an offset, leaving a visible "tab" header to look like an open accordion. | ✅ |
+| 10 | `circular_fan_stacking` | Cards swing in from alternating left/right sides to stack like a fan of playing cards. | ✅ |
+| 11 | `video_autoplay_stacking` | GSAP `onEnter`/`onLeave` automatically plays the video ONLY on the active topmost card. | ✅ |
+| 12 | `color_invert_stacking` | The entire website background/theme smoothly inverts based on the active pinned card. | ✅ |
+| 13 | `scale_up_reveal_stacking` | New card grows from `scale: 0` in the center to overtake the pinned card completely. | ✅ |
+| 14 | `diagonal_slide_stacking` | Cards slide in diagonally from the bottom-right corner to stack. | ✅ |
+| 15 | `split_screen_stacking` | Left side pins dynamic text, while right side stacks image cards. | ✅ |
+| 16 | `drag_throw_stacking` | Interactive `GSAP Draggable` where the user throws the top card away to reveal the next. | ✅ |
+| 17 | `text_marquee_stacking` | Internal marquee text speeds up based on the user's scroll velocity. | ✅ |
+| 18 | `staggered_grid_stacking` | A grid of smaller cards pins and then breaks down with a stagger effect. | ✅ |
+| 19 | `infinite_loop_stacking` | Seamless scroll reset illusion making the stack feel like it loops forever. | ✅ |
+| 20 | `snap_scroll_stacking` | Native CSS `scroll-snap` forces the browser to perfectly align on each card. | ✅ |
+| 21 | `lottie_scroll_stacking` | Scroll progress perfectly scrubs a Lottie animation frame-by-frame inside the card. | ✅ |
+| 22 | `explode_away_stacking` | The old card doesn't stay underneath; it scales up and bursts (blurs) away. | ✅ |
 
-### 📂 Included Sub-Modules & AI Prompts
-
-| # | Effect Name | Subfolder Link | AI Prompt (`prompt.md`) | Visual Description |
-|---|---|---|---|---|
-| 1 | 🍎 **Classic Stacking Cards** | [`classic_stacking_cards/`](classic_stacking_cards/) | [`prompt.md`](classic_stacking_cards/prompt.md) | Standard Apple-style vertical scroll card stacking with scale down. |
-
----
-
-## 🧠 Core Logic Overview
-
-### 1. ScrollTrigger Pinning
-The core of this effect relies on `gsap.ScrollTrigger`. Each card container needs to be pinned to the screen while the user continues to scroll.
-
-### 2. The Math of Stacking
-When a new card arrives and pins on top of the old one, the old one must visually recede into the background. We achieve this by calculating progress and animating:
-- `scale`: Reducing the scale slightly (e.g., from `1` to `0.9`).
-- `brightness` / `opacity`: Adding a dark overlay or adjusting filter brightness so the card beneath looks shadowed.
-
-```javascript
-cards.forEach((card, i) => {
-  ScrollTrigger.create({
-    trigger: card,
-    start: "top top",
-    pin: true,
-    pinSpacing: false
-  });
-  
-  // Animate the previous card to scale down when this card comes up
-});
-```
+## 🚀 How to Use
+Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.

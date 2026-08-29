@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body { background: #18181b; color: #fff; overflow-x: hidden; }
+
+.spacer-hero, .spacer-footer { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.badge { background: rgba(244, 63, 94, 0.15); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.4); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 20px;}
+.spacer-hero h1 { font-size: 4rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 15px;}
+.spacer-hero p { font-size: 1.25rem; color: #a1a1aa; }
+
+.cards-wrapper { position: relative; width: 100%; padding-bottom: 200px; }
+
+.card-container {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align top for easier offset math */
+  position: sticky; 
+  top: 0;
+  width: 100%;
+}
+
+.card {
+  width: 90%; max-width: 1000px; 
+  /* Height is dynamic based on how much offset we have. We'll use a fixed height and hide overflow */
+  height: 80vh; 
+  border-radius: 32px 32px 0 0; /* Round top corners only like a tab */
+  display: flex; flex-direction: column;
+  box-shadow: 0 -20px 40px rgba(0,0,0,0.4);
+  transform-origin: top center;
+  will-change: transform;
+}
+
+.card-tab {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.card-content { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px; }
+.card-content h2 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; }
+.card-content p { font-size: 1.25rem; opacity: 0.8; }

@@ -1,0 +1,24 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body { background: #000; color: #fff; overflow-x: hidden; }
+
+.spacer-hero, .spacer-footer { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.badge { background: rgba(139, 92, 246, 0.15); color: #a78bfa; border: 1px solid rgba(139, 92, 246, 0.4); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 20px;}
+.spacer-hero h1 { font-size: 4rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 15px;}
+
+.scroll-track { height: 400vh; position: relative; }
+
+.cards-pin-wrapper {
+  height: 100vh; width: 100%; position: sticky; top: 0; display: flex; justify-content: center; align-items: center;
+  overflow: hidden; /* Hide cards waiting off-screen */
+}
+
+.card {
+  position: absolute;
+  width: 90%; max-width: 1000px; height: 75vh;
+  border-radius: 40px; display: flex; justify-content: center; align-items: center;
+  box-shadow: -20px -20px 60px rgba(0,0,0,0.5); /* Shadow on top/left to show stacking over */
+  will-change: transform;
+}
+
+.card-content { text-align: center; }
+.card-content h2 { font-size: 4rem; font-weight: 900; margin-bottom: 20px; }

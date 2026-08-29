@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mask Reveal Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">CLIP-PATH REVEAL</span>
+    <h1>EXPANDING MASK</h1>
+    <p>Scroll down to reveal the next card through an expanding circle</p>
+  </header>
+
+  <!-- Single tall scroll container -->
+  <div class="scroll-track">
+    <!-- Pinned wrapper for all absolute cards -->
+    <div class="cards-pin-wrapper">
+      
+      <!-- Card 1 (Base, fully visible) -->
+      <div class="card card-1" style="background-color: #f8fafc; color: #0f172a; z-index: 1;">
+        <div class="card-content">
+          <h2>The Foundation</h2>
+          <p>I am always here at the bottom.</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 (Masked to 0) -->
+      <div class="card card-2" style="background-color: #3b82f6; color: #fff; z-index: 2;">
+        <div class="card-content">
+          <h2>Circle Expansion</h2>
+          <p>I am revealed from a tiny dot in the center.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 (Masked to 0) -->
+      <div class="card card-3" style="background-color: #0f172a; color: #fff; z-index: 3;">
+        <div class="card-content">
+          <h2>Eclipse</h2>
+          <p>Another layer takes over the screen.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 (Masked to 0) -->
+      <div class="card card-4" style="background-color: #ec4899; color: #fff; z-index: 4;">
+        <div class="card-content">
+          <h2>Final Mask</h2>
+          <p>The last card completes the sequence.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Reveal</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

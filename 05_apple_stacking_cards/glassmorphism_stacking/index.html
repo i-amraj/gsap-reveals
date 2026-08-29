@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <header class="spacer-hero">
+    <span class="badge">FROSTED UI</span>
+    <h1>GLASS STACK</h1>
+    <p>See-through frosted layers stacking seamlessly</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <div class="card-container">
+      <div class="card">
+        <div class="card-content">
+          <h2>Layer One</h2>
+          <p>I am the bottom layer. The blobs move behind me.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-container">
+      <div class="card">
+        <div class="card-content">
+          <h2>Layer Two</h2>
+          <p>The glass stacks multiply the backdrop blur.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-content">
+          <h2>Layer Three</h2>
+          <p>You can faintly see Layer Two underneath me.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-content">
+          <h2>Top Layer</h2>
+          <p>Maximum frost density achieved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Glass</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

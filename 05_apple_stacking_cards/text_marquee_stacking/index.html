@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Marquee Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">SCROLL VELOCITY</span>
+    <h1>MARQUEE STACK</h1>
+    <p>Scroll to stack cards and speed up the marquees</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <div class="card-container">
+      <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+        <div class="marquee-container">
+          <div class="marquee">
+            <span>SCROLL TO SPEED UP • SCROLL TO SPEED UP • SCROLL TO SPEED UP • SCROLL TO SPEED UP • </span>
+            <span>SCROLL TO SPEED UP • SCROLL TO SPEED UP • SCROLL TO SPEED UP • SCROLL TO SPEED UP • </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-container">
+      <div class="card" style="background-color: #10b981; color: #fff;">
+        <div class="marquee-container">
+          <div class="marquee marquee-reverse">
+            <span>ANIMATION VELOCITY • ANIMATION VELOCITY • ANIMATION VELOCITY • ANIMATION VELOCITY • </span>
+            <span>ANIMATION VELOCITY • ANIMATION VELOCITY • ANIMATION VELOCITY • ANIMATION VELOCITY • </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-container">
+      <div class="card" style="background-color: #f43f5e; color: #fff;">
+        <div class="marquee-container">
+          <div class="marquee">
+            <span>FINAL DESTINATION • FINAL DESTINATION • FINAL DESTINATION • FINAL DESTINATION • </span>
+            <span>FINAL DESTINATION • FINAL DESTINATION • FINAL DESTINATION • FINAL DESTINATION • </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Marquees</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
