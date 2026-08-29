@@ -1,0 +1,8 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body, html { width: 100%; height: 100%; background: #042f2e; color: #fff; overflow: hidden; }
+.trail-container { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
+.hero-header { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: -1; pointer-events: none; }
+.badge { background: rgba(20, 184, 166, 0.15); color: #14b8a6; border: 1px solid rgba(20, 184, 166, 0.4); padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; letter-spacing: 2px; }
+.hero-header h1 { font-size: 4.5rem; font-weight: 900; margin-top: 20px; }
+.hero-header p { color: #99f6e4; font-size: 1.25rem; margin-top: 10px; }
+.snake-node { position: absolute; top: 0; left: 0; width: 100px; height: 100px; object-fit: cover; border-radius: 50%; pointer-events: none; border: 3px solid #14b8a6; transform: translate(-50%, -50%) scale(0); will-change: transform; z-index: 10; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }

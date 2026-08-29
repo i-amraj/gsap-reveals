@@ -1,0 +1,32 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body, html { width: 100%; height: 100%; background: #000; overflow: hidden; }
+
+.trail-container { width: 100vw; height: 100vh; position: relative; }
+
+/* The images spawn here, below the text cover */
+#image-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
+.mask-img { position: absolute; width: 300px; height: 300px; object-fit: cover; pointer-events: none; transform: scale(0); will-change: transform, opacity; border-radius: 50%; }
+
+/* The text layer is WHITE. The text itself is BLACK. 
+   When using mix-blend-mode: screen on this layer, the white stays white (hiding background),
+   and the black becomes transparent, showing the image-layer below it! */
+.text-layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  pointer-events: none; /* Let mouse through to document */
+  mix-blend-mode: screen;
+}
+
+.text-layer h1 {
+  font-size: 25vw;
+  font-weight: 900;
+  color: #000;
+  line-height: 1;
+}

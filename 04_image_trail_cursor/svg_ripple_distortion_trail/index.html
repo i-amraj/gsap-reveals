@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Ripple Distortion Trail</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- The SVG Filter definition -->
+  <svg style="display:none;">
+    <filter id="rippleFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" id="turb" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" id="disp" />
+    </filter>
+  </svg>
+
+  <div class="trail-container">
+    <header class="hero-header">
+      <span class="badge">WEBGL EFFECT</span>
+      <h1>LIQUID RIPPLE TRAIL</h1>
+      <p>Trail images distort via SVG turbulence before fading</p>
+    </header>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

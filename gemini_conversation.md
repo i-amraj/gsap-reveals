@@ -301,10 +301,27 @@ Successfully engineered 8 diverse, interactive cursor trail variations using GSA
 7. **Depth Parallax Trail (`parallax_depth_trail`)**: Z-index & blur filters combined to create 3D floating depth.
 8. **Grid Snap Trail (`grid_snap_trail`)**: Mouse movement leaves images behind that snap perfectly onto an invisible 150x150 mathematical grid.
 
+**Extended Phase: Pushing to 22 Modules**
+The user requested more variations, so we built 14 additional advanced trail concepts:
+9. **Gravity Fall Trail (`gravity_fall_trail`)**: Images spawn and fall downwards out of the screen using gravity.
+10. **Snake Follower Path (`snake_follower_path`)**: A fixed chain of images perfectly follows the history of the mouse path.
+11. **Polaroid Pile Drop (`polaroid_pile_drop`)**: Polaroids drop and physically pile up permanently at the screen bottom.
+12. **Tunnel Vision Flythrough (`tunnel_vision_flythrough`)**: Spawned images scale up massively into the camera like a tunnel.
+13. **3D Card Flip Trail (`3d_card_flip_trail`)**: Spawned images pop in with a 3D Y-axis flip and flip out to fade.
+14. **SVG Ripple Distortion (`svg_ripple_distortion_trail`)**: Images ripple and distort like water puddles via SVG turbulence.
+15. **Color Matrix Neon (`color_matrix_neon_trail`)**: Images get random extreme neon cyberpunk SVG color matrices.
+16. **Pixelate Resolve Trail (`pixelate_resolve_trail`)**: Chunky 8-bit mosaic images resolve to sharp photos before fading.
+17. **Slice Shredder Explode (`slice_shredder_explode`)**: Images spawn and immediately slice into strips exploding apart.
+18. **Brush Splatter Mask (`brush_splatter_mask`)**: Images are masked dynamically like rough paint brush splatters.
+19. **Text Mask Reveal Trail (`text_mask_reveal_trail`)**: The trail of images is ONLY visible inside a giant typography mask.
+20. **Magnetic Repel Scatter (`magnetic_repel_scatter`)**: Spawned images aggressively push away if the cursor touches them again.
+21. **Spiral Vortex Suck (`spiral_vortex_suck`)**: Images spawn but instantly spiral into a central screen black hole.
+22. **Cursor Spotlight Reveal (`cursor_spotlight_reveal`)**: Mouse acts as a trailing flashlight revealing a hidden image underneath.
+
 **Status:**
-- All 8 designs created with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
-- `04_image_trail_cursor/README.md` created as index.
-- `roadmap.md` updated: Style 1.4 marked complete (8 Sub-Demos). Category 1 is fully finished.
+- All 22 designs created with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `04_image_trail_cursor/README.md` updated with all 22 modules.
+- `roadmap.md` updated: Style 1.4 marked complete (22 Sub-Demos). Category 1 is fully finished.
 - Code committed and pushed to GitHub repo.
 
 **Next Phase:** Category 2: Card & Grid Visual Animation Styles (`05_apple_stacking_cards`).

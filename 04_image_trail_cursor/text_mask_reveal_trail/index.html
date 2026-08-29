@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Mask Reveal Trail</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="trail-container">
+    <!-- Trail images will spawn inside here (under the text layer) -->
+    <div id="image-layer"></div>
+    
+    <!-- White background, black text. mix-blend-mode will make black transparent to the images behind -->
+    <div class="text-layer">
+      <h1>HOVER</h1>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
