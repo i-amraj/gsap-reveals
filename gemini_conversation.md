@@ -258,3 +258,53 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
+
+---
+
+## Session Update: Expanding Style 1.3 to 22 Demos
+**Objective:** The user requested to push the `03_hover_liquid_distortion` suite to its maximum limit by adding 10 more advanced effects, bringing the total to 22.
+
+**Accomplished:**
+Successfully engineered 10 new high-performance, WebGL & SVG filter distortion engines:
+1. **13. CRT VHS Scanline Glitch (`crt_scanline_glitch`)**: Retro `<feTurbulence>` jagged horizontal displacement with CSS scanlines.
+2. **14. Crystal Prism Shatter (`crystal_prism_shatter`)**: High-end geometric multi-polygon glass shatter utilizing GSAP translations.
+3. **15. Black Hole Warp Vortex (`black_hole_warp_vortex`)**: Extreme negative scale radial warp suck effect simulating an event horizon.
+4. **16. Psychedelic Color Cycle (`psychedelic_color_cycle`)**: Trippy `<feColorMatrix>` 0-360 hue rotation combined with fluid displacement waves.
+5. **17. Frosted Condensation Wipe (`frosted_condensation_wipe`)**: Dynamic CSS radial mask `quickTo` cursor reveal simulating wiping frosty glass.
+6. **18. Oil Paint Swirl (`oil_paint_swirl`)**: High-octave thick `<feTurbulence>` creating a Van Gogh style wet paint smudge.
+7. **19. Comic Halftone Distortion (`comic_halftone_distortion`)**: Pop-Art SVG dot pattern combined with liquid wave warping.
+8. **20. Echo Ripple Trail (`echo_ripple_trail`)**: Dynamic GSAP DOM generation spawning concentric shockwave ripples under the cursor trail.
+9. **21. Molten Lava Drip (`molten_lava_drip`)**: Intense red/orange color matrix heat filter with heavy vertical dripping displacement.
+10. **22. Geometric Mosaic Pixelation (`geometric_mosaic_pixelation`)**: Web3 style instant 8-bit chunky geometric blocks using `<feMorphology>` radius shift.
+
+**Status:**
+- All 10 sub-demos created with complete HTML, CSS, GSAP logic, `README.md`, and `prompt.md`.
+- `03_hover_liquid_distortion/README.md` updated to reflect the full catalog of 22 sub-demos.
+- `roadmap.md` updated: Style 1.3 is now completed with 22 sub-demos.
+- Pushed all updates to GitHub repo `i-amraj/gsap-reveals`.
+
+**Next Phase:** Ready to begin **Style 1.4: Interactive Mouse Trail Multi-Image Sequence (`04_image_trail_cursor`)**.
+
+---
+
+## Session Update: Style 1.4 (Image Trail Cursor)
+**Objective:** Build out the fourth and final module of Category 1: `04_image_trail_cursor`.
+
+**Accomplished:**
+Successfully engineered 8 diverse, interactive cursor trail variations using GSAP 3:
+1. **Classic Sequential Trail (`classic_sequential_trail`)**: Images spawn on cursor path and fade/scale down.
+2. **Random Scatter Collage (`random_scatter_trail`)**: Messy, randomly rotated image collage trail following mouse.
+3. **Spring Elastic Lag (`spring_elastic_lag`)**: 5 images following the cursor with increasing elastic spring lag using `quickTo`.
+4. **Velocity Stretch Trail (`velocity_stretch_trail`)**: Images stretch and skew dynamically based on mouse speed.
+5. **Flipbook Scrub Sequence (`scrub_sequence_gallery`)**: Mouse X movement scrubs through an image array like a video timeline.
+6. **Orbiting Image Ring (`circular_orbit_trail`)**: Spawned images orbit dynamically around the current cursor path.
+7. **Depth Parallax Trail (`parallax_depth_trail`)**: Z-index & blur filters combined to create 3D floating depth.
+8. **Grid Snap Trail (`grid_snap_trail`)**: Mouse movement leaves images behind that snap perfectly onto an invisible 150x150 mathematical grid.
+
+**Status:**
+- All 8 designs created with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `04_image_trail_cursor/README.md` created as index.
+- `roadmap.md` updated: Style 1.4 marked complete (8 Sub-Demos). Category 1 is fully finished.
+- Code committed and pushed to GitHub repo.
+
+**Next Phase:** Category 2: Card & Grid Visual Animation Styles (`05_apple_stacking_cards`).

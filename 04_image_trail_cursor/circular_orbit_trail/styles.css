@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #020205;
+  color: #fff;
+  overflow: hidden;
+}
+
+.trail-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.badge {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-header h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #f8fafc;
+}
+
+.hero-header p {
+  color: #94a3b8;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+/* Container placed exactly at mouse coordinates */
+.orbit-pivot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  z-index: 5;
+  will-change: transform;
+}
+
+/* The actual image is offset from the pivot point to create an orbit radius */
+.orbit-img {
+  position: absolute;
+  top: -60px; /* Offset to center the image on the Y axis of its local origin */
+  left: 80px; /* Orbit radius distance from mouse cursor */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%; /* Make them circular planets */
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.3);
+  transform: scale(0);
+  will-change: transform, opacity;
+}

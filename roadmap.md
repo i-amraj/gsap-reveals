@@ -1,6 +1,6 @@
 # 🗺️ GSAP Animation Styles Showcase Roadmap
 
-> **Overall Progress:** `[3 / 22 Animation Showcase Modules Completed] (14%)`
+> **Overall Progress:** `[4 / 22 Animation Showcase Modules Completed] (18%)`
 > **Workflow Protocol:** Har Animation Style ka dedicated folder hoga ➔ Usme live webpage (`index.html`), styling (`styles.css`), GSAP logic (`script.js`), detail guide (`README.md`), aur dedicated AI prompt (`prompt.md`) hogi.
 
 ---
@@ -8,8 +8,8 @@
 ## 🖼️ Category 1: Image & Visual Reveal Animation Styles
 - [x] **Style 1.1:** Canvas Image Mask Reveals (`01_clip_path_image_reveal`) — *(Completed 16 Sub-Demos)*
 - [x] **Style 1.2:** Image Parallax & Scale Depth Zoom (`02_image_parallax_zoom`) — *(Completed 22 Sub-Demos)*
-- [x] **Style 1.3:** WebGL & GSAP Liquid Distortion Hover (`03_hover_liquid_distortion`) — *(Completed 12 Sub-Demos)*
-- [ ] **Style 1.4:** Interactive Mouse Trail Multi-Image Sequence (`04_image_trail_cursor`)
+- [x] **Style 1.3:** WebGL & GSAP Liquid Distortion Hover (`03_hover_liquid_distortion`) — *(Completed 22 Sub-Demos)*
+- [x] **Style 1.4:** Interactive Mouse Trail Multi-Image Sequence (`04_image_trail_cursor`) — *(Completed 8 Sub-Demos)*
 
 
 ---

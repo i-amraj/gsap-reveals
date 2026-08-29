@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #fdf4ff; /* light pinkish */
+  color: #3f2c3e;
+  overflow: hidden;
+}
+
+.trail-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.badge {
+  background: rgba(192, 38, 211, 0.15);
+  color: #c026d3;
+  border: 1px solid rgba(192, 38, 211, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-header h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #3f2c3e;
+}
+
+.hero-header p {
+  color: #865583;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+/* Polaroids style */
+.scatter-img {
+  position: absolute;
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border: 12px solid #fff;
+  border-bottom: 40px solid #fff; /* Instant polaroid look */
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  will-change: transform, opacity;
+  z-index: 5;
+  /* Transform origin center for better rotation */
+  transform-origin: center center;
+}
