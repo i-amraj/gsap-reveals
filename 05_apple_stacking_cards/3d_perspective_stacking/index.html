@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Perspective Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">Z-AXIS DEPTH</span>
+    <h1>3D PERSPECTIVE DECK</h1>
+    <p>Scroll down to see cards tilt backwards into space</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #fce7f3; color: #831843;">
+        <div class="card-content">
+          <h2>Spatial UI</h2>
+          <p>Cards don't just shrink, they physically rotate back into the screen on the X-axis.</p>
+        </div>
+        <img src="../../assets/nature1.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #fef3c7; color: #78350f;">
+        <div class="card-content">
+          <h2>Perspective Rendering</h2>
+          <p>By applying a CSS perspective to the wrapper, we achieve real 3D depth.</p>
+        </div>
+        <img src="../../assets/nature2.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #d1fae5; color: #064e3b;">
+        <div class="card-content">
+          <h2>Lighting & Shadow</h2>
+          <p>Using CSS brightness filters, cards dynamically darken as they fall back into the shadows.</p>
+        </div>
+        <img src="../../assets/nature1.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #e0e7ff; color: #312e81;">
+        <div class="card-content">
+          <h2>The Final Card</h2>
+          <p>This is the last card in the 3D deck sequence.</p>
+        </div>
+        <img src="../../assets/nature2.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Stack</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

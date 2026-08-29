@@ -1,6 +1,6 @@
 # 🗺️ GSAP Animation Styles Showcase Roadmap
 
-> **Overall Progress:** `[4 / 22 Animation Showcase Modules Completed] (18%)`
+> **Overall Progress:** `[5 / 22 Animation Showcase Modules Completed] (22%)`
 > **Workflow Protocol:** Har Animation Style ka dedicated folder hoga ➔ Usme live webpage (`index.html`), styling (`styles.css`), GSAP logic (`script.js`), detail guide (`README.md`), aur dedicated AI prompt (`prompt.md`) hogi.
 
 ---
@@ -15,7 +15,7 @@
 ---
 
 ## 🃏 Category 2: Card & Grid Visual Animation Styles
-- [ ] **Style 2.1:** `05_apple_stacking_cards` — Apple-Style Sticky Pinned Stacking Cards on Scroll
+- [x] **Style 2.1:** `05_apple_stacking_cards` — Apple-Style Sticky Pinned Stacking Cards on Scroll — *(Completed 4 Sub-Demos)*
 - [ ] **Style 2.2:** `06_card_3d_tilt_hover` — Interactive 3D Perspective Tilt & Lighting Card Hover
 - [ ] **Style 2.3:** `07_flip_grid_transition` — GSAP Flip Plugin Lag-Free Grid Rearrange & Filtering
 - [ ] **Style 2.4:** `08_horizontal_card_track` — Mousewheel & Touch Linked Horizontal Card Slider Track

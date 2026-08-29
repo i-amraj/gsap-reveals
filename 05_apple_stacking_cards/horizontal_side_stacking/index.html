@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Side Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">SCROLL LINKED</span>
+    <h1>HORIZONTAL STACK</h1>
+    <p>Scroll down to move cards horizontally and stack them left</p>
+  </header>
+
+  <!-- This master container is pinned -->
+  <div class="h-scroll-section">
+    <!-- The track that moves left -->
+    <div class="h-track">
+      
+      <!-- Card 1 -->
+      <div class="h-card-wrapper">
+        <div class="h-card" style="background-color: #f8fafc; color: #0f172a;">
+          <div class="card-content">
+            <h2>Start Left</h2>
+            <p>This card hits the left edge and stops immediately.</p>
+          </div>
+          <img src="../../assets/nature1.jpeg" class="card-img">
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="h-card-wrapper">
+        <div class="h-card" style="background-color: #0f172a; color: #f8fafc;">
+          <div class="card-content">
+            <h2>Overlap</h2>
+            <p>Subsequent cards slide completely over the previous ones.</p>
+          </div>
+          <img src="../../assets/nature2.jpeg" class="card-img">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="h-card-wrapper">
+        <div class="h-card" style="background-color: #3b82f6; color: #ffffff;">
+          <div class="card-content">
+            <h2>Depth Slide</h2>
+            <p>Previous cards scale down and darken slightly beneath.</p>
+          </div>
+          <img src="../../assets/nature1.jpeg" class="card-img">
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="h-card-wrapper">
+        <div class="h-card" style="background-color: #ef4444; color: #ffffff;">
+          <div class="card-content">
+            <h2>Final Card</h2>
+            <p>End of the horizontal track.</p>
+          </div>
+          <img src="../../assets/nature2.jpeg" class="card-img">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Track</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

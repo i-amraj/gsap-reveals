@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classic Stacking Cards</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <h1>APPLE STYLE STACKING</h1>
+    <p>Scroll down to see the effect</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #f8fafc; color: #0f172a;">
+        <div class="card-content">
+          <h2>Design Perfection</h2>
+          <p>Every detail meticulously crafted for maximum visual impact.</p>
+        </div>
+        <img src="../../assets/nature1.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #0f172a; color: #f8fafc;">
+        <div class="card-content">
+          <h2>Seamless Flow</h2>
+          <p>ScrollTrigger handles the heavy lifting, ensuring perfectly smooth pinning.</p>
+        </div>
+        <img src="../../assets/nature2.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #3b82f6; color: #ffffff;">
+        <div class="card-content">
+          <h2>Depth & Shadow</h2>
+          <p>Cards scale down and darken as they are covered by subsequent layers.</p>
+        </div>
+        <img src="../../assets/nature1.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="card" style="background-color: #ef4444; color: #ffffff;">
+        <div class="card-content">
+          <h2>The Final Layer</h2>
+          <p>Stacking ends here. Continue scrolling to reveal the footer.</p>
+        </div>
+        <img src="../../assets/nature2.jpeg" alt="Nature" class="card-img">
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Stack</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Image Stacking</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="spacer-hero">
+    <span class="badge">INTERNAL PARALLAX</span>
+    <h1>PARALLAX STACKING</h1>
+    <p>Pinned cards feature internal image parallax as you scroll</p>
+  </header>
+
+  <div class="cards-wrapper">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-bg">
+          <img src="../../assets/nature1.jpeg" alt="Nature">
+        </div>
+        <div class="card-content">
+          <h2>Majestic Peaks</h2>
+          <p>Observe how the image pans independently inside the pinned card.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-bg">
+          <img src="../../assets/nature2.jpeg" alt="Nature">
+        </div>
+        <div class="card-content">
+          <h2>Deep Valleys</h2>
+          <p>The card scales down while the image inside continues its parallax journey.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-bg">
+          <img src="../../assets/nature1.jpeg" alt="Nature">
+        </div>
+        <div class="card-content">
+          <h2>Silent Forests</h2>
+          <p>A true Awwwards-winning combination of pinning and internal scrub.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="card">
+        <div class="card-bg">
+          <img src="../../assets/nature2.jpeg" alt="Nature">
+        </div>
+        <div class="card-content">
+          <h2>The Zenith</h2>
+          <p>The final destination of the stack.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="spacer-footer">
+    <h2>End of Parallax</h2>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

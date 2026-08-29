@@ -325,3 +325,23 @@ The user requested more variations, so we built 14 additional advanced trail con
 - Code committed and pushed to GitHub repo.
 
 **Next Phase:** Category 2: Card & Grid Visual Animation Styles (`05_apple_stacking_cards`).
+
+---
+
+## Session Update: Style 2.1 (Apple Stacking Cards)
+**Objective:** Kick off Category 2 by building out the first module: `05_apple_stacking_cards`.
+
+**Accomplished:**
+Engineered 4 premium Awwwards-winning variations of the sticky stacking cards effect using `ScrollTrigger`:
+1. **Classic Stacking Cards (`classic_stacking_cards`)**: The standard Apple effect where cards pin and stack vertically, scaling and darkening as they are covered.
+2. **3D Perspective Stacking (`3d_perspective_stacking`)**: Cards tilt backwards on the X-axis into true 3D space as they stack, creating a physical "deck" feel.
+3. **Horizontal Side Stacking (`horizontal_side_stacking`)**: Vertical scrolling moves cards horizontally into a stack on the left side of the screen.
+4. **Parallax Image Stacking (`parallax_image_stacking`)**: While the card is pinned, the oversized background image inside it continues to scrub on the Y-axis, creating intense internal depth.
+
+**Status:**
+- Created all 4 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `05_apple_stacking_cards/README.md` created as index.
+- `roadmap.md` updated: Style 2.1 marked complete.
+- Code committed and pushed to GitHub repo `i-amraj/gsap-reveals`.
+
+**Next Phase:** Style 2.2: Interactive 3D Perspective Tilt & Lighting Card Hover (`06_card_3d_tilt_hover`).
