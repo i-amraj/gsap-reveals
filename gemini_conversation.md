@@ -208,15 +208,14 @@ gsap.registerPlugin(ScrollTrigger);
   11. `pinned_zoom_lens_spotlight/` ➔ 2.5x HD Detail Magnifying Spotlight Traversal Lens
   12. `isometric_3d_plane_parallax/` ➔ Web3 Isometric 3D Plane Height Elevation (translateZ: 180px)
   13. `spiral_vortex_3d_zoom/` ➔ Music Video 3D Spiral Rotational Depth Travel
-  14. `overlapping_slat_venetian_parallax/` ➔ 5-Strip Vertical Shutter Slice Staggered Parallax
-  15. `spherical_globe_parallax_zoom/` ➔ 3D Spherical Globe Lens Sphere Unfold into Flat Viewport
-  16. `prism_kaleidoscope_3d_zoom/` ➔ Cyberpunk 4-Facet Triangular Prism 3D Geometric Unfold
-  17. `cylindrical_3d_carousel_parallax/` ➔ Revolving 3D Cylinder Image Ring Interactive Carousel
-  18. `depth_blur_aperture_focus/` ➔ Gaussian Blur (28px ➔ 0px) Camera Depth-of-Field Lens Focus
-  19. `diagonal_slice_parallax_cascade/` ➔ 45-Degree Diagonal Sloped Polygon Strip Cascade Slide
-  20. `interactive_magnetic_cursor_zoom/` ➔ Mouse Proximity Magnetic Pull + Spring Physics Depth Scale
-  21. `scroll_velocity_ripple_wave/` ➔ Scroll Speed SVG Displacement Wave Distortion & Skew
-  22. `crossfade_dual_layer_parallax/` ➔ Dual-Asset Nature 1 ➔ Nature 2 Counter-Slide Opacity Morph
+🌊 **Style 1.3: `03_hover_liquid_distortion/` WebGL & Liquid Suite Launched:**
+- Created 4 initial sub-demo engine folders using `nature1.jpeg` and `nature2.jpeg` from `../../assets/`:
+  1. `water_ripple_displacement/` ➔ Interactive SVG Turbulence Water Wave Displacement Hover
+  2. `rgb_split_glitch_liquid/` ➔ Cyberpunk RGB Color Channel Split & Wave Turbulence Hover
+  3. `fluid_glass_refraction/` ➔ Luxury Circular Fluid Glass Lens Cursor Refraction & Zoom
+  4. `directional_wave_slide/` ➔ Nature 1 ➔ Nature 2 Directional Liquid Wave Morph Transition
+- Every folder contains `index.html`, `styles.css`, `script.js`, `README.md`, and dedicated AI prompt `prompt.md` (Rule 9).
+
 
 
 

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: #080a11;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero-header {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-header h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-header p {
+  color: #94a3b8;
+  font-size: 1.15rem;
+  margin-top: 10px;
+}
+
+.card-stage {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-card {
+  width: 60vw;
+  height: 60vh;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glass-lens {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 50px rgba(52, 211, 153, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+  will-change: transform;
+}
+
+.lens-img {
+  width: 60vw; /* Exact match with card width */
+  height: 60vh; /* Exact match with card height */
+  object-fit: cover;
+  position: absolute;
+  transform: scale(1.35); /* Refracted zoom */
+  transform-origin: center center;
+}
+
+.card-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px;
+  background: linear-gradient(to top, rgba(8, 10, 17, 0.95) 0%, rgba(8, 10, 17, 0) 100%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.card-caption h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.card-caption p {
+  color: #34d399;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.footer {
+  padding: 60px;
+  text-align: center;
+  color: #64748b;
+}

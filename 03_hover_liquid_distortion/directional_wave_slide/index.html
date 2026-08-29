@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directional Fluid Flow Morphing Hover</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero-header">
+    <span class="badge">DIRECTIONAL FLUID FLOW</span>
+    <h1>LIQUID WAVE MORPH</h1>
+    <p>Hover over the card from any direction to morph Nature 1 into Nature 2 with fluid wave distortion</p>
+  </header>
+
+  <!-- SVG Wave Morph Filter -->
+  <svg style="display: none;">
+    <filter id="waveMorphFilter">
+      <feTurbulence id="waveTurbulence" type="fractalNoise" baseFrequency="0.03" numOctaves="2" result="noise" />
+      <feDisplacementMap id="waveDispMap" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <main class="card-stage">
+    <div class="fluid-slide-card">
+      <img src="../../assets/nature1.jpeg" alt="Nature Base" class="base-img">
+      <div class="overlay-wrapper">
+        <img src="../../assets/nature2.jpeg" alt="Nature Hover Overlay" class="overlay-img">
+      </div>
+      <div class="card-caption">
+        <h2>DIRECTIONAL FLUID MORPH</h2>
+        <p>Nature 1 ➔ Nature 2 Dynamic Liquid Wave Transition</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Directional Fluid Flow Morphing Engine</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
