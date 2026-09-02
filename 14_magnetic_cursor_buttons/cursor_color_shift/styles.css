@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; cursor:none; }
+#cursor { position:fixed; width:20px; height:20px; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:background 0.4s; background:#fff; }
+.zone { height:100vh; display:flex; align-items:center; justify-content:center; }
+.zone h2 { font-size:4rem; font-weight:700; }
+.zone-dark { background:#0f0f0f; color:#fff; }
+.zone-light { background:#fafafa; color:#111; }
+.zone-color { background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; }

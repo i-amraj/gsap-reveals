@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0f0f0f; color:#fff; font-family:'Press Start 2P',monospace; cursor:none; min-height:100vh; overflow:hidden; }
+#cursor { position:fixed; width:12px; height:12px; background:#39ff14; image-rendering:pixelated; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); box-shadow:0 0 6px #39ff14; }
+.pixel-block { position:fixed; image-rendering:pixelated; pointer-events:none; z-index:100; transform:translate(-50%,-50%); }
+.page { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:2rem; }
+.title { font-size:clamp(1.5rem,5vw,3rem); color:#39ff14; text-shadow:0 0 10px #39ff14; }
+.subtitle { font-size:0.7rem; color:#555; }

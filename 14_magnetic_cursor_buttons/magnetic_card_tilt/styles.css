@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#f8fafc; color:#111; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; }
+#cursor { position:fixed; width:12px; height:12px; background:#111; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); }
+.page { max-width:1000px; margin:0 auto; padding:6rem 2rem; text-align:center; }
+.title { font-size:4rem; font-weight:700; letter-spacing:-2px; margin-bottom:3rem; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:2rem; }
+.tilt-card { padding:2.5rem; background:#fff; border-radius:1.5rem; box-shadow:0 4px 24px rgba(0,0,0,0.08); cursor:none; perspective:800px; }
+.tilt-card .emoji { font-size:2.5rem; display:block; margin-bottom:1rem; }
+.tilt-card h3 { font-size:1.3rem; font-weight:700; margin-bottom:0.5rem; }
+.tilt-card p { color:#888; font-size:0.95rem; }

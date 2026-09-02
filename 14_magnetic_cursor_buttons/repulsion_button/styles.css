@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#fafafa; color:#111; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; }
+#cursor { position:fixed; width:16px; height:16px; background:#111; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); }
+.page { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+.title { font-size:4rem; font-weight:700; letter-spacing:-2px; margin-bottom:1rem; }
+.subtitle { color:#888; margin-bottom:3rem; }
+.grid { display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; }
+.repel-btn { padding:1rem 2.5rem; background:#111; color:#fff; border:none; border-radius:50px; font-family:'Inter',sans-serif; font-size:1rem; font-weight:600; cursor:none; will-change:transform; }

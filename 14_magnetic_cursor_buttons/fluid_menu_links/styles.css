@@ -1,0 +1,9 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0a0a0a; color:#fff; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; }
+#cursor { position:fixed; width:10px; height:10px; background:#fff; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); mix-blend-mode:difference; }
+.menu { height:100vh; display:flex; flex-direction:column; justify-content:center; padding:0 8vw; gap:0.5rem; overflow:hidden; }
+.menu-link { display:block; font-size:clamp(2.5rem,6vw,6rem); font-weight:700; text-decoration:none; color:#fff; cursor:none; overflow:hidden; height:1.1em; position:relative; line-height:1.1; }
+.menu-link .front,.menu-link .back { display:block; transition:transform 0.4s cubic-bezier(0.76,0,0.24,1); }
+.menu-link .back { position:absolute; top:0; left:0; color:#a78bfa; transform:translateY(100%); }
+.menu-link:hover .front { transform:translateY(-100%); }
+.menu-link:hover .back { transform:translateY(0%); }

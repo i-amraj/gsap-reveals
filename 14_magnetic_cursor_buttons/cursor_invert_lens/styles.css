@@ -1,0 +1,9 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#000; color:#fff; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; overflow-x:hidden; }
+.cursor-lens { position:fixed; width:150px; height:150px; background:#fff; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); mix-blend-mode:difference; will-change:transform; }
+.page { max-width:1200px; margin:0 auto; padding:6rem 2rem; text-align:center; }
+.title { font-size:8rem; font-weight:900; letter-spacing:-4px; margin-bottom:1rem; text-transform:uppercase; }
+.subtitle { color:#888; font-size:1.2rem; margin-bottom:4rem; }
+.image-wrap { width:100%; max-width:800px; margin:0 auto; border-radius:2rem; overflow:hidden; }
+.image-wrap img { width:100%; display:block; filter:grayscale(100%); transition:filter 0.5s; }
+.image-wrap:hover img { filter:grayscale(0%); }

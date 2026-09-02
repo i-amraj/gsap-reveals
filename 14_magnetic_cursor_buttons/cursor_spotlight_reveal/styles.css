@@ -1,0 +1,13 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0d0d0d; color:#fff; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; }
+#cursor { position:fixed; width:12px; height:12px; background:#fff; border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); }
+.spotlight {
+  position:fixed; top:0; left:0; width:100vw; height:100vh;
+  background: radial-gradient(circle 180px at 50% 50%, transparent 0%, rgba(0,0,0,0.97) 100%);
+  pointer-events:none; z-index:5;
+  transition:opacity 0.3s;
+}
+.page { position:relative; z-index:10; max-width:700px; margin:0 auto; padding:8rem 2rem; }
+.title { font-size:4rem; font-weight:700; letter-spacing:-2px; margin-bottom:1rem; }
+.subtitle { color:#444; margin-bottom:3rem; font-size:1.1rem; }
+.hidden-text { font-size:1.3rem; line-height:2; color:#888; }

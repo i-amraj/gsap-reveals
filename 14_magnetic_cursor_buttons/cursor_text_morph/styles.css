@@ -1,0 +1,22 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#111; color:#fff; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; }
+
+#cursor {
+  position:fixed; width:48px; height:48px;
+  border:1.5px solid rgba(255,255,255,0.5);
+  border-radius:50%; pointer-events:none; z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  transform:translate(-50%,-50%);
+  transition:width 0.3s, height 0.3s, background 0.3s;
+}
+#cursor.active { width:90px; height:90px; background:rgba(255,255,255,0.1); border-color:#fff; }
+#cursor-label { font-size:0.6rem; font-weight:700; letter-spacing:2px; opacity:0; transition:opacity 0.3s; }
+#cursor.active #cursor-label { opacity:1; }
+
+.page { max-width:900px; margin:0 auto; padding:8rem 2rem; text-align:center; }
+.title { font-size:4rem; font-weight:700; letter-spacing:-2px; margin-bottom:3rem; }
+.card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
+.card { padding:2.5rem 2rem; border:1px solid rgba(255,255,255,0.1); border-radius:1rem; text-align:left; cursor:none; transition:border-color 0.3s; }
+.card:hover { border-color:rgba(255,255,255,0.4); }
+.card h2 { font-size:1.5rem; margin-bottom:0.5rem; }
+.card p { color:#555; }

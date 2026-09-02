@@ -32,7 +32,7 @@
 
 ## 🌟 Category 4: Hero Section & Preloader Animation Styles
 - [x] **Style 4.1:** `13_curtain_split_preloader` — 0-100% Counter & Center Curtain Split Preloader — *(Completed 22 Sub-Demos)*
-- [ ] **Style 4.2:** `14_magnetic_cursor_buttons` — Smooth Magnetic Physics Cursor & Magnetic Button Hover — *(Initiated 4 Sub-Demos)*
+- [x] **Style 4.2:** `14_magnetic_cursor_buttons` — Smooth Magnetic Physics Cursor & Magnetic Button Hover — *(Completed 22 Sub-Demos)*
 
 ---
 

@@ -1,0 +1,6 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0f0f0f; color:#fff; font-family:'Inter',sans-serif; cursor:none; min-height:100vh; overflow:hidden; }
+#cursor { position:fixed; width:30px; height:30px; background:rgba(139,92,246,0.8); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); will-change:transform,border-radius; filter:blur(2px); }
+.page { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+.title { font-size:6rem; font-weight:700; letter-spacing:-3px; }
+.subtitle { color:#555; margin-top:1rem; font-size:1.2rem; }
