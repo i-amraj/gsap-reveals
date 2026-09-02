@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #0f172a; color: #fff; overflow: hidden; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subtitle {
+  color: #f59e0b; /* Amber */
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.edges-scramble {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  cursor: crosshair;
+  transition: color 0.3s ease;
+}
+
+.edges-scramble:hover {
+  color: #f59e0b;
+}
+
+@media (max-width: 768px) {
+  .edges-scramble { font-size: 1.2rem; text-align: center; }
+}

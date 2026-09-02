@@ -1,0 +1,48 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #050505; color: #fff; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.clock-card {
+  background: #111;
+  border: 1px solid #333;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.clock-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.clock-text {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #f8fafc;
+  /* Glow that pulses slightly via JS */
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+@media (max-width: 768px) {
+  .clock-card { padding: 1.5rem 2rem; }
+  .clock-text { font-size: 3rem; }
+}

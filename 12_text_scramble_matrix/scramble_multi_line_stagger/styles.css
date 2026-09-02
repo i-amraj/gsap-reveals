@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #0f172a; color: #fff; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { font-size: 1.2rem; color: #94a3b8; }
+
+.decode-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15vw;
+}
+
+.subtitle {
+  color: #10b981; 
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.stagger-paragraph {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.5;
+}
+
+/* Fix SplitType display issue */
+.line {
+  display: block; /* Force lines to stack */
+  color: #ef4444; /* Start red (encrypted) */
+  transition: color 0.5s ease;
+}
+
+/* Once decoded, they will be given this class via JS to return to white */
+.line.decoded {
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .stagger-paragraph { font-size: 1.5rem; }
+  .decode-section { padding: 0 5vw; }
+}

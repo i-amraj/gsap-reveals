@@ -1,0 +1,30 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #0f172a; color: #fff; overflow: hidden; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subtitle {
+  color: #0ea5e9; /* Sky blue */
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.blur-scramble {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #f8fafc;
+  cursor: crosshair;
+  /* Will-change helps performance when animating CSS filters rapidly */
+  will-change: filter, color;
+}
+
+@media (max-width: 768px) {
+  .blur-scramble { font-size: 1.5rem; text-align: center; }
+}

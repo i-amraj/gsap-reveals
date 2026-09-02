@@ -4,7 +4,7 @@ Welcome to the **Text Scramble Matrix** library. This module focuses on cryptogr
 
 Because the official GSAP `ScrambleTextPlugin` is a paid Club GreenSock utility, **all variations in this library are built entirely from scratch using free GSAP core logic**. By tweening a proxy object's progress and updating the text inside an `onUpdate` callback, we achieve identical, highly-performant scramble effects without requiring premium plugins.
 
-## 📦 Sub-Demos (Currently 16)
+## 📦 Sub-Demos (Currently 22)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -24,6 +24,12 @@ Because the official GSAP `ScrambleTextPlugin` is a paid Club GreenSock utility,
 | 14 | `scramble_random_word_glitch` | Periodically picks a random word inside a large static paragraph and glitches it out for a fraction of a second, creating a highly unstable aesthetic. | ✅ |
 | 15 | `scramble_hover_encrypt` | Inverts standard logic: The text is normally readable, but when hovered, it rapidly *encrypts* into symbols to hide sensitive data. | ✅ |
 | 16 | `scramble_loading_percentages` | A highly dynamic loader where the percentage counter (`004%`) violently scrambles its digits while counting up, locking in smoothly at `100%`. | ✅ |
+| 17 | `scramble_center_out` | A radial decryption where the text locks in from the exact center and spreads mathematically outwards to the edges. | ✅ |
+| 18 | `scramble_edges_in` | A converging decryption where the outer edges of the text lock in first and meet in the exact center of the string. | ✅ |
+| 19 | `scramble_blur_glitch` | Combines text scrambling with a dynamic CSS `filter: blur()` mapped to a sine wave, creating an optical camera refocus effect. | ✅ |
+| 20 | `scramble_multi_line_stagger` | Uses `SplitType` by lines. A massive paragraph of encrypted text decrypts in a sequential, cascading waterfall down the page as you scroll. | ✅ |
+| 21 | `scramble_binary_clock` | A live digital clock (`HH:MM:SS`) where every passing second rapidly decrypts into existence from a pool of 1s and 0s. | ✅ |
+| 22 | `scramble_image_caption_reveal` | Hovering over an image card triggers a hidden caption to physically slide up and aggressively decrypt into readable text. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
