@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow: hidden; } /* Disable page scroll for this demo */
+
+.page-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
+.content-side h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; margin-bottom: 1rem; }
+.content-side p { color: #94a3b8; font-size: 1.2rem; max-width: 500px; line-height: 1.6; }
+
+.marquee-side {
+  width: 300px;
+  background: #1e293b;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marquee-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  will-change: transform;
+}
+
+.marquee-content {
+  display: flex;
+  flex-direction: column;
+  /* Use bottom padding to space out the duplicates correctly */
+}
+
+.marquee-content div {
+  font-size: 4rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem 0;
+  /* Optional: flip text vertically if desired, but stacked horizontal text is more readable */
+}
+
+@media (max-width: 768px) {
+  .page-layout { flex-direction: column; }
+  .marquee-side { width: 100%; height: 300px; border-left: none; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  .marquee-container { height: 300px; }
+  .marquee-content div { font-size: 3rem; }
+}

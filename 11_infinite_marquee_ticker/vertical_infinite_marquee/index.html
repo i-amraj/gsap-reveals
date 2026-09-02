@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Infinite Marquee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="page-layout">
+    <div class="content-side">
+      <h1>VERTICAL RIBBON</h1>
+      <p>Marquees aren't limited to the X-axis. By stacking flex items in a column and animating the yPercent, you can create infinite sidebars or scrolling credits.</p>
+    </div>
+    
+    <div class="marquee-side">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- First Copy -->
+          <div class="marquee-content">
+            <div>AWARD WINNING</div>
+            <div>DIGITAL AGENCY</div>
+            <div>EST. 2024</div>
+            <div>CREATIVE STUDIO</div>
+          </div>
+          <!-- Exact Duplicate for seamless loop -->
+          <div class="marquee-content">
+            <div>AWARD WINNING</div>
+            <div>DIGITAL AGENCY</div>
+            <div>EST. 2024</div>
+            <div>CREATIVE STUDIO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

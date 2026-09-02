@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Direction Marquee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>The marquee flows left.</p>
+  </section>
+
+  <section class="marquee-section">
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          SCROLL DIRECTION &bull; REVERSE FLOW &bull; INTERACTIVE TICKER &bull; 
+        </div>
+        <div class="marquee-content">
+          SCROLL DIRECTION &bull; REVERSE FLOW &bull; INTERACTIVE TICKER &bull; 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>SCROLL UP</h1>
+    <p>The marquee flows right.</p>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
