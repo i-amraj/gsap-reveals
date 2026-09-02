@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic 3D Tilt Hover</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">STYLE 2.2</span>
+    <h1>BASIC 3D TILT</h1>
+    <p>Hover over the cards to see them react dynamically to your mouse position</p>
+  </header>
+
+  <main class="grid-container">
+    
+    <!-- Card 1 -->
+    <div class="card-wrapper">
+      <div class="card" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6);">
+        <div class="card-content">
+          <h2>Standard</h2>
+          <p>Smooth responsive tilt calculation mapped to cursor coordinates.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-wrapper">
+      <div class="card" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+        <div class="card-content">
+          <h2>Fluid</h2>
+          <p>Interpolation managed by GSAP for zero jitter or lag.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-wrapper">
+      <div class="card" style="background: linear-gradient(135deg, #f43f5e, #ec4899);">
+        <div class="card-content">
+          <h2>Reset</h2>
+          <p>Springs back to default 0deg rotation smoothly on mouse leave.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

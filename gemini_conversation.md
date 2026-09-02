@@ -363,3 +363,21 @@ Engineered 22 premium Awwwards-winning variations of the sticky stacking cards e
 - Code committed and pushed to GitHub repo `i-amraj/gsap-reveals`.
 
 **Next Phase:** Style 2.2: Interactive 3D Perspective Tilt & Lighting Card Hover (`06_card_3d_tilt_hover`).
+
+---
+
+## Session Update: Style 2.2 (Interactive 3D Tilt Hover) Kickoff
+**Objective:** Initiate the `06_card_3d_tilt_hover` module by building the foundational 3D hover effects.
+
+**Accomplished:**
+Engineered the first 4 variations of the 3D Perspective Tilt Card using GSAP mouse tracking:
+1. **Basic 3D Tilt (`basic_3d_tilt`)**: Smoothly maps `mousemove` coordinates to `rotationX` and `rotationY` within a `perspective` wrapper.
+2. **Glare Lighting Tilt (`glare_lighting_tilt`)**: Adds an absolute radial-gradient layer that dynamically follows the cursor to simulate specular lighting/glare on a glossy surface.
+3. **Floating Elements Tilt (`floating_elements_tilt`)**: Children inside the tilted card use `translateZ` to physically pop out toward the camera, creating strong parallax depth.
+4. **Magnetic Pull Tilt (`magnetic_tilt_hover`)**: The card not only tilts but also translates its X/Y coordinates slightly towards the cursor (magnetic snap) with an elastic bounce on reset.
+
+**Status:**
+- Created all 4 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `06_card_3d_tilt_hover/README.md` created.
+- `roadmap.md` updated: Style 2.2 marked as initiated (4 Sub-Demos).
+- Code committed and pushed to GitHub repo `i-amraj/gsap-reveals`.
