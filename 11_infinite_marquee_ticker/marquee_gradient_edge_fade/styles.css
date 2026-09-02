@@ -1,0 +1,59 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.marquee-section {
+  padding: 10vh 0;
+  background: #0f172a;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  
+  /* The Magic Mask */
+  -webkit-mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 15%, 
+    black 85%, 
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right, 
+    transparent 0%, 
+    black 15%, 
+    black 85%, 
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-content {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fff;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .marquee-content { font-size: 4rem; }
+}

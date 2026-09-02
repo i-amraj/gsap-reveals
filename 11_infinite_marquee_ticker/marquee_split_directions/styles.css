@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.marquee-section {
+  padding: 10vh 0;
+  background: #0f172a;
+}
+
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  /* Fixed height so absolute tracks stack correctly */
+  height: 12rem; 
+  width: 100%;
+}
+
+.marquee-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Slices the element, hiding the bottom 50% */
+.track-top {
+  clip-path: inset(0 0 50% 0);
+  /* Optional: differentiate color for extra effect */
+  color: #fff;
+}
+
+/* Slices the element, hiding the top 50% */
+.track-bottom {
+  clip-path: inset(50% 0 0 0);
+  color: #38bdf8;
+}
+
+.marquee-content {
+  font-size: 10rem;
+  font-weight: 900;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  user-select: none;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .marquee-wrapper { height: 6rem; }
+  .marquee-content { font-size: 5rem; }
+}
