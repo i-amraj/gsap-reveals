@@ -445,3 +445,5 @@ Engineered the first 4 variations demonstrating horizontal scroll hijacking:
 - Initiated **Style 3.1**, focusing on advanced kinetic typography using GSAP ScrollTrigger and the `SplitType` library.
 - Developed the first 4 core sub-demos: `word_by_word_opacity`, `character_by_character_opacity`, `line_by_line_opacity`, and `word_blur_reveal`.
 - Committed the foundation.
+- Finished all 22 variations for Style 3.1 (`09_scroll_text_highlight`), deeply exploring typography animation with `SplitType`, including Apple-style mask wipes, variable font weights, and 3D kinetic text.
+- Updated `roadmap.md` marking Style 3.1 as completed and pushed everything to the repository.

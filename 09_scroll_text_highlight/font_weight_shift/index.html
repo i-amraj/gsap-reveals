@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Weight Shift</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load Inter as a Variable Font (weights 100 through 900) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>Words dynamically gain physical weight and thickness.</p>
+  </section>
+
+  <section class="text-section">
+    <div class="container">
+      <p class="split-text">
+        Variable fonts have revolutionized typography on the web. Instead of swapping between static font files, we can smoothly interpolate the font-weight property in real-time, giving text a liquid, organic heartbeat as the user scrolls.
+      </p>
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
