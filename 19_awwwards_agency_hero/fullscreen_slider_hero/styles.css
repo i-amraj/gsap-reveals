@@ -1,0 +1,23 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow:hidden; }
+
+.slider-hero { position:relative; width:100vw; height:100vh; }
+
+.slide { position:absolute; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; overflow:hidden; clip-path: inset(0% 0% 0% 0%); }
+
+.slide-bg { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; background-size:cover; background-position:center; filter:brightness(0.5); transform:scale(1.2); }
+
+.slide-1 .slide-bg { background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); }
+.slide-2 .slide-bg { background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); }
+.slide-3 .slide-bg { background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); }
+
+.slide-content { position:relative; z-index:2; overflow:hidden; }
+.slide-content h1 { font-size:10vw; font-weight:700; letter-spacing:10px; transform:translateY(100%); }
+
+.slider-controls { position:absolute; bottom:40px; left:50%; transform:translateX(-50%); display:flex; gap:2rem; align-items:center; z-index:10; }
+button { background:transparent; color:#fff; border:1px solid #fff; padding:10px 20px; border-radius:30px; cursor:pointer; text-transform:uppercase; font-size:0.8rem; letter-spacing:1px; transition:background 0.3s, color 0.3s; }
+button:hover { background:#fff; color:#000; }
+.pagination { font-size:1.2rem; font-weight:700; }
+
+/* Ensure non-active slides are initially hidden via clip-path */
+.slide-2, .slide-3 { clip-path: inset(0% 0% 100% 0%); }

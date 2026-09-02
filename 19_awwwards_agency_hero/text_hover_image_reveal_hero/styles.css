@@ -1,0 +1,14 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Playfair Display',serif; background:#e5e5e5; color:#111; overflow-x:hidden; cursor:default; }
+
+.hero-section { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.menu-list { display:flex; flex-direction:column; align-items:center; }
+
+.menu-item { margin:1rem 0; cursor:pointer; position:relative; z-index:2; }
+.menu-item h1 { font-size:6rem; font-weight:400; font-style:italic; transition:color 0.3s; }
+.menu-item:hover h1 { color:#fff; mix-blend-mode:difference; }
+
+/* The reveal image */
+.hover-image-wrapper { position:fixed; top:0; left:0; width:400px; height:500px; pointer-events:none; z-index:1; transform:translate(-50%, -50%); opacity:0; overflow:hidden; border-radius:12px; }
+.hover-image { width:100%; height:100%; background-size:cover; background-position:center; transform:scale(1.2); }

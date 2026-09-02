@@ -1,0 +1,16 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:sans-serif; background:#fff; color:#000; overflow-x:hidden; }
+
+.video-mask-hero { position:relative; height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; background:#000; overflow:hidden; }
+
+.video-container { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; }
+video { width:100%; height:100%; object-fit:cover; }
+
+/* The magic: mix-blend-mode: multiply or screen. 
+Since video is under, we put a white layer over it with black text, and use screen */
+.text-mask { position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; z-index:2; display:flex; justify-content:center; align-items:center; mix-blend-mode:screen; }
+
+.mask-title { font-family:'Anton', sans-serif; font-size:30vw; line-height:1; color:#000; letter-spacing: -1vw; }
+
+.next-section { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; color:#fff; }
+.next-section h2 { font-size:4rem; }

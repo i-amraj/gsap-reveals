@@ -1,0 +1,11 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Anton',sans-serif; background:#fff; color:#000; overflow-x:hidden; }
+
+.hero-section { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; }
+
+.logo-wrapper { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); z-index:10; }
+.huge-logo { font-size:25vw; line-height:1; }
+
+.hero-image { width:80vw; height:60vh; background:url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; filter:grayscale(100%); margin-top:20vh; z-index:1; }
+
+.spacer { height:200vh; background:#111; }

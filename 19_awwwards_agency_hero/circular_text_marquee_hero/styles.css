@@ -1,0 +1,19 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#d6d3d1; color:#1c1917; overflow-x:hidden; }
+
+.hero-section { height:100vh; position:relative; display:flex; justify-content:center; align-items:center; }
+.spacer { height:100vh; background:#1c1917; }
+
+.content h1 { font-size:8rem; font-weight:700; line-height:1; letter-spacing:-2px; text-align:center; }
+.italic { font-family:'Playfair Display', serif; font-style:italic; font-weight:700; color:#c2410c; }
+
+.circular-badge { position:absolute; bottom:40px; right:40px; width:150px; height:150px; }
+#badge-svg { width:100%; height:100%; animation: rotateBadge 15s linear infinite; }
+.circular-text { font-family:'Inter',sans-serif; font-size:16.5px; font-weight:700; fill:#1c1917; text-transform:uppercase; letter-spacing: 2px; }
+
+@keyframes rotateBadge {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.badge-center { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); font-size:2rem; font-weight:300; }

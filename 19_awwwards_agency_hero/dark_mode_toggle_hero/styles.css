@@ -1,0 +1,29 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+/* Using CSS variables for easy swapping */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --btn-bg: #000000;
+  --btn-text: #ffffff;
+}
+
+body.dark-mode {
+  --bg: #000000;
+  --text: #ffffff;
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+}
+
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); transition: background 0s, color 0s; overflow:hidden; }
+
+.mode-mask { position:fixed; top:50px; right:50px; width:0px; height:0px; border-radius:50%; z-index:1; pointer-events:none; }
+
+.hero-section { height:100vh; display:flex; flex-direction:column; position:relative; z-index:2; mix-blend-mode:difference; color:#fff; }
+/* Using mix-blend-mode difference allows text to automatically invert based on background! */
+
+.header { padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center; }
+.logo { font-weight:700; font-size:2rem; }
+button { padding:10px 20px; font-family:inherit; font-weight:700; background:#fff; color:#000; border:none; border-radius:30px; cursor:pointer; }
+
+.content { flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; }
+.title { font-size:8rem; font-weight:700; letter-spacing:-2px; }

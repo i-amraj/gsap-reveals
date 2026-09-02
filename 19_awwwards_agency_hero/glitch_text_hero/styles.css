@@ -1,0 +1,16 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Share Tech Mono', monospace; background:#000; color:#0f0; overflow-x:hidden; }
+
+.hero-section { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+
+.glitch-wrapper { position:relative; }
+.glitch-text { font-size:10rem; font-weight:700; text-transform:uppercase; letter-spacing:5px; }
+
+/* The base text is exactly where it belongs */
+.text-base { position:relative; z-index:3; color:#fff; }
+
+/* The red and blue copies are placed exactly on top */
+.text-red { position:absolute; top:0; left:0; z-index:2; color:#f00; opacity:0; mix-blend-mode:screen; }
+.text-blue { position:absolute; top:0; left:0; z-index:1; color:#00f; opacity:0; mix-blend-mode:screen; }
+
+.subtitle { font-size:1.5rem; color:#0f0; margin-top:1rem; opacity:0; }

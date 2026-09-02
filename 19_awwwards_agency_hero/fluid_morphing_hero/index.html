@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fluid Morphing Hero</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <section class="hero-section">
+    <!-- SVG Blob Background -->
+    <div class="blob-wrapper">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="blob">
+        <path fill="#FF0066" d="M42.7,-74.6C56.6,-68.2,69.9,-58,78.2,-44.7C86.5,-31.4,89.7,-15.7,86.6,-1.8C83.5,12.1,74.1,24.2,64.8,35.8C55.5,47.4,46.3,58.5,34.4,66.1C22.5,73.7,7.9,77.8,-6.4,82.8C-20.7,87.8,-34.7,93.7,-46.8,88.7C-58.9,83.7,-69.1,67.8,-76.3,51C-83.5,34.2,-87.7,17.1,-87.1,0.4C-86.5,-16.3,-81,-32.6,-71.4,-45.5C-61.8,-58.4,-48.1,-67.9,-34.2,-74.3C-20.3,-80.7,-6.2,-84,8.1,-82.5C22.4,-81,36.5,-74.7,42.7,-74.6Z" transform="translate(100 100)" />
+      </svg>
+    </div>
+    
+    <div class="content">
+      <h1>Fluid <span class="italic">Forms</span></h1>
+      <p>Organically shaping the digital landscape.</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- Optional: If you have MorphSVGPlugin, include it here. For public demo, we animate path via simple attribute if points match, or just scale/rotate if not -->
+  <script src="script.js"></script>
+</body>
+</html>

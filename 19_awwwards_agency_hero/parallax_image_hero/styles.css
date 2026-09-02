@@ -1,0 +1,14 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; overflow:hidden; } /* Hidden for hero only demo */
+
+.parallax-hero { position:relative; width:100vw; height:100vh; display:flex; justify-content:center; align-items:center; overflow:hidden; }
+
+.parallax-layer { position:absolute; top:-5%; left:-5%; width:110%; height:110%; pointer-events:none; }
+
+.layer-bg { background:url('https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover; z-index:1; }
+
+.layer-text { display:flex; justify-content:center; align-items:center; z-index:2; }
+.layer-text h1 { font-size:15vw; font-weight:700; color:#fff; letter-spacing:1vw; mix-blend-mode:overlay; }
+
+/* Foreground element (e.g. some floating leaves or a cutout). We'll simulate with a gradient mask for now */
+.layer-fg { background: radial-gradient(circle at bottom right, rgba(0,0,0,0.8) 0%, transparent 60%); z-index:3; }

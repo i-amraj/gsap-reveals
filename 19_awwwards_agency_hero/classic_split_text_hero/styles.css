@@ -1,0 +1,23 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#0f0f0f; color:#f1f1f1; overflow-x:hidden; }
+
+.nav-bar { position:fixed; top:0; left:0; width:100%; padding:2rem 4rem; display:flex; justify-content:space-between; align-items:center; z-index:100; mix-blend-mode:difference; }
+.logo { font-family:'Oswald',sans-serif; font-size:2rem; font-weight:700; }
+.nav-links { display:flex; gap:2rem; }
+.nav-links a { color:#f1f1f1; text-decoration:none; text-transform:uppercase; font-size:0.875rem; letter-spacing:1px; }
+
+.hero-section { height:100vh; display:flex; padding:0 4rem; position:relative; align-items:center; }
+.hero-content { position:relative; z-index:10; width:60%; }
+
+.subtitle { font-size:1.125rem; text-transform:uppercase; letter-spacing:2px; margin-bottom:2rem; color:#888; opacity:0; }
+
+.main-title { font-family:'Oswald',sans-serif; font-size:8rem; line-height:0.9; text-transform:uppercase; margin-bottom:3rem; }
+.line { display:block; overflow:hidden; }
+.line-inner { display:block; transform:translateY(110%); }
+
+.cta-wrapper { opacity:0; }
+.cta-button { display:inline-block; padding:1.2rem 3rem; background:#f1f1f1; color:#0f0f0f; text-decoration:none; font-weight:500; border-radius:50px; text-transform:uppercase; letter-spacing:1px; transition:transform 0.3s ease; }
+.cta-button:hover { transform:scale(1.05); }
+
+.hero-image-wrapper { position:absolute; top:10%; right:4rem; width:45%; height:80%; overflow:hidden; z-index:1; border-radius:12px; }
+.hero-image { width:100%; height:100%; background:url('https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; transform:scale(1.2); }

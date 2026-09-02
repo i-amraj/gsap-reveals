@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Anton',sans-serif; background:#ff4500; color:#fff; overflow-x:hidden; }
+
+.hero-section { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.spacer { height:100vh; background:#111; }
+
+.kinetic-text { font-size:15vw; line-height:0.9; text-transform:uppercase; white-space:nowrap; transform-origin:center; }
+.outline { color:transparent; -webkit-text-stroke:2px #fff; }

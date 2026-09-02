@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SVG Drawing Hero</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Inter:wght@400&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <section class="hero-section">
+    <!-- SVG Vector Graphic -->
+    <svg class="hero-svg" viewBox="0 0 800 600" preserveAspectRatio="none">
+      <path class="draw-path" d="M 0 300 Q 200 100 400 300 T 800 300" />
+      <path class="draw-path" d="M 0 400 Q 200 600 400 400 T 800 400" />
+      <circle class="draw-path" cx="400" cy="300" r="150" />
+    </svg>
+    
+    <div class="content">
+      <h1 class="elegant-title">Minimal<br><span class="italic">Design</span></h1>
+      <p class="fade-in">Focusing on the space between the lines.</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
