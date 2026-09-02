@@ -1,0 +1,41 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.controls { display: flex; gap: 15px; margin-bottom: 50px; }
+.controls button {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; padding: 12px 24px; border-radius: 30px;
+  cursor: pointer; font-weight: 700; transition: all 0.3s;
+}
+.controls button:hover { background: #3b82f6; border-color: #3b82f6;}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+  position: relative; /* Essential for Flip absolute */
+}
+
+.box {
+  height: 80px;
+  border-radius: 12px;
+  display: flex; justify-content: center; align-items: center;
+  font-weight: 900; font-size: 1.5rem; color: rgba(255,255,255,0.8);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.box[data-color="red"] { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.box[data-color="blue"] { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.box[data-color="green"] { background: linear-gradient(135deg, #10b981, #047857); }
+
+@media (max-width: 768px) {
+  .grid-container { grid-template-columns: repeat(3, 1fr); }
+}

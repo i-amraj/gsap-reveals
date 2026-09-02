@@ -1,0 +1,48 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 80px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.controls { display: flex; gap: 15px; margin-bottom: 50px; }
+.resize-btn {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; padding: 12px 24px; border-radius: 30px;
+  cursor: pointer; font-weight: 700; transition: all 0.3s;
+}
+.resize-btn:hover { background: #3b82f6; border-color: #3b82f6;}
+
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center; /* Keeps the shrinking grid centered */
+}
+
+.grid-container {
+  display: grid;
+  /* Magic responsive grid: automatically creates columns and wraps to new lines */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  width: 100%; /* Default */
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative; /* For Flip absolute */
+  /* Add smooth transition to the width itself so the box shrinks nicely while Flip animates internals */
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.item {
+  background: linear-gradient(135deg, #10b981, #047857);
+  height: 120px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  /* The size of this will dynamically change based on grid auto-fit */
+}
+
+.item:nth-child(even) { background: linear-gradient(135deg, #f59e0b, #b45309); }
+.item:nth-child(3n) { background: #3b82f6; }

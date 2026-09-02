@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* CRITICAL: Enables wrapping */
+  gap: 15px;
+  width: 100%;
+  max-width: 600px; /* Constrained width forces wrapping */
+  padding: 30px;
+  background: #1e293b;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  position: relative; /* For Flip */
+}
+
+.tag {
+  background: #3b82f6;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tag:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Add some random colors via nth-child */
+.tag:nth-child(2n) { background: #f43f5e; }
+.tag:nth-child(3n) { background: #10b981; }
+.tag:nth-child(5n) { background: #a855f7; }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List to Detail</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">MASTER DETAIL</span>
+    <h1>LIST TO FULLSCREEN</h1>
+    <p>Click any row to expand it into a detail view. Click again to return.</p>
+  </header>
+
+  <main class="list-container" id="list">
+    
+    <div class="list-row">
+      <div class="color-tag" style="background: #3b82f6;"></div>
+      <div class="content">
+        <h3>Meeting with UI Team</h3>
+        <p>10:00 AM - Discussing design tokens.</p>
+        <div class="full-details">
+          <p>This text only appears in the full detail view! GSAP Flip handles the height expansion perfectly.</p>
+          <button class="action-btn">Join Meeting</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-row">
+      <div class="color-tag" style="background: #10b981;"></div>
+      <div class="content">
+        <h3>Lunch Break</h3>
+        <p>12:30 PM - Salad bowl.</p>
+        <div class="full-details">
+          <p>Enjoy your break. Don't forget to hydrate.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-row">
+      <div class="color-tag" style="background: #f43f5e;"></div>
+      <div class="content">
+        <h3>Deploy Production</h3>
+        <p>04:00 PM - Vercel pipeline trigger.</p>
+        <div class="full-details">
+          <p>Ensure all tests pass before hitting the deploy button.</p>
+          <button class="action-btn" style="background: #ef4444;">Deploy Now</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

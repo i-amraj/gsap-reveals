@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Container Morph</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">CROSS DOMAIN</span>
+    <h1>MULTI CONTAINER</h1>
+    <p>Click tags to move them perfectly between two entirely different containers.</p>
+  </header>
+
+  <main class="layout">
+    
+    <div class="panel">
+      <h2>Available Features</h2>
+      <div class="box" id="available">
+        <div class="tag">SSO Login</div>
+        <div class="tag">Payment Gateway</div>
+        <div class="tag">Analytics Dashboard</div>
+        <div class="tag">Push Notifications</div>
+        <div class="tag">Multi-Language</div>
+        <div class="tag">Dark Mode</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Selected Features</h2>
+      <div class="box" id="selected">
+        <!-- Moved tags will arrive here -->
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

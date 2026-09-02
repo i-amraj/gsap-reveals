@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nested Flip Accordion</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">NESTED FLIP</span>
+    <h1>SMOOTH ACCORDION</h1>
+    <p>GSAP handles the height calculation and sibling reflow automatically.</p>
+  </header>
+
+  <main class="accordion-container" id="accordion">
+    
+    <div class="accordion-item">
+      <div class="acc-header">
+        <h3>Section 1: The Basics</h3>
+        <span class="icon">+</span>
+      </div>
+      <div class="acc-body">
+        <p>This is the hidden content. Flip plugin automatically calculates the height of this content when it is changed from display none to block, and interpolates it smoothly.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="acc-header">
+        <h3>Section 2: Advanced Techniques</h3>
+        <span class="icon">+</span>
+      </div>
+      <div class="acc-body">
+        <p>By using <code>nested: true</code>, Flip knows to look for animations not just on the main container, but also on the child elements inside it that might be resizing or moving.</p>
+        <button class="dummy-btn">Learn More</button>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="acc-header">
+        <h3>Section 3: Final Integration</h3>
+        <span class="icon">+</span>
+      </div>
+      <div class="acc-body">
+        <p>Because Flip uses `absolute: true`, the elements below the opening accordion are perfectly tweened down the page without any jittering or layout snapping.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

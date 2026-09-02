@@ -1,0 +1,91 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 80px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.list-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+  position: relative; /* Essential for Flip absolute */
+}
+
+.list-row {
+  background: #1e293b;
+  border-radius: 16px;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  overflow: hidden; /* Important for height transitions */
+  transition: background 0.3s;
+}
+
+.list-row:hover { background: #334155; }
+
+.color-tag {
+  width: 10px;
+  min-height: 100%;
+}
+
+.content {
+  padding: 20px 25px;
+  flex: 1;
+}
+
+.content h3 { font-size: 1.2rem; font-weight: 700; color: #e2e8f0; margin-bottom: 5px; }
+.content p { color: #94a3b8; font-size: 1rem; }
+
+.full-details {
+  display: none; /* Hidden in list view */
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.full-details p { color: #cbd5e1; line-height: 1.6; margin-bottom: 20px;}
+.action-btn { background: #3b82f6; border: none; color: white; padding: 10px 20px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+
+/* =========================================
+   DETAIL MODE CSS CHANGES 
+   ========================================= */
+
+/* Hide all inactive rows when container is in detail mode */
+.list-container.detail-mode .list-row:not(.active) {
+  display: none;
+}
+
+/* Morph the active row into a giant card */
+.list-container.detail-mode .list-row.active {
+  cursor: zoom-out;
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,0.1);
+  height: 60vh; /* Expands massively */
+  flex-direction: column;
+}
+
+.list-container.detail-mode .list-row.active .color-tag {
+  width: 100%;
+  min-height: 10px; /* Horizontal bar instead of vertical */
+  height: 10px;
+}
+
+.list-container.detail-mode .list-row.active .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container.detail-mode .list-row.active h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.list-container.detail-mode .list-row.active .full-details {
+  display: block; /* Show the hidden content */
+  flex: 1; /* Pushes content to fill space if needed */
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid to Carousel</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">LAYOUT MORPH</span>
+    <h1>GRID ➔ CAROUSEL</h1>
+    <p>Seamlessly transition between a wrapped grid and a horizontal scroll track.</p>
+  </header>
+
+  <div class="controls">
+    <button id="toggle-view">Switch to Carousel View</button>
+  </div>
+
+  <main class="media-container" id="media-container">
+    <div class="card"><div class="img"></div><h3>Movie 1</h3></div>
+    <div class="card"><div class="img"></div><h3>Movie 2</h3></div>
+    <div class="card"><div class="img"></div><h3>Movie 3</h3></div>
+    <div class="card"><div class="img"></div><h3>Movie 4</h3></div>
+    <div class="card"><div class="img"></div><h3>Movie 5</h3></div>
+    <div class="card"><div class="img"></div><h3>Movie 6</h3></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -390,14 +390,34 @@ Engineered the first 4 variations of the 3D Perspective Tilt Card using GSAP mou
 **Objective:** Initiate the `07_flip_grid_transition` module by building the foundational GSAP Flip animations.
 
 **Accomplished:**
-Engineered the first 4 variations demonstrating state-based DOM animation:
-1. **Basic Category Filter (`basic_category_filter`)**: Classic portfolio filtering that smoothly collapses hidden items and rearranges visible ones dynamically.
-2. **List to Grid Toggle (`list_to_grid_toggle`)**: Flips a parent container class from CSS Grid to Flex Column, seamlessly morphing all children to their new sizes and positions.
-3. **Hero Image Expansion (`hero_image_expansion`)**: Extracts a thumbnail from the grid and transitions it `position: fixed` to cover the full viewport.
-4. **Click to Front Shuffle (`click_to_front_shuffle`)**: Reorders the DOM by prepending the clicked element, triggering a graceful shuffle across the entire grid.
+Engineered all 22 variations demonstrating state-based DOM animation, from basic list toggles to highly complex layouts:
+1. **Basic Category Filter**: Portfolio filtering collapsing hidden items and rearranging visible ones.
+2. **List to Grid Toggle**: Flips a parent container class from CSS Grid to Flex Column.
+3. **Hero Image Expansion**: Extracts a thumbnail to `position: fixed` to cover the full viewport.
+4. **Click to Front Shuffle**: Reorders the DOM by prepending the clicked element.
+5. **Add Remove Items**: Animates items being appended or removed from the DOM.
+6. **Masonry Grid Sort**: Untangles and reorders a pure CSS multi-column masonry grid.
+7. **Accordion Expand Grid**: A grid item expands to `span 2` columns/rows perfectly.
+8. **Flex Wrap Reorder**: Items of varying widths dynamically swap in a wrapping container.
+9. **Bento Box Swap**: Click two different-sized shapes to swap their DOM order in a dense grid.
+10. **Sidebar Squeeze Grid**: An expanding sidebar squeezes an `auto-fit` grid causing layout morphs.
+11. **Kanban Column Shift**: Appends a card into a completely different column dynamically.
+12. **Category Grouping**: Sorts mixed colored nodes in the DOM into organized groupings.
+13. **Nested Flip Accordion**: Uses `nested: true` to animate parent height when child `display` changes.
+14. **Grid to Carousel**: Morphs from flex-wrap to a horizontal scrolling carousel layout.
+15. **Random Size Shuffle**: Randomly assigns span sizes and DOM positions simultaneously.
+16. **Delete Row Collapse**: `onLeave` callback shrinks a list row's height and opacity to 0 seamlessly.
+17. **Multi Container Morph**: Moves items between two structurally distinct flex containers.
+18. **Auto Fit Resizer**: Animates responsive reflows caused by changing inline container width.
+19. **Flex Direction Switch**: Morphs abruptly between row and column flex layouts.
+20. **Choreographed Stagger**: Uses `stagger` and custom 3D rotation in `onEnter/onLeave`.
+21. **E-Commerce Cart Fly**: Clones an image, positions via `Flip.fit`, and flies it into a Cart icon.
+22. **Expandable List to Detail**: A master list row expands into a giant `80vh` card hiding siblings.
 
 **Status:**
-- Created all 4 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
-- `07_flip_grid_transition/README.md` created.
-- `roadmap.md` updated: Style 2.3 marked as initiated (4 Sub-Demos).
-- Code committed and pushed to GitHub repo `i-amraj/gsap-reveals`.
+- Created all 22 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `07_flip_grid_transition/README.md` updated with the full list.
+- `roadmap.md` updated: Style 2.3 marked as completed (22 Sub-Demos).
+- Code committed to GitHub repo `i-amraj/gsap-reveals`.
+
+**Next Phase:** Style 2.4: Mousewheel & Touch Linked Horizontal Card Slider Track (`08_horizontal_card_track`).

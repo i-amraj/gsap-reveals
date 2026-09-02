@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.controls {
+  display: flex; gap: 15px; margin-bottom: 50px;
+}
+.controls button {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.controls button:hover { background: #3b82f6; border-color: #3b82f6;}
+
+/* Masonry via CSS Multi-Column */
+.masonry-container {
+  column-count: 3; /* CSS magic */
+  column-gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  position: relative; /* For Flip absolute */
+}
+
+.item {
+  background: #1e293b;
+  border-radius: 20px;
+  margin-bottom: 20px; /* Instead of grid gap */
+  break-inside: avoid; /* Prevents item from splitting across columns */
+  display: flex; justify-content: center; align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  /* The height is set inline via JS */
+  border: 2px solid transparent;
+}
+
+.item h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Color coding just to make sorting visually obvious */
+.item[data-id="1"], .item[data-id="2"], .item[data-id="3"] { background: linear-gradient(135deg, #f43f5e, #e11d48); }
+.item[data-id="4"], .item[data-id="5"], .item[data-id="6"] { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.item[data-id="7"], .item[data-id="8"], .item[data-id="9"] { background: linear-gradient(135deg, #10b981, #047857); }
+
+@media (max-width: 768px) {
+  .masonry-container { column-count: 2; }
+}
+@media (max-width: 480px) {
+  .masonry-container { column-count: 1; }
+}

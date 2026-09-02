@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Squeeze Grid</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">DASHBOARD UI</span>
+    <h1>SIDEBAR SQUEEZE</h1>
+    <p>Toggle the sidebar to squeeze the grid. GSAP animates the responsive auto-fit reflow.</p>
+  </header>
+
+  <div class="controls">
+    <button id="toggle-sidebar">☰ Toggle Sidebar</button>
+  </div>
+
+  <div class="dashboard-wrapper" id="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li>Dashboard</li>
+          <li>Analytics</li>
+          <li>Settings</li>
+          <li>Users</li>
+          <li>Reports</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="grid">
+        <div class="widget">Widget 1</div>
+        <div class="widget">Widget 2</div>
+        <div class="widget">Widget 3</div>
+        <div class="widget">Widget 4</div>
+        <div class="widget">Widget 5</div>
+        <div class="widget">Widget 6</div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masonry Grid Sort</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">COMPLEX REFLOW</span>
+    <h1>MASONRY SORTING</h1>
+    <p>GSAP flawlessly untangles CSS multi-column layouts</p>
+  </header>
+
+  <div class="controls">
+    <button id="sort-asc">Sort (Asc)</button>
+    <button id="sort-desc">Sort (Desc)</button>
+    <button id="shuffle">Shuffle</button>
+  </div>
+
+  <main class="masonry-container" id="masonry">
+    <!-- Items will be generated via JS so we can easily assign random heights and IDs -->
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

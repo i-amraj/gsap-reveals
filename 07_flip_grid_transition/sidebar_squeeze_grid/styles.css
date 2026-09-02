@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 50px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 30px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.controls { margin-bottom: 20px; width: 100%; max-width: 1000px; padding: 0 20px; }
+#toggle-sidebar {
+  background: #3b82f6;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.dashboard-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  background: #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  margin-bottom: 50px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 0; /* Hidden by default */
+  background: #0f172a;
+  border-right: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden; /* Hide content when 0 width */
+  transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1); /* Smooth CSS transition for sidebar */
+}
+
+/* Toggled State */
+.dashboard-wrapper.sidebar-open .sidebar {
+  width: 250px; /* Expands sidebar */
+}
+
+.sidebar nav ul { list-style: none; padding: 20px; width: 250px; }
+.sidebar nav li { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 700; color: #94a3b8;}
+.sidebar nav li:hover { color: #3b82f6; cursor: pointer; }
+
+/* Main Grid */
+.main-content {
+  flex: 1; /* Takes remaining space */
+  padding: 30px;
+  /* When sidebar expands, this shrinks naturally via flexbox */
+}
+
+.grid {
+  display: grid;
+  /* Auto-fit magic: as container shrinks, columns reduce and wrap items */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  position: relative; /* For Flip absolute */
+}
+
+.widget {
+  background: linear-gradient(135deg, #10b981, #047857);
+  height: 180px;
+  border-radius: 16px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 1.5rem; font-weight: 900; color: rgba(255,255,255,0.8);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.widget:nth-child(even) { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }

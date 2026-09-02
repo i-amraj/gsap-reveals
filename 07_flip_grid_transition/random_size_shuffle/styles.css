@@ -1,0 +1,50 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.controls { margin-bottom: 50px; }
+#shuffle-btn {
+  background: linear-gradient(135deg, #f43f5e, #be123c);
+  border: none; color: #fff; padding: 15px 40px;
+  border-radius: 50px; cursor: pointer; font-weight: 900;
+  font-size: 1.2rem; transition: transform 0.2s;
+  box-shadow: 0 10px 20px rgba(244, 63, 94, 0.4);
+}
+#shuffle-btn:hover { transform: scale(1.05); }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 120px;
+  grid-auto-flow: dense; /* Essential for packing mixed sizes */
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  position: relative; /* Essential for Flip absolute */
+}
+
+.item {
+  background: #1e293b;
+  border-radius: 20px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 2rem; font-weight: 900; color: rgba(255,255,255,0.5);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  /* Optional transition for colors if we change them */
+  transition: filter 0.3s;
+}
+
+/* Shapes */
+.shape-1 { /* Default 1x1 */ grid-column: span 1; grid-row: span 1; background: #3b82f6;}
+.shape-2 { /* Wide */ grid-column: span 2; grid-row: span 1; background: #10b981;}
+.shape-3 { /* Tall */ grid-column: span 1; grid-row: span 2; background: #a855f7;}
+.shape-4 { /* Large */ grid-column: span 2; grid-row: span 2; background: #f59e0b;}
+
+@media (max-width: 768px) {
+  .grid-container { grid-template-columns: repeat(2, 1fr); }
+  .shape-2, .shape-4 { grid-column: span 2; }
+}

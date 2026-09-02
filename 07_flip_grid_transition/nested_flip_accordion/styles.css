@@ -1,0 +1,81 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 50px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.accordion-container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 20px;
+  position: relative; /* Essential for Flip absolute */
+}
+
+.accordion-item {
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.acc-header {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #1e293b;
+  transition: background 0.3s;
+}
+
+.acc-header:hover {
+  background: #334155;
+}
+
+.acc-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: transform 0.3s;
+}
+
+.acc-body {
+  padding: 0 25px 25px;
+  display: none; /* Hidden by default */
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.dummy-btn {
+  margin-top: 15px;
+  background: #3b82f6;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Active State */
+.accordion-item.active .acc-header {
+  background: #3b82f6;
+  color: white;
+}
+.accordion-item.active .acc-header h3 { color: white; }
+.accordion-item.active .icon { transform: rotate(45deg); color: white; }
+.accordion-item.active .acc-body {
+  display: block; /* DOM change! */
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+}
