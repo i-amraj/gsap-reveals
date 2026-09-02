@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marquee Hover Pause</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>A marquee that smoothly stops when inspected.</p>
+  </section>
+
+  <section class="marquee-section">
+    <!-- The container acts as the hover hit area -->
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          INTERACTIVE TICKER &bull; HOVER TO PAUSE &bull; READABLE CONTENT &bull; 
+        </div>
+        <div class="marquee-content">
+          INTERACTIVE TICKER &bull; HOVER TO PAUSE &bull; READABLE CONTENT &bull; 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

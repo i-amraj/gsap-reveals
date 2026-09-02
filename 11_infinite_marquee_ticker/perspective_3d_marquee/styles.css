@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.marquee-section {
+  padding: 10vh 0;
+  background: #0f172a;
+  /* Establish 3D space for children */
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  
+  /* Tilt the container backward and skew it slightly */
+  transform: rotateX(45deg) rotateZ(-5deg);
+  transform-style: preserve-3d;
+  
+  /* Make it wider than the screen to hide edges caused by the tilt */
+  width: 120vw;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-content {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #38bdf8;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  user-select: none;
+  /* A subtle shadow grounds the 3D effect */
+  text-shadow: 0 20px 30px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .marquee-content { font-size: 4rem; }
+}
