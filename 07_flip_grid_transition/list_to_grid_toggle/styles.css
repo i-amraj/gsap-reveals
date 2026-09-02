@@ -1,0 +1,84 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; padding-bottom: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.controls {
+  margin-bottom: 40px;
+}
+
+#toggle-view {
+  background: #3b82f6;
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+#toggle-view:hover {
+  background: #2563eb;
+}
+
+/* Default: Grid View */
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.item {
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column; /* Stack vertically in Grid view */
+}
+
+.img-placeholder {
+  height: 200px;
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  display: flex; justify-content: center; align-items: center;
+  font-size: 4rem; font-weight: 900; color: rgba(255,255,255,0.3);
+}
+
+/* Different colors for placeholders */
+.item:nth-child(2) .img-placeholder { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.item:nth-child(3) .img-placeholder { background: linear-gradient(135deg, #10b981, #047857); }
+.item:nth-child(4) .img-placeholder { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+
+.info {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.info h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.info p { color: #cbd5e1; line-height: 1.6; }
+
+/* Modified: List View */
+.content-container.list-view {
+  grid-template-columns: 1fr; /* Single column */
+}
+
+.content-container.list-view .item {
+  flex-direction: row; /* Side-by-side in List view */
+  align-items: center;
+}
+
+.content-container.list-view .img-placeholder {
+  width: 250px;
+  height: 180px;
+  flex-shrink: 0;
+}

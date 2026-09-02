@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click to Front Shuffle</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">DOM REORDERING</span>
+    <h1>CLICK TO FRONT SHUFFLE</h1>
+    <p>Click any card to move it to the first position. Watch the grid adapt.</p>
+  </header>
+
+  <main class="grid-container">
+    <!-- Generating 9 items -->
+    <div class="grid-item"><h2>1</h2></div>
+    <div class="grid-item"><h2>2</h2></div>
+    <div class="grid-item"><h2>3</h2></div>
+    <div class="grid-item"><h2>4</h2></div>
+    <div class="grid-item"><h2>5</h2></div>
+    <div class="grid-item"><h2>6</h2></div>
+    <div class="grid-item"><h2>7</h2></div>
+    <div class="grid-item"><h2>8</h2></div>
+    <div class="grid-item"><h2>9</h2></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

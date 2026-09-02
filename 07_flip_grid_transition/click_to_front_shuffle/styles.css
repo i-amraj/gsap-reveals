@@ -1,0 +1,49 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 100px; overflow-x: hidden; }
+
+.header { text-align: center; margin-bottom: 40px; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #f8fafc; }
+.header p { color: #94a3b8; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+  /* Relative positioning needed for Flip absolute: true */
+  position: relative;
+}
+
+.grid-item {
+  background: #3b82f6;
+  height: 150px;
+  border-radius: 20px;
+  display: flex; justify-content: center; align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.2s;
+  /* Add z-index so the moving item goes over the others */
+  z-index: 1; 
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  background: #2563eb;
+  z-index: 10;
+}
+
+.grid-item h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.8);
+  pointer-events: none;
+}
+
+/* Distinct colors just for visual tracking */
+.grid-item:nth-child(even) { background: #10b981; }
+.grid-item:nth-child(3n) { background: #8b5cf6; }
+.grid-item:nth-child(even):hover { background: #059669; }
+.grid-item:nth-child(3n):hover { background: #7c3aed; }

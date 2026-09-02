@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List to Grid Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">LAYOUT MORPHING</span>
+    <h1>GRID / LIST VIEW</h1>
+    <p>GSAP Flip seamlessly morphs elements between two entirely different CSS layouts</p>
+  </header>
+
+  <div class="controls">
+    <button id="toggle-view">Switch to List View ☷</button>
+  </div>
+
+  <main class="content-container">
+    <div class="item">
+      <div class="img-placeholder">1</div>
+      <div class="info">
+        <h3>Project Alpha</h3>
+        <p>A comprehensive redesign of the main portal.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img-placeholder">2</div>
+      <div class="info">
+        <h3>Project Beta</h3>
+        <p>Implementing new thermal printing drivers.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img-placeholder">3</div>
+      <div class="info">
+        <h3>Project Gamma</h3>
+        <p>Updating the foreground service isolates.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="img-placeholder">4</div>
+      <div class="info">
+        <h3>Project Delta</h3>
+        <p>Full GSAP 3D interactive tilt integration.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
