@@ -1,0 +1,71 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+body { background: #18181b; color: #f4f4f5; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.door-left, .door-right {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background: #f4f4f5; /* Light doors opening to dark theme */
+  will-change: transform;
+}
+
+.door-left { left: 0; border-right: 1px solid rgba(0,0,0,0.1); }
+.door-right { right: 0; border-left: 1px solid rgba(0,0,0,0.1); }
+
+.counter-container {
+  position: relative;
+  z-index: 10;
+  color: #18181b; /* Dark text on light doors */
+  overflow: hidden; /* For masking the text reveal */
+}
+
+.counter-text {
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  background: linear-gradient(to right, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3.5rem; }
+  .counter-text { font-size: 6rem; }
+}
