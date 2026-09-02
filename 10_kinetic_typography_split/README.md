@@ -2,7 +2,7 @@
 
 This module explores precise, staggered text reveals using clipping masks and 3D transforms. Unlike scrubbed animations that rely entirely on the user's scrollbar, these animations trigger automatically when the text enters the viewport, executing a perfectly choreographed kinetic sequence using GSAP's staggering capabilities combined with `SplitType`.
 
-## 📦 Sub-Demos (Currently 12)
+## 📦 Sub-Demos (Currently 16)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -18,6 +18,10 @@ This module explores precise, staggered text reveals using clipping masks and 3D
 | 10 | `word_clip_path_wipe` | Animates the CSS `clip-path` polygon to elegantly wipe words into view from left to right. | ✅ |
 | 11 | `char_zoom_blur_reveal` | Characters push deep into the Z-axis and blur heavily, before snapping forward into crisp focus. | ✅ |
 | 12 | `char_explosion_collapse` | Characters start randomly exploded across X, Y, and rotation axes, snapping violently into a readable sentence. | ✅ |
+| 13 | `3d_line_domino_fall` | Entire lines of text hinge from the bottom and fall forward `90deg` like tumbling dominoes. | ✅ |
+| 14 | `masked_word_diagonal_slide` | Words slide upwards and diagonally (`x` and `y` offsets) from behind invisible clipping masks. | ✅ |
+| 15 | `3d_char_spin_y` | Characters perform a full 360-degree horizontal spin on their Y-axis as they fade into existence. | ✅ |
+| 16 | `line_clip_path_center_out` | Animates the `clip-path` polygon from a squished center-line outward to full width, stretching the text into reality. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
