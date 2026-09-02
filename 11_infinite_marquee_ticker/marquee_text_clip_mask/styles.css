@@ -1,0 +1,51 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.marquee-section {
+  padding: 10vh 0;
+  background: #000;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-content {
+  font-size: 10rem;
+  font-weight: 900;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  user-select: none;
+  
+  /* The clipping mask magic */
+  background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps image stationary while text moves */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .marquee-content { font-size: 5rem; }
+}

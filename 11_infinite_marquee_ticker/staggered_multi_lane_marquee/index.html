@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staggered Multi-Lane Marquee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>Multiple lanes flowing at varied speeds create depth.</p>
+  </section>
+
+  <section class="marquee-section">
+    <div class="marquee-container">
+      
+      <!-- Lane 1 (Fast Left) -->
+      <div class="marquee-track track-1">
+        <div class="marquee-content large">
+          DYNAMIC DEPTH &bull; PARALLAX SPEED &bull; 
+        </div>
+        <div class="marquee-content large">
+          DYNAMIC DEPTH &bull; PARALLAX SPEED &bull; 
+        </div>
+      </div>
+
+      <!-- Lane 2 (Slow Right) -->
+      <div class="marquee-track track-2">
+        <div class="marquee-content outline">
+          MULTI LANE TRACKS &bull; MULTI LANE TRACKS &bull; MULTI LANE TRACKS &bull; 
+        </div>
+        <div class="marquee-content outline">
+          MULTI LANE TRACKS &bull; MULTI LANE TRACKS &bull; MULTI LANE TRACKS &bull; 
+        </div>
+      </div>
+      
+      <!-- Lane 3 (Very Fast Left) -->
+      <div class="marquee-track track-3">
+        <div class="marquee-content small">
+          DIFFERENT TYPOGRAPHY WEIGHTS &bull; STAGGERED DURATIONS &bull; VISUAL HIERARCHY &bull; 
+        </div>
+        <div class="marquee-content small">
+          DIFFERENT TYPOGRAPHY WEIGHTS &bull; STAGGERED DURATIONS &bull; VISUAL HIERARCHY &bull; 
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

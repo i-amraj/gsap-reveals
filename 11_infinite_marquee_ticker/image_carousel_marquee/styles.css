@@ -1,0 +1,54 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.marquee-section {
+  padding: 10vh 0;
+  background: #0f172a;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem;           /* Gap between images inside a block */
+  padding-right: 2rem; /* Exact same gap on the right so the duplicate matches seamlessly */
+}
+
+.marquee-content img {
+  height: 350px;
+  width: 500px;
+  object-fit: cover;
+  border-radius: 1rem;
+  /* Optional: prevent images from dragging/selecting */
+  pointer-events: none;
+  user-select: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+  .marquee-content img {
+    height: 200px;
+    width: 300px;
+  }
+}
