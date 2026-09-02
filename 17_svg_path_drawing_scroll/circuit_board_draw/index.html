@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Circuit Board Draw</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="spacer"><h1>Scroll Down</h1></div>
+  
+  <section class="circuit-section">
+    <svg class="circuit-svg" viewBox="0 0 500 500">
+      <!-- Circuit paths -->
+      <path class="trace" d="M 50 250 L 150 250 L 200 200 L 300 200 L 350 150 L 450 150" />
+      <path class="trace" d="M 50 300 L 100 300 L 150 350 L 250 350 L 300 300 L 450 300" />
+      <path class="trace" d="M 50 150 L 100 150 L 150 100 L 400 100 L 450 50" />
+      <!-- Nodes (fade in later) -->
+      <circle class="node" cx="450" cy="150" r="10" />
+      <circle class="node" cx="450" cy="300" r="10" />
+      <circle class="node" cx="450" cy="50" r="10" />
+    </svg>
+  </section>
+
+  <div class="spacer"><h1>End</h1></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

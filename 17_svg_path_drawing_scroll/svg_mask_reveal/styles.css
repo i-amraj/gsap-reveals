@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.mask-section { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+.image-wrapper { width:1000px; height:500px; position:relative; overflow:hidden; }
+/* Apply the SVG mask to the image */
+.reveal-img { width:100%; height:100%; object-fit:cover; mask:url(#draw-mask); -webkit-mask:url(#draw-mask); }

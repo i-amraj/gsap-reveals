@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#0f172a; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.multi-section { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+.multi-svg { width:500px; height:500px; }
+.stagger-path { fill:none; stroke:#a855f7; stroke-width:20; stroke-linecap:round; }

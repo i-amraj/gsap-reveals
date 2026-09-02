@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#fef08a; color:#111; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.sig-section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.sig-svg { width:400px; height:150px; }
+.sig-section h3 { font-size:1.5rem; margin-top:1rem; opacity:0; transform:translateY(20px); }

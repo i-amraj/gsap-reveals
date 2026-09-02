@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Shape Morphing</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="spacer"><h1>Scroll Down</h1></div>
+  
+  <section class="morph-section">
+    <!-- Star morphing to Checkmark (must have same number of points/similar structure if not using MorphSVGPlugin) -->
+    <!-- But since MorphSVG is premium, we will use a CSS/JS trick: changing the 'd' attribute directly for simple paths with identical node counts. -->
+    <svg class="morph-svg" viewBox="0 0 100 100">
+      <!-- Triangle -->
+      <path id="shape" d="M 50 10 L 90 90 L 10 90 Z" fill="#3b82f6" />
+    </svg>
+    <h3 id="morph-text">Triangle</h3>
+  </section>
+
+  <div class="spacer"><h1>End</h1></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

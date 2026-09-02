@@ -1,0 +1,9 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.neon-section { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+.neon-svg { width:400px; height:200px; 
+  /* The neon effect */
+  filter: drop-shadow(0 0 10px #a855f7) drop-shadow(0 0 20px #a855f7) drop-shadow(0 0 30px #a855f7);
+}

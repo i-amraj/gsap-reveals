@@ -1,0 +1,6 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.native-section { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+.geo-svg { width:300px; height:300px; }

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Infinite Loop Draw</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="spacer"><h1>Scroll Down</h1></div>
+  
+  <section class="loop-section">
+    <!-- An infinity symbol to loop -->
+    <svg class="loop-svg" viewBox="0 0 200 100">
+      <path id="infinity" d="M 50 50 C 25 25, 0 50, 25 75 C 50 100, 150 0, 175 25 C 200 50, 175 75, 150 50 C 125 25, 75 75, 50 50 Z" fill="none" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </section>
+
+  <div class="spacer"><h1>End</h1></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

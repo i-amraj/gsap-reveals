@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f4f4f5; color:#111; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.text-section { min-height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.text-svg { width:100%; max-width:1000px; }
+#svg-text { font-size:120px; font-family:'Inter', sans-serif; font-weight:900; fill:transparent; stroke:#38bdf8; stroke-width:2px; }

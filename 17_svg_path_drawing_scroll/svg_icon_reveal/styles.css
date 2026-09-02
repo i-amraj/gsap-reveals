@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.icon-section { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+.heart-icon { width:200px; height:200px; overflow:visible; }
+
+/* We will transition the fill color in JS, but initially it's none via HTML */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Chart Line Draw</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="spacer"><h1>Scroll Down</h1></div>
+  
+  <section class="chart-section">
+    <div class="chart-container">
+      <!-- Grid lines -->
+      <div class="grid-line" style="bottom: 0%;"></div>
+      <div class="grid-line" style="bottom: 25%;"></div>
+      <div class="grid-line" style="bottom: 50%;"></div>
+      <div class="grid-line" style="bottom: 75%;"></div>
+      <div class="grid-line" style="bottom: 100%;"></div>
+      
+      <!-- The SVG Chart Line -->
+      <svg class="chart-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+        <path id="chart-path" d="M 0 350 L 100 300 L 200 320 L 300 200 L 400 250 L 500 100 L 600 150 L 700 50 L 800 0" fill="none" stroke="#10b981" stroke-width="4" stroke-linejoin="round"/>
+        <!-- Fill under chart -->
+        <path id="chart-fill" d="M 0 350 L 100 300 L 200 320 L 300 200 L 400 250 L 500 100 L 600 150 L 700 50 L 800 0 L 800 400 L 0 400 Z" fill="rgba(16, 185, 129, 0.2)" stroke="none" opacity="0"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="spacer"><h1>End</h1></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

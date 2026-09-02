@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>3D Wireframe Draw</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="spacer"><h1>Scroll Down</h1></div>
+  
+  <section class="wireframe-section">
+    <!-- Isometric Cube SVG -->
+    <svg class="wireframe-svg" viewBox="0 0 200 200">
+      <!-- Back edges -->
+      <path class="edge" d="M 100 20 L 180 60 L 180 140" />
+      <path class="edge" d="M 20 60 L 100 100 L 180 60" />
+      <!-- Front edges -->
+      <path class="edge" d="M 20 60 L 20 140 L 100 180" />
+      <path class="edge" d="M 100 180 L 180 140" />
+      <path class="edge" d="M 100 100 L 100 180" />
+      <path class="edge" d="M 100 20 L 20 60" />
+    </svg>
+  </section>
+
+  <div class="spacer"><h1>End</h1></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

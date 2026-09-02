@@ -1,0 +1,13 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#0f172a; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#1e293b; }
+.spacer h1 { font-size:4rem; }
+.svg-section { min-height:100vh; display:flex; justify-content:center; align-items:center; }
+.line-svg { width:90vw; max-width:1000px; height:auto; }
+
+/* Critical CSS for native SVG drawing without DrawSVGPlugin */
+#draw-path {
+  /* We will set these dynamically in JS to match the exact path length */
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
