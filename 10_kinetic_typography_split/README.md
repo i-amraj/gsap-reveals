@@ -2,7 +2,7 @@
 
 This module explores precise, staggered text reveals using clipping masks and 3D transforms. Unlike scrubbed animations that rely entirely on the user's scrollbar, these animations trigger automatically when the text enters the viewport, executing a perfectly choreographed kinetic sequence using GSAP's staggering capabilities combined with `SplitType`.
 
-## 📦 Sub-Demos (Currently 8)
+## 📦 Sub-Demos (Currently 12)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -14,6 +14,10 @@ This module explores precise, staggered text reveals using clipping masks and 3D
 | 06 | `3d_perspective_unfold` | Words unfold downwards from their top edge (`rotateX: -90`) like an unrolling physical map. | ✅ |
 | 07 | `char_bounce_drop_in` | Characters drop from above the screen and elastically bounce into their final positions. | ✅ |
 | 08 | `3d_char_barrel_roll` | Characters spin backwards 180 degrees on the X-axis while sliding up into place. | ✅ |
+| 09 | `char_elastic_scale_up` | Characters pop past 100% scale and wobble down into place with elastic easing. | ✅ |
+| 10 | `word_clip_path_wipe` | Animates the CSS `clip-path` polygon to elegantly wipe words into view from left to right. | ✅ |
+| 11 | `char_zoom_blur_reveal` | Characters push deep into the Z-axis and blur heavily, before snapping forward into crisp focus. | ✅ |
+| 12 | `char_explosion_collapse` | Characters start randomly exploded across X, Y, and rotation axes, snapping violently into a readable sentence. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
