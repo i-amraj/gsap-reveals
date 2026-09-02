@@ -2,7 +2,7 @@
 
 This module focuses on Apple/Stripe-style kinetic typography where text dynamically reacts to the user's vertical scroll position. By utilizing GSAP ScrollTrigger combined with the `SplitType` library, we can easily slice text into lines, words, or characters and animate them seamlessly.
 
-## 📦 Sub-Demos (Currently 8)
+## 📦 Sub-Demos (Currently 12)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -14,6 +14,10 @@ This module focuses on Apple/Stripe-style kinetic typography where text dynamica
 | 06 | `line_mask_reveal_up` | Using `overflow: hidden` on lines, words sweep upwards physically out of thin air on scroll. | ✅ |
 | 07 | `word_stagger_scale` | Words scale up from 0 to 1 as they fade in, giving a punchy, popping kinetic typography effect. | ✅ |
 | 08 | `highlight_marker_swipe` | A solid background color and text color shift simulates dragging a highlighter across the words. | ✅ |
+| 09 | `character_rotation_flip` | Applies a 3D perspective to words, allowing characters to flip down (`rotateX`) like a mechanical board. | ✅ |
+| 10 | `neon_glow_illuminate` | Text brightens and gains a heavy, layered `text-shadow`, physically "turning on" like neon lights. | ✅ |
+| 11 | `random_character_reveal` | Leverages GSAP's `stagger: { from: 'random' }` to decode and fade in characters in completely random order. | ✅ |
+| 12 | `text_shadow_parallax` | Animates the `text-shadow` offset dynamically, giving the illusion of a sweeping light source over the text. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
