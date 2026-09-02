@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.canvas-section { position:relative; height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; background:#000; }
+canvas { max-width:100%; max-height:100vh; object-fit:contain; }
+.text-overlay { position:absolute; font-size:3rem; font-weight:700; opacity:0; pointer-events:none; }
+#text-1 { top:20%; left:10%; }
+#text-2 { bottom:20%; right:10%; }
+#text-3 { top:50%; left:50%; transform:translate(-50%, -50%); }

@@ -1,0 +1,6 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#fff; color:#111; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#f4f4f5; }
+.spacer h1 { font-size:4rem; }
+.lottie-section { height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; background:#fff; }
+#lottie-container { width:600px; height:600px; }

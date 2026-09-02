@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Split Screen Canvas Scrub</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+  <div class="spacer"><h1>Scroll Down</h1></div>
+  
+  <section class="split-section">
+    <!-- Left Side: Sticky Canvas -->
+    <div class="canvas-side">
+      <div class="canvas-sticky">
+        <canvas id="scrub-canvas" width="600" height="600"></canvas>
+      </div>
+    </div>
+    
+    <!-- Right Side: Scrolling Text Content -->
+    <div class="text-side">
+      <div class="text-block"><h2>Feature One</h2><p>Observe the rotation as you read.</p></div>
+      <div class="text-block"><h2>Feature Two</h2><p>The canvas stays pinned.</p></div>
+      <div class="text-block"><h2>Feature Three</h2><p>Tied to the scroll progress of this container.</p></div>
+    </div>
+  </section>
+
+  <div class="spacer"><h1>End</h1></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

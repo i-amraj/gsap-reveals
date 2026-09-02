@@ -1,0 +1,6 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#0f172a; color:#fff; overflow-x:hidden; }
+.hover-section { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:2rem; }
+.hover-section h1 { color:#94a3b8; }
+.canvas-container { width:600px; height:600px; background:#1e293b; border-radius:20px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.5); cursor:ew-resize; overflow:hidden; }
+canvas { width:100%; height:100%; }
