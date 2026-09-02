@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.horizontal-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+}
+
+.path-svg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  background: #3b82f6;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  /* Initially off-screen or hidden until GSAP places them on the path */
+  top: 0; left: 0;
+  opacity: 0; 
+}
+
+.card-1 { background: #f43f5e; }
+.card-2 { background: #3b82f6; }
+.card-3 { background: #10b981; }
+.card-4 { background: #a855f7; }
+.card-5 { background: #f59e0b; }
