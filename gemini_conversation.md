@@ -439,3 +439,9 @@ Engineered the first 4 variations demonstrating horizontal scroll hijacking:
 - `08_horizontal_card_track/README.md` created.
 - `roadmap.md` updated: Style 2.4 marked as initiated (4 Sub-Demos).
 - Code committed to local repository.
+- Finished all 22 variations for Style 2.4 (`08_horizontal_card_track`), heavily utilizing `containerAnimation` for synchronized effects, custom velocity dragging with `Draggable`, and the `MotionPathPlugin`.
+- Updated `roadmap.md` marking Style 2.4 as completed and pushed everything to the repository.
+### Session Summary: GSAP Typography Module (`09_scroll_text_highlight`)
+- Initiated **Style 3.1**, focusing on advanced kinetic typography using GSAP ScrollTrigger and the `SplitType` library.
+- Developed the first 4 core sub-demos: `word_by_word_opacity`, `character_by_character_opacity`, `line_by_line_opacity`, and `word_blur_reveal`.
+- Committed the foundation.
