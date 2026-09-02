@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marquee Scramble Ticker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>A looping marquee that periodically scrambles into new data.</p>
+  </section>
+
+  <section class="marquee-section">
+    <div class="marquee-container">
+      <div class="marquee-track">
+        <!-- Text is managed by JS -->
+        <div class="marquee-content">SCROLLING INFINITELY &bull; </div>
+        <div class="marquee-content">SCROLLING INFINITELY &bull; </div>
+        <div class="marquee-content">SCROLLING INFINITELY &bull; </div>
+        <div class="marquee-content">SCROLLING INFINITELY &bull; </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

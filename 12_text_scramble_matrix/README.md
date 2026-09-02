@@ -4,7 +4,7 @@ Welcome to the **Text Scramble Matrix** library. This module focuses on cryptogr
 
 Because the official GSAP `ScrambleTextPlugin` is a paid Club GreenSock utility, **all variations in this library are built entirely from scratch using free GSAP core logic**. By tweening a proxy object's progress and updating the text inside an `onUpdate` callback, we achieve identical, highly-performant scramble effects without requiring premium plugins.
 
-## 📦 Sub-Demos (Currently 8)
+## 📦 Sub-Demos (Currently 12)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -16,6 +16,10 @@ Because the official GSAP `ScrambleTextPlugin` is a paid Club GreenSock utility,
 | 06 | `scramble_password_reveal` | Simulates a password input box, scrambling from hidden bullets (`••••••`) into the final password when toggled. | ✅ |
 | 07 | `hero_title_morph` | A stunning, recursive morphing transition that cleanly sweeps and scrambles between multiple hero phrases of varying lengths. | ✅ |
 | 08 | `scramble_number_counter` | A statistical counter that locks into its final formatted number (e.g., `8,492,104`) using cryptographic scrambling instead of standard interpolation. | ✅ |
+| 09 | `scramble_text_mask_image` | The scrambling text acts as a CSS `-webkit-background-clip` mask, creating a wildly dynamic reveal of an underlying image during the glitch. | ✅ |
+| 10 | `japanese_kanji_scramble` | Uses a specific pool of half-width Katakana characters to simulate a "Ghost in the Shell" aesthetic that decrypts into English on scroll. | ✅ |
+| 11 | `scramble_typewriter` | Text is typed out onto a terminal screen, but the last 3 characters are always scrambling, simulating real-time payload decryption. | ✅ |
+| 12 | `marquee_scramble_ticker` | An infinite looping GSAP marquee that continuously morphs into different phrases via scrambling every 4 seconds without breaking its flow. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.

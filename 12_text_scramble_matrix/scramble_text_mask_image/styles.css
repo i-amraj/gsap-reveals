@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #0f172a; color: #fff; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subtitle {
+  color: #38bdf8;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+}
+
+.scramble-mask-text {
+  font-size: 6rem;
+  font-weight: 800;
+  cursor: crosshair;
+  display: inline-block;
+  line-height: 1.1;
+  text-transform: uppercase;
+  
+  /* The Magic Clipping Mask */
+  background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* Add a subtle outline to make it readable against dark background */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .scramble-mask-text { font-size: 3rem; text-align: center; }
+}

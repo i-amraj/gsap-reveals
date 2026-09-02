@@ -26,7 +26,7 @@
 - [x] **Style 3.1:** `09_scroll_text_highlight` — Apple/Stripe Style Scroll-Scrubbed Text Word Highlight — *(Completed 22 Sub-Demos)*
 - [x] **Style 3.2:** `10_kinetic_typography_split` — 3D Masked Letter-by-Letter Staggered Reveal — *(Completed 22 Sub-Demos)*
 - [x] **Style 3.3:** `11_infinite_marquee_ticker` — Velocity-Sensitive Seamless Running Text Marquee — *(Completed 22 Sub-Demos)*
-- [ ] **Style 3.4:** `12_text_scramble_matrix` — Matrix Character Decoding & Text Morphing — *(Initiated 8 Sub-Demos)*
+- [ ] **Style 3.4:** `12_text_scramble_matrix` — Matrix Character Decoding & Text Morphing — *(Initiated 12 Sub-Demos)*
 
 ---
 

@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #000; color: #fff; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { font-size: 1.2rem; color: #94a3b8; }
+
+.decode-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10vw;
+}
+
+.subtitle {
+  color: #10b981;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+}
+
+.kanji-scramble {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #10b981; /* Matrix green */
+  display: block;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+@media (max-width: 768px) {
+  .kanji-scramble { font-size: 2.5rem; }
+}
