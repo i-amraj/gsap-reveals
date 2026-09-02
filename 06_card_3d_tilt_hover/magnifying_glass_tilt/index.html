@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnifying Glass Tilt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">INTERACTIVE LENS</span>
+    <h1>MAGNIFYING TILT</h1>
+    <p>Hover to inspect the image in detail</p>
+  </header>
+
+  <main class="grid-container">
+    
+    <div class="card-wrapper">
+      <div class="card">
+        
+        <!-- Base Image -->
+        <img src="../../assets/nature1.jpeg" class="base-img" alt="Base">
+        
+        <!-- Magnifying Lens -->
+        <div class="lens">
+          <!-- The same image, but scaled up -->
+          <img src="../../assets/nature1.jpeg" class="lens-img" alt="Zoom">
+        </div>
+        
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

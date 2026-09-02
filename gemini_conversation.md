@@ -377,7 +377,9 @@ Engineered the first 4 variations of the 3D Perspective Tilt Card using GSAP mou
 4. **Magnetic Pull Tilt (`magnetic_tilt_hover`)**: The card not only tilts but also translates its X/Y coordinates slightly towards the cursor (magnetic snap) with an elastic bounce on reset.
 
 **Status:**
-- Created all 4 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
-- `06_card_3d_tilt_hover/README.md` created.
-- `roadmap.md` updated: Style 2.2 marked as initiated (4 Sub-Demos).
+- Created all 22 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `06_card_3d_tilt_hover/README.md` updated with the full list of 22 variations.
+- `roadmap.md` updated: Style 2.2 marked as completed (22 Sub-Demos).
 - Code committed and pushed to GitHub repo `i-amraj/gsap-reveals`.
+
+**Next Phase:** Style 2.3: GSAP Flip Plugin Lag-Free Grid Rearrange & Filtering (`07_flip_grid_transition`).

@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+
+.header { text-align: center; margin-bottom: 60px; position: relative; z-index: 10;}
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; }
+.header p { color: #94a3b8; }
+
+.grid-wrapper {
+  perspective: 2000px;
+  width: 100vw;
+  display: flex; justify-content: center; align-items: center;
+}
+
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.grid-card {
+  width: 150px; height: 150px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border-radius: 20px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 3rem; font-weight: 900;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  
+  /* Pop them off the board */
+  transform: translateZ(50px);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.grid-card:hover {
+  transform: translateZ(80px) scale(1.05);
+  background: linear-gradient(135deg, #60a5fa, #818cf8);
+}

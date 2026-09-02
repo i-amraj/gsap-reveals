@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inner Cube Tilt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">3D ENVIRONMENT</span>
+    <h1>INNER CUBE TILT</h1>
+    <p>Look inside the 3D room by moving your mouse</p>
+  </header>
+
+  <main class="grid-container">
+    
+    <div class="cube-wrapper">
+      <div class="cube">
+        <div class="face face-back">BACK WALL</div>
+        <div class="face face-left">LEFT WALL</div>
+        <div class="face face-right">RIGHT WALL</div>
+        <div class="face face-top">CEILING</div>
+        <div class="face face-bottom">FLOOR</div>
+        
+        <!-- Floating object inside the room -->
+        <div class="floating-obj"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

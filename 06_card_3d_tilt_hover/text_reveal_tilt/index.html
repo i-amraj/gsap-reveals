@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Reveal Tilt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="header">
+    <span class="badge">HIDDEN DIMENSIONS</span>
+    <h1>TEXT REVEAL TILT</h1>
+    <p>Tilt the card sharply to the right to see the hidden message on its left wall</p>
+  </header>
+
+  <main class="grid-container">
+    
+    <div class="card-wrapper">
+      <div class="card-box">
+        <!-- Main Front Face -->
+        <div class="face face-front">
+          <h2>TILT ME</h2>
+          <p>Hover and move left/right.</p>
+        </div>
+        
+        <!-- Left Side Wall (revealed when tilted right) -->
+        <div class="face face-left">
+          <span>SECRET CODE: 4815162342</span>
+        </div>
+        
+        <!-- Right Side Wall (revealed when tilted left) -->
+        <div class="face face-right">
+          <span>GSAP IS AWESOME</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

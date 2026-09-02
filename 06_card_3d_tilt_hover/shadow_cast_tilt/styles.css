@@ -1,0 +1,46 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #cbd5e1; color: #0f172a; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+
+/* Light theme to see shadows better */
+.header { text-align: center; margin-bottom: 60px; z-index: 10;}
+.badge { background: rgba(0,0,0,0.1); border: 1px solid rgba(0,0,0,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; color: #1e293b; }
+.header p { color: #475569; }
+
+.card-wrapper {
+  perspective: 1500px;
+  width: 350px;
+  height: 480px;
+  position: relative;
+}
+
+.floor-shadow {
+  position: absolute;
+  top: 5%; left: 5%;
+  width: 90%; height: 90%;
+  background: rgba(0,0,0,0.4);
+  filter: blur(30px);
+  border-radius: 30px;
+  /* Placed behind the card but not transformed with it */
+  z-index: 1;
+  will-change: transform;
+}
+
+.card {
+  width: 100%; height: 100%;
+  border-radius: 30px;
+  background: #fff;
+  transform-style: preserve-3d;
+  will-change: transform;
+  
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+  padding: 40px;
+  z-index: 2;
+  position: relative;
+  /* Using a subtle border instead of box-shadow because we made a custom shadow */
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card-content { pointer-events: none; }
+.card-content h2 { font-size: 3rem; font-weight: 900; color: #1e293b; margin-bottom: 10px; letter-spacing: -1px;}
+.card-content p { color: #64748b; font-size: 1.1rem; }

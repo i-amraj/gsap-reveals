@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #000; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+
+.header { text-align: center; margin-bottom: 60px; z-index: 10;}
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; }
+.header p { color: #a1a1aa; }
+
+.cube-wrapper {
+  perspective: 1000px;
+  width: 400px;
+  height: 400px;
+}
+
+.cube {
+  width: 100%; height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.face {
+  position: absolute;
+  top: 0; left: 0;
+  width: 400px; height: 400px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 2rem; font-weight: 900; color: rgba(255,255,255,0.3);
+  border: 1px solid #333;
+}
+
+/* Constructing the Room (Depth = 400px, so Z moves are 200px) */
+/* The box is centered at Z=0. Back is pushed back, others rotated and pushed. */
+
+.face-back {
+  background: #111;
+  transform: translateZ(-200px);
+}
+
+.face-left {
+  background: #1a1a1a;
+  transform: rotateY(90deg) translateZ(-200px);
+}
+
+.face-right {
+  background: #1a1a1a;
+  transform: rotateY(-90deg) translateZ(-200px);
+}
+
+.face-top {
+  background: #222;
+  transform: rotateX(-90deg) translateZ(-200px);
+}
+
+.face-bottom {
+  background: #0a0a0a;
+  transform: rotateX(90deg) translateZ(-200px);
+}
+
+.floating-obj {
+  position: absolute;
+  top: 150px; left: 150px;
+  width: 100px; height: 100px;
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  border-radius: 20px;
+  box-shadow: 0 0 40px #f43f5e;
+  /* Floats exactly in the center of the room (Z=0) */
+  transform: translateZ(0px) rotate45deg;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: translateZ(0px) rotateX(0) rotateY(0); }
+  100% { transform: translateZ(0px) rotateX(360deg) rotateY(360deg); }
+}

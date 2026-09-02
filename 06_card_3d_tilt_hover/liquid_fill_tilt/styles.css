@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+
+.header { text-align: center; margin-bottom: 60px; z-index: 10;}
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; }
+.header p { color: #94a3b8; }
+
+.card-wrapper {
+  perspective: 1000px;
+  width: 320px;
+  height: 480px;
+}
+
+.card {
+  width: 100%; height: 100%;
+  border-radius: 30px;
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,0.1);
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  overflow: hidden; /* Contains the liquid */
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.card-content {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 2;
+  pointer-events: none;
+}
+.card-content h2 { font-size: 3rem; font-weight: 900; letter-spacing: 2px; text-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+
+/* The Liquid Setup */
+.liquid-container {
+  position: absolute;
+  bottom: 0; left: -50%;
+  width: 200%; height: 50%; /* Wider than card so it can tilt without edges showing */
+  transform-origin: center center;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* CSS Wave trick using border-radius spinning */
+.liquid {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 200%;
+  background: linear-gradient(to bottom, #3b82f6, #2563eb);
+}
+
+.liquid::before, .liquid::after {
+  content: '';
+  position: absolute;
+  width: 200%; height: 200%;
+  top: -150%; left: -50%;
+  background: #1e293b; /* Match card background to cut out wave */
+}
+
+.liquid::before {
+  border-radius: 45%;
+  background: rgba(30, 41, 59, 1);
+  animation: wave 5s linear infinite;
+}
+
+.liquid::after {
+  border-radius: 40%;
+  background: rgba(30, 41, 59, 0.5);
+  animation: wave 7s linear infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

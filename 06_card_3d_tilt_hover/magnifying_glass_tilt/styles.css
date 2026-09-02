@@ -1,0 +1,57 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #111; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; }
+
+.header { text-align: center; margin-bottom: 60px; z-index: 10;}
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 2px; }
+.header h1 { font-size: 3rem; font-weight: 900; margin: 15px 0 10px; }
+.header p { color: #888; }
+
+.card-wrapper {
+  perspective: 1200px;
+  width: 400px;
+  height: 500px;
+}
+
+.card {
+  width: 100%; height: 100%;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+  border: 1px solid #333;
+}
+
+.base-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* The Lens Container */
+.lens {
+  position: absolute;
+  top: 0; left: 0;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+  box-shadow: 0 0 20px rgba(0,0,0,0.8), inset 0 0 20px rgba(0,0,0,0.5);
+  overflow: hidden;
+  pointer-events: none; /* Let mouse hit card */
+  opacity: 0;
+  transform: translate(-50%, -50%); /* Center on mouse */
+  z-index: 10;
+}
+
+.card:hover .lens {
+  opacity: 1;
+}
+
+/* The Zoomed Image inside the Lens */
+.lens-img {
+  position: absolute;
+  /* Width must match the scaled proportion of the base card */
+  width: 800px; /* Card is 400, so 2x zoom */
+  height: 1000px; /* Card is 500, so 2x zoom */
+  object-fit: cover;
+}
