@@ -1,0 +1,92 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #fafafa;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+  min-height: 100vh;
+}
+
+/* ---- DUAL CURSOR ---- */
+/* DOT: snaps immediately */
+#cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #111;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* RING: lags behind */
+#cursor-ring {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #111;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
+}
+
+#cursor-ring.hovering {
+  width: 70px;
+  height: 70px;
+  background: rgba(0,0,0,0.05);
+  border-color: transparent;
+}
+
+/* PAGE LAYOUT */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  cursor: none;
+}
+
+.card {
+  padding: 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  text-align: left;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #666;
+  font-weight: 300;
+}

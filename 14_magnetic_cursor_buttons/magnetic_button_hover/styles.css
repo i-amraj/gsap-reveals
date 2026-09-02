@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #09090b;
+  color: #fafafa;
+  font-family: 'Inter', sans-serif;
+  cursor: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CUSTOM CURSOR */
+#cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.2s, height 0.2s;
+}
+
+#cursor.expanded {
+  width: 60px;
+  height: 60px;
+}
+
+/* PAGE LAYOUT */
+.page {
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  color: #71717a;
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.button-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* THE MAGNETIC BUTTON */
+.mag-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50px;
+  color: #fafafa;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  cursor: none;
+  will-change: transform;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.mag-btn:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.5);
+}

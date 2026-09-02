@@ -23,6 +23,12 @@ This library focuses on creating the highly sought-after "Awwwards-style" preloa
 | 14 | `checkerboard_split` | A massive 10x10 CSS Grid. After loading, the 100 blocks stagger-rotate and scale down to 0% border-radius from the edges inwards. | ✅ |
 | 15 | `random_pixel_dissolve` | A dense 225-block grid (15x15) where pixels randomly scale and fade out, creating a highly digital, noisy static wipe transition. | ✅ |
 | 16 | `three_d_door_fold` | Utilizes CSS `perspective: 1500px` and `rotateY` in GSAP. The left and right halves of the preloader swing outwards like massive 3D saloon doors. | ✅ |
+| 17 | `horizontal_venetian_blinds` | 6 horizontal rows where alternating rows slide left and right simultaneously like real venetian blinds, revealing the hero behind them. | ✅ |
+| 18 | `collapsing_diamond_reveal` | A massive CSS `clip-path` diamond shape collapses into a single center point via `polygon()` morphing, creating a sharp angular collapse. | ✅ |
+| 19 | `alternating_column_split` | 6 vertical columns fly alternately up and down with an incremental wave delay, creating an intricate interleaved vertical reveal. | ✅ |
+| 20 | `circular_multi_layer_iris` | 3 stacked colored layers each collapse their `clip-path: circle()` to `0%` radius in sequence, creating a multi-layered camera iris effect. | ✅ |
+| 21 | `zoom_blur_portal` | The entire loader scales up to 15x and blurs intensely, simulating the feeling of flying forward through a blue portal into the hero section. | ✅ |
+| 22 | `slice_and_slide_reveal` | Three horizontal slices each exit in a different axis — top goes up, middle slides right, bottom goes down — for a true multi-axis mechanical wipe. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.

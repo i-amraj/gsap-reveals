@@ -1,0 +1,79 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Chakra Petch', sans-serif; }
+body { background: #fdfdfd; color: #111; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.slice {
+  position: absolute;
+  left: 0;
+  width: 100vw;
+  height: 33.333vh; /* Exact thirds */
+  background: #111;
+  will-change: transform;
+}
+
+.slice-top {
+  top: 0;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.slice-middle {
+  top: 33.333vh;
+  background: #facc15; /* Contrasting middle stripe */
+}
+
+.slice-bottom {
+  top: 66.666vh;
+  border-top: 2px solid rgba(255,255,255,0.1);
+}
+
+.counter-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* Text on the yellow middle stripe */
+  color: #111; 
+}
+
+.counter-text {
+  font-size: 10rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 10rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.hero-subtitle {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #666;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 5rem; }
+  .counter-text { font-size: 7rem; }
+}

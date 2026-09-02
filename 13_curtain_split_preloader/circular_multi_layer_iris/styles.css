@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif; }
+body { background: #fdfbf7; color: #1c1917; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  /* 150% covers the corners of a rectangle */
+  clip-path: circle(150% at 50% 50%);
+  will-change: clip-path;
+}
+
+/* The stacking and coloring of the iris layers */
+.layer-1 { background: #1c1917; z-index: 3; } /* Black (starts visible) */
+.layer-2 { background: #eab308; z-index: 2; } /* Yellow */
+.layer-3 { background: #d6d3d1; z-index: 1; } /* Light Gray */
+
+.counter-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #fdfbf7;
+}
+
+.counter-text {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 10rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #78716c;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 5rem; }
+  .counter-text { font-size: 6rem; }
+}

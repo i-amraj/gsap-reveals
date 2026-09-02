@@ -1,0 +1,59 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Orbitron', sans-serif; }
+body { background: #000; color: #fff; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  background: #3b82f6; /* Blue portal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform, filter, opacity;
+  /* Transform origin in center so it scales towards us symmetrically */
+  transform-origin: center center;
+}
+
+.counter-container {
+  color: #fff;
+  text-align: center;
+}
+
+.counter-text {
+  font-size: 15rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Dark space background */
+  background: radial-gradient(circle at center, #1e1b4b, #000);
+}
+
+.hero-title {
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.hero-subtitle {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #818cf8;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 4rem; }
+  .counter-text { font-size: 8rem; }
+}

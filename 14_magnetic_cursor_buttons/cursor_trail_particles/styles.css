@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: none;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main cursor dot */
+#cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Particle style — injected dynamically */
+.particle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  /* Center each particle on its spawn coordinates */
+  transform: translate(-50%, -50%);
+}
+
+/* PAGE */
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #71717a;
+}
