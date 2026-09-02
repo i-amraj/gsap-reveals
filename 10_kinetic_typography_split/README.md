@@ -2,7 +2,7 @@
 
 This module explores precise, staggered text reveals using clipping masks and 3D transforms. Unlike scrubbed animations that rely entirely on the user's scrollbar, these animations trigger automatically when the text enters the viewport, executing a perfectly choreographed kinetic sequence using GSAP's staggering capabilities combined with `SplitType`.
 
-## 📦 Sub-Demos (Currently 20)
+## 📦 Sub-Demos (Currently 22)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -26,6 +26,8 @@ This module explores precise, staggered text reveals using clipping masks and 3D
 | 18 | `3d_word_swing_down` | Words are hinged from their top edge and swing heavily downwards on the X-axis with a bouncing ease. | ✅ |
 | 19 | `word_blur_scale_slam` | Words start massively scaled and blurred, accelerating exponentially and slamming into focus with a hard stop. | ✅ |
 | 20 | `char_random_decode_fade` | Removes directional flow entirely by randomly decoding and fading in characters sequentially across the text block. | ✅ |
+| 21 | `word_tracking_pull_in` | Characters within words are magnetically pulled together as `letter-spacing` animates down to zero. | ✅ |
+| 22 | `char_neon_flash_reveal` | Characters spark into existence with a heavy cyan neon `text-shadow` before cooling to pure white text. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
