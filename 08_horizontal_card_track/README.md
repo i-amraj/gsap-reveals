@@ -2,7 +2,7 @@
 
 This module demonstrates how to create horizontal scrolling sections linked to vertical scroll using GSAP ScrollTrigger. By pinning a container and translating an inner track on the X-axis, we can hijack the standard vertical scroll to create immersive horizontal experiences.
 
-## 📦 Sub-Demos (Currently 16)
+## 📦 Sub-Demos (Currently 20)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -22,6 +22,10 @@ This module demonstrates how to create horizontal scrolling sections linked to v
 | 14 | `perspective_3d_track` | 3D Cover Flow layout synced to horizontal scroll using `containerAnimation` and `rotateY`. | ✅ |
 | 15 | `horizontal_timeline_scrub` | A progress bar and marker dots that visually sync with cards entering the center of the viewport. | ✅ |
 | 16 | `background_color_shift` | Smoothly morphs the entire page's background color to match the dominant color of the centered card. | ✅ |
+| 17 | `text_reveal_on_scroll` | Text inside masked containers sweeps up precisely as the card scrolls into the center. | ✅ |
+| 18 | `horizontal_card_flip` | 3D `rotateY(180deg)` cards physically flip over to reveal their content exactly when they hit the center. | ✅ |
+| 19 | `split_screen_horizontal` | Left side stays static with stacked text that updates based on the center image in the right scrolling track. | ✅ |
+| 20 | `multi_directional_horizontal` | Two tracks stacked vertically passing each other in perfectly opposite directions (left vs right) on scroll. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split Screen Horizontal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>Left panel text updates as right panel cards scroll.</p>
+  </section>
+
+  <section class="split-section" id="split-section">
+    
+    <!-- Fixed Left Panel -->
+    <div class="left-panel">
+      <div class="text-container">
+        <div class="text-item text-0 active">
+          <h2>01 / RED</h2>
+          <p>Passionate and energetic.</p>
+        </div>
+        <div class="text-item text-1">
+          <h2>02 / BLUE</h2>
+          <p>Calm and trustworthy.</p>
+        </div>
+        <div class="text-item text-2">
+          <h2>03 / GREEN</h2>
+          <p>Natural and balanced.</p>
+        </div>
+        <div class="text-item text-3">
+          <h2>04 / PURPLE</h2>
+          <p>Mystical and luxurious.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrolling Right Panel -->
+    <div class="right-panel">
+      <div class="track">
+        <div class="card card-1"></div>
+        <div class="card card-2"></div>
+        <div class="card card-3"></div>
+        <div class="card card-4"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

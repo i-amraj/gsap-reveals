@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.horizontal-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 5vw;
+}
+
+.track-top {
+  padding-left: 10vw; 
+  padding-right: 10vw;
+}
+
+/* The bottom track will be dynamically positioned by JS, but we pad it similarly */
+.track-bottom {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.card {
+  width: 40vw;
+  height: 35vh;
+  border-radius: 20px;
+  background: #334155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.card h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.8);
+}
+
+.card-1 { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.card-2 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.card-3 { background: linear-gradient(135deg, #10b981, #047857); }
+.card-4 { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+
+.card-5 { background: linear-gradient(135deg, #ec4899, #be185d); }
+.card-6 { background: linear-gradient(135deg, #f59e0b, #b45309); }
+.card-7 { background: linear-gradient(135deg, #84cc16, #4d7c0f); }
+.card-8 { background: linear-gradient(135deg, #06b6d4, #0369a1); }
+
+@media (max-width: 768px) {
+  .card { width: 70vw; height: 25vh; }
+}

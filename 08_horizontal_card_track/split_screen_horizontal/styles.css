@@ -1,0 +1,94 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.split-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* LEFT PANEL (Static visually) */
+.left-panel {
+  width: 50vw;
+  height: 100vh;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.text-container {
+  position: relative;
+  width: 80%;
+  height: 200px;
+}
+
+.text-item {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+}
+
+.text-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-item h2 { font-size: 4rem; font-weight: 900; margin-bottom: 10px; }
+.text-item p { font-size: 1.5rem; color: #94a3b8; }
+
+/* RIGHT PANEL (Scrolling) */
+.right-panel {
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  /* Padding so the first card sits in the center of the right panel */
+  padding: 0 15vw; 
+  gap: 5vw;
+}
+
+.card {
+  width: 20vw;
+  height: 40vh;
+  border-radius: 20px;
+  background: #334155;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.card-1 { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.card-2 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.card-3 { background: linear-gradient(135deg, #10b981, #047857); }
+.card-4 { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+
+@media (max-width: 768px) {
+  .split-section { flex-direction: column; }
+  .left-panel, .right-panel { width: 100vw; height: 50vh; border-right: none; }
+  .card { width: 50vw; }
+  .track { padding: 0 25vw; }
+  .text-item h2 { font-size: 2.5rem; }
+}
