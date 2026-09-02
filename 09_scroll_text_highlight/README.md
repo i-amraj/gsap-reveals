@@ -2,7 +2,7 @@
 
 This module focuses on Apple/Stripe-style kinetic typography where text dynamically reacts to the user's vertical scroll position. By utilizing GSAP ScrollTrigger combined with the `SplitType` library, we can easily slice text into lines, words, or characters and animate them seamlessly.
 
-## 📦 Sub-Demos (Currently 16)
+## 📦 Sub-Demos (Currently 20)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -22,6 +22,10 @@ This module focuses on Apple/Stripe-style kinetic typography where text dynamica
 | 14 | `character_sine_wave` | Uses a yoyo repeat inside a stagger to send a continuous lifting wave through the letters as you scroll. | ✅ |
 | 15 | `word_slam_focus` | Words start massive and blurry, aggressively scaling down into focus to create a heavy visual impact. | ✅ |
 | 16 | `character_3d_fall` | Characters physically drop from above on the Z-axis, slotting perfectly into place on the screen. | ✅ |
+| 17 | `3d_line_tilt_reveal` | Lines of text swing down from a -90deg `rotateX` tilt like a cinematic drawbridge. | ✅ |
+| 18 | `gradient_mask_wipe` | Uses pure CSS background-clip and GSAP `background-position` for a flawless, un-segmented Apple color wipe. | ✅ |
+| 19 | `letter_spacing_expansion` | Lines of text decompress horizontally (`letter-spacing`) as they fade in, releasing visual tension. | ✅ |
+| 20 | `center_out_reveal` | Leverages `stagger: { from: 'center' }` to send a shockwave of revealing words expanding outwards from the middle. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.

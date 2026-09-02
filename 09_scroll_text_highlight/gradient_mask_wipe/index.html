@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Mask Wipe</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>A flawless CSS gradient wipes across the text seamlessly.</p>
+  </section>
+
+  <section class="text-section">
+    <div class="container">
+      <p class="split-text">
+        Sometimes the most performant animations don't require heavy DOM manipulation. By combining CSS `background-clip: text` with a double-width linear gradient, we can scrub the `background-position` with GSAP to create a perfectly smooth, un-segmented color reveal that Apple uses heavily on their landing pages.
+      </p>
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <!-- Note: We don't even need SplitType for this one! -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
