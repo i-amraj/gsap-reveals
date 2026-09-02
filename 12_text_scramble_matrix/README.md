@@ -4,7 +4,7 @@ Welcome to the **Text Scramble Matrix** library. This module focuses on cryptogr
 
 Because the official GSAP `ScrambleTextPlugin` is a paid Club GreenSock utility, **all variations in this library are built entirely from scratch using free GSAP core logic**. By tweening a proxy object's progress and updating the text inside an `onUpdate` callback, we achieve identical, highly-performant scramble effects without requiring premium plugins.
 
-## 📦 Sub-Demos (Currently 12)
+## 📦 Sub-Demos (Currently 16)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -20,6 +20,10 @@ Because the official GSAP `ScrambleTextPlugin` is a paid Club GreenSock utility,
 | 10 | `japanese_kanji_scramble` | Uses a specific pool of half-width Katakana characters to simulate a "Ghost in the Shell" aesthetic that decrypts into English on scroll. | ✅ |
 | 11 | `scramble_typewriter` | Text is typed out onto a terminal screen, but the last 3 characters are always scrambling, simulating real-time payload decryption. | ✅ |
 | 12 | `marquee_scramble_ticker` | An infinite looping GSAP marquee that continuously morphs into different phrases via scrambling every 4 seconds without breaking its flow. | ✅ |
+| 13 | `vertical_text_scramble` | Scrambles text configured with `writing-mode: vertical-rl` to mimic authentic, top-to-bottom falling matrix rain columns. | ✅ |
+| 14 | `scramble_random_word_glitch` | Periodically picks a random word inside a large static paragraph and glitches it out for a fraction of a second, creating a highly unstable aesthetic. | ✅ |
+| 15 | `scramble_hover_encrypt` | Inverts standard logic: The text is normally readable, but when hovered, it rapidly *encrypts* into symbols to hide sensitive data. | ✅ |
+| 16 | `scramble_loading_percentages` | A highly dynamic loader where the percentage counter (`004%`) violently scrambles its digits while counting up, locking in smoothly at `100%`. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.

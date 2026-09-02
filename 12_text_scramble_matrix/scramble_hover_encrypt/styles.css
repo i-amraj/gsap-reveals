@@ -1,0 +1,36 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #0f172a; color: #fff; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10vw;
+  gap: 2rem;
+}
+
+.subtitle {
+  color: #ef4444; /* Red warning */
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.encrypt-text {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #f8fafc;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.encrypt-text:hover {
+  color: #ef4444; /* Turn red on encrypt */
+}
+
+@media (max-width: 768px) {
+  .encrypt-text { font-size: 1.5rem; }
+}

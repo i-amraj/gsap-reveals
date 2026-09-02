@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #0f172a; color: #fff; overflow: hidden; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subtitle {
+  color: #10b981;
+  font-size: 1rem;
+  letter-spacing: 4px;
+}
+
+.column-wrapper {
+  display: flex;
+  gap: 4rem;
+}
+
+.vertical-scramble {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #f8fafc;
+  cursor: crosshair;
+  
+  /* Vertical Typography Magic */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.5rem;
+  
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.vertical-scramble:hover {
+  color: #10b981;
+  text-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+@media (max-width: 768px) {
+  .vertical-scramble { font-size: 2rem; gap: 2rem; }
+}
