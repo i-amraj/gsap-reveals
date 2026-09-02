@@ -1,0 +1,63 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body { background: #111; color: #fff; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 1; /* Underneath the hero section */
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-container {
+  text-align: center;
+  color: #fff;
+}
+
+.counter-text {
+  font-size: 12rem;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 2; /* On top of the preloader */
+  background: #3b82f6; /* Blue background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* The Magic Mask */
+  clip-path: circle(0% at 50% 50%);
+  will-change: clip-path;
+}
+
+.hero-title {
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  color: #eff6ff;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 4rem; }
+  .counter-text { font-size: 6rem; }
+}

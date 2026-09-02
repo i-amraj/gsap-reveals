@@ -15,6 +15,10 @@ This library focuses on creating the highly sought-after "Awwwards-style" preloa
 | 07 | `multi_layer_curtain` | 3 distinctly colored full-screen layers that wipe away vertically in a fluid sequence to reveal the hero section underneath. | ✅ |
 | 08 | `four_quadrant_split` | Divides the screen into four corners. Once loaded, the quadrants explode outwards diagonally in four different directions simultaneously. | ✅ |
 | 08 | `four_quadrant_split` | Divides the screen into four corners. Once loaded, the quadrants explode outwards diagonally in four different directions simultaneously. | ✅ |
+| 09 | `expanding_circle_reveal` | Inverts the classic iris loader: the preloader stays static while the hero section expands dynamically from a central point via `clip-path: circle()`. | ✅ |
+| 10 | `split_text_curtain` | Using CSS polygons, the counter text itself literally tears in half horizontally as the curtains open, splitting the `100%` directly down the middle. | ✅ |
+| 11 | `bar_chart_reveal` | Ten vertical columns organically grow from `0%` to `100%` height during the count, before elegantly staggering up and away to reveal the site. | ✅ |
+| 12 | `svg_curve_wipe` | An SVG `<path>` morphs its `d` attribute over time to simulate physical elastic tension, pulling back before snapping rapidly out of view. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
