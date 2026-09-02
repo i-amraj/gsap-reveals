@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skew on Drag</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="overlay">
+    <h1>DRAG ME</h1>
+    <p>Grab the track and pull. Friction causes the cards to skew.</p>
+  </div>
+
+  <!-- We use a wrapper larger than the track to act as bounds -->
+  <section class="horizontal-wrapper">
+    <div class="track" id="drag-track">
+      <div class="card card-1"><h2>01</h2></div>
+      <div class="card card-2"><h2>02</h2></div>
+      <div class="card card-3"><h2>03</h2></div>
+      <div class="card card-4"><h2>04</h2></div>
+      <div class="card card-5"><h2>05</h2></div>
+      <div class="card card-6"><h2>06</h2></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

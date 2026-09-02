@@ -1,0 +1,114 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.horizontal-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  padding: 0 35vw; 
+  gap: 10vw;
+}
+
+.card {
+  width: 30vw;
+  height: 50vh;
+  border-radius: 20px;
+  background: #334155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.card h2 {
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.8);
+}
+
+.card-1 { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.card-2 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.card-3 { background: linear-gradient(135deg, #10b981, #047857); }
+.card-4 { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+
+/* Timeline Styles */
+.timeline-wrapper {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-track {
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  position: relative;
+  border-radius: 2px;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.marker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #94a3b8;
+  border: 4px solid #0f172a;
+  transition: all 0.3s ease;
+}
+
+/* Position markers evenly */
+.marker-0 { left: 0%; transform: translate(-50%, -50%); }
+.marker-1 { left: 33.33%; transform: translate(-50%, -50%); }
+.marker-2 { left: 66.66%; transform: translate(-50%, -50%); }
+.marker-3 { left: 100%; transform: translate(-50%, -50%); }
+
+.marker.active {
+  background: #fff;
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 0 0 10px #fff;
+}
+
+@media (max-width: 768px) {
+  .card { width: 70vw; height: 40vh; }
+  .track { padding: 0 15vw; }
+  .timeline-wrapper { width: 80vw; }
+}
