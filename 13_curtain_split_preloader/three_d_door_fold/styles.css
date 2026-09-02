@@ -1,0 +1,81 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cinzel', serif; }
+body { background: #18181b; color: #fff; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  /* Crucial for the 3D effect */
+  perspective: 1500px;
+}
+
+.door {
+  position: absolute;
+  top: 0;
+  width: 50vw;
+  height: 100vh;
+  background: #facc15; /* Gold doors */
+  will-change: transform;
+}
+
+.door-left {
+  left: 0;
+  /* Hinge is on the far left edge */
+  transform-origin: left center;
+  border-right: 2px solid rgba(0,0,0,0.2);
+}
+
+.door-right {
+  right: 0;
+  /* Hinge is on the far right edge */
+  transform-origin: right center;
+  border-left: 2px solid rgba(0,0,0,0.2);
+}
+
+.counter-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #18181b; /* Dark text on gold */
+}
+
+.counter-text {
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #facc15;
+}
+
+.hero-subtitle {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  margin-bottom: 1rem;
+  opacity: 0;
+  color: #a1a1aa;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3rem; }
+  .counter-text { font-size: 6rem; }
+}

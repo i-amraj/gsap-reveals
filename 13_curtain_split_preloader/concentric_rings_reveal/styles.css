@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Jura', sans-serif; }
+body { background: #000; color: #fff; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  /* Centering the counter container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  /* translate applied via GSAP usually, but we set initial state */
+  transform: translate(-50%, -50%);
+  /* 150vw ensures it covers the 16:9 screen completely */
+  width: 150vw;
+  height: 150vw; 
+  border-radius: 50%;
+  will-change: transform;
+}
+
+/* Colors from dark to light outwards, or varied */
+.ring-4 { background: #0f172a; z-index: 1; }
+.ring-3 { background: #1e293b; z-index: 2; width: 120vw; height: 120vw; }
+.ring-2 { background: #334155; z-index: 3; width: 90vw; height: 90vw; }
+.ring-1 { background: #475569; z-index: 4; width: 60vw; height: 60vw; }
+
+.counter-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.counter-text {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.loading-label {
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  color: #94a3b8;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at center, #1e1b4b, #000);
+}
+
+.hero-title {
+  font-size: 8rem;
+  font-weight: 700;
+  letter-spacing: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  color: #818cf8;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3rem; letter-spacing: 4px; }
+  .counter-text { font-size: 5rem; }
+}
