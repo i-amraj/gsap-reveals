@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow: hidden; }
+
+.marquee-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee-container {
+  position: relative;
+  width: 80vmin; /* Responsive square */
+  height: 80vmin;
+}
+
+.marquee-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Fix text rendering issues in some browsers */
+.svg-marquee-text {
+  text-transform: uppercase;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.center-content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.5rem;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG TextPath Marquee</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="marquee-section">
+    <div class="marquee-container">
+      <svg viewBox="0 0 1000 1000" class="marquee-svg">
+        <!-- Define a circular path -->
+        <path id="circlePath" d="M 500, 500 m -350, 0 a 350,350 0 1,1 700,0 a 350,350 0 1,1 -700,0" fill="none" />
+        
+        <!-- Bind text to the path -->
+        <text font-size="48" font-weight="900" fill="#38bdf8" letter-spacing="5">
+          <textPath href="#circlePath" class="svg-marquee-text" startOffset="0%">
+            CIRCULAR VECTOR MARQUEE &bull; NON LINEAR PATH &bull; SEAMLESS SPIN &bull; CIRCULAR VECTOR MARQUEE &bull; NON LINEAR PATH &bull; SEAMLESS SPIN &bull; 
+          </textPath>
+        </text>
+      </svg>
+      
+      <div class="center-content">
+        <h1>SPIN</h1>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
