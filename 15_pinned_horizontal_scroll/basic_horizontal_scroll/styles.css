@@ -1,0 +1,12 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#1a1a1a; }
+.spacer h1 { font-size:4rem; }
+.horizontal-container { height:100vh; width:100%; overflow:hidden; }
+.track { display:flex; height:100%; width:fit-content; }
+.panel { height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; flex-shrink:0; }
+.panel h2 { font-size:6rem; font-weight:700; color:#111; }
+.p1 { background:#facc15; }
+.p2 { background:#3b82f6; }
+.p3 { background:#ef4444; }
+.p4 { background:#22c55e; }

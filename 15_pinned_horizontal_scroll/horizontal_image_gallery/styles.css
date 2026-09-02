@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.pin-wrap { height:100vh; width:100vw; display:flex; align-items:center; overflow:hidden; }
+.gallery-track { display:flex; gap:5vw; padding:0 25vw; height:60vh; align-items:center; }
+.gallery-img { height:100%; width:auto; border-radius:1rem; object-fit:cover; flex-shrink:0; max-width:80vw; }

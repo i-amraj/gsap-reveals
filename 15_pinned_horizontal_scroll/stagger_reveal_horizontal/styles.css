@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.pin-wrap { height:100vh; width:100vw; display:flex; align-items:center; overflow:hidden; }
+.track { display:flex; height:100vh; }
+.panel { width:100vw; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding-left:10vw; flex-shrink:0; border-right:1px solid rgba(255,255,255,0.1); }
+.stagger-text { font-size:8rem; font-weight:700; line-height:1; letter-spacing:-3px; overflow:hidden; clip-path:polygon(0 100%, 100% 100%, 100% 100%, 0 100%); transform:translateY(100px); }

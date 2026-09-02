@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#e11d48; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.pin-wrap { height:100vh; width:100vw; display:flex; align-items:center; overflow:hidden; }
+.marquee-track { display:flex; width:fit-content; white-space:nowrap; }
+.marquee-track h1 { font-size:25vw; font-weight:900; line-height:1; letter-spacing:-5px; padding:0 20px; }

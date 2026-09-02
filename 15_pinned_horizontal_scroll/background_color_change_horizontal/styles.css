@@ -1,0 +1,8 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#fef08a; /* Start color */ color:#111; overflow-x:hidden; transition:background 0.5s ease; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.pin-wrap { height:100vh; width:100vw; display:flex; align-items:center; overflow:hidden; }
+.track { display:flex; height:100vh; width:fit-content; }
+.panel { width:100vw; height:100vh; display:flex; justify-content:center; align-items:center; flex-shrink:0; }
+.panel h2 { font-size:8rem; font-weight:700; mix-blend-mode:difference; color:#fff; }

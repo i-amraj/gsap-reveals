@@ -1,0 +1,12 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Space Grotesk',sans-serif; background:#0f0f0f; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h2 { font-size:4rem; font-weight:700; }
+.pin-wrap { height:100vh; width:100vw; display:flex; align-items:center; overflow:hidden; }
+.track { display:flex; gap:10vw; padding:0 25vw; height:60vh; }
+.skew-card { width:30vw; min-width:300px; height:100%; border-radius:1rem; display:flex; justify-content:center; align-items:center; font-size:6rem; font-weight:700; color:#111; will-change:transform; transform-origin:center center; flex-shrink:0; }
+.c1 { background:#facc15; }
+.c2 { background:#3b82f6; }
+.c3 { background:#ef4444; }
+.c4 { background:#22c55e; }
+.c5 { background:#a855f7; }

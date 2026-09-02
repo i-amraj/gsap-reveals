@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Space Grotesk',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h2 { font-size:3rem; }
+.pin-wrap { height:100vh; width:100vw; display:flex; align-items:center; overflow:hidden; }
+.card-track { display:flex; gap:10vw; padding:0 20vw; height:60vh; }
+.card { width:40vw; min-width:300px; height:100%; position:relative; overflow:hidden; border-radius:2rem; flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+/* Inner image needs to be wider than the card for horizontal parallax */
+.card-img { position:absolute; top:0; left:-10vw; width:calc(100% + 20vw); height:100%; background-size:cover; background-position:center; z-index:1; }
+.card-title { position:relative; z-index:2; font-size:5rem; font-weight:700; color:#fff; text-shadow:0 10px 30px rgba(0,0,0,0.5); }

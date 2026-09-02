@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Horizontal Infinite Loop</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <!-- Note: True infinite scroll is hard with pinning. 
+       Usually we use a seamless loop helper function, but here we'll demonstrate a continuous marquee loop independent of scroll, as a variation of horizontal movement -->
+  
+  <div class="marquee-container">
+    <div class="marquee-content" id="marquee1">
+      <div class="box">Item 1</div><div class="box">Item 2</div><div class="box">Item 3</div><div class="box">Item 4</div><div class="box">Item 5</div>
+      <div class="box">Item 1</div><div class="box">Item 2</div><div class="box">Item 3</div><div class="box">Item 4</div><div class="box">Item 5</div>
+    </div>
+  </div>
+
+  <div class="marquee-container reverse">
+    <div class="marquee-content" id="marquee2">
+      <div class="box">Alpha</div><div class="box">Beta</div><div class="box">Gamma</div><div class="box">Delta</div><div class="box">Epsilon</div>
+      <div class="box">Alpha</div><div class="box">Beta</div><div class="box">Gamma</div><div class="box">Delta</div><div class="box">Epsilon</div>
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

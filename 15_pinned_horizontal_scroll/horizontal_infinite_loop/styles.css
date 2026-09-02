@@ -1,0 +1,5 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#111; overflow-x:hidden; display:flex; flex-direction:column; justify-content:center; height:100vh; gap:2rem; }
+.marquee-container { width:100vw; overflow:hidden; display:flex; }
+.marquee-content { display:flex; width:max-content; }
+.box { width:400px; height:250px; background:#fff; margin-right:2rem; border-radius:1rem; display:flex; justify-content:center; align-items:center; font-size:3rem; font-weight:700; flex-shrink:0; }

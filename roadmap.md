@@ -37,7 +37,7 @@
 ---
 
 ## 📜 Category 5: Advanced Scroll Storytelling Styles
-- [ ] **Style 5.1:** `15_pinned_horizontal_scroll` — Pinned Horizontal Showcase Track (GSAP.com Style)
+- [x] **Style 5.1:** `15_pinned_horizontal_scroll` — Pinned Horizontal Showcase Track (GSAP.com Style) — *(Completed 22 Sub-Demos)*
 - [ ] **Style 5.2:** `16_choreographed_scroll_trigger` — Staggered Multi-Element Choreography Timeline
 - [ ] **Style 5.3:** `17_svg_path_drawing_scroll` — Dynamic SVG Vector Path Drawing & Stroke Morphing
 - [ ] **Style 5.4:** `18_3d_model_canvas_scroll` — 360 Degree 3D Canvas / Three.js Product Rotation
