@@ -1,0 +1,41 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'JetBrains Mono', monospace; }
+body { background: #050505; color: #fff; overflow: hidden; }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.subtitle {
+  color: #3b82f6;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  margin-bottom: 2rem;
+}
+
+.scramble-text {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #f8fafc;
+  cursor: crosshair;
+  /* Monospace ensures the block characters match width of standard letters */
+  display: inline-block;
+}
+
+/* The Glitch Effect activated via JS */
+.glitching {
+  /* Chromatic aberration */
+  text-shadow: 4px 0 rgba(239, 68, 68, 0.8), -4px 0 rgba(59, 130, 246, 0.8);
+  /* Slight skew for physical distortion */
+  transform: skewX(-10deg);
+  /* Intense contrast */
+  filter: contrast(150%) brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  .scramble-text { font-size: 2rem; text-align: center; }
+}
