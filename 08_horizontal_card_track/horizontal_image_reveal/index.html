@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Image Reveal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>Images reveal dynamically as they enter the screen horizontally.</p>
+  </section>
+
+  <section class="horizontal-section" id="reveal-section">
+    <div class="track">
+      
+      <div class="card">
+        <div class="img-container">
+          <div class="img-bg" style="background: linear-gradient(135deg, #10b981, #047857);"></div>
+          <h2>NATURE</h2>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="img-container">
+          <div class="img-bg" style="background: linear-gradient(135deg, #f43f5e, #be123c);"></div>
+          <h2>ENERGY</h2>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="img-container">
+          <div class="img-bg" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);"></div>
+          <h2>OCEAN</h2>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="img-container">
+          <div class="img-bg" style="background: linear-gradient(135deg, #a855f7, #7e22ce);"></div>
+          <h2>GALAXY</h2>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

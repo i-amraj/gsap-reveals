@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Multi Layer Track</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section class="spacer">
+    <h1>SCROLL DOWN</h1>
+    <p>Multiple layers scrolling horizontally at different speeds.</p>
+  </section>
+
+  <section class="horizontal-section" id="parallax-section">
+    
+    <!-- Slow Background Layer -->
+    <div class="layer bg-layer">
+      <div class="bg-shape" style="left: 10vw; width: 300px; height: 300px;"></div>
+      <div class="bg-shape" style="left: 60vw; width: 500px; height: 500px; top: 10%;"></div>
+      <div class="bg-shape" style="left: 120vw; width: 200px; height: 200px; top: 70%;"></div>
+      <div class="bg-shape" style="left: 180vw; width: 400px; height: 400px;"></div>
+    </div>
+
+    <!-- Normal Speed Middle Layer (The Cards) -->
+    <div class="layer mid-layer track">
+      <div class="card card-1"><h2>01</h2></div>
+      <div class="card card-2"><h2>02</h2></div>
+      <div class="card card-3"><h2>03</h2></div>
+      <div class="card card-4"><h2>04</h2></div>
+    </div>
+
+    <!-- Fast Foreground Layer -->
+    <div class="layer fg-layer">
+      <h2 class="fg-text" style="left: 20vw; top: 20%;">FAST</h2>
+      <h2 class="fg-text" style="left: 80vw; top: 60%;">FOREGROUND</h2>
+      <h2 class="fg-text" style="left: 150vw; top: 30%;">PARALLAX</h2>
+      <h2 class="fg-text" style="left: 220vw; top: 70%;">DEPTH</h2>
+    </div>
+
+  </section>
+
+  <section class="spacer">
+    <h1>KEEP SCROLLING</h1>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

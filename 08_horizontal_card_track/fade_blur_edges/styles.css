@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.horizontal-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  /* Add padding so first and last cards can sit exactly in the center */
+  padding: 0 35vw; 
+  gap: 3vw;
+}
+
+.card {
+  width: 30vw;
+  height: 50vh;
+  border-radius: 20px;
+  background: #334155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+  
+  /* Initial CSS state for edges */
+  opacity: 0.2;
+  filter: blur(10px);
+}
+
+.card h2 {
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.8);
+}
+
+.card-1 { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.card-2 { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.card-3 { background: linear-gradient(135deg, #10b981, #047857); }
+.card-4 { background: linear-gradient(135deg, #a855f7, #7e22ce); }
+.card-5 { background: linear-gradient(135deg, #f59e0b, #b45309); }
+.card-6 { background: linear-gradient(135deg, #ec4899, #be185d); }
+
+@media (max-width: 768px) {
+  .card { width: 60vw; height: 40vh; }
+  .track { padding: 0 20vw; }
+}
