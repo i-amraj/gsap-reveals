@@ -1,0 +1,75 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: #0f172a; color: #fff; overflow-x: hidden; }
+
+.spacer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1e293b;
+}
+
+.spacer h1 { font-size: 4rem; font-weight: 900; color: #f8fafc; }
+.spacer p { color: #94a3b8; font-size: 1.2rem; }
+
+.horizontal-section {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  padding: 0 10vw;
+  gap: 5vw;
+}
+
+.card {
+  width: 60vw;
+  height: 70vh;
+  border-radius: 20px;
+  background: #334155;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden; /* Crucial for parallax masking */
+}
+
+/* The image must be wider than the card to allow room to move horizontally */
+.parallax-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%; /* Extra width for parallax sliding */
+  height: 100%;
+  z-index: 1;
+}
+
+/* Overlay to darken image so text is readable */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.card h2 {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #fff;
+  z-index: 3; /* Keep text above image and overlay */
+  letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+  .card { width: 80vw; }
+  .card h2 { font-size: 3rem; }
+}

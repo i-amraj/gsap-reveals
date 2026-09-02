@@ -421,3 +421,21 @@ Engineered all 22 variations demonstrating state-based DOM animation, from basic
 - Code committed to GitHub repo `i-amraj/gsap-reveals`.
 
 **Next Phase:** Style 2.4: Mousewheel & Touch Linked Horizontal Card Slider Track (`08_horizontal_card_track`).
+
+---
+
+## Session Update: Style 2.4 (Horizontal Card Track) Kickoff
+**Objective:** Initiate the `08_horizontal_card_track` module by building the foundational GSAP ScrollTrigger horizontal scroll animations.
+
+**Accomplished:**
+Engineered the first 4 variations demonstrating horizontal scroll hijacking:
+1. **Basic Horizontal Scroll (`basic_horizontal_scroll`)**: Pins a section and translates a flex track along the X-axis based on vertical scroll progress.
+2. **Skewed Velocity Scroll (`skewed_velocity_scroll`)**: Uses `self.getVelocity()` to dynamically skew the cards based on how fast the user is scrolling.
+3. **Parallax Image Track (`parallax_image_track`)**: Images inside the cards move at a slightly different rate than the container, creating a deep 3D parallax effect on the X-axis.
+4. **Snap to Card Scroll (`snap_to_card_scroll`)**: Uses ScrollTrigger's `snap` property to perfectly center the nearest card in the viewport when scrolling stops.
+
+**Status:**
+- Created all 4 designs with `index.html`, `styles.css`, `script.js`, and `prompt.md`.
+- `08_horizontal_card_track/README.md` created.
+- `roadmap.md` updated: Style 2.4 marked as initiated (4 Sub-Demos).
+- Code committed to local repository.
