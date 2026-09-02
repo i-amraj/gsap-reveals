@@ -2,7 +2,7 @@
 
 This module explores precise, staggered text reveals using clipping masks and 3D transforms. Unlike scrubbed animations that rely entirely on the user's scrollbar, these animations trigger automatically when the text enters the viewport, executing a perfectly choreographed kinetic sequence using GSAP's staggering capabilities combined with `SplitType`.
 
-## 📦 Sub-Demos (Currently 16)
+## 📦 Sub-Demos (Currently 20)
 
 | # | Module Name | Description | Status |
 |---|---|---|---|
@@ -22,6 +22,10 @@ This module explores precise, staggered text reveals using clipping masks and 3D
 | 14 | `masked_word_diagonal_slide` | Words slide upwards and diagonally (`x` and `y` offsets) from behind invisible clipping masks. | ✅ |
 | 15 | `3d_char_spin_y` | Characters perform a full 360-degree horizontal spin on their Y-axis as they fade into existence. | ✅ |
 | 16 | `line_clip_path_center_out` | Animates the `clip-path` polygon from a squished center-line outward to full width, stretching the text into reality. | ✅ |
+| 17 | `char_clip_path_reveal_up` | Characters are unveiled cleanly from bottom to top using an inline `clip-path` wipe, staying stationary in the layout. | ✅ |
+| 18 | `3d_word_swing_down` | Words are hinged from their top edge and swing heavily downwards on the X-axis with a bouncing ease. | ✅ |
+| 19 | `word_blur_scale_slam` | Words start massively scaled and blurred, accelerating exponentially and slamming into focus with a hard stop. | ✅ |
+| 20 | `char_random_decode_fade` | Removes directional flow entirely by randomly decoding and fading in characters sequentially across the text block. | ✅ |
 
 ## 🚀 How to Use
 Navigate into any sub-directory and open `index.html` in your browser. Each directory contains a `prompt.md` which you can use to generate this exact effect in any AI.
