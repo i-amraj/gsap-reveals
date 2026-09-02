@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.flip-section { min-height:100vh; display:flex; justify-content:center; align-items:center; gap:2rem; padding:5rem; perspective:1000px; }
+.flip-card { width:150px; height:200px; transform-style:preserve-3d; }
+.inner { width:100%; height:100%; background:#f43f5e; border-radius:1rem; display:flex; justify-content:center; align-items:center; font-weight:700; font-size:1.5rem; backface-visibility:hidden; transform:rotateX(-180deg); opacity:0; }

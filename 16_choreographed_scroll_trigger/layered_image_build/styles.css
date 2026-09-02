@@ -1,0 +1,11 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#1e293b; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#0f172a; }
+.spacer h1 { font-size:4rem; }
+.layered-section { height:150vh; display:flex; justify-content:center; align-items:center; }
+.canvas { width:400px; height:400px; position:relative; }
+.layer { position:absolute; border-radius:1rem; box-shadow:0 10px 30px rgba(0,0,0,0.5); }
+.l1 { width:100%; height:100%; background:#ef4444; top:0; left:0; z-index:1; }
+.l2 { width:80%; height:80%; background:#3b82f6; top:10%; left:10%; z-index:2; }
+.l3 { width:60%; height:60%; background:#10b981; top:20%; left:20%; z-index:3; }
+.l4 { width:40%; height:40%; background:#f59e0b; top:30%; left:30%; z-index:4; }

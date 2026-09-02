@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+.spacer h1 { font-size:4rem; }
+.rotate-section { min-height:100vh; display:flex; justify-content:center; align-items:center; gap:2rem; padding:2rem; perspective:1000px; }
+.rot-card { width:200px; height:300px; background:#a855f7; border-radius:1rem; display:flex; justify-content:center; align-items:center; transform:rotateY(-90deg); opacity:0; transform-origin:left center; }
+.rot-card h2 { font-size:2rem; }

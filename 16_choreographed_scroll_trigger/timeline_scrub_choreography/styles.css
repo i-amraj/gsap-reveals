@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#1e1e1e; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#111; }
+.spacer h1 { font-size:4rem; }
+.choreo-section { height:200vh; position:relative; overflow:hidden; } /* tall section to allow scrubbing */
+.element { position:absolute; border-radius:50%; }
+.e1 { width:300px; height:300px; background:#f43f5e; top:20%; left:-20%; }
+.e2 { width:150px; height:150px; background:#3b82f6; bottom:-20%; right:10%; }
+.e3 { width:200px; height:200px; background:#10b981; top:-20%; right:-20%; }
+.element-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%) scale(0.5); opacity:0; font-size:8rem; font-weight:700; letter-spacing:10px; color:#fff; mix-blend-mode:difference; z-index:10; }

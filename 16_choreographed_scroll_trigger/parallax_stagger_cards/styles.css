@@ -1,0 +1,9 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#fff; color:#000; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#fafafa; }
+.spacer h1 { font-size:4rem; }
+.parallax-stagger-section { display:flex; justify-content:center; gap:5rem; padding:10rem 2rem; min-height:150vh; }
+.card-column { display:flex; flex-direction:column; gap:5rem; width:40%; max-width:400px; }
+.col-right { margin-top:10rem; } /* Offset the right column natively */
+.card { width:100%; height:500px; background:#f43f5e; border-radius:1rem; display:flex; justify-content:center; align-items:center; font-size:4rem; font-weight:700; color:#fff; }
+.col-left .card { background:#3b82f6; }

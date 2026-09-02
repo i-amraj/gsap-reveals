@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Space Grotesk',sans-serif; background:#fff; color:#000; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#fafafa; }
+.spacer h2 { font-size:3rem; }
+.pin-section { height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; background:#000; color:#fff; overflow:hidden; }
+.content-wrapper { display:flex; flex-direction:column; align-items:center; }
+.headline { font-size:8rem; font-weight:700; line-height:1; opacity:0; transform:translateY(100px); }

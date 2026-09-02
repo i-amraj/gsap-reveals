@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#e11d48; color:#fff; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#be123c; }
+.spacer h1 { font-size:4rem; }
+.split-section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:5rem; }
+.line { overflow:hidden; } /* Acts as a mask */
+.word { font-size:8vw; font-weight:900; line-height:1; letter-spacing:-2px; transform:translateY(110%); } /* Initially hidden below mask */

@@ -1,0 +1,11 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:#f8fafc; color:#111; overflow-x:hidden; }
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; background:#e2e8f0; }
+.spacer h1 { font-size:4rem; }
+.iso-section { height:150vh; display:flex; justify-content:center; align-items:center; }
+.iso-grid { display:grid; grid-template-columns:repeat(3, 100px); grid-template-rows:repeat(3, 100px); gap:20px; transform:rotateX(60deg) rotateZ(-45deg); transform-style:preserve-3d; }
+.iso-block { width:100px; height:100px; position:relative; transform-style:preserve-3d; opacity:0; transform:translateZ(-200px); }
+.top, .left, .right { position:absolute; width:100px; height:100px; }
+.top { background:#60a5fa; transform:translateZ(100px); }
+.left { background:#3b82f6; transform:rotateX(-90deg) translateZ(50px) translateY(50px); height:100px; }
+.right { background:#2563eb; transform:rotateY(90deg) translateZ(50px) translateX(50px); height:100px; }
