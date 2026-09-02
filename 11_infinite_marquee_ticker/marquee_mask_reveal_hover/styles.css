@@ -1,0 +1,68 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { overflow: hidden; background: #0f172a; cursor: crosshair; }
+
+.page-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.base-layer {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  color: #fff;
+  z-index: 1;
+}
+
+.base-layer h1 { font-size: 5rem; font-weight: 900; }
+.base-layer p { font-size: 1.5rem; color: #94a3b8; }
+
+.reveal-layer {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: #38bdf8; /* Bright background for contrast */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  
+  /* The Magic Mask */
+  /* We use CSS variables updated by JS */
+  clip-path: circle(0px at var(--x, 50%) var(--y, 50%));
+  transition: clip-path 0.1s ease-out; /* Smooths the mouse follow slightly */
+}
+
+/* Enlarge the mask when hovering */
+.page-wrapper:hover .reveal-layer {
+  clip-path: circle(250px at var(--x, 50%) var(--y, 50%));
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-content {
+  font-size: 10rem;
+  font-weight: 900;
+  color: #0f172a;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .marquee-content { font-size: 5rem; }
+  .page-wrapper:hover .reveal-layer { clip-path: circle(150px at var(--x, 50%) var(--y, 50%)); }
+}
