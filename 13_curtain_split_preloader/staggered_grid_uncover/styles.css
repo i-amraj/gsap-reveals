@@ -1,0 +1,73 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto Mono', monospace; }
+body { background: #020617; color: #f8fafc; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.grid-container {
+  display: grid;
+  /* 6 columns, 6 rows = 36 blocks */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid-block {
+  background: #3b82f6; /* Blue blocks */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+.counter-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #fff;
+  background: rgba(15, 23, 42, 0.5); /* Semi-transparent backing so it pops */
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.counter-text {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #94a3b8;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3rem; letter-spacing: 2px; }
+}

@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Exo 2', sans-serif; }
+body { background: #171717; color: #fff; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.quad {
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  background: #facc15; /* Yellow */
+  will-change: transform;
+}
+
+/* Positioning */
+.quad-tl { top: 0; left: 0; }
+.quad-tr { top: 0; right: 0; }
+.quad-bl { bottom: 0; left: 0; }
+.quad-br { bottom: 0; right: 0; }
+
+/* Optional: subtle borders between quads for a techy feel */
+.quad-tl { border-right: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1); }
+.quad-tr { border-left: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1); }
+.quad-bl { border-right: 1px solid rgba(0,0,0,0.1); border-top: 1px solid rgba(0,0,0,0.1); }
+.quad-br { border-left: 1px solid rgba(0,0,0,0.1); border-top: 1px solid rgba(0,0,0,0.1); }
+
+.counter-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #171717; /* Dark text on yellow */
+}
+
+.counter-text {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 5px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  opacity: 0;
+  color: #a3a3a3;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 4rem; letter-spacing: 0px; }
+  .counter-text { font-size: 5rem; }
+}

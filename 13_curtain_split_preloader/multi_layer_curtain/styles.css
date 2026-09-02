@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Clash Display', sans-serif; }
+body { background: #fafafa; color: #111; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  will-change: transform;
+}
+
+/* Layer stacking: layer-1 is on top (z-index 3), hiding the others initially */
+.layer-1 { background: #111111; z-index: 3; } /* Black */
+.layer-2 { background: #6366f1; z-index: 2; } /* Indigo */
+.layer-3 { background: #e0e7ff; z-index: 1; } /* Light Indigo */
+
+.counter-container {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #fff;
+}
+
+.counter-text {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 10rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #4b5563;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 5rem; }
+  .counter-text { font-size: 5rem; }
+}

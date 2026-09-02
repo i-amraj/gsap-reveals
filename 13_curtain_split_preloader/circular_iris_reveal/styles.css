@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Space Grotesk', sans-serif; }
+body { background: #fdfbf7; color: #1c1917; overflow: hidden; }
+
+/* PRELOADER STYLES */
+.preloader-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 9999;
+  background: #1c1917; /* Dark loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  /* 150% ensures the corners of the viewport are covered */
+  clip-path: circle(150% at 50% 50%);
+  will-change: clip-path;
+}
+
+.counter-container {
+  text-align: center;
+  color: #fdfbf7;
+}
+
+.counter-text {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.loading-label {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: #a8a29e;
+  margin-top: 1rem;
+}
+
+/* HERO SECTION STYLES */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 12rem;
+  font-weight: 700;
+  letter-spacing: -5px;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  opacity: 0;
+  color: #78716c;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 6rem; letter-spacing: -2px; }
+  .counter-text { font-size: 5rem; }
+}
