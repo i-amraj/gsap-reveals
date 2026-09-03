@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#111; color:#fff; overflow:hidden; height:100vh; cursor:crosshair; }
+
+.hero { height:100%; display:flex; justify-content:center; align-items:center; }
+h1 { font-size:4rem; color:#444; pointer-events:none; }
+
+.emoji-particle { position:absolute; font-size:2rem; pointer-events:none; z-index:100; transform:translate(-50%, -50%); }

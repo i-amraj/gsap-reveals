@@ -49,6 +49,9 @@
 - [x] **Project 6.2:** `20_apple_product_launch` — Apple iPhone/Watch Style Pinned Scroll Showcase Page — *(Completed 22 Sub-Demos)*
 - [x] **Project 6.3:** `21_gsap_website_replica` — GSAP.com Replica Showcase Page — *(Completed 22 Sub-Demos)*
 
+## 🌟 Category 7: The AI Super Skill Library (Awwwards Level)
+- [ ] **Project 7.1:** `22_ai_super_skill_library` — Advanced GSAP + WebGL/Canvas Snippets — *(Initiated 5 Sub-Demos)*
+
 ---
 
 ### 📝 Folder & File Rules Checklist

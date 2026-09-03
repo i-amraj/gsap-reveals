@@ -1,0 +1,11 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; font-size:2rem; color:#555; }
+
+.gallery-container { width:100%; height:100vh; overflow:hidden; }
+
+.gallery-track { display:flex; height:100%; width:fit-content; padding:0 10vw; align-items:center; gap:5vw; }
+
+.gallery-item { width:60vw; height:60vh; flex-shrink:0; border-radius:20px; overflow:hidden; }
+.gallery-item img { width:100%; height:100%; object-fit:cover; }

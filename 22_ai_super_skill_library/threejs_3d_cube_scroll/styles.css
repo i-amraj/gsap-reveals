@@ -1,0 +1,11 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+
+#webgl-canvas { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:1; pointer-events:none; }
+
+.content { position:relative; z-index:2; }
+.step { height:100vh; display:flex; align-items:center; padding:0 10vw; pointer-events:none; }
+.step:nth-child(even) { justify-content:flex-end; }
+.step:nth-child(odd) { justify-content:flex-start; }
+
+h1 { font-size:4rem; color:#fff; text-shadow:0 0 20px rgba(0,0,0,0.8); }

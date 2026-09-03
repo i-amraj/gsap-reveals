@@ -1,0 +1,5 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#e0e0e0; height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.magnetic-btn { width:200px; height:200px; background:#111; border-radius:50%; border:none; color:#fff; cursor:pointer; position:relative; display:flex; justify-content:center; align-items:center; }
+.btn-text { font-size:1.5rem; font-weight:bold; pointer-events:none; }
