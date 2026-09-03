@@ -1,0 +1,15 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system, sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.mesh-hero { height:100vh; position:relative; overflow:hidden; display:flex; justify-content:center; align-items:center; }
+
+/* We generate a mesh pattern using repeating radial gradients */
+.mesh-bg { position:absolute; top:0; left:0; width:100%; height:100%; background-color:#111; background-image: radial-gradient(#333 15%, transparent 16%), radial-gradient(#333 15%, transparent 16%); background-size: 20px 20px; background-position: 0 0, 10px 10px; z-index:1; transform:scale(1); transform-origin:center center; }
+
+/* A glowing gradient overlay representing the Siri top light */
+.gradient-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.5) 0%, rgba(236, 72, 153, 0.3) 30%, transparent 70%); mix-blend-mode:screen; z-index:2; opacity:0; }
+
+.text-content { position:relative; z-index:3; text-align:center; }
+.text-content h1 { font-size:6rem; font-weight:700; letter-spacing:-2px; text-shadow:0 10px 30px rgba(0,0,0,0.8); }

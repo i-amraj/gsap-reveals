@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Apple Pencil Draw Scroll</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <div class="spacer"><h1>Scroll Down</h1></div>
+
+  <section class="pencil-hero">
+    
+    <!-- SVG Path to draw -->
+    <svg class="draw-canvas" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+      <path id="signature-path" d="M 100 300 C 200 100, 300 500, 400 300 S 600 500, 700 200 S 900 300, 950 250" fill="transparent" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    
+    <!-- Pencil Image -->
+    <div class="pencil-img"></div>
+    
+    <div class="hero-text">
+      <h1>Pixel-perfect precision.</h1>
+    </div>
+
+  </section>
+  
+  <div class="spacer"><h1>Keep Scrolling</h1></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- Need MotionPathPlugin to stick the pencil to the SVG line -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

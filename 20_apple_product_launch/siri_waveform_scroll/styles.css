@@ -1,0 +1,13 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system, sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.siri-hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; }
+
+.waveform { display:flex; align-items:center; gap:8px; height:200px; }
+
+.bar { width:10px; height:10px; /* Initially dots */ border-radius:10px; background:linear-gradient(180deg, #3b82f6, #ec4899); filter:blur(1px); }
+
+.siri-text { margin-top:3rem; }
+.siri-text h1 { font-size:4rem; font-weight:700; background:linear-gradient(90deg, #3b82f6, #ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; opacity:0; transform:translateY(20px); }

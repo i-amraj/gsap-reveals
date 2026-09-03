@@ -1,0 +1,23 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system, sans-serif; background:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.imac-hero { height:100vh; display:flex; justify-content:center; align-items:center; position:relative; }
+
+.imac-grid { display:flex; gap:20px; z-index:1; transform:translateY(100px); opacity:0; }
+
+.imac { width:100px; height:80px; position:relative; border-radius:10px 10px 0 0; }
+.imac::after { content:''; position:absolute; bottom:-20px; left:50%; transform:translateX(-50%); width:30px; height:20px; }
+
+/* The 7 iconic iMac colors */
+.c1 { background:#22c55e; } .c1::after { background:#16a34a; }
+.c2 { background:#eab308; } .c2::after { background:#ca8a04; }
+.c3 { background:#f97316; } .c3::after { background:#ea580c; }
+.c4 { background:#ef4444; } .c4::after { background:#dc2626; }
+.c5 { background:#a855f7; } .c5::after { background:#9333ea; }
+.c6 { background:#3b82f6; } .c6::after { background:#2563eb; }
+.c7 { background:#94a3b8; } .c7::after { background:#64748b; }
+
+.title-overlay { position:absolute; z-index:2; text-align:center; mix-blend-mode:difference; color:#fff; pointer-events:none; }
+.title-overlay h1 { font-size:8rem; font-weight:700; line-height:0.9; letter-spacing:-2px; }

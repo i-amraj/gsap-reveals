@@ -1,0 +1,19 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system, sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.airpods-hero { height:100vh; display:flex; justify-content:center; align-items:center; position:relative; }
+
+.airpods-case { position:relative; width:200px; height:200px; z-index:2; transform:scale(2); }
+
+.case-body { position:absolute; bottom:0; left:0; width:200px; height:120px; background:#fff; border-radius:0 0 40px 40px; box-shadow:inset 0 -10px 20px rgba(0,0,0,0.2); z-index:3; }
+
+.case-lid { position:absolute; top:20px; left:0; width:200px; height:60px; background:#f0f0f0; border-radius:40px 40px 0 0; transform-origin:center bottom; z-index:4; box-shadow:inset 0 10px 20px rgba(0,0,0,0.1); }
+
+.earbud { position:absolute; top:50px; width:40px; height:80px; background:#fff; border-radius:20px; z-index:2; box-shadow:inset -5px -5px 10px rgba(0,0,0,0.2); }
+.left-bud { left:40px; }
+.right-bud { right:40px; }
+
+.text-reveal { position:absolute; z-index:1; opacity:0; text-align:center; top:20%; width:100%; }
+.text-reveal h1 { font-size:4rem; font-weight:700; background:linear-gradient(180deg, #fff, #888); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
