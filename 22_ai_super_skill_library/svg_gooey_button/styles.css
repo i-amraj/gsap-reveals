@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#111; display:flex; justify-content:center; align-items:center; height:100vh; }
+
+.gooey-btn { position:relative; background:#88ce02; border:none; border-radius:30px; padding:15px 40px; font-size:1.5rem; font-weight:bold; color:#111; cursor:pointer; outline:none; /* Apply goo filter to the button and its children */ filter:url('#goo'); }
+
+.btn-text { position:relative; z-index:10; pointer-events:none; }
+
+.bubbles-container { position:absolute; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; }
+
+.bubble { position:absolute; background:#88ce02; border-radius:50%; top:50%; left:50%; transform:translate(-50%, -50%); width:20px; height:20px; }
