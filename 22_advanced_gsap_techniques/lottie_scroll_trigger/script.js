@@ -31,5 +31,5 @@ function LottieScrollTrigger(vars) {
 
 LottieScrollTrigger({
   target: "#lottie-container",
-  path: "https://assets.codepen.io/35984/tutor_animation.json" // Sample Lottie JSON
+  path: "https://assets4.lottiefiles.com/packages/lf20_zyquagfl.json" // Sample Lottie JSON
 });

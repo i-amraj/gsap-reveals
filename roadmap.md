@@ -50,7 +50,7 @@
 - [x] **Project 6.3:** `21_gsap_website_replica` — GSAP.com Replica Showcase Page — *(Completed 22 Sub-Demos)*
 
 ## 🌟 Category 7: The AI Super Skill Library (Awwwards Level)
-- [x] **Project 7.1:** `22_ai_super_skill_library` — Advanced GSAP + WebGL/Canvas Snippets — *(Completed 22 Sub-Demos)*
+- [x] **Project 7.1:** `22_advanced_gsap_techniques` — Advanced GSAP + WebGL/Canvas Snippets — *(Completed 22 Sub-Demos)*
 
 ---
 
