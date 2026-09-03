@@ -1,0 +1,2 @@
+# Logo Particle Burst
+Mimics the physics-based physics2D particle explosions often shown in GSAP codepens. Clicking a button triggers a timeline that shrinks and violently wiggles the GSAP logo using `ease: "elastic"`. Simultaneously, a javascript loop constructs 100 DOM particles which are scattered radially from the center of the screen using randomized X/Y distributions and GSAP's stagger parameter.

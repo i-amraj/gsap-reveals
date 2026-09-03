@@ -1,0 +1,2 @@
+# Club GreenSock Confetti
+Mimics the physics-driven celebratory confetti animations often seen upon signups or milestones. Without using the paid `Physics2DPlugin`, we achieve this by assigning multiple concurrent tweens to the same element: an initial fast `power3.out` tween shooting the Y-axis up, followed by a delayed `power1.in` tween pulling it back down (gravity), alongside continuous, randomized `rotationX`, `rotationY`, and `rotationZ` tweens for tumbling.

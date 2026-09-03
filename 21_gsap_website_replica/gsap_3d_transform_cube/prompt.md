@@ -1,0 +1,2 @@
+# GSAP 3D Transform Cube
+Demonstrates GSAP's robust handling of CSS3D transforms. Six `.face` divs are positioned into a cube using `rotateY/X` and `translateZ(100px)`. GSAP applies an infinite idle rotation to the parent cube. Clicking buttons allows you to inject violent relative rotations (`rotationX: "+=720"`) or "explode" the cube by animating the `z` property of all six faces simultaneously, proving GSAP normalizes matrix math flawlessly across local coordinate systems.

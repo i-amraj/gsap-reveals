@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Custom Ease Graph</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <section class="ease-hero">
+    
+    <h2>Custom Ease Visualizer</h2>
+    
+    <div class="ease-container">
+      <!-- Background grid -->
+      <div class="grid"></div>
+      
+      <!-- The element that animates -->
+      <div class="ball"></div>
+      
+      <!-- The SVG drawing the curve -->
+      <svg class="ease-graph" viewBox="0 0 400 400">
+        <!-- Bounce Out Curve (simplified) -->
+        <path id="curve" d="M 0,400 Q 50,400 100,200 T 200,50 T 250,150 T 300,50 T 350,100 T 400,0" fill="none" stroke="#88ce02" stroke-width="4" stroke-dasharray="1000" stroke-dashoffset="1000" />
+      </svg>
+    </div>
+    
+    <button id="play-btn">Play Animation</button>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- CustomEase (Core GSAP) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

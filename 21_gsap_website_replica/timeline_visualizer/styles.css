@@ -1,0 +1,27 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow:hidden; display:flex; justify-content:center; align-items:center; height:100vh; }
+
+.timeline-hero { width:100%; max-width:800px; display:flex; flex-direction:column; gap:2rem; }
+
+.stage { height:200px; background:#1e1e1e; border:1px solid #333; border-radius:10px; padding:20px; position:relative; }
+
+.box { width:40px; height:40px; border-radius:5px; margin-bottom:15px; display:flex; justify-content:center; align-items:center; font-weight:700; color:#111; }
+.red { background:#ff5f56; }
+.green { background:#27c93f; }
+.blue { background:#3b82f6; }
+
+.ui-panel { background:#222; border-radius:10px; padding:20px; font-family:'Fira Code', monospace; position:relative; }
+
+.playhead-container { position:absolute; top:0; left:20px; width:calc(100% - 40px); height:100%; pointer-events:none; z-index:10; }
+.playhead { position:absolute; top:0; left:0; width:2px; height:100%; background:#fff; box-shadow:0 0 10px rgba(255,255,255,0.8); }
+.playhead::before { content:''; position:absolute; top:-5px; left:-4px; width:10px; height:10px; background:#fff; border-radius:50%; }
+
+.track { width:100%; height:40px; border-bottom:1px solid #333; position:relative; display:flex; align-items:center; }
+
+.tween { position:absolute; height:30px; border-radius:5px; display:flex; justify-content:center; align-items:center; font-size:0.8rem; color:#111; padding:0 10px; }
+.t-red { background:rgba(255,95,86,0.8); width:30%; left:0; }
+.t-green { background:rgba(39,201,63,0.8); width:30%; left:25%; }
+.t-blue { background:rgba(59,130,246,0.8); width:30%; left:50%; }
+
+button { align-self:center; background:transparent; border:2px solid #88ce02; color:#88ce02; padding:10px 30px; font-size:1.2rem; font-weight:700; border-radius:30px; cursor:pointer; }
+button:hover { background:#88ce02; color:#111; }

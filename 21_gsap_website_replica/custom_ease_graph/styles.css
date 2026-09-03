@@ -1,0 +1,17 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; overflow:hidden; }
+
+.ease-hero { display:flex; flex-direction:column; align-items:center; gap:2rem; }
+h2 { color:#fff; font-size:2rem; }
+
+.ease-container { position:relative; width:400px; height:400px; background:#1e1e1e; border:1px solid #333; overflow:hidden; }
+
+.grid { position:absolute; width:100%; height:100%; background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px; opacity:0.5; }
+
+.ease-graph { position:absolute; top:0; left:0; width:100%; height:100%; z-index:2; }
+
+/* The ball travels horizontally at linear speed, but vertically using the ease */
+.ball { position:absolute; bottom:-15px; left:-15px; width:30px; height:30px; background:#ff5f56; border-radius:50%; z-index:3; box-shadow:0 0 10px #ff5f56; }
+
+button { background:transparent; border:2px solid #88ce02; color:#88ce02; padding:10px 30px; font-size:1.2rem; font-weight:700; border-radius:30px; cursor:pointer; }
+button:hover { background:#88ce02; color:#111; }

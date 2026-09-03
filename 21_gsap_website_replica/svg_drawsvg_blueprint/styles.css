@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+.blueprint-hero { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; }
+
+.blueprint-hero h2 { font-size:4rem; color:#88ce02; margin-bottom:2rem; }
+
+.blueprint-svg { width:80%; max-width:800px; filter: drop-shadow(0 0 10px rgba(136,206,2,0.4)); }

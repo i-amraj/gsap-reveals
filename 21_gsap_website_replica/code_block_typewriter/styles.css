@@ -1,0 +1,29 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+.code-section { min-height:100vh; display:flex; justify-content:center; align-items:center; gap:4rem; padding:2rem; }
+
+.text-content h2 { font-size:4rem; color:#88ce02; max-width:400px; }
+
+.code-editor { width:500px; background:#1e1e1e; border-radius:10px; border:1px solid #333; overflow:hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+
+.editor-header { background:#2d2d2d; padding:10px 15px; display:flex; gap:8px; }
+.dot { width:12px; height:12px; border-radius:50%; }
+.red { background:#ff5f56; }
+.yellow { background:#ffbd2e; }
+.green { background:#27c93f; }
+
+.editor-body { padding:20px; font-family: 'Fira Code', monospace; font-size:1.2rem; color:#d4d4d4; min-height:150px; }
+.cursor { color:#88ce02; animation: blink 1s step-end infinite; }
+
+@keyframes blink { 50% { opacity:0; } }
+
+.target-box { width:100px; height:100px; background:#88ce02; border-radius:10px; margin-left:2rem; }
+
+/* Code syntax colors applied dynamically */
+.keyword { color: #c678dd; }
+.function { color: #61afef; }
+.string { color: #98c379; }
+.number { color: #d19a66; }

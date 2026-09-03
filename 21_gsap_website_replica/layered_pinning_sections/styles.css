@@ -1,0 +1,14 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+#panels-container { position:relative; width:100%; height:100vh; /* Set to 100vh so they stack perfectly */ }
+
+.panel { position:absolute; top:0; left:0; width:100%; height:100vh; display:flex; justify-content:center; align-items:center; box-shadow: 0 -20px 40px rgba(0,0,0,0.5); }
+.panel h1 { font-size:5rem; color:#111; }
+
+.p1 { background:#88ce02; z-index:1; }
+.p2 { background:#ffbd2e; z-index:2; }
+.p3 { background:#ff5f56; z-index:3; }
+.p4 { background:#3b82f6; z-index:4; }

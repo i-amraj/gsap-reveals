@@ -1,0 +1,12 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+.highlight-section { height:100vh; display:flex; justify-content:center; align-items:center; padding:0 2rem; }
+
+.text-container { max-width:1000px; text-align:center; }
+h1 { font-size:4.5rem; line-height:1.4; color:#fff; }
+
+.highlight { position:relative; display:inline-block; z-index:1; padding:0 10px; color:#111; transition:color 0.1s; }
+.highlight::before { content:''; position:absolute; bottom:0; left:0; width:0%; height:100%; background:#88ce02; z-index:-1; border-radius:10px; }

@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+.stagger-section { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+
+.text-mask { overflow:hidden; /* This hides the text when it is translated down */ line-height:1.2; padding:5px 0; }
+
+.stagger-line { font-size:6rem; transform:translateY(100%); /* Start hidden below the mask */ }

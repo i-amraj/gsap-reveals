@@ -1,0 +1,17 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+.features-section { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:4rem 2rem; }
+
+.section-title h2 { font-size:3.5rem; color:#88ce02; margin-bottom:4rem; opacity:0; transform:translateY(30px); }
+
+.feature-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; width:100%; max-width:1000px; perspective:1000px; }
+
+.feature-card { background:#1e1e1e; border-radius:15px; padding:2rem; text-align:center; border:1px solid #333; opacity:0; transform:rotateY(-30deg) translateZ(-50px); }
+.feature-card:hover { border-color:#88ce02; }
+
+.icon { font-size:3rem; margin-bottom:1rem; }
+.feature-card h3 { font-size:1.5rem; margin-bottom:1rem; color:#fff; }
+.feature-card p { font-size:1rem; color:#aaa; line-height:1.5; }

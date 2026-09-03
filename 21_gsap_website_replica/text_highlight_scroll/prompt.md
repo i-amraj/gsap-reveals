@@ -1,0 +1,2 @@
+# Text Highlight Scroll
+A very common typography effect seen on premium sites and GSAP showcase pages. As you scroll down, a highlighter marker effect sweeps across specific words. A timeline is created for each highlighted word, linked to ScrollTrigger `scrub: 1`. It first expands the width of a green background div from `0%` to `100%`, and then dynamically shifts the text color from white to black so it remains readable against the new background.

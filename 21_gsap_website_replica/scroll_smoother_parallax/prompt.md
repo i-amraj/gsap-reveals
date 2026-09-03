@@ -1,0 +1,2 @@
+# ScrollSmoother Parallax
+Demonstrates the data-attribute parallax functionality provided natively by the Club GreenSock `ScrollSmoother` plugin. Because the plugin is paid, we recreate the exact `data-speed` parsing mechanic using Vanilla JS and standard `ScrollTrigger`. Elements with `data-speed="0.2"` scroll much slower than the page, while `data-speed="2.0"` scroll much faster, creating instant multi-layered depth.

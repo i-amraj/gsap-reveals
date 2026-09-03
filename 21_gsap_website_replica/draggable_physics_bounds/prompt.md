@@ -1,0 +1,2 @@
+# Draggable Physics Bounds
+A replica of the interactive `Draggable` plugin playground. Users can grab three styled UI elements and drag them freely. The `bounds` property strictly confines the items to the dotted container, and `edgeResistance` handles rubber-band physics when users drag into the boundary walls. (Note: Inertia throw-physics require Club GreenSock, but the bounding logic works in core).

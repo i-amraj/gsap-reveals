@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SVG DrawSVG Blueprint</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <div class="spacer"><h2>Scroll Down</h2></div>
+
+  <section class="blueprint-hero">
+    
+    <h2>Designing the Web.</h2>
+
+    <svg class="blueprint-svg" viewBox="0 0 800 600">
+      <!-- Website Frame -->
+      <rect class="draw-path" x="50" y="50" width="700" height="500" rx="10" fill="none" stroke="#88ce02" stroke-width="4"/>
+      <!-- Header -->
+      <line class="draw-path" x1="50" y1="120" x2="750" y2="120" stroke="#88ce02" stroke-width="4"/>
+      <!-- Logo circle -->
+      <circle class="draw-path" cx="100" cy="85" r="20" fill="none" stroke="#88ce02" stroke-width="4"/>
+      <!-- Nav lines -->
+      <line class="draw-path" x1="550" y1="85" x2="720" y2="85" stroke="#88ce02" stroke-width="4" stroke-dasharray="20 10"/>
+      
+      <!-- Hero Image Box -->
+      <rect class="draw-path" x="100" y="160" width="600" height="200" fill="none" stroke="#88ce02" stroke-width="4"/>
+      <!-- Hero cross -->
+      <line class="draw-path" x1="100" y1="160" x2="700" y2="360" stroke="#88ce02" stroke-width="2"/>
+      <line class="draw-path" x1="700" y1="160" x2="100" y2="360" stroke="#88ce02" stroke-width="2"/>
+      
+      <!-- Text blocks below -->
+      <rect class="draw-path" x="100" y="400" width="280" height="100" fill="none" stroke="#88ce02" stroke-width="4"/>
+      <rect class="draw-path" x="420" y="400" width="280" height="100" fill="none" stroke="#88ce02" stroke-width="4"/>
+    </svg>
+
+  </section>
+  
+  <div class="spacer"><h2>Keep Scrolling</h2></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

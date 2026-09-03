@@ -1,0 +1,2 @@
+# Interactive Cursor Spotlight
+Uses the highly performant `gsap.quickTo()` method to track the user's mouse position and pipe it into CSS custom properties (`--x`, `--y`). These variables actively drive the `at X Y` coordinates of a `radial-gradient` assigned to the `mask-image` property of the container. The result is a smooth, lag-free flashlight effect that reveals a beautiful background image and text underneath as you move your mouse.

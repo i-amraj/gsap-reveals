@@ -1,0 +1,14 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; color:#444; }
+
+.carousel-section { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; perspective:1200px; position:relative; }
+
+.carousel-section h2 { font-size:4rem; color:#88ce02; position:absolute; bottom:15%; z-index:10; }
+
+.carousel-container { width:100vw; height:300px; position:relative; display:flex; justify-content:center; align-items:center; }
+
+.carousel-wheel { width:200px; height:200px; position:relative; transform-style:preserve-3d; }
+
+.plugin-card { position:absolute; width:200px; height:100px; background:#222; border:2px solid #88ce02; border-radius:10px; display:flex; justify-content:center; align-items:center; font-size:1.5rem; font-weight:700; color:#fff; backface-visibility:hidden; box-shadow: 0 0 20px rgba(136,206,2,0.2); }

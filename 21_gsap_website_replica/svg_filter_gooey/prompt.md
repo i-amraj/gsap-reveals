@@ -1,0 +1,2 @@
+# SVG Filter Gooey
+A popular technique frequently showcased by the GSAP community. An inline SVG defines a `<feGaussianBlur>` and `<feColorMatrix>` filter. This `url(#goo)` filter is applied to a CSS parent container. Inside, GSAP endlessly tweens absolute positioned circles away from and towards the center. The filter intercepts the overlap, mathmatically squishing and blending the circles together like liquid mercury.

@@ -1,0 +1,2 @@
+# Layered Pinning Sections
+A classic GSAP layout technique. Instead of pinning each section individually, a single `#panels-container` is pinned to the viewport for `+=300%` of scroll depth. The internal sections are `position: absolute` and stacked via `z-index`. GSAP uses a single timeline to stagger their `yPercent` from `100` (off-screen bottom) to `0`, creating a smooth, overlapping card-stacking effect as the user scrolls.

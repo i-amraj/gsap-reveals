@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ScrollSmoother Parallax</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      
+      <header class="hero">
+        <h1 data-speed="0.5">ScrollSmoother</h1>
+        <p data-speed="0.8">Premium smooth scrolling made easy.</p>
+      </header>
+      
+      <section class="parallax-section">
+        <!-- data-speed creates parallax in ScrollSmoother. We will simulate this manually with ScrollTrigger. -->
+        <div class="box b1" data-speed="0.2">Slow (0.2x)</div>
+        <div class="box b2" data-speed="1.0">Normal (1x)</div>
+        <div class="box b3" data-speed="2.0">Fast (2x)</div>
+      </section>
+      
+      <footer class="footer">
+        <h2 data-speed="1.5">End of content</h2>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

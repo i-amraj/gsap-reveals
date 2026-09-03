@@ -1,0 +1,17 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Signika Negative', sans-serif; background:#111; color:#fff; overflow:hidden; display:flex; justify-content:center; align-items:center; height:100vh; }
+
+.gooey-hero { display:flex; flex-direction:column; align-items:center; gap:4rem; }
+
+h2 { font-size:3rem; color:#88ce02; }
+
+/* Apply the SVG filter to this container */
+.gooey-container { filter: url('#goo'); position:relative; width:400px; height:400px; display:flex; justify-content:center; align-items:center; }
+
+.blob { position:absolute; border-radius:50%; background:#88ce02; }
+
+.center-blob { width:150px; height:150px; display:flex; justify-content:center; align-items:center; font-size:2rem; font-weight:700; color:#111; z-index:10; }
+
+.b1 { width:100px; height:100px; z-index:1; }
+.b2 { width:80px; height:80px; z-index:1; }
+.b3 { width:120px; height:120px; z-index:1; }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MorphSVG Button Hover</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <section class="btn-hero">
+    
+    <!-- We use an SVG as the background for the button to manipulate its path -->
+    <div class="morph-btn-wrapper">
+      
+      <svg class="morph-bg" viewBox="0 0 300 100">
+        <!-- Base shape: Pill -->
+        <path class="btn-path" d="M 50,10 L 250,10 C 272,10 290,28 290,50 C 290,72 272,90 250,90 L 50,90 C 28,90 10,72 10,50 C 10,28 28,10 50,10 Z" fill="#88ce02" />
+      </svg>
+      
+      <span class="btn-text">Morph Me</span>
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -47,7 +47,7 @@
 ## 🏆 Category 6: Real-World Master Webpages (Projects)
 - [x] **Project 6.1:** `19_awwwards_agency_hero` — Full Modern Agency Hero Section Page — *(Completed 22 Sub-Demos)*
 - [x] **Project 6.2:** `20_apple_product_launch` — Apple iPhone/Watch Style Pinned Scroll Showcase Page — *(Completed 22 Sub-Demos)*
-- [ ] **Project 6.3:** `21_gsap_website_replica` — GSAP.com Replica Showcase Page
+- [x] **Project 6.3:** `21_gsap_website_replica` — GSAP.com Replica Showcase Page — *(Completed 22 Sub-Demos)*
 
 ---
 

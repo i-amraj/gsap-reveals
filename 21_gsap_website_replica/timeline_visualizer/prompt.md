@@ -1,0 +1,2 @@
+# Timeline Visualizer
+Replicates the visual GUI found in GSAP documentation that teaches the concept of `gsap.timeline()`. It provides a stage with boxes, and a UI panel with tracks representing tweens with position parameters like `"-=0.25"`. Clicking play fires the actual timeline on the boxes, while simultaneously animating a white CSS playhead perfectly synchronized with the total `.duration()` across the UI tracks.

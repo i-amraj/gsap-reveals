@@ -1,0 +1,2 @@
+# SplitText Scramble Reveal
+Simulates the Club GreenSock `ScrambleTextPlugin`. Uses a GSAP proxy object to animate a `progress` value from 0 to 1 over 2 seconds. In the `onUpdate` callback, the script reconstructs the string: left-side characters are resolved to the original text, while right-side characters are constantly swapped with random "hacker" matrix symbols, creating a highly cinematic decode effect.

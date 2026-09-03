@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Code Block Typewriter</title><link rel="stylesheet" href="styles.css"><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Signika+Negative:wght@700&display=swap" rel="stylesheet"></head>
+<body>
+  
+  <div class="spacer"><h2>Scroll Down</h2></div>
+
+  <section class="code-section">
+    <div class="text-content">
+      <h2>Ridiculously simple syntax.</h2>
+    </div>
+    
+    <div class="code-editor">
+      <div class="editor-header">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      </div>
+      <div class="editor-body">
+        <pre><code id="code-content"></code><span class="cursor">|</span></pre>
+      </div>
+    </div>
+    
+    <div class="target-box"></div>
+  </section>
+  
+  <div class="spacer"><h2>Keep Scrolling</h2></div>
+
+  <!-- We simulate the TextPlugin typewriter effect with basic JS string manipulation in GSAP timeline to avoid needing the Club plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

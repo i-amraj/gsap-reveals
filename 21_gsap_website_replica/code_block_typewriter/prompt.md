@@ -1,0 +1,2 @@
+# Code Block Typewriter
+Replicates the GSAP homepage code editor showcase. Because the official `TextPlugin` is a Club GreenSock feature, this mimics it using a custom GSAP object proxy (`{ length: 0 }`). It dynamically substrings and injects simple regex-based syntax highlighting (`<span class="keyword">`) on `onUpdate`, and then immediately executes the drawn code block on a live target element.
