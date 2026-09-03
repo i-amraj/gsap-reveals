@@ -1,0 +1,11 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+/* Using a variable font from Google Fonts (e.g. Inter variable) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body { font-family: 'Inter', sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.font-section { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.variable-text { font-size:12vw; font-weight:100; /* Start very thin */ letter-spacing:-2px; color:#88ce02; }

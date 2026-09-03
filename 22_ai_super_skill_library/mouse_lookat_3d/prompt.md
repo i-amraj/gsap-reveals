@@ -1,0 +1,2 @@
+# Mouse LookAt 3D
+A classic interactive 3D component (like the GitHub Octocat or Stripe's globe). A WebGL Three.js scene builds a simple 3D eyeball geometry. The script listens to global `mousemove` events, normalizes the X and Y coordinates to a range of `-1` to `1`, and then utilizes `gsap.quickTo()` to pipe these values into the `rotation.x` and `rotation.y` of the 3D mesh. This creates a responsive, buttery smooth "look at" behavior.

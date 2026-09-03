@@ -1,0 +1,2 @@
+# ThreeJS Particles Scroll
+Creates a hyper-performant starfield using `THREE.Points` and `THREE.BufferGeometry` containing 5,000 vertices. A javascript object `params` holds `rotationSpeed` and `zSpeed` variables which are evaluated continuously in the `requestAnimationFrame` loop. GSAP ScrollTrigger scrubs the values of this `params` object, accelerating the spin and camera translation depth to simulate jumping to lightspeed based purely on scroll progress.

@@ -1,0 +1,7 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#000; overflow:hidden; }
+
+#fluid-canvas { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:1; }
+
+.content { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); z-index:2; pointer-events:none; }
+h1 { font-size:5rem; color:#fff; mix-blend-mode:difference; text-transform:uppercase; font-weight:900; }

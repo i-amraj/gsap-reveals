@@ -1,0 +1,2 @@
+# GSAP FLIP Gallery Filter
+Demonstrates the First-Last-Invert-Play (FLIP) animation technique using GSAP's official FLIP plugin. Essential for grid reflows and filtering galleries. It records the state of all DOM nodes, applies CSS changes to `display: none` for filtered items, and then smoothly animates the reflow of remaining items while animating the scale/opacity of entering/leaving items simultaneously.

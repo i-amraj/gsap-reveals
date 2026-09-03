@@ -1,0 +1,2 @@
+# Glitch Text Effect
+A programmatic approach to RGB split glitching. CSS pseudo-elements (`::before`, `::after`) clone the `data-text` attribute, applying red and cyan text shadows to simulate chromatic aberration. GSAP triggers a recursive function that rapidly tweens the `x` offset and `skewX` of the text for split-second durations before snapping back to normal, creating a randomized, jarring cybernetic effect.

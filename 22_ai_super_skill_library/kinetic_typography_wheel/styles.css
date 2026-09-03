@@ -1,0 +1,19 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#111; color:#fff; overflow-x:hidden; }
+
+.spacer { height:100vh; display:flex; justify-content:center; align-items:center; }
+
+.wheel-section { height:100vh; display:flex; justify-content:center; align-items:center; perspective:1000px; overflow:hidden; }
+
+.wheel-container { position:relative; width:100vw; height:300px; transform-style:preserve-3d; }
+
+.wheel-text { position:absolute; top:50%; left:0; width:100%; text-align:center; font-size:4rem; font-weight:900; white-space:nowrap; text-transform:uppercase; transform-origin:50% 50%; color:transparent; -webkit-text-stroke: 1px #fff; }
+
+/* Setup the cylinder in CSS 3D space */
+.wheel-text:nth-child(1) { transform: translateY(-50%) rotateX(0deg) translateZ(150px); }
+.wheel-text:nth-child(2) { transform: translateY(-50%) rotateX(51deg) translateZ(150px); }
+.wheel-text:nth-child(3) { transform: translateY(-50%) rotateX(102deg) translateZ(150px); }
+.wheel-text:nth-child(4) { transform: translateY(-50%) rotateX(154deg) translateZ(150px); }
+.wheel-text:nth-child(5) { transform: translateY(-50%) rotateX(205deg) translateZ(150px); }
+.wheel-text:nth-child(6) { transform: translateY(-50%) rotateX(257deg) translateZ(150px); }
+.wheel-text:nth-child(7) { transform: translateY(-50%) rotateX(308deg) translateZ(150px); }

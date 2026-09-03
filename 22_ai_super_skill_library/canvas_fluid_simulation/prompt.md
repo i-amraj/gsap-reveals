@@ -1,0 +1,2 @@
+# Canvas Fluid Simulation
+A highly performant technique mapping mouse coordinates to a `<canvas>` context. On `mousemove`, a new javascript object representing a ripple is pushed to an array. GSAP animates the abstract object's properties (`radius`, `opacity`). The `gsap.ticker` runs a continuous loop that clears the canvas and redraws all active ripples every frame, resulting in thousands of potential concurrent animations without DOM lag.

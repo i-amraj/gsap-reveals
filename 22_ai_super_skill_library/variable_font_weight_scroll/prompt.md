@@ -1,0 +1,2 @@
+# Variable Font Weight Scroll
+Exploits the capabilities of modern CSS Variable Fonts (like Inter). Rather than swapping between distinct font-family weights, GSAP can interpolate and tween the numerical `fontWeight` CSS property seamlessly. When linked to ScrollTrigger, scrolling down dynamically expands the text from a hairline `100` weight to an ultra-black `900` weight while simultaneously expanding its `letterSpacing`.

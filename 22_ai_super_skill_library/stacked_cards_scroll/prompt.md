@@ -1,0 +1,2 @@
+# Stacked Cards Scroll
+Combines native CSS `position: sticky` with GSAP ScrollTrigger. As the user scrolls, each `.card` sticks to the top of the viewport. A ScrollTrigger instance observes the scrolling bounds of each card, scrubbing a `scale` tween. This creates a highly requested "falling back into depth" visual, where older cards visually recede and darken to make room for newer cards stacking on top of them.

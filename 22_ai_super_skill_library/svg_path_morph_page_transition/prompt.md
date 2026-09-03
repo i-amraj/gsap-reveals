@@ -1,0 +1,2 @@
+# SVG Path Morph Page Transition
+A common technique used in combination with SPA routers like Next.js, Nuxt, or Barba.js. A fixed `<svg>` overlays the entire viewport with `pointer-events: none`. Upon clicking a link, GSAP tweens the `attr: { d }` property of the SVG path through multiple keyframes to simulate a fluid, organic wave crashing down to cover the screen. Once fully obscured, the route changes, and the animation reverses to reveal the new page.

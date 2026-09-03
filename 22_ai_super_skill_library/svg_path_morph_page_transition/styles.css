@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: sans-serif; background:#111; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; overflow:hidden; }
+
+.content { text-align:center; z-index:1; }
+h1 { font-size:4rem; margin-bottom:2rem; }
+
+button { background:transparent; border:2px solid #88ce02; color:#88ce02; padding:15px 40px; font-size:1.5rem; border-radius:30px; cursor:pointer; }
+button:hover { background:#88ce02; color:#111; }
+
+.transition-overlay { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:9999; pointer-events:none; }

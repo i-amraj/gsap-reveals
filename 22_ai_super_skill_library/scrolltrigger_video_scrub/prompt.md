@@ -1,0 +1,2 @@
+# ScrollTrigger Video Scrub
+A highly requested Apple-style effect. The video is set to `position: absolute` covering the screen. GSAP ScrollTrigger pins the section for an extended duration (`+=2000` pixels). During this pinned phase, a GSAP tween scrubs the `<video>` element's `currentTime` property from `0` to its total `.duration`. For optimal performance in production, videos should be encoded with very frequent keyframes (e.g. every frame) so the browser can seek instantly.

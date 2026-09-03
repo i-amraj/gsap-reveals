@@ -1,0 +1,2 @@
+# Cursor Follower Image Reveal
+A prominent interaction pattern for portfolios and creative agency websites. A hidden `position: fixed` image container constantly tracks the mouse using `gsap.quickTo()`. When the user hovers over specific headline elements, the image container reads the `data-image` attribute, updates its `src`, and tweens its `opacity` and `scale` up, resulting in a floating image that follows the cursor perfectly.
