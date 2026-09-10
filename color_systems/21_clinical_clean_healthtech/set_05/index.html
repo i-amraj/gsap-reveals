@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genomics Violet | Clinical Clean Healthtech Set 05</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Clinical Clean Healthtech</a>
+    <span class="badge-tag">MODULE 21 &bull; SET 05</span>
+  </div>
+
+  <div class="container">
+    <header class="hero-header">
+      <h1 class="hero-title">Genomics Violet</h1>
+      <p class="hero-desc">Part of Clinical Clean Healthtech. Click any color swatch below to copy its HEX value instantly.</p>
+    </header>
+
+    <!-- Color Swatches Bar -->
+    <div class="swatches-bar">
+      <div class="swatch" data-hex="#080614">
+        <div class="swatch-color" style="background: #080614; border: 1px solid var(--border);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Background</span>
+          <span class="swatch-hex">#080614</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#130f2e">
+        <div class="swatch-color" style="background: #130f2e;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Surface</span>
+          <span class="swatch-hex">#130f2e</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#a855f7">
+        <div class="swatch-color" style="background: #a855f7;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Primary</span>
+          <span class="swatch-hex">#a855f7</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#06b6d4">
+        <div class="swatch-color" style="background: #06b6d4;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Secondary</span>
+          <span class="swatch-hex">#06b6d4</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#34d399">
+        <div class="swatch-color" style="background: #34d399;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Accent</span>
+          <span class="swatch-hex">#34d399</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Real-World UI Archetype Preview -->
+    <div style="margin-bottom: 2rem;">
+      <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.1em; display:block; margin-bottom:0.75rem;">
+        REAL-WORLD UI PREVIEW &bull; HEALTHTECH VITAL TELEMETRY
+      </span>
+      
+        <div class="archetype-health-card">
+          <div class="health-header">
+            <span>BIOMETRIC SENSOR ARRAY</span>
+            <span class="health-pulse">● LIVE 60Hz</span>
+          </div>
+          <div class="health-metric-grid">
+            <div class="metric-cell">
+              <span class="lbl">HEART RATE</span>
+              <strong style="color:var(--primary);">72 <small>BPM</small></strong>
+            </div>
+            <div class="metric-cell">
+              <span class="lbl">OXYGEN LEVEL</span>
+              <strong style="color:var(--secondary);">99%</strong>
+            </div>
+            <div class="metric-cell">
+              <span class="lbl">RECOVERY SCORE</span>
+              <strong style="color:var(--accent);">94/100</strong>
+            </div>
+          </div>
+          <button class="btn-primary" style="width:100%;">Export Health Report</button>
+        </div>
+        
+    </div>
+    
+    <!-- Live Component Showcase -->
+    <div class="showcase-grid">
+      <!-- Card 1: Buttons & Badges -->
+      <div class="demo-card">
+        <span class="card-label">INTERACTIVE BUTTONS</span>
+        <div class="btn-group">
+          <button class="btn-primary">Primary Action</button>
+          <button class="btn-secondary">Secondary</button>
+          <button class="btn-outline">Outline</button>
+        </div>
+        <div class="tag-row">
+          <span class="tag tag-primary">New</span>
+          <span class="tag tag-secondary">Featured</span>
+          <span class="tag tag-accent">Active</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Input Controls -->
+      <div class="demo-card">
+        <span class="card-label">FORM &amp; SEARCH CONTROLS</span>
+        <input type="text" class="input-mock" placeholder="Search components in this palette...">
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+          High contrast ratios guaranteed for text readability and crisp UI definition.
+        </p>
+      </div>
+
+      <!-- Card 3: Bento Stat Widget -->
+      <div class="demo-card">
+        <span class="card-label">BENTO STAT METRIC</span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--primary);">99.9%</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Optimal contrast balance across dark and light surfaces.</p>
+      </div>
+    </div>
+
+    <!-- 1-Click Action Row -->
+    <div class="action-box">
+      <button class="action-btn" id="copyTokensBtn">📋 Copy CSS Variables</button>
+      <button class="action-btn" id="copyPromptBtn">✨ Copy AI Color Prompt</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

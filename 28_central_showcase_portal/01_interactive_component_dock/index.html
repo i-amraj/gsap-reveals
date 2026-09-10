@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Component Dock | Module 28</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="wallpaper-glow"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Portal Hub</a>
+
+  <div class="desktop-screen">
+    <div class="screen-header">
+      <div class="time-widget" id="timeWidget">12:00 PM</div>
+      <div class="status-tags">
+        <span>GSAP DOCK OS v3.0</span>
+        <span class="dot-online"></span>
+      </div>
+    </div>
+
+    <!-- Center Stage Preview Card -->
+    <div class="preview-stage">
+      <div class="stage-card" id="stageCard">
+        <div class="card-icon" id="stageIcon">🍱</div>
+        <div class="card-info">
+          <span class="cat-tag" id="stageCat">BENTO GRIDS</span>
+          <h2 id="stageTitle">Interactive Bento Grids</h2>
+          <p id="stageDesc">Apple & Vercel style bento grids featuring cursor spotlights, 3D tilt gyroscopes, and border beams.</p>
+          <div class="stage-actions">
+            <button class="action-btn" id="copyPromptBtn">📋 Copy Component Prompt</button>
+            <a href="../../23_interactive_bento_grids/index.html" id="stageLink" class="action-btn secondary">Launch Module &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- macOS Style Floating Magnifying Dock -->
+    <div class="dock-wrapper">
+      <div class="dock-shelf" id="dockShelf">
+        
+        <div class="dock-item" data-id="bento" data-cat="BENTO GRIDS" data-title="Interactive Bento Grids" data-icon="🍱" data-desc="Apple & Vercel style bento grids with cursor spotlights, 3D tilt gyroscopes, and border beams." data-url="../../23_interactive_bento_grids/index.html" data-prompt="Create modern bento grid cards with cursor spotlights and 3D tilt hover physics using GSAP.">
+          <span class="dock-tooltip">Bento Grids</span>
+          <div class="dock-icon">🍱</div>
+        </div>
+
+        <div class="dock-item" data-id="motion" data-cat="MOTIONPATH" data-title="Bezier Scroll & Flight" data-icon="🚀" data-desc="Curved Bezier SVG flight paths, auto-rotating spacecraft, and scroll-linked laser tracks." data-url="../../24_motionpath_bezier_scroll/index.html" data-prompt="Build an SVG MotionPath rocket animation with autoRotate and glowing particle trails using GSAP MotionPath.">
+          <span class="dock-tooltip">MotionPath</span>
+          <div class="dock-icon">🚀</div>
+        </div>
+
+        <div class="dock-item" data-id="physics" data-cat="PHYSICS" data-title="Draggable & Fling Playground" data-icon="🎯" data-desc="Inertia momentum, sticker throw fling, Tinder card stacks, and Verlet cloth physics." data-url="../../25_physics_draggable_playground/index.html" data-prompt="Create an interactive sticker board with throw inertia momentum and bounds hit testing using GSAP Draggable.">
+          <span class="dock-tooltip">Physics Drag</span>
+          <div class="dock-icon">🎯</div>
+        </div>
+
+        <div class="dock-item" data-id="transitions" data-cat="TRANSITIONS" data-title="Seamless Page Transitions" data-icon="🔄" data-desc="FLIP shared elements, organic curved curtain morphing, and 3D cube transitions." data-url="../../26_seamless_page_transitions/index.html" data-prompt="Create seamless shared-element card-to-hero page transitions using GSAP Flip plugin.">
+          <span class="dock-tooltip">Transitions</span>
+          <div class="dock-icon">🔄</div>
+        </div>
+
+        <div class="dock-item" data-id="audio" data-cat="AUDIO SYNTH" data-title="Audio Reactive Micro-Interactions" data-icon="🔊" data-desc="Zero-dependency Web Audio procedural sound synthesis, spring pops, and real-time spectrum analysis." data-url="../../27_audio_reactive_micro_interactions/index.html" data-prompt="Build tactile sound micro-interactions synthesized procedurally via native Web Audio API and GSAP 3.">
+          <span class="dock-tooltip">Audio Reactive</span>
+          <div class="dock-icon">🔊</div>
+        </div>
+
+        <div class="dock-item" data-id="text" data-cat="TYPOGRAPHY" data-title="Kinetic Typography" data-icon="✍️" data-desc="SplitText letter-by-letter wave reveals, hacker matrix decoders, and running marquee tickers." data-url="../../01_text_effects/index.html" data-prompt="Create kinetic typography wave reveals and matrix decoder text morphing using GSAP.">
+          <span class="dock-tooltip">Typography</span>
+          <div class="dock-icon">✍️</div>
+        </div>
+
+        <div class="dock-item" data-id="cards" data-cat="3D CARDS" data-title="3D Tilt Cards & Stacks" data-icon="🃏" data-desc="Perspective depth hover tilt, card fanout arches, and realistic glossy sheen." data-url="../../04_card_animations/index.html" data-prompt="Build interactive 3D perspective tilt cards with glossy light reflections using GSAP.">
+          <span class="dock-tooltip">3D Cards</span>
+          <div class="dock-icon">🃏</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✨ Copied prompt to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

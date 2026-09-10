@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk Telemetry HUD Stat | Stats & Metric Displays Set 04</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #06b6d418, transparent 70%);"></div>
+
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Stats & Metric Displays</a>
+    <span class="badge-tag">MODULE 13 &bull; SET 04</span>
+  </div>
+
+  <div class="stage-container">
+    <!-- Component Stage Preview -->
+    <div class="component-stage" id="componentStage">
+      
+        <div class="comp-stat-widget" style="border-color:#06b6d440;">
+          <div class="stat-header">
+            <span class="stat-label">EDGE REQUEST LATENCY</span>
+            <span class="stat-trend" style="color:#06b6d4; background:#06b6d420;">-48% FASTER</span>
+          </div>
+          <div class="stat-number" style="color:#06b6d4;">0.42<span style="font-size:1.2rem;">ms</span></div>
+          <div class="stat-subtext">Measured over 48M transactions worldwide.</div>
+        </div>
+        
+    </div>
+
+    <!-- Component Spec & Action Controller -->
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">DATA & METRICS</span>
+        <h2 class="spec-title">Cyberpunk Telemetry HUD Stat</h2>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="actions-row">
+        <button class="action-btn primary" id="toggleStateBtn">⚡ Toggle State</button>
+        <button class="action-btn" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <!-- Specs Footer -->
+      <div class="specs-grid">
+        <div class="spec-item"><span>TYPE:</span> <strong>stats</strong></div>
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#06b6d4;">#06b6d4</strong></div>
+        <div class="spec-item"><span>FRAMEWORK:</span> <strong>Vanilla CSS &amp; HTML5</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Scroll Scrubbed Word Highlight (Module 13) ✍️
+
+Word-by-word reading opacity illumination tied to scroll progression.
+
+---
+
+## 🎯 8 Typography Sets in this Module
+
+Navigate to any sub-set folder (`set_01` to `set_08`) to view live interactive specimens, live editable controllers, and 1-click AI typography prompts!

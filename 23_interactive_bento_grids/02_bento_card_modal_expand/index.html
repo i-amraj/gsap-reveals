@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Grid 02: Card Modal Expand (GSAP Flip)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">GSAP Flip Engine</div>
+      <h1>Card-to-Modal Seamless Expand</h1>
+      <p>Click any card to watch it expand smoothly into a high-detail focal modal without layout jumps or flickering.</p>
+    </header>
+
+    <div class="bento-grid" id="grid">
+      <!-- Card 1 -->
+      <div class="card card-wide" data-card="1">
+        <div class="card-thumbnail" style="--accent: #8b5cf6;">
+          <span class="icon">⚡</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Architecture</span>
+          <h3>Quantum Compute Engine</h3>
+          <p class="summary">Distributed parallel cluster for heavy matrix computation and neural graph training.</p>
+          <div class="expand-prompt">Click to expand details ↗</div>
+        </div>
+        <div class="expanded-content">
+          <h4>System Telemetry & Nodes</h4>
+          <p>Running across 4,096 high-bandwidth H100 interconnects. Memory throughput reaches 3.2 TB/s with zero dropped packets over 72 consecutive hours of torture testing.</p>
+          <div class="stat-row">
+            <div class="stat-box">
+              <span class="label">Total Nodes</span>
+              <span class="val">1,024</span>
+            </div>
+            <div class="stat-box">
+              <span class="label">Efficiency</span>
+              <span class="val">99.4%</span>
+            </div>
+            <div class="stat-box">
+              <span class="label">Latency</span>
+              <span class="val">1.2ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card" data-card="2">
+        <div class="card-thumbnail" style="--accent: #06b6d4;">
+          <span class="icon">🛡️</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Security</span>
+          <h3>Biometric Key Ring</h3>
+          <p class="summary">Hardware-enclave based authentication with multi-party signature protocols.</p>
+          <div class="expand-prompt">Click to expand details ↗</div>
+        </div>
+        <div class="expanded-content">
+          <h4>Enclave Security Specifications</h4>
+          <p>FIPS 140-3 Level 4 certified physical tamper resistance. Micro-probes automatically erase ephemeral cryptographic seeds upon laser glitching detection.</p>
+          <div class="stat-row">
+            <div class="stat-box">
+              <span class="label">Auth Speed</span>
+              <span class="val">42ms</span>
+            </div>
+            <div class="stat-box">
+              <span class="label">Entropy Pool</span>
+              <span class="val">512-bit</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card" data-card="3">
+        <div class="card-thumbnail" style="--accent: #10b981;">
+          <span class="icon">🌐</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Networking</span>
+          <h3>Mesh Synapse</h3>
+          <p class="summary">P2P decentralized state sync providing resilient disaster recovery.</p>
+          <div class="expand-prompt">Click to expand details ↗</div>
+        </div>
+        <div class="expanded-content">
+          <h4>Peer Mesh Consensus</h4>
+          <p>Byzantine fault-tolerant gossip propagation protocol handling up to 33% malicious adversarial actors without desynchronizing state vectors.</p>
+          <div class="stat-row">
+            <div class="stat-box">
+              <span class="label">Peers</span>
+              <span class="val">28,490</span>
+            </div>
+            <div class="stat-box">
+              <span class="label">Propagation</span>
+              <span class="val">85ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backdrop overlay for modal state -->
+    <div class="modal-backdrop" id="backdrop"></div>
+    <!-- Modal close button -->
+    <button class="close-btn" id="closeBtn" aria-label="Close modal">✕</button>
+
+    <div class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Bento Grid Hub</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

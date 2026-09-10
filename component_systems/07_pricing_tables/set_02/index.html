@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Slider Seat Calculator | UI Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #818cf818, transparent 70%);"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+    <span class="badge-tag">SET 02 &bull; PRODUCTION COMPONENT</span>
+  </div>
+
+  <div class="stage-container">
+    <div class="component-stage" id="componentStage">
+      
+        <div class="slider-calculator-card">
+          <span class="calc-label">PAY-AS-YOU-GROW &bull; TEAM SEATS CALCULATOR</span>
+          <h2>Select Team Capacity</h2>
+          <p class="calc-desc">Scale seamlessly from a single solo creator to a global organization.</p>
+          
+          <div class="calc-slider-box">
+            <div class="slider-labels">
+              <span>Seats: <strong id="seatCount" style="color:#818cf8;">10</strong></span>
+              <span id="discountTag" style="color:#22c55e;">15% Volume Discount</span>
+            </div>
+            <input type="range" id="seatSlider" min="1" max="100" value="10" class="custom-seat-slider">
+          </div>
+
+          <div class="calc-invoice-box">
+            <div class="invoice-left">
+              <span>ESTIMATED TOTAL</span>
+              <div class="invoice-amount">$<span id="totalPrice">120</span><span class="cycle">/month</span></div>
+            </div>
+            <button class="calc-cta-btn">Start Instant Checkout &rarr;</button>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">UI COMPONENT ARCHITECTURE</span>
+        <h2 class="spec-title">Interactive Slider Seat Calculator</h2>
+        <p class="spec-desc">Real-time pricing calculator where dragging the seat slider dynamically recalculates the monthly invoice amount.</p>
+      </div>
+
+      <div class="actions-row">
+        <button class="action-btn primary" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#818cf8;">#818cf8</strong></div>
+        <div class="spec-item"><span>LAYOUT:</span> <strong>Dedicated Custom Pattern</strong></div>
+        <div class="spec-item"><span>STANDARD:</span> <strong>Vanilla HTML5 &amp; CSS</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

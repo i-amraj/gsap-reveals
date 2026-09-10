@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics 03: macOS Magnetic Dock Magnification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dock-wrapper">
+    <header class="header">
+      <div class="badge">Gaussian Proximity Physics</div>
+      <h1>macOS Magnetic Dock Magnification</h1>
+      <p>Hover and slide your cursor across the floating dock. Icons dynamically magnify using a continuous Gaussian proximity curve. Click any app to trigger an authentic launch bounce.</p>
+    </header>
+
+    <!-- Floating Dock Container -->
+    <div class="dock-container" id="dockContainer">
+      <div class="dock" id="dock">
+        <div class="dock-item" data-app="Finder">
+          <span class="icon">🧭</span>
+          <span class="tooltip">Finder</span>
+        </div>
+        <div class="dock-item" data-app="Terminal">
+          <span class="icon">💻</span>
+          <span class="tooltip">Terminal</span>
+        </div>
+        <div class="dock-item" data-app="Code">
+          <span class="icon">⚡</span>
+          <span class="tooltip">VS Code</span>
+        </div>
+        <div class="dock-item" data-app="Browser">
+          <span class="icon">🌐</span>
+          <span class="tooltip">Browser</span>
+        </div>
+        <div class="dock-item" data-app="Music">
+          <span class="icon">🎵</span>
+          <span class="tooltip">Music</span>
+        </div>
+        <div class="dock-item" data-app="Security">
+          <span class="icon">🛡️</span>
+          <span class="tooltip">Vault</span>
+        </div>
+        <div class="dock-item" data-app="Settings">
+          <span class="icon">⚙️</span>
+          <span class="tooltip">Settings</span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Physics Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

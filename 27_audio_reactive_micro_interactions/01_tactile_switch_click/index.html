@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactile Switch Click | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="glow-backdrop"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="card">
+      <div class="badge">PROMPT READY &bull; WEB AUDIO API</div>
+      <h1>Tactile Switch & Click</h1>
+      <p>Dual-frequency synthesized mechanical transient + low thud audio paired with elastic GSAP spring switch physics.</p>
+
+      <div class="switch-rack">
+        <!-- Switch 1: Hyperdrive -->
+        <div class="switch-item">
+          <div class="label-box">
+            <span class="title">HYPERDRIVE</span>
+            <span class="status-badge off" id="status-1">OFFLINE</span>
+          </div>
+          <button class="tactile-switch" id="switch-1" data-active="false" aria-label="Toggle Hyperdrive">
+            <div class="switch-track">
+              <div class="switch-indicator"></div>
+              <div class="switch-thumb">
+                <div class="thumb-ridge"></div>
+                <div class="thumb-ridge"></div>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Switch 2: Quantum Shield -->
+        <div class="switch-item">
+          <div class="label-box">
+            <span class="title">QUANTUM SHIELD</span>
+            <span class="status-badge off" id="status-2">OFFLINE</span>
+          </div>
+          <button class="tactile-switch" id="switch-2" data-active="false" aria-label="Toggle Quantum Shield">
+            <div class="switch-track">
+              <div class="switch-indicator"></div>
+              <div class="switch-thumb">
+                <div class="thumb-ridge"></div>
+                <div class="thumb-ridge"></div>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Switch 3: Core Overclock -->
+        <div class="switch-item">
+          <div class="label-box">
+            <span class="title">CORE OVERCLOCK</span>
+            <span class="status-badge off" id="status-3">OFFLINE</span>
+          </div>
+          <button class="tactile-switch" id="switch-3" data-active="false" aria-label="Toggle Core Overclock">
+            <div class="switch-track">
+              <div class="switch-indicator"></div>
+              <div class="switch-thumb">
+                <div class="thumb-ridge"></div>
+                <div class="thumb-ridge"></div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="specs-panel">
+        <div class="spec"><span>Synthesis</span><strong>AudioContext Sine + Highpass Noise</strong></div>
+        <div class="spec"><span>Transient</span><strong>1200Hz Click &rarr; 140Hz Thud</strong></div>
+        <div class="spec"><span>GSAP Easing</span><strong>back.out(2.5)</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

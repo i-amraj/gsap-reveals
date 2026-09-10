@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Island Capsule Nav | UI Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #38bdf818, transparent 70%);"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+    <span class="badge-tag">SET 01 &bull; PRODUCTION COMPONENT</span>
+  </div>
+
+  <div class="stage-container">
+    <div class="component-stage" id="componentStage">
+      
+        <div class="dynamic-island-nav" id="dynamicIsland">
+          <div class="island-collapsed">
+            <div class="island-brand">
+              <span class="pulse-dot"></span>
+              <span class="brand-text">NEXUS</span>
+            </div>
+            <div class="island-links">
+              <a href="#">Showcase</a>
+              <a href="#">Docs</a>
+              <a href="#">Pricing</a>
+            </div>
+            <button class="island-action-btn" id="islandExpandBtn">✦ Search</button>
+          </div>
+          <div class="island-expanded" id="islandExpandedContent" style="display:none;">
+            <div class="island-search-row">
+              <span>🔍</span>
+              <input type="text" placeholder="Search commands or documentation..." autofocus>
+              <button class="island-close-btn" id="islandCloseBtn">&times;</button>
+            </div>
+            <div class="island-quick-chips">
+              <span>Quick:</span>
+              <a href="#">Components</a>
+              <a href="#">Color Systems</a>
+              <a href="#">Typography</a>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">UI COMPONENT ARCHITECTURE</span>
+        <h2 class="spec-title">Dynamic Island Capsule Nav</h2>
+        <p class="spec-desc">Apple iPhone style floating Dynamic Island capsule that smoothly expands on hover or click into search and actions.</p>
+      </div>
+
+      <div class="actions-row">
+        <button class="action-btn primary" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#38bdf8;">#38bdf8</strong></div>
+        <div class="spec-item"><span>LAYOUT:</span> <strong>Dedicated Custom Pattern</strong></div>
+        <div class="spec-item"><span>STANDARD:</span> <strong>Vanilla HTML5 &amp; CSS</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

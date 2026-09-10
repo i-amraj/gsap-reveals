@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master UI Component Systems Portal | 28 Modules &bull; 224 Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090e;
+      --surface: #0f1420;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #38bdf8;
+      --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: #f8fafc; font-family: var(--font-ui); min-height: 100vh; overflow-x: hidden; }
+    .ambient-glow { position: fixed; top: -10vw; left: 50%; transform: translateX(-50%); width: 80vw; height: 35vw; background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%); pointer-events: none; z-index: 0; }
+    .portal-header { position: relative; z-index: 2; padding: 3rem 2rem 2rem; max-width: 1280px; margin: 0 auto; text-align: center; }
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .back-link { color: #94a3b8; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid var(--border); background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); }
+    .portal-tag { font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; letter-spacing: 0.08em; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .portal-subtitle { color: #94a3b8; max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.6; }
+    .stats-row { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.75rem 1.75rem; text-align: center; }
+    .stat-box .val { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+    .stat-box .lbl { font-size: 0.75rem; font-family: var(--font-mono); color: #94a3b8; text-transform: uppercase; }
+    .search-container { max-width: 580px; margin: 0 auto 3rem; }
+    .search-container input { width: 100%; padding: 0.85rem 1.5rem; border-radius: 9999px; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.12); color: #f8fafc; font-size: 0.95rem; outline: none; backdrop-filter: blur(16px); transition: border-color 0.2s; }
+    .search-container input:focus { border-color: var(--accent); }
+    .modules-grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.75rem; max-width: 1280px; margin: 0 auto; padding: 0 2rem 5rem; }
+    .comp-module-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.25s ease; }
+    .comp-module-card:hover { transform: translateY(-5px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+    .card-preview { height: 130px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; background: rgba(255,255,255,0.02); }
+    .preview-glow { width: 90px; height: 90px; border-radius: 50%; filter: blur(30px); opacity: 0.55; }
+    .preview-id { position: absolute; top: 1rem; left: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: #f8fafc; background: rgba(0,0,0,0.6); padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid var(--border); }
+    .preview-type { position: absolute; bottom: 1rem; right: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); background: rgba(0,0,0,0.7); padding: 0.2rem 0.6rem; border-radius: 6px; border: 1px solid var(--border); }
+    .card-content { padding: 1.75rem; display: flex; flex-direction: column; flex: 1; }
+    .meta-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .cat-pill { font-family: var(--font-mono); font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
+    .sets-pill { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); background: rgba(56, 189, 248, 0.1); padding: 0.2rem 0.6rem; border-radius: 9999px; }
+    .card-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .card-content p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem; flex: 1; }
+    .open-hub-btn { display: inline-block; text-align: center; text-decoration: none; color: #f8fafc; font-size: 0.875rem; font-weight: 600; padding: 0.7rem 1.25rem; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); transition: all 0.2s; }
+    .open-hub-btn:hover { background: var(--accent); color: #000; border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <header class="portal-header">
+    <div class="top-nav">
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="../index.html" class="back-link">&larr; Root Hub</a>
+        <a href="../28_central_showcase_portal/index.html" class="back-link" style="color: #a855f7; border-color: rgba(168,85,247,0.4);">🚀 Animation Portal</a>
+        <a href="../color_systems/index.html" class="back-link" style="color: #ec4899; border-color: rgba(236,72,153,0.4);">🎨 Color Systems</a>
+        <a href="../text_systems/index.html" class="back-link" style="color: #818cf8; border-color: rgba(129,140,248,0.4);">✍️ Text Systems</a>
+        <a href="../background_systems/index.html" class="back-link" style="color: #38bdf8; border-color: rgba(56,189,248,0.4);">🌌 Background Systems</a>
+      </div>
+      <span class="portal-tag">UI COMPONENT ARCHITECTURE &bull; 224 PRODUCTION SETS</span>
+    </div>
+
+    <h1>Master UI Component Systems Portal</h1>
+    <p class="portal-subtitle">
+      28 dedicated UI component modules featuring 8 curated sets each (224 production components).
+      Navbars, Hero Sections, Bento Grids, Action Buttons, Cmd+K Search Palettes, Pricing Tables, Testimonial Walls, FAQ Accordions, Footers, and AI Chat Boxes.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-box"><span class="val">28</span><span class="lbl">Component Modules</span></div>
+      <div class="stat-box"><span class="val">224</span><span class="lbl">Production Sets</span></div>
+      <div class="stat-box"><span class="val">100%</span><span class="lbl">Modular &amp; Clean</span></div>
+      <div class="stat-box"><span class="val">Zero</span><span class="lbl">Build Overhead</span></div>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="compSearch" placeholder="Search components (e.g. 'navbar', 'hero', 'bento', 'button', 'pricing', 'cmdk', 'chat')..." autocomplete="off">
+    </div>
+  </header>
+
+  <main class="modules-grid" id="modulesGrid">
+    
+        <div class="comp-module-card" data-category="layout & navigation" data-title="navigation & headers">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 01</span>
+            <span class="preview-type">navbar</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Layout & Navigation</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Navigation & Headers</h3>
+            <p>Floating dynamic island navbars, glassmorphic sticky headers, minimal pill capsules, and mega-menus.</p>
+            <div class="card-actions">
+              <a href="01_navigation_headers/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="hero & landings" data-title="hero section layouts">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 02</span>
+            <span class="preview-type">hero</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Hero & Landings</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Hero Section Layouts</h3>
+            <p>High-impact hero banners with dual CTAs, badge capsules, glowing ambient backlights, and metric stats.</p>
+            <div class="card-actions">
+              <a href="02_hero_sections/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="cards & containers" data-title="bento grid cards">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 03</span>
+            <span class="preview-type">bento</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Cards & Containers</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Bento Grid Cards</h3>
+            <p>Linear & Apple style asymmetric bento grid layouts with interactive hover lighting and frosted glass.</p>
+            <div class="card-actions">
+              <a href="03_bento_grid_cards/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="buttons & actions" data-title="action buttons & ctas">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 04</span>
+            <span class="preview-type">buttons</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Buttons & Actions</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Action Buttons & CTAs</h3>
+            <p>Shimmer border running lights, magnetic hover physics, liquid fill, and glowing gradient actions.</p>
+            <div class="card-actions">
+              <a href="04_action_buttons_ctas/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="cards & containers" data-title="feature cards & teasers">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 05</span>
+            <span class="preview-type">cards</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Cards & Containers</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Feature Cards & Teasers</h3>
+            <p>3D perspective tilt cards, cursor spotlight border glow, and expandable hover preview containers.</p>
+            <div class="card-actions">
+              <a href="05_feature_cards_teasers/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="forms & search" data-title="command bar & search (cmd+k)">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 06</span>
+            <span class="preview-type">cmdk</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Forms & Search</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Command Bar & Search (Cmd+K)</h3>
+            <p>Spotlight command search palettes, keyboard shortcuts navigation, and filtered category search.</p>
+            <div class="card-actions">
+              <a href="06_command_bar_cmdk/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="commerce & conversion" data-title="pricing tables & cards">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 07</span>
+            <span class="preview-type">pricing</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Commerce & Conversion</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Pricing Tables & Cards</h3>
+            <p>Monthly/Annual billing switches, tier highlight ribbons, feature comparison ticks, and CTA buttons.</p>
+            <div class="card-actions">
+              <a href="07_pricing_tables/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="trust & conversion" data-title="testimonials & social proof">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 08</span>
+            <span class="preview-type">testimonials</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Trust & Conversion</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Testimonials & Social Proof</h3>
+            <p>Draggable wall-of-love cards, customer review quotes, star ratings, and verified client badges.</p>
+            <div class="card-actions">
+              <a href="08_testimonials_social_proof/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="content & support" data-title="faq accordions">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 09</span>
+            <span class="preview-type">accordion</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Content & Support</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>FAQ Accordions</h3>
+            <p>Smooth height-animating FAQ accordions, multi-category tabs, and expandable question tiles.</p>
+            <div class="card-actions">
+              <a href="09_faq_accordions/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="layout & footer" data-title="footers & signoffs">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 10</span>
+            <span class="preview-type">footer</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Layout & Footer</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Footers & Signoffs</h3>
+            <p>Mega-footers with newsletter subscription forms, live timezone clocks, and multi-tier sitemaps.</p>
+            <div class="card-actions">
+              <a href="10_footers_signoffs/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="forms & inputs" data-title="form inputs & controls">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 11</span>
+            <span class="preview-type">inputs</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Forms & Inputs</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Form Inputs & Controls</h3>
+            <p>Floating label inputs, OTP verification digits, credit card formatters, and multi-step wizards.</p>
+            <div class="card-actions">
+              <a href="11_form_inputs_fields/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="overlays & modals" data-title="modals & dialogs">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 12</span>
+            <span class="preview-type">modals</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Overlays & Modals</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Modals & Dialogs</h3>
+            <p>Centered glass alert modals, slide-over side drawers, and mobile bottom sheet sheets.</p>
+            <div class="card-actions">
+              <a href="12_modals_dialogs/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="data & metrics" data-title="stats & metric displays">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 13</span>
+            <span class="preview-type">stats</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Data & Metrics</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Stats & Metric Displays</h3>
+            <p>Rolling number counters, circular SVG progress rings, trend indicators, and live ping badges.</p>
+            <div class="card-actions">
+              <a href="13_stats_metric_displays/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="navigation & filters" data-title="tabs & segmented controls">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 14</span>
+            <span class="preview-type">tabs</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Navigation & Filters</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Tabs & Segmented Controls</h3>
+            <p>Sliding magnetic pill indicators, glass underline tabs, icon segmenters, and vertical tab sidebars.</p>
+            <div class="card-actions">
+              <a href="14_tabs_segmented_controls/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="indicators & badges" data-title="badges & status pills">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #22c55e;"></div>
+            <span class="preview-id">MOD 15</span>
+            <span class="preview-type">badges</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Indicators & Badges</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Badges & Status Pills</h3>
+            <p>Pulsing live radar dots, shimmer running border badges, technical monospace tags, and filter chips.</p>
+            <div class="card-actions">
+              <a href="15_badges_status_pills/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="data & grids" data-title="data tables & list views">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 16</span>
+            <span class="preview-type">tables</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Data & Grids</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Data Tables & List Views</h3>
+            <p>Modern striped data tables, sortable column headers, user avatar rows, and sticky header grids.</p>
+            <div class="card-actions">
+              <a href="16_data_tables_lists/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="navigation & progress" data-title="breadcrumbs & steppers">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 17</span>
+            <span class="preview-type">steppers</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Navigation & Progress</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Breadcrumbs & Steppers</h3>
+            <p>Numbered circular step wizards, horizontal progress pipelines, chevron breadcrumbs, and timelines.</p>
+            <div class="card-actions">
+              <a href="17_breadcrumbs_steppers/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="notifications & alerts" data-title="alerts, banners & toasts">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 18</span>
+            <span class="preview-type">alerts</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Notifications & Alerts</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Alerts, Banners & Toasts</h3>
+            <p>Top notification announcement bars, floating action toasts, glass callouts, and destructive alerts.</p>
+            <div class="card-actions">
+              <a href="18_alerts_banners_toasts/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="media & galleries" data-title="sliders & carousels">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 19</span>
+            <span class="preview-type">carousels</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Media & Galleries</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Sliders & Carousels</h3>
+            <p>Mouse drag touch sliders, coverflow 3D cards, thumbnail indicators, and infinite auto-scroll rails.</p>
+            <div class="card-actions">
+              <a href="19_sliders_carousels/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="media & interactive" data-title="audio & media players">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 20</span>
+            <span class="preview-type">audio</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Media & Interactive</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Audio & Media Players</h3>
+            <p>Minimalist waveform audio players, floating pill bars, vinyl record animations, and volume dials.</p>
+            <div class="card-actions">
+              <a href="20_audio_media_players/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="hints & overlays" data-title="tooltips & popovers">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 21</span>
+            <span class="preview-type">tooltips</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Hints & Overlays</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Tooltips & Popovers</h3>
+            <p>Cursor-follow tooltips, rich card popovers with actions, keyboard shortcut badges, and tour bubbles.</p>
+            <div class="card-actions">
+              <a href="21_tooltips_popovers/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="forms & menus" data-title="dropdowns & select menus">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 22</span>
+            <span class="preview-type">dropdowns</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Forms & Menus</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Dropdowns & Select Menus</h3>
+            <p>Custom animated select menus, multi-select tag chips, user profile avatar menus, and mega-selects.</p>
+            <div class="card-actions">
+              <a href="22_dropdowns_select_menus/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="feedback & loading" data-title="skeletons & loading states">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 23</span>
+            <span class="preview-type">skeletons</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Feedback & Loading</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Skeletons & Loading States</h3>
+            <p>Shimmer pulse card placeholders, avatar+text skeleton wires, table wave loaders, and circular spinners.</p>
+            <div class="card-actions">
+              <a href="23_skeletons_loading_states/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="storytelling & logs" data-title="timeline & milestones">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 24</span>
+            <span class="preview-type">timeline</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Storytelling & Logs</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Timeline & Milestones</h3>
+            <p>Alternating vertical history timelines, horizontal milestone tracks, changelog feeds, and roadmap nodes.</p>
+            <div class="card-actions">
+              <a href="24_timeline_milestones/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="interactivity & proof" data-title="comparison & split views">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 25</span>
+            <span class="preview-type">comparison</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Interactivity & Proof</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Comparison & Split Views</h3>
+            <p>Draggable before/after image sliders, feature comparison matrices, code diff viewers, and view toggles.</p>
+            <div class="card-actions">
+              <a href="25_comparison_split_views/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="overlays & canvas" data-title="drawers & offcanvas sheets">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 26</span>
+            <span class="preview-type">drawers</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Overlays & Canvas</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Drawers & Offcanvas Sheets</h3>
+            <p>Slide-out shopping cart drawers, left navigation sidebars, bottom filter sheets, and peek drawers.</p>
+            <div class="card-actions">
+              <a href="26_drawers_offcanvas_sheets/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="controls & switches" data-title="toggle switches & flippers">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 27</span>
+            <span class="preview-type">switches</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Controls & Switches</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Toggle Switches & Flippers</h3>
+            <p>Monthly/Annual billing sliding pills, dark/light mode sun-to-moon switches, and 3D card flippers.</p>
+            <div class="card-actions">
+              <a href="27_toggle_switches_flips/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comp-module-card" data-category="ai & chat interfaces" data-title="ai chat & prompt boxes">
+          <div class="card-preview">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 28</span>
+            <span class="preview-type">ai_chat</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">AI & Chat Interfaces</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>AI Chat & Prompt Boxes</h3>
+            <p>Auto-expanding AI prompt textareas, quick suggestion chips, model selector pills, and streaming output.</p>
+            <div class="card-actions">
+              <a href="28_ai_chat_prompt_boxes/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('compSearch');
+    const cards = document.querySelectorAll('.comp-module-card');
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const cat = card.getAttribute('data-category') || '';
+        if (title.includes(query) || cat.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

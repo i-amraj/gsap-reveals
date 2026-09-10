@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring Pop Haptic Button | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">TACTILE SOUND SYNTHESIS</div>
+    <h1>Spring Pop & Haptic Blip</h1>
+    <p>Procedural resonant bubble pop audio synthesized on-the-fly with GSAP squash, stretch & haptic bubble particle bursts.</p>
+
+    <div class="stage">
+      <div class="button-wrapper">
+        <button class="pop-btn" id="popBtn" aria-label="Trigger Spring Pop">
+          <span class="btn-shine"></span>
+          <span class="icon">🚀</span>
+          <span class="btn-text">PRESS FOR HAPTIC POP</span>
+          <span class="tap-counter" id="counter">0</span>
+        </button>
+        <div class="particle-anchor" id="particleAnchor"></div>
+      </div>
+
+      <div class="tone-selector">
+        <button class="tone-pill active" data-tone="bubble">Bubble Pop (540Hz)</button>
+        <button class="tone-pill" data-tone="laser">Laser Blip (980Hz)</button>
+        <button class="tone-pill" data-tone="subthump">Sub Thump (90Hz)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

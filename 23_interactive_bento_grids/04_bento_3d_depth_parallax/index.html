@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Grid 04: 3D Depth Multi-Layer Parallax</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">Spatial Computing UI</div>
+      <h1>3D Depth Multi-Layer Parallax</h1>
+      <p>Hover and pan your cursor across the bento cards. Internal layers, floating badges, and glowing orbs shift at differential depths creating true holographic perspective.</p>
+    </header>
+
+    <div class="bento-grid">
+      <!-- Parallax Card 1: Vision / AI Brain -->
+      <div class="parallax-card card-large">
+        <div class="parallax-layer bg-grid" data-depth="0.1"></div>
+        <div class="parallax-layer glow-orb" data-depth="0.25"></div>
+        
+        <div class="parallax-layer card-content" data-depth="0.4">
+          <span class="tag">Neural Spatial</span>
+          <h3>Multimodal Perceptual Synthesis</h3>
+          <p>Processing 120 FPS stereoscopic camera inputs with spatial mesh anchoring.</p>
+        </div>
+
+        <div class="parallax-layer floating-chip chip-1" data-depth="0.8">
+          <span class="chip-icon">👁️</span>
+          <span>Depth Map: 0.05m</span>
+        </div>
+
+        <div class="parallax-layer floating-chip chip-2" data-depth="0.95">
+          <span class="chip-icon">⚡</span>
+          <span>120 FPS Latency Sync</span>
+        </div>
+      </div>
+
+      <!-- Parallax Card 2: Haptic Device -->
+      <div class="parallax-card">
+        <div class="parallax-layer bg-radial" data-depth="0.15"></div>
+        
+        <div class="parallax-layer card-content" data-depth="0.45">
+          <span class="tag">Haptic Engine</span>
+          <h3>Micro-Vibration Motors</h3>
+          <p>Sub-millimeter tactile resistance simulates physical textures on glass.</p>
+        </div>
+
+        <div class="parallax-layer floating-chip chip-bottom" data-depth="0.85">
+          <span>🎯 240Hz Haptic Pulse</span>
+        </div>
+      </div>
+
+      <!-- Parallax Card 3: Acoustic Tracking -->
+      <div class="parallax-card">
+        <div class="parallax-layer bg-conic" data-depth="0.15"></div>
+
+        <div class="parallax-layer card-content" data-depth="0.45">
+          <span class="tag">Audio Spatial</span>
+          <h3>Binaural HRTF Matrix</h3>
+          <p>Real-time head-related transfer functions model room acoustic reflections.</p>
+        </div>
+
+        <div class="parallax-layer floating-chip chip-bottom" data-depth="0.85">
+          <span>🎧 360° Soundstage</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Bento Grid Hub</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

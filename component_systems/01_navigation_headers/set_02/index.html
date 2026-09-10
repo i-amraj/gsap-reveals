@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphic Sticky Blur Header | UI Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #818cf818, transparent 70%);"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+    <span class="badge-tag">SET 02 &bull; PRODUCTION COMPONENT</span>
+  </div>
+
+  <div class="stage-container">
+    <div class="component-stage" id="componentStage">
+      
+        <header class="glass-sticky-nav">
+          <div class="nav-container">
+            <div class="logo-area">
+              <span class="logo-sym">❖</span>
+              <span class="logo-text">VELOCE</span>
+            </div>
+            <nav class="nav-menu">
+              <div class="nav-dropdown-trigger">
+                <a href="#" class="active">Products ▾</a>
+                <div class="mega-dropdown">
+                  <div class="dropdown-col">
+                    <span class="col-heading">PLATFORM</span>
+                    <a href="#">Edge Runtime</a>
+                    <a href="#">Neural Engine</a>
+                    <a href="#">Telemetry Studio</a>
+                  </div>
+                  <div class="dropdown-col">
+                    <span class="col-heading">SOLUTIONS</span>
+                    <a href="#">Enterprise Security</a>
+                    <a href="#">Automated Scale</a>
+                  </div>
+                </div>
+              </div>
+              <a href="#">Solutions</a>
+              <a href="#">Enterprise</a>
+              <a href="#">Pricing</a>
+            </nav>
+            <div class="nav-cta-box">
+              <a href="#" class="login-link">Sign In</a>
+              <button class="cta-glow-btn">Get Started &rarr;</button>
+            </div>
+          </div>
+        </header>
+        
+    </div>
+
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">UI COMPONENT ARCHITECTURE</span>
+        <h2 class="spec-title">Glassmorphic Sticky Blur Header</h2>
+        <p class="spec-desc">Full-width modern sticky navigation bar with heavy frosted backdrop-blur (20px) and interactive mega-dropdown.</p>
+      </div>
+
+      <div class="actions-row">
+        <button class="action-btn primary" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#818cf8;">#818cf8</strong></div>
+        <div class="spec-item"><span>LAYOUT:</span> <strong>Dedicated Custom Pattern</strong></div>
+        <div class="spec-item"><span>STANDARD:</span> <strong>Vanilla HTML5 &amp; CSS</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

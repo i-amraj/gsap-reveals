@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider Pitch Bend | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+</head>
+<body>
+  <div class="glow-bg"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">DRAGGABLE PITCH MODULATOR &bull; LIVE OSCILLOSCOPE</div>
+    <h1>Analog Pitch Bend Slider</h1>
+    <p>Drag the synthesizer pitch wheel or fader handle. Position continuously modulates oscillator frequency and filter resonance with live canvas waveform oscilloscope rendering.</p>
+
+    <div class="synth-console">
+      <!-- Live Oscilloscope Display -->
+      <div class="screen-frame">
+        <div class="screen-header">
+          <span>OSCILLOSCOPE &bull; REAL-TIME WAVEFORM</span>
+          <span class="freq-tag" id="freqDisplay">440.0 Hz</span>
+        </div>
+        <canvas id="scopeCanvas" width="560" height="110"></canvas>
+      </div>
+
+      <!-- Slider Ribbon / Pitch Wheel -->
+      <div class="fader-section">
+        <div class="fader-label-row">
+          <span>PITCH LOW (65Hz)</span>
+          <span class="center-mark">DETENT (440Hz)</span>
+          <span>PITCH HIGH (1320Hz)</span>
+        </div>
+
+        <div class="slider-track-box" id="trackBox">
+          <div class="track-active-fill" id="trackFill"></div>
+          <div class="slider-handle" id="sliderHandle">
+            <div class="handle-grip"></div>
+            <div class="handle-grip"></div>
+            <div class="handle-grip"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="waveform-selectors">
+        <button class="wave-btn active" data-wave="sawtooth">SAWTOOTH</button>
+        <button class="wave-btn" data-wave="sine">SINE</button>
+        <button class="wave-btn" data-wave="square">SQUARE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

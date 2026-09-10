@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Arcade Cabinet Portal | Module 28</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="arcade-room"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Portal Hub</a>
+
+  <!-- Arcade Cabinet Frame -->
+  <div class="arcade-cabinet">
+    <!-- Marquee Banner -->
+    <div class="cabinet-marquee">
+      <div class="marquee-title">★ GSAP ARCADE 1994 ★</div>
+    </div>
+
+    <!-- CRT Curved Screen -->
+    <div class="crt-monitor">
+      <div class="crt-scanlines"></div>
+      
+      <div class="crt-content">
+        <div class="high-score-banner">
+          <span>HIGH SCORE: 999,990</span>
+          <span class="credits" id="creditsText">INSERT COIN [0]</span>
+        </div>
+
+        <div class="game-select-title">SELECT ANIMATION STAGE</div>
+
+        <!-- Games List -->
+        <div class="game-list" id="gameList">
+          <div class="game-row active" data-url="../../23_interactive_bento_grids/index.html">
+            <span class="cursor-hand">&gt;</span>
+            <span class="game-name">STAGE 1: BENTO SPOTLIGHT</span>
+          </div>
+          <div class="game-row" data-url="../../24_motionpath_bezier_scroll/index.html">
+            <span class="cursor-hand">&gt;</span>
+            <span class="game-name">STAGE 2: BEZIER ROCKET</span>
+          </div>
+          <div class="game-row" data-url="../../25_physics_draggable_playground/index.html">
+            <span class="cursor-hand">&gt;</span>
+            <span class="game-name">STAGE 3: PHYSICS DRAG</span>
+          </div>
+          <div class="game-row" data-url="../../26_seamless_page_transitions/index.html">
+            <span class="cursor-hand">&gt;</span>
+            <span class="game-name">STAGE 4: SEAMLESS FLIP</span>
+          </div>
+          <div class="game-row" data-url="../../27_audio_reactive_micro_interactions/index.html">
+            <span class="cursor-hand">&gt;</span>
+            <span class="game-name">STAGE 5: AUDIO SYNTH</span>
+          </div>
+        </div>
+
+        <div class="start-prompt" id="startPrompt">PRESS ENTER OR SPACE TO START</div>
+      </div>
+    </div>
+
+    <!-- Arcade Control Panel Deck -->
+    <div class="control-deck">
+      <button class="coin-btn" id="coinBtn">🪙 INSERT 25¢ COIN</button>
+      <div class="controls-dpad">
+        <button class="dpad-btn" id="upBtn">&uarr;</button>
+        <button class="dpad-btn" id="downBtn">&darr;</button>
+      </div>
+      <button class="start-btn" id="startBtn">START</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

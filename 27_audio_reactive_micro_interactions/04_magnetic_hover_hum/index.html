@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnetic Hover Hum | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="sonar-ring" id="sonar1"></div>
+  <div class="sonar-ring" id="sonar2"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">PROXIMITY PITCH-SHIFT &bull; SONAR RESONANCE</div>
+    <h1>Magnetic Proximity Hum</h1>
+    <p>Move your cursor towards the core. Distance modulates a dual-oscillator drone frequency, amplitude, and magnetic pull in real-time.</p>
+
+    <div class="radar-arena" id="arena">
+      <div class="magnetic-core" id="core">
+        <div class="core-inner">
+          <div class="core-gem"></div>
+          <span class="core-label">MAGNETIC CORE</span>
+          <span class="freq-meter" id="freqMeter">120 Hz</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="telemetry-bar">
+      <div class="stat"><span>Distance</span><strong id="distStat">--- px</strong></div>
+      <div class="stat"><span>Hum Tone</span><strong id="toneStat">Idle Sine</strong></div>
+      <div class="stat"><span>Magnetic Intensity</span><strong id="intensityStat">0%</strong></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

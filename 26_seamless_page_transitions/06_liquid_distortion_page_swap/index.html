@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition 06: Liquid Displacement Ripple Page Swap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- SVG Liquid Displacement Filter -->
+  <svg class="liquid-filter-svg" aria-hidden="true">
+    <defs>
+      <filter id="liquidDisplace" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox">
+        <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
+        <feDisplacementMap id="displaceMap" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="page-container" id="pageContainer">
+    <!-- View 1 -->
+    <div class="view-panel" id="view1">
+      <span class="badge">Matrix One</span>
+      <h1>Hydraulic Visual Refraction</h1>
+      <p>Simulating real-time fluid refraction optics during page transitions using dynamic SVG displacement map scale modulation.</p>
+      <button class="trigger-btn" id="btnToView2">✦ Trigger Liquid Warp ➔</button>
+    </div>
+
+    <!-- View 2 -->
+    <div class="view-panel is-hidden" id="view2">
+      <span class="badge badge-cyan">Matrix Two</span>
+      <h1>Prismatic Wavefront Core</h1>
+      <p>The wavefront has settled into crystalline equilibrium with zero pixel artifacts and instantaneous hardware compositing.</p>
+      <button class="trigger-btn" id="btnToView1">← Reverse Liquid Warp</button>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Transitions Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

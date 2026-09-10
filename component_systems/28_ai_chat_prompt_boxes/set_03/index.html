@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Model Selector Dropdown Pill | AI Chat & Prompt Boxes Set 03</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #10b98118, transparent 70%);"></div>
+
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to AI Chat & Prompt Boxes</a>
+    <span class="badge-tag">MODULE 28 &bull; SET 03</span>
+  </div>
+
+  <div class="stage-container">
+    <!-- Component Stage Preview -->
+    <div class="component-stage" id="componentStage">
+      
+        <div class="comp-chat-box">
+          <div class="chat-model-pill" style="border-color:#10b98140; color:#10b981;">✦ Gemini 2.5 Pro Ultra</div>
+          <div class="chat-input-area">
+            <textarea placeholder="Ask anything or request design adjustments..." rows="2" readonly>Generate a high-converting hero banner with glassmorphism cards</textarea>
+            <div class="chat-actions-row">
+              <div class="chat-tools">
+                <button class="chat-tool-btn">📎</button>
+                <button class="chat-tool-btn">🎙️</button>
+              </div>
+              <button class="chat-send-btn" style="background:#10b981; color:#000;">Send &rarr;</button>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+
+    <!-- Component Spec & Action Controller -->
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">AI & CHAT INTERFACES</span>
+        <h2 class="spec-title">AI Model Selector Dropdown Pill</h2>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="actions-row">
+        <button class="action-btn primary" id="toggleStateBtn">⚡ Toggle State</button>
+        <button class="action-btn" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <!-- Specs Footer -->
+      <div class="specs-grid">
+        <div class="spec-item"><span>TYPE:</span> <strong>ai_chat</strong></div>
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#10b981;">#10b981</strong></div>
+        <div class="spec-item"><span>FRAMEWORK:</span> <strong>Vanilla CSS &amp; HTML5</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

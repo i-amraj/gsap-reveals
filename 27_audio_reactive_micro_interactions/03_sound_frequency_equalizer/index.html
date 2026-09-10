@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency Equalizer Spectrum | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-spectrum"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">AUDIO ANALYSER &bull; GSAP TICKER</div>
+    <h1>Spectrum Frequency Equalizer</h1>
+    <p>Procedural synthesizer arpeggios routed into an AudioContext AnalyserNode with 24 frequency-band visualizer bars and peak floaters.</p>
+
+    <div class="eq-console">
+      <div class="eq-header">
+        <div class="channel-info">
+          <span class="status-dot" id="statusDot"></span>
+          <span class="channel-name" id="trackName">SYNTH ENGINE: IDLE</span>
+        </div>
+        <div class="bpm-counter" id="freqReadout">0.00 kHz</div>
+      </div>
+
+      <!-- Equalizer Bars Container -->
+      <div class="visualizer" id="visualizer">
+        <!-- 24 bars dynamically or statically rendered -->
+      </div>
+
+      <div class="eq-controls">
+        <button class="btn-primary" id="togglePlayBtn">
+          <span class="play-icon">▶</span> <span id="btnLabel">START SYNTH CHORD LOOP</span>
+        </button>
+        <div class="style-toggle">
+          <button class="style-btn active" data-mode="neon">NEON CYAN</button>
+          <button class="style-btn" data-mode="sunset">SUNSET FIRE</button>
+          <button class="style-btn" data-mode="matrix">CYBER MATRIX</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

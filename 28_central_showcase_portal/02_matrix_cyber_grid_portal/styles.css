@@ -1,0 +1,327 @@
+:root {
+  --matrix-green: #00ff66;
+  --matrix-dark: #050a06;
+  --card-bg: rgba(0, 255, 102, 0.03);
+  --border-green: rgba(0, 255, 102, 0.2);
+  --border-hover: rgba(0, 255, 102, 0.7);
+  --text-muted: #4ade80;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--matrix-dark);
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  padding: 2.5rem 2rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* CRT Scanline Effect */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.back-link {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: var(--matrix-green);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(0, 255, 102, 0.08);
+  border: 1px solid var(--border-green);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.cyber-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cyber-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-green);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--matrix-green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background: var(--matrix-green);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--matrix-green);
+}
+
+.shortcut-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+kbd {
+  background: rgba(0, 255, 102, 0.15);
+  border: 1px solid var(--border-green);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  color: var(--matrix-green);
+}
+
+/* Command Bar */
+.command-bar-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 255, 102, 0.04);
+  border: 1px solid var(--border-green);
+  border-radius: 12px;
+  padding: 0.9rem 1.4rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 25px rgba(0, 255, 102, 0.08);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.command-bar-wrap:focus-within {
+  border-color: var(--matrix-green);
+  box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+}
+
+.prompt-arrow {
+  color: var(--matrix-green);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-right: 0.9rem;
+}
+
+#cyberSearch {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--matrix-green);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+}
+
+#cyberSearch::placeholder {
+  color: rgba(74, 222, 128, 0.4);
+}
+
+.blinking-cursor {
+  color: var(--matrix-green);
+  font-weight: 800;
+  animation: blink 0.8s infinite steps(1);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Matrix Grid */
+.matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cyber-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-green);
+  border-radius: 14px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.cyber-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 255, 102, 0.15);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+.node-tag {
+  color: var(--matrix-green);
+  font-weight: 700;
+}
+
+.sec-class {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.cyber-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.cyber-card p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1.4rem;
+  flex: 1;
+}
+
+.cyber-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 255, 102, 0.1);
+  padding-top: 1rem;
+  font-size: 0.75rem;
+}
+
+.view-prompt {
+  color: var(--matrix-green);
+  text-decoration: underline;
+}
+
+.cyber-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-green);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.green {
+  color: var(--matrix-green);
+}
+
+/* Modal */
+.cyber-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.cyber-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-box {
+  background: #050a06;
+  border: 1.5px solid var(--matrix-green);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 50px rgba(0, 255, 102, 0.3);
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--matrix-green);
+  font-size: 0.85rem;
+  margin-bottom: 1.2rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--matrix-green);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.prompt-code {
+  background: rgba(0, 255, 102, 0.05);
+  border: 1px solid var(--border-green);
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #86efac;
+  white-space: pre-wrap;
+  margin: 1.2rem 0 1.8rem;
+}
+
+.modal-btn-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.cyber-btn {
+  padding: 0.75rem 1.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cyber-btn.primary {
+  background: var(--matrix-green);
+  color: #000;
+  border: none;
+}
+
+.cyber-btn.primary:hover {
+  background: #4ade80;
+  box-shadow: 0 0 20px var(--matrix-green);
+}
+
+.cyber-btn.secondary {
+  background: transparent;
+  color: var(--matrix-green);
+  border: 1px solid var(--matrix-green);
+}

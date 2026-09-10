@@ -1,0 +1,139 @@
+:root {
+  --bg: #05060a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06b6d4;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.scroll-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 999px;
+  color: #34d399;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Vortex Stage */
+.vortex-stage {
+  position: relative;
+  height: 1500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spiral-svg {
+  position: sticky;
+  top: 10vh;
+  width: min(700px, 90vw);
+  height: min(700px, 90vw);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.singularity-core {
+  position: sticky;
+  top: calc(10vh + min(350px, 45vw) - 20px);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #fff, var(--accent-purple), transparent 70%);
+  border-radius: 50%;
+  filter: blur(8px);
+  box-shadow: 0 0 30px #8b5cf6, 0 0 60px #06b6d4;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Space Nodes */
+.space-node {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.6rem 1.1rem;
+  background: rgba(18, 22, 33, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  z-index: 20;
+  will-change: transform;
+}
+
+.space-node .icon {
+  font-size: 1.1rem;
+}
+
+/* Footer Link */
+.footer-action {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #fff;
+}

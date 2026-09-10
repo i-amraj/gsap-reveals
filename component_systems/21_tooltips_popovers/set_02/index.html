@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich Card Popover with Actions | Tooltips & Popovers Set 02</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #818cf818, transparent 70%);"></div>
+
+  <!-- Top Navigation Bar -->
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Tooltips & Popovers</a>
+    <span class="badge-tag">MODULE 21 &bull; SET 02</span>
+  </div>
+
+  <div class="stage-container">
+    <!-- Component Stage Preview -->
+    <div class="component-stage" id="componentStage">
+      
+        <div class="comp-tooltip-stage">
+          <button class="comp-btn-subtle" style="border-color:#818cf8; color:#818cf8;">Hover over me</button>
+          <div class="tooltip-bubble" style="border-color:#818cf8; background:#818cf820;">
+            <span style="color:#818cf8; font-weight:700;">PRO TIP:</span> Press ⌘K to open Spotlight command bar.
+          </div>
+        </div>
+        
+    </div>
+
+    <!-- Component Spec & Action Controller -->
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">HINTS & OVERLAYS</span>
+        <h2 class="spec-title">Rich Card Popover with Actions</h2>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="actions-row">
+        <button class="action-btn primary" id="toggleStateBtn">⚡ Toggle State</button>
+        <button class="action-btn" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <!-- Specs Footer -->
+      <div class="specs-grid">
+        <div class="spec-item"><span>TYPE:</span> <strong>tooltips</strong></div>
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#818cf8;">#818cf8</strong></div>
+        <div class="spec-item"><span>FRAMEWORK:</span> <strong>Vanilla CSS &amp; HTML5</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

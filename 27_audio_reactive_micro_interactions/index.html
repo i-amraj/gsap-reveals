@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 27: Audio Reactive Micro-Interactions | GSAP Motion Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-sphere sphere-1"></div>
+  <div class="ambient-sphere sphere-2"></div>
+
+  <header class="hub-header">
+    <div class="top-nav">
+      <a href="../index.html" class="nav-back">&larr; Main GSAP Hub</a>
+      <span class="hub-category-tag">MODULE 27 &bull; ADVANCED SOUND & MOTION</span>
+    </div>
+    <h1 class="hub-title">Audio Reactive Micro-Interactions</h1>
+    <p class="hub-subtitle">
+      Zero external media files. Procedural Web Audio API sound synthesis coupled with high-fidelity GSAP 3 spring physics, squash-and-stretch kinetics, and real-time spectrum analysis.
+    </p>
+
+    <div class="hub-stats">
+      <div class="stat-box">
+        <span class="num">8</span>
+        <span class="label">Sub-Demos</span>
+      </div>
+      <div class="stat-box">
+        <span class="num">0</span>
+        <span class="label">External Audio Files</span>
+      </div>
+      <div class="stat-box">
+        <span class="num">100%</span>
+        <span class="label">Procedural Web Audio</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="demos-container">
+    <div class="demos-grid" id="demosGrid">
+      
+      <!-- Demo 1 -->
+      <a href="01_tactile_switch_click/index.html" class="demo-card" data-index="1">
+        <div class="card-status">SUB-DEMO 01</div>
+        <div class="demo-preview-visual preview-switch">
+          <div class="mini-switch-track">
+            <div class="mini-switch-thumb"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Tactile Switch Click</h3>
+          <p>Dual-frequency synthesized transient click + low mechanical thud paired with elastic spring toggle physics.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Sine + Noise</span>
+            <span class="tech-tag">back.out(2.5)</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 2 -->
+      <a href="02_spring_pop_haptic_button/index.html" class="demo-card" data-index="2">
+        <div class="card-status">SUB-DEMO 02</div>
+        <div class="demo-preview-visual preview-pop">
+          <div class="mini-btn">🚀 POP</div>
+        </div>
+        <div class="card-body">
+          <h3>Spring Pop & Haptic Blip</h3>
+          <p>Procedural resonant bubble pop audio synthesis with squash, stretch, and 360&deg; radiant bubble particle fireworks.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Chirp Sweep</span>
+            <span class="tech-tag">elastic.out</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 3 -->
+      <a href="03_sound_frequency_equalizer/index.html" class="demo-card" data-index="3">
+        <div class="card-status">SUB-DEMO 03</div>
+        <div class="demo-preview-visual preview-eq">
+          <div class="mini-bars">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Frequency Spectrum Equalizer</h3>
+          <p>Procedural pentatonic synthesizer chords routed to an AnalyserNode driving 24 spectrum bars with gravity peaks at 60fps.</p>
+          <div class="card-meta">
+            <span class="tech-tag">AnalyserNode</span>
+            <span class="tech-tag">gsap.ticker</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 4 -->
+      <a href="04_magnetic_hover_hum/index.html" class="demo-card" data-index="4">
+        <div class="card-status">SUB-DEMO 04</div>
+        <div class="demo-preview-visual preview-magnetic">
+          <div class="mini-radar">
+            <div class="mini-core"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Magnetic Hover Hum</h3>
+          <p>Cursor proximity dynamically modulates dual-oscillator drone frequency, amplitude, and magnetic physical attraction.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Pitch Modulation</span>
+            <span class="tech-tag">Proximity Physics</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 5 -->
+      <a href="05_typewriter_keystroke_audio/index.html" class="demo-card" data-index="5">
+        <div class="card-status">SUB-DEMO 05</div>
+        <div class="demo-preview-visual preview-type">
+          <div class="mini-terminal">&gt; console.log(_)</div>
+        </div>
+        <div class="card-body">
+          <h3>Typewriter Keystroke Audio</h3>
+          <p>Mechanical keyswitch sound synthesis (Cherry MX Blue snap, spacebar thud, carriage return bell chime) synced with text typing.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Bell Chime Synth</span>
+            <span class="tech-tag">Human Typing Jitter</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 6 -->
+      <a href="06_slider_pitch_bend/index.html" class="demo-card" data-index="6">
+        <div class="card-status">SUB-DEMO 06</div>
+        <div class="demo-preview-visual preview-fader">
+          <div class="mini-track">
+            <div class="mini-thumb"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Slider Pitch Bend</h3>
+          <p>Draggable analog pitch wheel fader dynamically modulating synth frequency from 65Hz to 1320Hz with live canvas oscilloscope.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Draggable</span>
+            <span class="tech-tag">Canvas Scope</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 7 -->
+      <a href="07_card_flip_whoosh/index.html" class="demo-card" data-index="7">
+        <div class="card-status">SUB-DEMO 07</div>
+        <div class="demo-preview-visual preview-flip">
+          <div class="mini-card-3d"></div>
+        </div>
+        <div class="card-body">
+          <h3>3D Card Flip & Air Whoosh</h3>
+          <p>Procedural white noise buffer passing through a sweeping resonant bandpass filter creating an acoustic air whoosh on 3D card flip.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Filtered Noise</span>
+            <span class="tech-tag">back.inOut(1.4)</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Demo 8 -->
+      <a href="08_game_achievement_unlocked/index.html" class="demo-card" data-index="8">
+        <div class="card-status">SUB-DEMO 08</div>
+        <div class="demo-preview-visual preview-achievement">
+          <div class="mini-trophy">🏆</div>
+        </div>
+        <div class="card-body">
+          <h3>Game Achievement Fanfare</h3>
+          <p>Ascending major triad chime arpeggio with high crystalline shimmer, celebratory confetti sparks, and bouncy banner reveal.</p>
+          <div class="card-meta">
+            <span class="tech-tag">Major Triad Bells</span>
+            <span class="tech-tag">Gold Confetti</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="hub-footer">
+    <p>GSAP Micro-Interactions Mastery &bull; Crafted with Procedural Web Audio API &amp; GSAP 3</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

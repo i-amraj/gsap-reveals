@@ -1,0 +1,241 @@
+:root {
+  --neon-yellow: #facc15;
+  --neon-cyan: #38bdf8;
+  --neon-pink: #ec4899;
+  --bg-dark: #05060a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.arcade-room {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.12) 0%, rgba(5, 6, 10, 0.95) 70%);
+  pointer-events: none;
+}
+
+.back-link {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-size: 0.65rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* Cabinet Container */
+.arcade-cabinet {
+  width: 100%;
+  max-width: 640px;
+  background: #111422;
+  border: 4px solid #1e2538;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 50px rgba(236, 72, 153, 0.25), 0 25px 50px rgba(0, 0, 0, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+/* Marquee Header */
+.cabinet-marquee {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #38bdf8);
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.6);
+}
+
+.marquee-title {
+  font-size: 0.9rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  letter-spacing: 0.1em;
+}
+
+/* CRT Monitor */
+.crt-monitor {
+  background: #000;
+  border: 8px solid #232a3e;
+  border-radius: 20px;
+  height: 380px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crt-scanlines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.crt-content {
+  width: 100%;
+  padding: 1.8rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.high-score-banner {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.58rem;
+  color: var(--neon-yellow);
+  margin-bottom: 1.5rem;
+}
+
+.credits {
+  color: var(--neon-pink);
+}
+
+.game-select-title {
+  font-size: 0.72rem;
+  color: var(--neon-cyan);
+  margin-bottom: 1.6rem;
+  text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
+  margin-bottom: 1.6rem;
+  padding-left: 1.5rem;
+}
+
+.game-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.65rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.cursor-hand {
+  visibility: hidden;
+  color: var(--neon-yellow);
+}
+
+.game-row.active {
+  color: #fff;
+  text-shadow: 0 0 8px #fff;
+}
+
+.game-row.active .cursor-hand {
+  visibility: visible;
+}
+
+.start-prompt {
+  font-size: 0.58rem;
+  color: #a855f7;
+  animation: flash 1s infinite steps(1);
+}
+
+@keyframes flash {
+  50% { opacity: 0; }
+}
+
+/* Control Deck */
+.control-deck {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.4rem;
+  padding: 0.6rem 0.5rem 0;
+}
+
+.coin-btn {
+  background: #f59e0b;
+  color: #000;
+  border: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #b45309;
+  transition: transform 0.1s ease;
+}
+
+.coin-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #b45309;
+}
+
+.controls-dpad {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dpad-btn {
+  background: #334155;
+  color: #fff;
+  border: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #1e293b;
+}
+
+.dpad-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #1e293b;
+}
+
+.start-btn {
+  background: #10b981;
+  color: #000;
+  border: none;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.68rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #047857;
+  transition: transform 0.1s ease;
+}
+
+.start-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #047857;
+}

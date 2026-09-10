@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Keystroke Audio | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-code-glow"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">MECHANICAL KEYSWITCH SYNTH &bull; CARRIAGE CHIME</div>
+    <h1>Mechanical Keystroke Audio</h1>
+    <p>Procedural mechanical switches (Cherry MX Blue style transient click + Cherry MX Brown thud + Return Chime) synchronized to letter-by-letter text animation.</p>
+
+    <div class="terminal-card">
+      <div class="terminal-bar">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-title">keystroke_synth.sh</div>
+        <div class="switch-type">CHERRY MX BLUE</div>
+      </div>
+
+      <div class="terminal-body">
+        <span class="prompt-symbol">&gt;</span>
+        <span class="typed-content" id="typedOutput"></span>
+        <span class="cursor" id="cursor">_</span>
+      </div>
+
+      <div class="interactive-input-box">
+        <input type="text" id="liveInput" placeholder="Click here and type on your physical keyboard..." autocomplete="off" spellcheck="false">
+      </div>
+
+      <div class="terminal-footer">
+        <button class="action-btn" id="replayBtn">⚡ AUTOPLAY DEMO TEXT</button>
+        <button class="action-btn secondary" id="clearBtn">CLEAR TERMINAL</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

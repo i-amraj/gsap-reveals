@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Scrubbed Word Highlight Variation 01 | Scroll Scrubbed Word Highlight Set 01</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Scroll Scrubbed Word Highlight</a>
+    <span class="badge-tag">MODULE 13 &bull; SET 01</span>
+  </div>
+
+  <div class="container">
+    <!-- Hero Specimen Stage -->
+    <div class="specimen-stage" id="specimenStage">
+      <h1 class="hero-text-display" id="heroText">SCROLL SCRUBBED WORD HIGHLIGHT // SET 01</h1>
+      <p class="hero-sub-text">A modern, responsive typographic treatment crafted for visual impact and editorial polish.</p>
+    </div>
+
+    <!-- Interactive Text Controller -->
+    <div class="controller-box">
+      <span class="controller-label">LIVE TYPOGRAPHY CONTROLLER &bull; EDIT TEXT IN REAL-TIME</span>
+      <input type="text" id="textInput" class="interactive-input" value="SCROLL SCRUBBED WORD HIGHLIGHT // SET 01" placeholder="Type anything to test this typography style...">
+    </div>
+
+    <!-- Font Specs Matrix -->
+    <div class="specs-grid">
+      <div class="spec-card">
+        <span>PRIMARY FONT</span>
+        <strong>Space Grotesk</strong>
+      </div>
+      <div class="spec-card">
+        <span>FONT WEIGHT</span>
+        <strong>800</strong>
+      </div>
+      <div class="spec-card">
+        <span>LETTER SPACING</span>
+        <strong>0.04em</strong>
+      </div>
+      <div class="spec-card">
+        <span>TEXT TRANSFORM</span>
+        <strong>uppercase</strong>
+      </div>
+    </div>
+
+    <!-- 1-Click Copy Actions -->
+    <div class="actions-row">
+      <button class="action-btn" id="replayAnimBtn">⚡ Replay Kinetic Animation</button>
+      <button class="action-btn" id="copyCssBtn">📋 Copy Typography CSS</button>
+      <button class="action-btn" id="copyPromptBtn">✨ Copy AI Typography Prompt</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

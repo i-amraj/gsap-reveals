@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Matrix Portal | Module 28</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="crt-overlay"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Portal Hub</a>
+
+  <div class="cyber-container">
+    <!-- Terminal Header -->
+    <header class="cyber-header">
+      <div class="system-status">
+        <span class="status-indicator"></span>
+        <span>CYBER_GRID_OS // NODE_ID: 0x28</span>
+      </div>
+      <div class="shortcut-badge">PRESS <kbd>Ctrl</kbd>+<kbd>K</kbd> FOR COMMAND PALETTE</div>
+    </header>
+
+    <!-- Command Input Bar -->
+    <div class="command-bar-wrap">
+      <span class="prompt-arrow">&gt;</span>
+      <input type="text" id="cyberSearch" placeholder="EXECUTE SEARCH QUERY (e.g. 'bento', 'bezier', 'audio', 'cards')..." autocomplete="off" spellcheck="false">
+      <span class="blinking-cursor">_</span>
+    </div>
+
+    <!-- Cyber Modules Matrix Grid -->
+    <div class="matrix-grid" id="matrixGrid">
+      <!-- Generated items -->
+    </div>
+
+    <!-- HUD Telemetry Footer -->
+    <footer class="cyber-footer">
+      <div>STATUS: <span class="green">ALL SYSTEMS NOMINAL</span></div>
+      <div id="itemCounter">INDEXED NODES: 6 UNITS</div>
+      <div>ENCRYPTION: 4096-BIT SHA</div>
+    </footer>
+  </div>
+
+  <!-- Prompt Modal View -->
+  <div class="cyber-modal" id="cyberModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <span id="modalNodeId">[NODE::DATA]</span>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <h3 id="modalTitle">Component Title</h3>
+      <pre class="prompt-code" id="modalPrompt"></pre>
+      <div class="modal-btn-row">
+        <button class="cyber-btn primary" id="copyBtn">COPY RAW PROMPT</button>
+        <a href="#" id="launchBtn" class="cyber-btn secondary">LAUNCH REPO &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

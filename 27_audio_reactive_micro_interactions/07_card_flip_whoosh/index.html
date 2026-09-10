@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Flip Whoosh | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="glow-bg"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">FILTERED NOISE SYNTHESIS &bull; 3D WHOOSH</div>
+    <h1>3D Card Flip & Air Whoosh</h1>
+    <p>Click the card to flip. Web Audio synthesizes an acoustic air whoosh using white noise buffer passing through a sweeping bandpass resonant filter.</p>
+
+    <div class="card-scene" id="cardScene">
+      <div class="flip-card" id="flipCard">
+        <!-- FRONT -->
+        <div class="card-face card-front">
+          <div class="card-chip"></div>
+          <div class="card-brand">NEXUS TITANIUM</div>
+          <div class="card-number">4029 &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; 8821</div>
+          <div class="card-footer">
+            <div>
+              <span class="label">CARDHOLDER</span>
+              <span class="val">ALEX VANDERBILT</span>
+            </div>
+            <div>
+              <span class="label">EXPIRES</span>
+              <span class="val">10/29</span>
+            </div>
+          </div>
+          <div class="card-hint">CLICK TO FLIP &rarr;</div>
+        </div>
+
+        <!-- BACK -->
+        <div class="card-face card-back">
+          <div class="mag-stripe"></div>
+          <div class="cvv-panel">
+            <span>CVV</span>
+            <div class="cvv-box">742</div>
+          </div>
+          <div class="hologram"></div>
+          <div class="card-hint">&larr; CLICK TO RETURN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="whoosh-specs">
+      <div class="spec-col"><span>Noise Type</span><strong>White Noise Buffer</strong></div>
+      <div class="spec-col"><span>Filter Sweep</span><strong>250Hz &rarr; 2800Hz &rarr; 400Hz</strong></div>
+      <div class="spec-col"><span>Flip Ease</span><strong>back.inOut(1.4)</strong></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

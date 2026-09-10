@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Animation Master Showcase Portal | Ultimate Creative Suite</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Header Section -->
+  <header class="portal-header">
+    <div class="header-top">
+      <div class="brand">
+        <span class="brand-badge">PORTAL HUB</span>
+        <span class="brand-title">GSAP CREATIVE SUITE</span>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="../component_systems/index.html" class="home-link" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">🧩 Component Systems (28 Modules)</a>
+        <a href="../background_systems/index.html" class="home-link" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">🌌 Background Systems (28 Modules)</a>
+        <a href="../text_systems/index.html" class="home-link" style="border-color: rgba(99, 102, 241, 0.4); color: #818cf8;">✍️ Text Systems (28 Modules)</a>
+        <a href="../color_systems/index.html" class="home-link" style="border-color: rgba(236, 72, 153, 0.4); color: #f472b6;">🎨 Color Systems (28 Modules)</a>
+        <a href="../index.html" class="home-link">&larr; Root Index</a>
+      </div>
+    </div>
+
+    <h1 class="main-title">Central Showcase &amp; Component Portal</h1>
+    <p class="main-subtitle">
+      Explore, test, and instantly grab production-grade AI prompts for all modules across the GSAP Animation ecosystem. Interactive live preview, category filtering, and instant search.
+    </p>
+
+    <!-- Global Stats -->
+    <div class="metrics-strip">
+      <div class="metric-card">
+        <span class="val" id="totalModulesCount">28</span>
+        <span class="lbl">Modules</span>
+      </div>
+      <div class="metric-card">
+        <span class="val" id="totalDemosCount">120+</span>
+        <span class="lbl">Interactive Demos</span>
+      </div>
+      <div class="metric-card">
+        <span class="val">100%</span>
+        <span class="lbl">Vanilla &amp; CDN</span>
+      </div>
+      <div class="metric-card">
+        <span class="val">Zero</span>
+        <span class="lbl">Build Overhead</span>
+      </div>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="controls-container">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search by animation type, keyword, or module (e.g., 'bento', 'bezier', 'draggable', 'audio')..." autocomplete="off">
+        <button id="clearSearch" class="clear-btn" style="display: none;">&times;</button>
+      </div>
+
+      <div class="category-filters" id="categoryFilters">
+        <button class="filter-pill active" data-category="all">All Modules</button>
+        <button class="filter-pill" data-category="portal">Showcase Portals</button>
+        <button class="filter-pill" data-category="bento">Bento Grids</button>
+        <button class="filter-pill" data-category="motionpath">MotionPath &amp; Scroll</button>
+        <button class="filter-pill" data-category="physics">Physics &amp; Draggable</button>
+        <button class="filter-pill" data-category="transitions">Page Transitions</button>
+        <button class="filter-pill" data-category="audio">Audio Reactive</button>
+        <button class="filter-pill" data-category="text">Text &amp; Typography</button>
+        <button class="filter-pill" data-category="svg">SVG &amp; Vectors</button>
+        <button class="filter-pill" data-category="cards">Cards &amp; 3D</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Cards Grid -->
+  <main class="portal-main">
+    <div class="results-header">
+      <span class="results-count" id="resultsCount">Showing all modules</span>
+    </div>
+
+    <div class="modules-grid" id="modulesGrid">
+      <!-- Dynamically rendered or static fallback populated by script.js -->
+    </div>
+  </main>
+
+  <!-- Live Modal Iframe Viewer -->
+  <div class="preview-modal" id="previewModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-window">
+      <div class="modal-topbar">
+        <div class="modal-title-area">
+          <span class="modal-badge" id="modalBadge">LIVE PREVIEW</span>
+          <span class="modal-demo-title" id="modalDemoTitle">Component Name</span>
+        </div>
+        <div class="modal-actions">
+          <button class="btn-action" id="copyPromptBtn">📋 Copy AI Prompt</button>
+          <a href="#" id="modalOpenExternal" target="_blank" class="btn-action">↗ Open Tab</a>
+          <button class="btn-close" id="modalCloseBtn">&times;</button>
+        </div>
+      </div>
+      <div class="iframe-wrap">
+        <iframe id="previewIframe" src="about:blank" title="Live Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prompt Copied Toast Notification -->
+  <div class="copy-toast" id="copyToast">
+    ✨ AI Prompt copied to clipboard! Ready to paste into Gemini or Claude.
+  </div>
+
+  <footer class="portal-footer">
+    <p>GSAP Animation Architecture &bull; Built with HTML5, CSS3, GSAP 3 &amp; Web Audio API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide-Out Mobile Drawer Nav | UI Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #10b98118, transparent 70%);"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+    <span class="badge-tag">SET 07 &bull; PRODUCTION COMPONENT</span>
+  </div>
+
+  <div class="stage-container">
+    <div class="component-stage" id="componentStage">
+      
+        <div class="mobile-nav-bar">
+          <div class="mobile-brand">
+            <span class="brand-badge-circle">M</span>
+            <span>MOMENTUM</span>
+          </div>
+          <button class="hamburger-btn" id="mobileDrawerTrigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="offcanvas-drawer" id="mobileDrawer">
+          <div class="drawer-header">
+            <strong>MENU</strong>
+            <button class="drawer-close" id="mobileDrawerClose">&times;</button>
+          </div>
+          <nav class="drawer-nav-list">
+            <a href="#">🏠 Overview</a>
+            <a href="#">⚡ Animations Suite</a>
+            <a href="#">🎨 Color Systems</a>
+            <a href="#">✍️ Typography Systems</a>
+            <a href="#">🌌 Backgrounds</a>
+            <a href="#">🧩 Components</a>
+          </nav>
+          <div class="drawer-footer">
+            <button class="comp-btn-primary" style="background:#10b981; color:#000; width:100%;">Get Started</button>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">UI COMPONENT ARCHITECTURE</span>
+        <h2 class="spec-title">Slide-Out Mobile Drawer Nav</h2>
+        <p class="spec-desc">Responsive mobile navigation bar with animated hamburger button and side slide-out offcanvas drawer menu.</p>
+      </div>
+
+      <div class="actions-row">
+        <button class="action-btn primary" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#10b981;">#10b981</strong></div>
+        <div class="spec-item"><span>LAYOUT:</span> <strong>Dedicated Custom Pattern</strong></div>
+        <div class="spec-item"><span>STANDARD:</span> <strong>Vanilla HTML5 &amp; CSS</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

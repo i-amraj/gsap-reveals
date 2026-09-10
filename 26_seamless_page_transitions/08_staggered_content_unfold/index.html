@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition 08: Choreographed Staggered Layout Unfold</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-frame">
+    <!-- Shared Top Nav -->
+    <nav class="top-nav">
+      <span class="nav-brand">NEURAL.STUDIO</span>
+      <div class="nav-links">
+        <button class="nav-tab active" data-page="home">Overview</button>
+        <button class="nav-tab" data-page="about">Specifications</button>
+      </div>
+    </nav>
+
+    <!-- Page Content Section -->
+    <main class="page-content" id="pageContent">
+      <!-- Section 1: Overview -->
+      <div class="view-content active" id="pageHome">
+        <div class="anim-item hero-badge">Q3 2026 ARCHITECTURE</div>
+        <h1 class="anim-item hero-title">Autonomous Edge Intelligence</h1>
+        <p class="anim-item hero-desc">Distributed neural inference operating at sub-millisecond latencies across hundreds of serverless bare-metal clusters.</p>
+        
+        <div class="anim-item card-trio">
+          <div class="mini-card">
+            <span class="mini-val">42ms</span>
+            <span class="mini-lbl">Cold Boot</span>
+          </div>
+          <div class="mini-card">
+            <span class="mini-val">120K</span>
+            <span class="mini-lbl">RPS Throughput</span>
+          </div>
+          <div class="mini-card">
+            <span class="mini-val">0.00%</span>
+            <span class="mini-lbl">Downtime Delta</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Specifications -->
+      <div class="view-content is-hidden" id="pageAbout">
+        <div class="anim-item hero-badge badge-emerald">HARDWARE SPECS</div>
+        <h1 class="anim-item hero-title">Cryptographic Hardware Enclaves</h1>
+        <p class="anim-item hero-desc">Isolated silicon micro-architectures providing hardware-attested cryptographic confidentiality for every inference batch.</p>
+        
+        <div class="anim-item card-trio">
+          <div class="mini-card">
+            <span class="mini-val">FIPS 140</span>
+            <span class="mini-lbl">Security Level 4</span>
+          </div>
+          <div class="mini-card">
+            <span class="mini-val">Kyber-1024</span>
+            <span class="mini-lbl">Lattice Defense</span>
+          </div>
+          <div class="mini-card">
+            <span class="mini-val">512-Bit</span>
+            <span class="mini-lbl">Entropy Root</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Transitions Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

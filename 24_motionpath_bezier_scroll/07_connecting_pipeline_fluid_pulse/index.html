@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotionPath 07: Branching Neural Pipeline Fluid Pulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">Branching Circuit Topology</div>
+      <h1>Branching Neural Pipeline Fluid Pulse</h1>
+      <p>Data packets travel along bifurcating circuit pipelines using GSAP MotionPath. Click any destination node to fire high-energy pulses across distinct SVG conduits.</p>
+    </header>
+
+    <div class="circuit-stage" id="circuitStage">
+      <svg class="pipeline-svg" viewBox="0 0 900 500">
+        <defs>
+          <filter id="neonGlow">
+            <feGaussianBlur stdDeviation="4" result="glow"/>
+            <feMerge>
+              <feMergeNode in="glow"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- Conduits -->
+        <path id="pathBranchA" class="conduit-path" d="M 100 250 C 300 250, 400 100, 750 100" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4"/>
+        <path id="pathBranchB" class="conduit-path" d="M 100 250 C 350 250, 500 250, 750 250" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4"/>
+        <path id="pathBranchC" class="conduit-path" d="M 100 250 C 300 250, 400 400, 750 400" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4"/>
+      </svg>
+
+      <!-- Source Node -->
+      <div class="circuit-node source-node">
+        <span class="node-icon">🧠</span>
+        <span class="node-title">Neural Ingest</span>
+      </div>
+
+      <!-- Target Nodes -->
+      <div class="circuit-node target-node node-a" data-branch="A" style="top: 75px; right: 80px;">
+        <span class="node-icon">⚡</span>
+        <span class="node-title">Inference Engine</span>
+      </div>
+
+      <div class="circuit-node target-node node-b" data-branch="B" style="top: 225px; right: 80px;">
+        <span class="node-icon">📦</span>
+        <span class="node-title">Vector Memory</span>
+      </div>
+
+      <div class="circuit-node target-node node-c" data-branch="C" style="top: 375px; right: 80px;">
+        <span class="node-icon">🛡️</span>
+        <span class="node-title">Zero Trust HSM</span>
+      </div>
+
+      <!-- Energy Pulse Packet -->
+      <div class="energy-packet" id="packet"></div>
+    </div>
+
+    <div class="action-bar">
+      <button class="fire-btn" id="fireAllBtn">⚡ Broadcast Burst to All Nodes</button>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to MotionPath Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

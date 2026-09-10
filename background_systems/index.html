@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Background Systems Portal | 28 Modules &bull; 224 Environments</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090e;
+      --surface: #0f1420;
+      --border: rgba(255, 255, 255, 0.08);
+      --accent: #38bdf8;
+      --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: #f8fafc; font-family: var(--font-ui); min-height: 100vh; overflow-x: hidden; }
+    .ambient-glow { position: fixed; top: -10vw; left: 50%; transform: translateX(-50%); width: 80vw; height: 35vw; background: radial-gradient(circle, rgba(56, 189, 248, 0.12), transparent 70%); pointer-events: none; z-index: 0; }
+    .portal-header { position: relative; z-index: 2; padding: 3rem 2rem 2rem; max-width: 1280px; margin: 0 auto; text-align: center; }
+    .top-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .back-link { color: #94a3b8; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid var(--border); background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); }
+    .portal-tag { font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; letter-spacing: 0.08em; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .portal-subtitle { color: #94a3b8; max-width: 700px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.6; }
+    .stats-row { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .stat-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.75rem 1.75rem; text-align: center; }
+    .stat-box .val { display: block; font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+    .stat-box .lbl { font-size: 0.75rem; font-family: var(--font-mono); color: #94a3b8; text-transform: uppercase; }
+    .search-container { max-width: 580px; margin: 0 auto 3rem; }
+    .search-container input { width: 100%; padding: 0.85rem 1.5rem; border-radius: 9999px; background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255,255,255,0.12); color: #f8fafc; font-size: 0.95rem; outline: none; backdrop-filter: blur(16px); transition: border-color 0.2s; }
+    .search-container input:focus { border-color: var(--accent); }
+    .modules-grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.75rem; max-width: 1280px; margin: 0 auto; padding: 0 2rem 5rem; }
+    .bg-module-card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: all 0.25s ease; }
+    .bg-module-card:hover { transform: translateY(-5px); border-color: rgba(56, 189, 248, 0.4); box-shadow: 0 15px 35px rgba(0,0,0,0.5); }
+    .card-preview { height: 150px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .preview-glow { width: 120px; height: 120px; border-radius: 50%; filter: blur(35px); opacity: 0.55; }
+    .preview-id { position: absolute; top: 1rem; left: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: #f8fafc; background: rgba(0,0,0,0.6); padding: 0.25rem 0.65rem; border-radius: 9999px; border: 1px solid var(--border); }
+    .preview-type { position: absolute; bottom: 1rem; right: 1rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); background: rgba(0,0,0,0.7); padding: 0.2rem 0.6rem; border-radius: 6px; border: 1px solid var(--border); }
+    .card-content { padding: 1.75rem; display: flex; flex-direction: column; flex: 1; }
+    .meta-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .cat-pill { font-family: var(--font-mono); font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; }
+    .sets-pill { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); background: rgba(56, 189, 248, 0.1); padding: 0.2rem 0.6rem; border-radius: 9999px; }
+    .card-content h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .card-content p { color: #94a3b8; font-size: 0.9rem; line-height: 1.5; margin-bottom: 1.5rem; flex: 1; }
+    .open-hub-btn { display: inline-block; text-align: center; text-decoration: none; color: #f8fafc; font-size: 0.875rem; font-weight: 600; padding: 0.7rem 1.25rem; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); transition: all 0.2s; }
+    .open-hub-btn:hover { background: var(--accent); color: #000; border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <header class="portal-header">
+    <div class="top-nav">
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="../index.html" class="back-link">&larr; Root Hub</a>
+        <a href="../component_systems/index.html" class="back-link" style="color: #34d399; border-color: rgba(16,185,129,0.4);">🧩 Component Systems</a>
+        <a href="../28_central_showcase_portal/index.html" class="back-link" style="color: #38bdf8; border-color: rgba(56,189,248,0.4);">🚀 Animation Portal</a>
+        <a href="../color_systems/index.html" class="back-link" style="color: #ec4899; border-color: rgba(236,72,153,0.4);">🎨 Color Systems</a>
+        <a href="../text_systems/index.html" class="back-link" style="color: #818cf8; border-color: rgba(129,140,248,0.4);">✍️ Text Systems</a>
+      </div>
+      <span class="portal-tag">ATMOSPHERIC CANVAS &bull; 60FPS</span>
+    </div>
+
+    <h1>Master Background Systems Portal</h1>
+    <p class="portal-subtitle">
+      28 dedicated atmospheric modules featuring 8 curated sets each (224 production environments).
+      Aurora meshes, film grain noise, cyber matrix grids, dot blueprints, metaballs, deep space starfields, and quantum nexus fields.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-box"><span class="val">28</span><span class="lbl">Atmospheric Modules</span></div>
+      <div class="stat-box"><span class="val">224</span><span class="lbl">Background Sets</span></div>
+      <div class="stat-box"><span class="val">60 FPS</span><span class="lbl">Hardware Accelerated</span></div>
+      <div class="stat-box"><span class="val">Zero</span><span class="lbl">Build Overhead</span></div>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="bgSearch" placeholder="Search background styles (e.g. 'aurora', 'grid', 'grain', 'matrix', 'smoke', 'stars')..." autocomplete="off">
+    </div>
+  </header>
+
+  <main class="modules-grid" id="modulesGrid">
+    
+        <div class="bg-module-card" data-category="atmospheric & fluid" data-title="aurora mesh gradients">
+          <div class="card-preview" style="background: #07090e;">
+            <div class="preview-glow" style="background: #34d399;"></div>
+            <span class="preview-id">MOD 01</span>
+            <span class="preview-type">canvas_mesh</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Atmospheric & Fluid</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Aurora Mesh Gradients</h3>
+            <p>Multi-point fluid blurred radial gradient blobs with slow organic drift and iridescent color mixing.</p>
+            <div class="card-actions">
+              <a href="01_aurora_mesh_gradients/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="organic & analog" data-title="film grain & noise textures">
+          <div class="card-preview" style="background: #0c0a09;">
+            <div class="preview-glow" style="background: #fafaf9;"></div>
+            <span class="preview-id">MOD 02</span>
+            <span class="preview-type">svg_grain</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Organic & Analog</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Film Grain & Noise Textures</h3>
+            <p>Cinematic 35mm analog film grain, micro-static noise overlay, and high-fashion editorial texture.</p>
+            <div class="card-actions">
+              <a href="02_film_grain_noise_textures/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="sci-fi & cyber" data-title="cyber matrix grid">
+          <div class="card-preview" style="background: #030712;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 03</span>
+            <span class="preview-type">canvas_grid</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Sci-Fi & Cyber</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Cyber Matrix Grid</h3>
+            <p>Perspective 3D perspective wireframe horizon grids, glowing neon grid planes, and tron gridlines.</p>
+            <div class="card-actions">
+              <a href="03_cyber_matrix_grid/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="tech & developer" data-title="dot matrix blueprint">
+          <div class="card-preview" style="background: #090d16;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 04</span>
+            <span class="preview-type">canvas_dots</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Tech & Developer</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Dot Matrix Blueprint</h3>
+            <p>Precision architectural dot matrix grids, cursor-proximity repelling nodes, and schematic canvas dots.</p>
+            <div class="card-actions">
+              <a href="04_dot_matrix_blueprint/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="modern & spatial" data-title="glassmorphism deep space">
+          <div class="card-preview" style="background: #060814;">
+            <div class="preview-glow" style="background: #818cf8;"></div>
+            <span class="preview-id">MOD 05</span>
+            <span class="preview-type">glass_space</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Modern & Spatial</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Glassmorphism Deep Space</h3>
+            <p>Floating multi-layered frosted glass panels over cosmic radial light flares with backdrop-blur depth.</p>
+            <div class="card-actions">
+              <a href="05_glassmorphism_deep_space/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="sci-fi & cosmic" data-title="starfield cosmos warp">
+          <div class="card-preview" style="background: #02040a;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 06</span>
+            <span class="preview-type">canvas_stars</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Sci-Fi & Cosmic</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Starfield Cosmos Warp</h3>
+            <p>3D warp speed hyperspace particles, depth parallax starfields, and cosmic dust drift.</p>
+            <div class="card-actions">
+              <a href="06_starfield_cosmos_warp/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="design & cartography" data-title="topographic contour lines">
+          <div class="card-preview" style="background: #090d16;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 07</span>
+            <span class="preview-type">svg_contour</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Design & Cartography</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Topographic Contour Lines</h3>
+            <p>Flowing elevation terrain maps, procedural contour wave paths with interactive hover distortion.</p>
+            <div class="card-actions">
+              <a href="07_topographic_contour_lines/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="fluid & creative" data-title="liquid metaballs canvas">
+          <div class="card-preview" style="background: #090514;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 08</span>
+            <span class="preview-type">canvas_metaballs</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Fluid & Creative</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Liquid Metaballs Canvas</h3>
+            <p>Real-time gooey canvas metaballs coalescing, dividing, and gravitating towards the mouse cursor.</p>
+            <div class="card-actions">
+              <a href="08_liquid_metaballs_canvas/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="abstract & modern" data-title="geometric origami patterns">
+          <div class="card-preview" style="background: #040b17;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 09</span>
+            <span class="preview-type">canvas_geom</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Abstract & Modern</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Geometric Origami Patterns</h3>
+            <p>Rotating isometric tessellations, polyhedral crystal faces, and shifting kaleidoscopic geometry.</p>
+            <div class="card-actions">
+              <a href="09_geometric_origami_patterns/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="minimal & luxury" data-title="spotlight radial vignette">
+          <div class="card-preview" style="background: #060709;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 10</span>
+            <span class="preview-type">spotlight</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Minimal & Luxury</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Spotlight Radial Vignette</h3>
+            <p>Apple keynote style studio spotlights, smooth cursor-tracking torch cones, and dark luxury vignettes.</p>
+            <div class="card-actions">
+              <a href="10_spotlight_radial_vignette/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="retro & 80s" data-title="retro 80s synth horizon">
+          <div class="card-preview" style="background: #13021c;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 11</span>
+            <span class="preview-type">retro_synth</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Retro & 80s</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Retro 80s Synth Horizon</h3>
+            <p>Outrun synthwave striped neon sun, moving 3D wireframe mountains, and CRT phosphor horizon glow.</p>
+            <div class="card-actions">
+              <a href="11_retro_80s_synth_horizon/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="atmospheric & mystic" data-title="smoke & fluid fog">
+          <div class="card-preview" style="background: #05070a;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 12</span>
+            <span class="preview-type">canvas_smoke</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Atmospheric & Mystic</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Smoke & Fluid Fog</h3>
+            <p>Ethereal billowing smoke particles, low ground fog, and cinematic atmospheric density.</p>
+            <div class="card-actions">
+              <a href="12_smoke_fluid_fog/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="architectural" data-title="minimalist concrete & shadow">
+          <div class="card-preview" style="background: #18181b;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 13</span>
+            <span class="preview-type">arch_shadow</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Architectural</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Minimalist Concrete & Shadow</h3>
+            <p>Brutalist architectural concrete textures with soft drifting window sunbeam shadows.</p>
+            <div class="card-actions">
+              <a href="13_minimalist_concrete_shadow/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="tech & hardware" data-title="circuit board pcb">
+          <div class="card-preview" style="background: #022c22;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 14</span>
+            <span class="preview-type">canvas_pcb</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Tech & Hardware</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Circuit Board PCB</h3>
+            <p>Procedural PCB electronic copper traces, pulse packet nodes, and glowing IC bus channels.</p>
+            <div class="card-actions">
+              <a href="14_circuit_board_pcb/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="mathematical & smooth" data-title="flowing sinewave ribbons">
+          <div class="card-preview" style="background: #030a16;">
+            <div class="preview-glow" style="background: #06b6d4;"></div>
+            <span class="preview-id">MOD 15</span>
+            <span class="preview-type">canvas_waves</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Mathematical & Smooth</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Flowing Sinewave Ribbons</h3>
+            <p>Smooth undulating 3D harmonic sine wave ribbons floating across the viewport in continuous flow.</p>
+            <div class="card-actions">
+              <a href="15_flowing_sinewave_ribbons/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="futuristic & iridescent" data-title="holographic prismatic foil">
+          <div class="card-preview" style="background: #08090f;">
+            <div class="preview-glow" style="background: #c084fc;"></div>
+            <span class="preview-id">MOD 16</span>
+            <span class="preview-type">holo_foil</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Futuristic & Iridescent</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Holographic Prismatic Foil</h3>
+            <p>Liquid metal chrome reflections shifting across full spectral rainbow angles on mouse movement.</p>
+            <div class="card-actions">
+              <a href="16_holographic_prismatic_foil/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="pop art & editorial" data-title="subtle stripes & halftone">
+          <div class="card-preview" style="background: #090d16;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 17</span>
+            <span class="preview-type">halftone_stripes</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Pop Art & Editorial</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Subtle Stripes & Halftone</h3>
+            <p>Modern graphic design risograph halftone dot patterns, angled pinstripes, and moiré effects.</p>
+            <div class="card-actions">
+              <a href="17_subtle_stripes_halftone/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="aquatic & ambient" data-title="deep ocean bioluminescence">
+          <div class="card-preview" style="background: #020b18;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 18</span>
+            <span class="preview-type">ocean_abyss</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Aquatic & Ambient</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Deep Ocean Bioluminescence</h3>
+            <p>Underwater caustics, floating luminous plankton, and deep abyss aquatic light beams.</p>
+            <div class="card-actions">
+              <a href="18_deep_ocean_bioluminescence/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="generative & mathematical" data-title="voronoi cellular mosaic">
+          <div class="card-preview" style="background: #02130a;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 19</span>
+            <span class="preview-type">canvas_voronoi</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Generative & Mathematical</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Voronoi Cellular Mosaic</h3>
+            <p>Dynamic mathematical Voronoi diagram tessellations shifting organically with mouse coordinates.</p>
+            <div class="card-actions">
+              <a href="19_voronoi_cellular_mosaic/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="editorial & bold" data-title="duotone gradient maps">
+          <div class="card-preview" style="background: #05020c;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 20</span>
+            <span class="preview-type">duotone_map</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Editorial & Bold</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Duotone Gradient Maps</h3>
+            <p>High-contrast Swiss risograph dual-color mapping with dramatic visual punch and clean gradients.</p>
+            <div class="card-actions">
+              <a href="20_duotone_gradient_maps/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="interactive network" data-title="particle constellation web">
+          <div class="card-preview" style="background: #030816;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 21</span>
+            <span class="preview-type">canvas_constellation</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Interactive Network</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Particle Constellation Web</h3>
+            <p>Floating interactive particles connecting dynamic spiderweb lines based on distance and mouse proximity.</p>
+            <div class="card-actions">
+              <a href="21_particle_constellation_web/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="luxury & event" data-title="golden bokeh luxe glamour">
+          <div class="card-preview" style="background: #100c02;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 22</span>
+            <span class="preview-type">canvas_bokeh</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Luxury & Event</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Golden Bokeh Luxe Glamour</h3>
+            <p>Soft out-of-focus golden champagne bokeh spheres drifting gently with optical depth-of-field blur.</p>
+            <div class="card-actions">
+              <a href="22_golden_bokeh_lux_glamour/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="retro tech & glitch" data-title="glitch vhs crt scanlines">
+          <div class="card-preview" style="background: #021206;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 23</span>
+            <span class="preview-type">crt_glitch</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Retro Tech & Glitch</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Glitch VHS CRT Scanlines</h3>
+            <p>Authentic vintage CRT TV phosphor scanlines, horizontal static jitter, RGB chromatic displacement.</p>
+            <div class="card-actions">
+              <a href="23_glitch_vhs_crt_scanlines/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="craft & organic" data-title="monastic zen paper texture">
+          <div class="card-preview" style="background: #121214;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 24</span>
+            <span class="preview-type">zen_paper</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Craft & Organic</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Monastic Zen Paper Texture</h3>
+            <p>Organic Japanese mulberry washi paper fiber, coarse craft linen weave, and subtle natural tactility.</p>
+            <div class="card-actions">
+              <a href="24_monastic_zen_paper_texture/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="optical & fluid" data-title="volumetric caustic refraction">
+          <div class="card-preview" style="background: #021226;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 25</span>
+            <span class="preview-type">canvas_caustic</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Optical & Fluid</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Volumetric Caustic Refraction</h3>
+            <p>Swimming pool light refractions, undulating underwater caustics, and volumetric sunlight shafts.</p>
+            <div class="card-actions">
+              <a href="25_volumetric_caustic_refraction/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="military & sci-fi" data-title="radar sonar tactical sweep">
+          <div class="card-preview" style="background: #021408;">
+            <div class="preview-glow" style="background: #22c55e;"></div>
+            <span class="preview-id">MOD 26</span>
+            <span class="preview-type">canvas_radar</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Military & Sci-Fi</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Radar Sonar Tactical Sweep</h3>
+            <p>Concentric radar distance rings, sweeping 360-degree detection beam, and fading contact blips.</p>
+            <div class="card-actions">
+              <a href="26_radar_sonar_tactical_sweep/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="elemental & warm" data-title="fire ember particle rise">
+          <div class="card-preview" style="background: #140502;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 27</span>
+            <span class="preview-type">canvas_embers</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Elemental & Warm</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>Fire Ember Particle Rise</h3>
+            <p>Floating fiery embers, glowing ash sparks rising with turbulence, and warm furnace backlight.</p>
+            <div class="card-actions">
+              <a href="27_fire_ember_particle_rise/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-module-card" data-category="future & ai" data-title="ai quantum field nexus">
+          <div class="card-preview" style="background: #040514;">
+            <div class="preview-glow" style="background: #38bdf8;"></div>
+            <span class="preview-id">MOD 28</span>
+            <span class="preview-type">canvas_quantum</span>
+          </div>
+          <div class="card-content">
+            <div class="meta-row">
+              <span class="cat-pill">Future & AI</span>
+              <span class="sets-pill">8 Sets</span>
+            </div>
+            <h3>AI Quantum Field Nexus</h3>
+            <p>Pulsing quantum probability waves, neural synapsing energy lattices, and AI nodal intelligence fields.</p>
+            <div class="card-actions">
+              <a href="28_ai_quantum_field_nexus/index.html" class="open-hub-btn">Explore 8 Sets &rarr;</a>
+            </div>
+          </div>
+        </div>
+        
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('bgSearch');
+    const cards = document.querySelectorAll('.bg-module-card');
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const cat = card.getAttribute('data-category') || '';
+        if (title.includes(query) || cat.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

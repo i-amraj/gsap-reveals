@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fighter Cockpit Red | Aerospace Cockpit HUD Set 06</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Aerospace Cockpit HUD</a>
+    <span class="badge-tag">MODULE 26 &bull; SET 06</span>
+  </div>
+
+  <div class="container">
+    <header class="hero-header">
+      <h1 class="hero-title">Fighter Cockpit Red</h1>
+      <p class="hero-desc">Part of Aerospace Cockpit HUD. Click any color swatch below to copy its HEX value instantly.</p>
+    </header>
+
+    <!-- Color Swatches Bar -->
+    <div class="swatches-bar">
+      <div class="swatch" data-hex="#0a0203">
+        <div class="swatch-color" style="background: #0a0203; border: 1px solid var(--border);"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Background</span>
+          <span class="swatch-hex">#0a0203</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#1a0609">
+        <div class="swatch-color" style="background: #1a0609;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Surface</span>
+          <span class="swatch-hex">#1a0609</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#ef4444">
+        <div class="swatch-color" style="background: #ef4444;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Primary</span>
+          <span class="swatch-hex">#ef4444</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#f59e0b">
+        <div class="swatch-color" style="background: #f59e0b;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Secondary</span>
+          <span class="swatch-hex">#f59e0b</span>
+        </div>
+      </div>
+      <div class="swatch" data-hex="#38bdf8">
+        <div class="swatch-color" style="background: #38bdf8;"></div>
+        <div class="swatch-info">
+          <span class="swatch-name">Accent</span>
+          <span class="swatch-hex">#38bdf8</span>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Real-World UI Archetype Preview -->
+    <div style="margin-bottom: 2rem;">
+      <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.1em; display:block; margin-bottom:0.75rem;">
+        REAL-WORLD UI PREVIEW &bull; HIGH-FASHION EDITORIAL ARTICLE
+      </span>
+      
+        <div class="archetype-editorial-card">
+          <span class="issue-tag">ISSUE 48 &bull; DESIGN THEORY</span>
+          <h2 class="editorial-headline" style="font-family:'Playfair Display',serif; font-style:italic;">The Architecture of Visual Harmony</h2>
+          <p class="editorial-excerpt">How modern digital aesthetics blend high-contrast color palettes with architectural spatial layouts to invoke emotional resonance.</p>
+          <div class="editorial-footer">
+            <span>By Vivienne Vance</span>
+            <a href="#" style="color:var(--primary); font-weight:700;">Read Full Essay &rarr;</a>
+          </div>
+        </div>
+        
+    </div>
+    
+    <!-- Live Component Showcase -->
+    <div class="showcase-grid">
+      <!-- Card 1: Buttons & Badges -->
+      <div class="demo-card">
+        <span class="card-label">INTERACTIVE BUTTONS</span>
+        <div class="btn-group">
+          <button class="btn-primary">Primary Action</button>
+          <button class="btn-secondary">Secondary</button>
+          <button class="btn-outline">Outline</button>
+        </div>
+        <div class="tag-row">
+          <span class="tag tag-primary">New</span>
+          <span class="tag tag-secondary">Featured</span>
+          <span class="tag tag-accent">Active</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Input Controls -->
+      <div class="demo-card">
+        <span class="card-label">FORM &amp; SEARCH CONTROLS</span>
+        <input type="text" class="input-mock" placeholder="Search components in this palette...">
+        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+          High contrast ratios guaranteed for text readability and crisp UI definition.
+        </p>
+      </div>
+
+      <!-- Card 3: Bento Stat Widget -->
+      <div class="demo-card">
+        <span class="card-label">BENTO STAT METRIC</span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem; font-weight: 700; color: var(--primary);">99.9%</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Optimal contrast balance across dark and light surfaces.</p>
+      </div>
+    </div>
+
+    <!-- 1-Click Action Row -->
+    <div class="action-box">
+      <button class="action-btn" id="copyTokensBtn">📋 Copy CSS Variables</button>
+      <button class="action-btn" id="copyPromptBtn">✨ Copy AI Color Prompt</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

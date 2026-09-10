@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Carousel Gallery Portal | Module 28</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="spotlight"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Portal Hub</a>
+
+  <div class="carousel-container">
+    <header class="carousel-header">
+      <span class="badge">CYLINDER CAROUSEL 3D</span>
+      <h1>Master Component 3D Carousel</h1>
+      <p>Use arrow keys or navigation controls to orbit the 3D showcase carousel.</p>
+    </header>
+
+    <!-- 3D Stage -->
+    <div class="stage-3d">
+      <div class="carousel-ring" id="carouselRing">
+        
+        <div class="card-3d" data-index="0">
+          <span class="ring-num">01</span>
+          <h3>Interactive Bento</h3>
+          <p>Linear/Apple bento cards with cursor spotlights & 3D tilt.</p>
+          <a href="../../23_interactive_bento_grids/index.html" class="ring-btn">Launch &rarr;</a>
+        </div>
+
+        <div class="card-3d" data-index="1">
+          <span class="ring-num">02</span>
+          <h3>MotionPath Bezier</h3>
+          <p>Autonomous spline flight paths and scroll laser trails.</p>
+          <a href="../../24_motionpath_bezier_scroll/index.html" class="ring-btn">Launch &rarr;</a>
+        </div>
+
+        <div class="card-3d" data-index="2">
+          <span class="ring-num">03</span>
+          <h3>Physics Draggable</h3>
+          <p>Inertia throw stickers, Tinder fling, and Verlet cloth physics.</p>
+          <a href="../../25_physics_draggable_playground/index.html" class="ring-btn">Launch &rarr;</a>
+        </div>
+
+        <div class="card-3d" data-index="3">
+          <span class="ring-num">04</span>
+          <h3>Page Transitions</h3>
+          <p>Shared FLIP hero expansions and organic SVG curtain wipes.</p>
+          <a href="../../26_seamless_page_transitions/index.html" class="ring-btn">Launch &rarr;</a>
+        </div>
+
+        <div class="card-3d" data-index="4">
+          <span class="ring-num">05</span>
+          <h3>Audio Interactions</h3>
+          <p>Web Audio API procedural clicks, pops, and 24-band spectrum.</p>
+          <a href="../../27_audio_reactive_micro_interactions/index.html" class="ring-btn">Launch &rarr;</a>
+        </div>
+
+        <div class="card-3d" data-index="5">
+          <span class="ring-num">06</span>
+          <h3>Kinetic Text</h3>
+          <p>SplitText character staggers and cyber decryption decoders.</p>
+          <a href="../../01_text_effects/index.html" class="ring-btn">Launch &rarr;</a>
+        </div>
+
+      </div>
+      <!-- Reflective Mirror Floor -->
+      <div class="mirror-floor"></div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="controls-row">
+      <button class="nav-arrow" id="prevBtn">&larr; Previous</button>
+      <div class="step-indicator" id="stepIndicator">Node 1 / 6</div>
+      <button class="nav-arrow" id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

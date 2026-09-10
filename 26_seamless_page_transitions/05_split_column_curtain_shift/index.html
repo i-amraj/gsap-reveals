@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition 05: Split-Column Alternating Curtain Shift</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 5 Split Columns Curtain -->
+  <div class="column-curtain" id="columnCurtain">
+    <div class="col-strip col-1" data-dir="down"></div>
+    <div class="col-strip col-2" data-dir="up"></div>
+    <div class="col-strip col-3" data-dir="down"></div>
+    <div class="col-strip col-4" data-dir="up"></div>
+    <div class="col-strip col-5" data-dir="down"></div>
+  </div>
+
+  <div class="page-container">
+    <!-- View A -->
+    <div class="view-panel" id="viewA">
+      <span class="badge">Nexus 01</span>
+      <h1>Distributed Kinetic Systems</h1>
+      <p>Multi-threaded animation pipelines engineered for buttery-smooth 120 FPS high-refresh displays.</p>
+      <button class="trigger-btn" id="btnToB">✦ Engage Column Shift ➔</button>
+    </div>
+
+    <!-- View B -->
+    <div class="view-panel is-hidden" id="viewB">
+      <span class="badge badge-emerald">Nexus 02</span>
+      <h1>Biomorphic Design Algorithms</h1>
+      <p>Algorithmic cellular automata generating responsive procedural UI interfaces dynamically.</p>
+      <button class="trigger-btn" id="btnToA">← Return to Kinetic Systems</button>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Transitions Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

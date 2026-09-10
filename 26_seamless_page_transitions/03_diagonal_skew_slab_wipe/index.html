@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition 03: Diagonal Skew Slab Curtain Wipe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Diagonal Slabs Overlay -->
+  <div class="slab-overlay">
+    <div class="slab slab-1"></div>
+    <div class="slab slab-2"></div>
+    <div class="slab slab-3"></div>
+  </div>
+
+  <div class="page-container">
+    <!-- View A -->
+    <div class="view-panel" id="panelA">
+      <span class="badge">Architecture Alpha</span>
+      <h1>Autonomous Neural Pipeline</h1>
+      <p>Decentralized AI inference cluster executing high-dimensional vector embeddings with continuous self-optimization.</p>
+      <button class="switch-btn" id="toPanelB">Switch to Horizon Beta ➔</button>
+    </div>
+
+    <!-- View B -->
+    <div class="view-panel is-hidden" id="panelB">
+      <span class="badge badge-cyan">Horizon Beta</span>
+      <h1>Sub-Orbital Optical Telemetry</h1>
+      <p>Photonic laser cross-links bridging inter-satellite constellations with ultra-dense quantum encryption keys.</p>
+      <button class="switch-btn" id="toPanelA">← Back to Architecture Alpha</button>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Transitions Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

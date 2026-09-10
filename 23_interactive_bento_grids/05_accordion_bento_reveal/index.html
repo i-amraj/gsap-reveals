@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bento Grid 05: Dynamic Squeeze Accordion Reveal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">Adaptive Responsive Layout</div>
+      <h1>Dynamic Bento Squeeze & Accordion Reveal</h1>
+      <p>Hover over any card in the strip. The active card dynamically expands its spatial footprint while neighboring cards smoothly compress, revealing deep contextual features.</p>
+    </header>
+
+    <div class="accordion-bento" id="accordionTrack">
+      <!-- Panel 1 -->
+      <div class="bento-panel active" data-color="#8b5cf6">
+        <div class="panel-collapsed">
+          <span class="vertical-num">01</span>
+          <span class="vertical-title">Design Systems</span>
+        </div>
+        <div class="panel-content">
+          <span class="badge-mini">Phase 01</span>
+          <h2>Automated Design Tokens</h2>
+          <p>Sync Figma variables with production code repos through continuous automated CI/CD webhooks with zero friction.</p>
+          <div class="feature-tags">
+            <span>Figma Tokens</span>
+            <span>Zero Runtime</span>
+            <span>Type Safe</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2 -->
+      <div class="bento-panel" data-color="#06b6d4">
+        <div class="panel-collapsed">
+          <span class="vertical-num">02</span>
+          <span class="vertical-title">Code Generation</span>
+        </div>
+        <div class="panel-content">
+          <span class="badge-mini">Phase 02</span>
+          <h2>Deterministic Neural AST</h2>
+          <p>Parse full UI mockups directly into clean, responsive HTML, CSS, and GSAP timeline scripts with 100% syntax compliance.</p>
+          <div class="feature-tags">
+            <span>AST Compiler</span>
+            <span>Tree Shaking</span>
+            <span>60 FPS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3 -->
+      <div class="bento-panel" data-color="#10b981">
+        <div class="panel-collapsed">
+          <span class="vertical-num">03</span>
+          <span class="vertical-title">Edge Delivery</span>
+        </div>
+        <div class="panel-content">
+          <span class="badge-mini">Phase 03</span>
+          <h2>Global Edge Replication</h2>
+          <p>Instant asset distribution across 320 points of presence worldwide with sub-second cache invalidation guarantees.</p>
+          <div class="feature-tags">
+            <span>Anycast DNS</span>
+            <span>Brotli 11</span>
+            <span>TLS 1.3</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 4 -->
+      <div class="bento-panel" data-color="#f59e0b">
+        <div class="panel-collapsed">
+          <span class="vertical-num">04</span>
+          <span class="vertical-title">Continuous Telemetry</span>
+        </div>
+        <div class="panel-content">
+          <span class="badge-mini">Phase 04</span>
+          <h2>Automated Canary Testing</h2>
+          <p>Statistical anomaly detection evaluates new builds against real user web vitals before rolling out to 100% of live traffic.</p>
+          <div class="feature-tags">
+            <span>Core Vitals</span>
+            <span>Zero Downtime</span>
+            <span>Auto Rollback</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Bento Grid Hub</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

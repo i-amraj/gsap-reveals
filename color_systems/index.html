@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Color Systems Portal | 28 Modules &bull; 224 Palettes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <header class="portal-header">
+    <div class="top-nav">
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+        <a href="../index.html" class="back-link">&larr; Root Hub</a>
+        <a href="../component_systems/index.html" class="back-link" style="border-color: rgba(16, 185, 129, 0.4); color: #34d399;">🧩 Component Systems (28 Modules)</a>
+        <a href="../background_systems/index.html" class="back-link" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">🌌 Background Systems (28 Modules)</a>
+        <a href="../text_systems/index.html" class="back-link" style="border-color: rgba(99, 102, 241, 0.4); color: #818cf8;">✍️ Text Systems (28 Modules)</a>
+        <a href="../28_central_showcase_portal/index.html" class="back-link" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">🚀 Animation Portal</a>
+      </div>
+      <span class="portal-tag">COLOR COMBINATION ARCHITECTURE</span>
+    </div>
+
+    <h1>Master Color Systems Portal</h1>
+    <p class="portal-subtitle">
+      28 dedicated aesthetic modules with 8 curated sets each (224 production palettes).
+      Standardized CSS tokens, verified contrast ratios, and ready-to-copy AI design prompts.
+    </p>
+
+    <div class="stats-row">
+      <div class="stat-box"><span class="val">28</span><span class="lbl">Aesthetic Modules</span></div>
+      <div class="stat-box"><span class="val">224</span><span class="lbl">Palette Sets</span></div>
+      <div class="stat-box"><span class="val">100%</span><span class="lbl">CSS Token Standard</span></div>
+      <div class="stat-box"><span class="val">WCAG</span><span class="lbl">Contrast Checked</span></div>
+    </div>
+
+    <!-- Search & Filters -->
+    <div class="filter-controls">
+      <div class="search-wrap">
+        <input type="text" id="colorSearch" placeholder="Search aesthetics (e.g. 'cyberpunk', 'nordic', 'luxury', 'retro', 'fintech')..." autocomplete="off">
+      </div>
+    </div>
+  </header>
+
+  <main class="portal-main">
+    <div class="modules-grid" id="modulesGrid">
+      
+      <div class="module-card" data-category="sci-fi & cyber" data-title="cyberpunk high contrast">
+        <div class="module-card-preview" style="background: #06070a;">
+          <div class="swatch-dots">
+            <span style="background: #00f3ff;"></span>
+            <span style="background: #ff0055;"></span>
+            <span style="background: #39ff14;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 01</span>
+            <span class="mod-cat">Sci-Fi & Cyber</span>
+          </div>
+          <h3>Cyberpunk High Contrast</h3>
+          <p>High-voltage electric neons, hot magenta, acid limes, and deep obsidian blacks.</p>
+          <div class="card-action-bar">
+            <a href="01_cyberpunk_high_contrast/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="minimal & clean" data-title="nordic scandinavian minimal">
+        <div class="module-card-preview" style="background: #f8fafc;">
+          <div class="swatch-dots">
+            <span style="background: #0284c7;"></span>
+            <span style="background: #0c4a6e;"></span>
+            <span style="background: #38bdf8;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 02</span>
+            <span class="mod-cat">Minimal & Clean</span>
+          </div>
+          <h3>Nordic Scandinavian Minimal</h3>
+          <p>Airy frosted ice, bleached birch wood, serene fjord blues, and granite slates.</p>
+          <div class="card-action-bar">
+            <a href="02_nordic_scandinavian_minimal/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="fashion & luxury" data-title="luxury editorial monochrome">
+        <div class="module-card-preview" style="background: #0a0a0a;">
+          <div class="swatch-dots">
+            <span style="background: #d4af37;"></span>
+            <span style="background: #f5f5f4;"></span>
+            <span style="background: #e5e5e5;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 03</span>
+            <span class="mod-cat">Fashion & Luxury</span>
+          </div>
+          <h3>Luxury Editorial Monochrome</h3>
+          <p>Timeless Vogue-level aesthetics, champagne gold, onyx blacks, warm ivory, and platinum.</p>
+          <div class="card-action-bar">
+            <a href="03_luxury_editorial_monochrome/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="retro-futurism" data-title="tokyo night synthwave">
+        <div class="module-card-preview" style="background: #0f0c29;">
+          <div class="swatch-dots">
+            <span style="background: #a855f7;"></span>
+            <span style="background: #ec4899;"></span>
+            <span style="background: #06b6d4;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 04</span>
+            <span class="mod-cat">Retro-Futurism</span>
+          </div>
+          <h3>Tokyo Night Synthwave</h3>
+          <p>Deep Shibuya indigo, neon violets, tangerine sunsets, and laser grid horizons.</p>
+          <div class="card-action-bar">
+            <a href="04_tokyo_night_synthwave/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="eco & organic" data-title="biophilic organic nature">
+        <div class="module-card-preview" style="background: #f5fbf7;">
+          <div class="swatch-dots">
+            <span style="background: #15803d;"></span>
+            <span style="background: #052e16;"></span>
+            <span style="background: #84cc16;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 05</span>
+            <span class="mod-cat">Eco & Organic</span>
+          </div>
+          <h3>Biophilic Organic Nature</h3>
+          <p>Deep moss greens, raw terracotta clay, forest ferns, and soothing herbal tones.</p>
+          <div class="card-action-bar">
+            <a href="05_biophilic_organic_nature/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="warm & energetic" data-title="solar warmth sunset">
+        <div class="module-card-preview" style="background: #120508;">
+          <div class="swatch-dots">
+            <span style="background: #e11d48;"></span>
+            <span style="background: #f59e0b;"></span>
+            <span style="background: #fb7185;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 06</span>
+            <span class="mod-cat">Warm & Energetic</span>
+          </div>
+          <h3>Solar Warmth Sunset</h3>
+          <p>High-octane fiery crimsons, solar gold, twilight plums, and warm desert peach.</p>
+          <div class="card-action-bar">
+            <a href="06_solar_warmth_sunset/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="graphic & bauhaus" data-title="swiss brutalist bauhaus">
+        <div class="module-card-preview" style="background: #ffffff;">
+          <div class="swatch-dots">
+            <span style="background: #e11d48;"></span>
+            <span style="background: #1d4ed8;"></span>
+            <span style="background: #facc15;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 07</span>
+            <span class="mod-cat">Graphic & Bauhaus</span>
+          </div>
+          <h3>Swiss Brutalist Bauhaus</h3>
+          <p>Iconic primary red, cobalt blue, lemon yellow, stark pitch blacks, and raw canvas.</p>
+          <div class="card-action-bar">
+            <a href="07_swiss_brutalist_bauhaus/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="cosmic & spatial" data-title="glassmorphism deep space">
+        <div class="module-card-preview" style="background: #050510;">
+          <div class="swatch-dots">
+            <span style="background: #a855f7;"></span>
+            <span style="background: #38bdf8;"></span>
+            <span style="background: #ec4899;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 08</span>
+            <span class="mod-cat">Cosmic & Spatial</span>
+          </div>
+          <h3>Glassmorphism Deep Space</h3>
+          <p>Cosmic nebula violets, starlight cyans, midnight void, and translucent frosted glass.</p>
+          <div class="card-action-bar">
+            <a href="08_glassmorphism_deep_space/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="vintage & pop" data-title="retro 90s nostalgia">
+        <div class="module-card-preview" style="background: #120826;">
+          <div class="swatch-dots">
+            <span style="background: #00f0ff;"></span>
+            <span style="background: #ff007f;"></span>
+            <span style="background: #ffe600;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 09</span>
+            <span class="mod-cat">Vintage & Pop</span>
+          </div>
+          <h3>Retro 90s Nostalgia</h3>
+          <p>Vaporwave teals, bubblegum pinks, arcade yellows, and Memphis geometry.</p>
+          <div class="card-action-bar">
+            <a href="09_retro_90s_nostalgia/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="nautical & coastal" data-title="coastal mediterranean">
+        <div class="module-card-preview" style="background: #f8fafc;">
+          <div class="swatch-dots">
+            <span style="background: #0284c7;"></span>
+            <span style="background: #075985;"></span>
+            <span style="background: #f59e0b;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 10</span>
+            <span class="mod-cat">Nautical & Coastal</span>
+          </div>
+          <h3>Coastal Mediterranean</h3>
+          <p>Aegean Sea blues, warm terracotta roof tiles, sun-bleached sand, and olive groves.</p>
+          <div class="card-action-bar">
+            <a href="10_coastal_mediterranean/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="corporate & fintech" data-title="fintech security slate">
+        <div class="module-card-preview" style="background: #0a0e1a;">
+          <div class="swatch-dots">
+            <span style="background: #10b981;"></span>
+            <span style="background: #38bdf8;"></span>
+            <span style="background: #6366f1;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 11</span>
+            <span class="mod-cat">Corporate & Fintech</span>
+          </div>
+          <h3>Fintech Security Slate</h3>
+          <p>Institutional trust, deep midnight navy, secure emerald mint, and sleek gunmetal slate.</p>
+          <div class="card-action-bar">
+            <a href="11_fintech_security_slate/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="gen-z & trend" data-title="neo-brutalism pop">
+        <div class="module-card-preview" style="background: #facc15;">
+          <div class="swatch-dots">
+            <span style="background: #a3e635;"></span>
+            <span style="background: #000000;"></span>
+            <span style="background: #ec4899;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 12</span>
+            <span class="mod-cat">Gen-Z & Trend</span>
+          </div>
+          <h3>Neo-Brutalism Pop</h3>
+          <p>High-voltage lime, electric lavender, hard 4px black borders, and punchy saturated shadows.</p>
+          <div class="card-action-bar">
+            <a href="12_neo_brutalism_pop/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="cozy & hospitality" data-title="dark coffee warm latte">
+        <div class="module-card-preview" style="background: #140f0c;">
+          <div class="swatch-dots">
+            <span style="background: #d97706;"></span>
+            <span style="background: #fafaf9;"></span>
+            <span style="background: #b45309;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 13</span>
+            <span class="mod-cat">Cozy & Hospitality</span>
+          </div>
+          <h3>Dark Coffee Warm Latte</h3>
+          <p>Rich roasted espresso, warm oat milk crema, sweet caramel, and velvety mocha.</p>
+          <div class="card-action-bar">
+            <a href="13_dark_coffee_warm_latte/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="marine & mystic" data-title="deep ocean abyss">
+        <div class="module-card-preview" style="background: #020c1b;">
+          <div class="swatch-dots">
+            <span style="background: #00f0ff;"></span>
+            <span style="background: #3b82f6;"></span>
+            <span style="background: #34d399;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 14</span>
+            <span class="mod-cat">Marine & Mystic</span>
+          </div>
+          <h3>Deep Ocean Abyss</h3>
+          <p>Bioluminescent aqua, Mariana Trench midnight, marine pearls, and deep reef corals.</p>
+          <div class="card-action-bar">
+            <a href="14_deep_ocean_abyss/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="zen & craft" data-title="japanese wabi-sabi">
+        <div class="module-card-preview" style="background: #fcfbf7;">
+          <div class="swatch-dots">
+            <span style="background: #1c1917;"></span>
+            <span style="background: #78716c;"></span>
+            <span style="background: #dc2626;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 15</span>
+            <span class="mod-cat">Zen & Craft</span>
+          </div>
+          <h3>Japanese Wabi-Sabi</h3>
+          <p>Sumi charcoal ink, ceremonial matcha, hinoki cypress wood, and bleached linen.</p>
+          <div class="card-action-bar">
+            <a href="15_japanese_wabi_sabi/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="athletic & high-energy" data-title="electric sports hyper">
+        <div class="module-card-preview" style="background: #050608;">
+          <div class="swatch-dots">
+            <span style="background: #ccff00;"></span>
+            <span style="background: #ffffff;"></span>
+            <span style="background: #ff3366;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 16</span>
+            <span class="mod-cat">Athletic & High-Energy</span>
+          </div>
+          <h3>Electric Sports Hyper</h3>
+          <p>Hyper volt green, speedway orange, carbon fiber gray, and pure aerodynamic white.</p>
+          <div class="card-action-bar">
+            <a href="16_electric_sports_hyper/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="ethereal & calm" data-title="lavender haze dreamscape">
+        <div class="module-card-preview" style="background: #0d0b17;">
+          <div class="swatch-dots">
+            <span style="background: #c084fc;"></span>
+            <span style="background: #38bdf8;"></span>
+            <span style="background: #f472b6;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 17</span>
+            <span class="mod-cat">Ethereal & Calm</span>
+          </div>
+          <h3>Lavender Haze Dreamscape</h3>
+          <p>Soft amethyst crystal, dusk mauve, cloud mist gray, and calming violet glows.</p>
+          <div class="card-action-bar">
+            <a href="17_lavender_haze_dreamscape/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="warm landscape" data-title="desert dusk canyon">
+        <div class="module-card-preview" style="background: #140908;">
+          <div class="swatch-dots">
+            <span style="background: #f97316;"></span>
+            <span style="background: #f59e0b;"></span>
+            <span style="background: #38bdf8;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 18</span>
+            <span class="mod-cat">Warm Landscape</span>
+          </div>
+          <h3>Desert Dusk Canyon</h3>
+          <p>Sedona red rocks, sunbaked adobe, burnt canyon sand, and twilight saguaro greens.</p>
+          <div class="card-action-bar">
+            <a href="18_desert_dusk_canyon/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="vintage & industrial" data-title="steampunk industrial copper">
+        <div class="module-card-preview" style="background: #120e0b;">
+          <div class="swatch-dots">
+            <span style="background: #d97706;"></span>
+            <span style="background: #0d9488;"></span>
+            <span style="background: #ef4444;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 19</span>
+            <span class="mod-cat">Vintage & Industrial</span>
+          </div>
+          <h3>Steampunk Industrial Copper</h3>
+          <p>Aged brass cogwheels, verdigris copper patina, burnished bronze, and cast iron.</p>
+          <div class="card-action-bar">
+            <a href="19_steampunk_industrial_copper/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="friendly & app" data-title="pastel playful sorbet">
+        <div class="module-card-preview" style="background: #f0fdf4;">
+          <div class="swatch-dots">
+            <span style="background: #16a34a;"></span>
+            <span style="background: #0ea5e9;"></span>
+            <span style="background: #f43f5e;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 20</span>
+            <span class="mod-cat">Friendly & App</span>
+          </div>
+          <h3>Pastel Playful Sorbet</h3>
+          <p>Pistachio mint, peach gelato, buttercup yellow, and whipped lavender cream.</p>
+          <div class="card-action-bar">
+            <a href="20_pastel_playful_sorbet/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="medical & biotech" data-title="clinical clean healthtech">
+        <div class="module-card-preview" style="background: #f8fafc;">
+          <div class="swatch-dots">
+            <span style="background: #0284c7;"></span>
+            <span style="background: #0f172a;"></span>
+            <span style="background: #10b981;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 21</span>
+            <span class="mod-cat">Medical & Biotech</span>
+          </div>
+          <h3>Clinical Clean Healthtech</h3>
+          <p>Sterile clinical cyans, pristine laboratory whites, calming teals, and soft dove grays.</p>
+          <div class="card-action-bar">
+            <a href="21_clinical_clean_healthtech/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="seasonal & warm" data-title="autumn harvest foliage">
+        <div class="module-card-preview" style="background: #120608;">
+          <div class="swatch-dots">
+            <span style="background: #dc2626;"></span>
+            <span style="background: #f59e0b;"></span>
+            <span style="background: #ea580c;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 22</span>
+            <span class="mod-cat">Seasonal & Warm</span>
+          </div>
+          <h3>Autumn Harvest Foliage</h3>
+          <p>Maple crimson, goldenrod yellow, chestnut wood, and spiced pumpkin orange.</p>
+          <div class="card-action-bar">
+            <a href="22_autumn_harvest_foliage/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="underground & club" data-title="glitch acid rave">
+        <div class="module-card-preview" style="background: #050604;">
+          <div class="swatch-dots">
+            <span style="background: #39ff14;"></span>
+            <span style="background: #a855f7;"></span>
+            <span style="background: #00f0ff;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 23</span>
+            <span class="mod-cat">Underground & Club</span>
+          </div>
+          <h3>Glitch Acid Rave</h3>
+          <p>Radioactive lime, UV blacklight purple, infrared red, and pitch noise void.</p>
+          <div class="card-action-bar">
+            <a href="23_glitch_acid_rave/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="architectural & pure" data-title="monastic zen grayscale">
+        <div class="module-card-preview" style="background: #000000;">
+          <div class="swatch-dots">
+            <span style="background: #ffffff;"></span>
+            <span style="background: #a3a3a3;"></span>
+            <span style="background: #737373;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 24</span>
+            <span class="mod-cat">Architectural & Pure</span>
+          </div>
+          <h3>Monastic Zen Grayscale</h3>
+          <p>12-step mathematical optical grayscales, brutalist concrete, and graphite balance.</p>
+          <div class="card-action-bar">
+            <a href="24_monastic_zen_grayscale/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="prestige & royalty" data-title="regal emerald jewel">
+        <div class="module-card-preview" style="background: #021c14;">
+          <div class="swatch-dots">
+            <span style="background: #10b981;"></span>
+            <span style="background: #d4af37;"></span>
+            <span style="background: #38bdf8;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 25</span>
+            <span class="mod-cat">Prestige & Royalty</span>
+          </div>
+          <h3>Regal Emerald Jewel</h3>
+          <p>Deep Colombian emerald, royal ruby port, sapphire velvet, and imperial gold bullion.</p>
+          <div class="card-action-bar">
+            <a href="25_regal_emerald_jewel/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="military & aviation" data-title="aerospace cockpit hud">
+        <div class="module-card-preview" style="background: #060503;">
+          <div class="swatch-dots">
+            <span style="background: #f59e0b;"></span>
+            <span style="background: #ef4444;"></span>
+            <span style="background: #38bdf8;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 26</span>
+            <span class="mod-cat">Military & Aviation</span>
+          </div>
+          <h3>Aerospace Cockpit HUD</h3>
+          <p>Aviation amber, radar phosphor green, supersonic cyan, and tactical cockpit black.</p>
+          <div class="card-action-bar">
+            <a href="26_aerospace_cockpit_hud/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="80s coastal & glamour" data-title="sunset miami vice">
+        <div class="module-card-preview" style="background: #0c0717;">
+          <div class="swatch-dots">
+            <span style="background: #ec4899;"></span>
+            <span style="background: #06b6d4;"></span>
+            <span style="background: #facc15;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 27</span>
+            <span class="mod-cat">80s Coastal & Glamour</span>
+          </div>
+          <h3>Sunset Miami Vice</h3>
+          <p>Flamingo pink, vibrant turquoise blue, palm emerald, and twilight gradient glows.</p>
+          <div class="card-action-bar">
+            <a href="27_sunset_miami_vice/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card" data-category="future & ai" data-title="ai generative future chroma">
+        <div class="module-card-preview" style="background: #07090e;">
+          <div class="swatch-dots">
+            <span style="background: #38bdf8;"></span>
+            <span style="background: #a855f7;"></span>
+            <span style="background: #f43f5e;"></span>
+          </div>
+        </div>
+        <div class="module-card-body">
+          <div class="card-meta-top">
+            <span class="mod-num">MODULE 28</span>
+            <span class="mod-cat">Future & AI</span>
+          </div>
+          <h3>AI Generative Future Chroma</h3>
+          <p>Prismatic iridescence, dynamic holographic chromatic aberration, and dark cosmic void.</p>
+          <div class="card-action-bar">
+            <a href="28_ai_generative_future_chroma/index.html" class="portal-btn">Explore 8 Sets &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="portal-footer">
+    <p>Color Systems Architecture &bull; Crafted for Diverse, Authentic, and High-Contrast AI Generation</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

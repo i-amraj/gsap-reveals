@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Spatial Canvas Hub | Module 28</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+</head>
+<body>
+  <a href="../index.html" class="back-link">&larr; Back to Portal Hub</a>
+
+  <!-- Top Spatial Controls -->
+  <div class="spatial-hud">
+    <div class="hud-brand">SPATIAL CANVAS &bull; DRAG TO PAN &bull; WHEEL TO ZOOM</div>
+    <div class="zoom-controls">
+      <button class="zoom-btn" id="zoomOut">&minus;</button>
+      <span class="zoom-level" id="zoomLevel">100%</span>
+      <button class="zoom-btn" id="zoomIn">&plus;</button>
+      <button class="zoom-btn reset" id="zoomReset">Reset</button>
+    </div>
+  </div>
+
+  <!-- Infinite Canvas World Container -->
+  <div class="canvas-viewport" id="viewport">
+    <div class="canvas-world" id="world">
+      <!-- Grid Lines Background -->
+      <div class="dot-grid"></div>
+
+      <!-- Cluster 1: Modern Layouts -->
+      <div class="node-cluster" style="top: 400px; left: 500px;">
+        <div class="cluster-label">CLUSTER A: MODERN LAYOUTS</div>
+        <div class="canvas-card" data-url="../../23_interactive_bento_grids/index.html">
+          <span class="card-tag">MODULE 23</span>
+          <h3>Interactive Bento Grids</h3>
+          <p>Radial spotlight glows & 3D gyroscopic cards.</p>
+          <span class="explore-btn">Open Module &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Cluster 2: Curved Dynamics -->
+      <div class="node-cluster" style="top: 350px; left: 1150px;">
+        <div class="cluster-label">CLUSTER B: CURVED DYNAMICS</div>
+        <div class="canvas-card" data-url="../../24_motionpath_bezier_scroll/index.html">
+          <span class="card-tag">MODULE 24</span>
+          <h3>MotionPath & Bezier</h3>
+          <p>Autonomous spline flight paths & scroll drawing.</p>
+          <span class="explore-btn">Open Module &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Cluster 3: Physical Interactions -->
+      <div class="node-cluster" style="top: 850px; left: 600px;">
+        <div class="cluster-label">CLUSTER C: PHYSICAL INTERACTIONS</div>
+        <div class="canvas-card" data-url="../../25_physics_draggable_playground/index.html">
+          <span class="card-tag">MODULE 25</span>
+          <h3>Physics & Draggable</h3>
+          <p>Throw fling momentum & interactive cloth rope.</p>
+          <span class="explore-btn">Open Module &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Cluster 4: Transitions -->
+      <div class="node-cluster" style="top: 900px; left: 1250px;">
+        <div class="cluster-label">CLUSTER D: FLOW & TRANSITIONS</div>
+        <div class="canvas-card" data-url="../../26_seamless_page_transitions/index.html">
+          <span class="card-tag">MODULE 26</span>
+          <h3>Page Transitions</h3>
+          <p>Shared FLIP hero expansions & SVG wipes.</p>
+          <span class="explore-btn">Open Module &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Cluster 5: Sound & Audio -->
+      <div class="node-cluster" style="top: 600px; left: 1850px;">
+        <div class="cluster-label">CLUSTER E: AUDIO REACTION</div>
+        <div class="canvas-card" data-url="../../27_audio_reactive_micro_interactions/index.html">
+          <span class="card-tag">MODULE 27</span>
+          <h3>Audio Micro-Interactions</h3>
+          <p>Web Audio synthesis & real-time spectrum analysis.</p>
+          <span class="explore-btn">Open Module &rarr;</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

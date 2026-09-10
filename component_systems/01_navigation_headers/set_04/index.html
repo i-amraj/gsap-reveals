@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk HUD Header | UI Components</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-glow" style="background: radial-gradient(circle, #06b6d418, transparent 70%);"></div>
+
+  <div class="top-bar">
+    <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+    <span class="badge-tag">SET 04 &bull; PRODUCTION COMPONENT</span>
+  </div>
+
+  <div class="stage-container">
+    <div class="component-stage" id="componentStage">
+      
+        <header class="cyber-hud-nav">
+          <div class="hud-left">
+            <span class="hud-bracket">[</span>
+            <span class="hud-sys">SYS_NAV // VER 4.0</span>
+            <span class="hud-bracket">]</span>
+          </div>
+          <div class="hud-links">
+            <a href="#" class="active">01_CORE</a>
+            <a href="#">02_QUANTUM</a>
+            <a href="#">03_MATRIX</a>
+            <a href="#">04_DECRYPT</a>
+          </div>
+          <div class="hud-right">
+            <span class="hud-ping-dot"></span>
+            <span class="hud-status">STATUS: LINK_ACTIVE</span>
+            <button class="hud-terminal-btn">TERMINAL</button>
+          </div>
+        </header>
+        
+    </div>
+
+    <div class="spec-panel">
+      <div class="spec-meta">
+        <span class="spec-cat">UI COMPONENT ARCHITECTURE</span>
+        <h2 class="spec-title">Cyberpunk HUD Header</h2>
+        <p class="spec-desc">High-tech military HUD navigation with 45-degree clipped corners, status telemetry, and neon brackets.</p>
+      </div>
+
+      <div class="actions-row">
+        <button class="action-btn primary" id="copyHtmlBtn">📄 Copy HTML</button>
+        <button class="action-btn" id="copyCssBtn">📋 Copy CSS</button>
+        <button class="action-btn" id="copyPromptBtn">🤖 Copy AI Prompt</button>
+      </div>
+
+      <div class="specs-grid">
+        <div class="spec-item"><span>ACCENT:</span> <strong style="color:#06b6d4;">#06b6d4</strong></div>
+        <div class="spec-item"><span>LAYOUT:</span> <strong>Dedicated Custom Pattern</strong></div>
+        <div class="spec-item"><span>STANDARD:</span> <strong>Vanilla HTML5 &amp; CSS</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard!</div>
+  <script src="script.js"></script>
+</body>
+</html>

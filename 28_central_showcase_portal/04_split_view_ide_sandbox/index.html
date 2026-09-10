@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split View Sandbox Portal | Module 28</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="sandbox-ide">
+    
+    <!-- Left Explorer & Code Panel -->
+    <aside class="sidebar-panel">
+      <div class="sidebar-header">
+        <a href="../index.html" class="back-link">&larr; Portal Hub</a>
+        <span class="ide-tag">GSAP SANDBOX</span>
+      </div>
+
+      <div class="explorer-tree">
+        <div class="tree-title">COMPONENTS EXPLORER</div>
+        
+        <div class="tree-item active" data-url="../../23_interactive_bento_grids/01_mouse_spotlight_glow/index.html" data-title="Bento Spotlight Glow" data-code="gsap.to(card, { '--mouse-x': `${x}px`, '--mouse-y': `${y}px`, duration: 0.2 });">
+          <span>🍱</span> Bento Spotlight Glow
+        </div>
+        
+        <div class="tree-item" data-url="../../24_motionpath_bezier_scroll/01_rocket_bezier_flight/index.html" data-title="Rocket Bezier Flight" data-code="gsap.to('#rocket', { motionPath: { path: '#curve', autoRotate: true }, duration: 4, repeat: -1 });">
+          <span>🚀</span> Rocket Bezier Flight
+        </div>
+
+        <div class="tree-item" data-url="../../25_physics_draggable_playground/01_inertia_throw_stickers/index.html" data-title="Inertia Throw Stickers" data-code="Draggable.create('.sticker', { type: 'x,y', inertia: true, bounds: '#board' });">
+          <span>🎯</span> Inertia Throw Stickers
+        </div>
+
+        <div class="tree-item" data-url="../../26_seamless_page_transitions/01_grid_card_to_fullscreen_hero/index.html" data-title="Shared Element FLIP" data-code="const state = Flip.getState('.card, .hero'); Flip.from(state, { duration: 0.7, ease: 'power3.inOut' });">
+          <span>🔄</span> Shared Element FLIP
+        </div>
+
+        <div class="tree-item" data-url="../../27_audio_reactive_micro_interactions/01_tactile_switch_click/index.html" data-title="Tactile Switch Audio" data-code="osc.frequency.setValueAtTime(1400, now); osc.frequency.exponentialRampToValueAtTime(800, now + 0.035);">
+          <span>🔊</span> Tactile Switch Click
+        </div>
+      </div>
+
+      <!-- Code & Prompt Snippet Box -->
+      <div class="snippet-box">
+        <div class="snippet-header">
+          <span class="snippet-label">AI PROMPT &amp; CORE LOGIC</span>
+          <button class="copy-snippet-btn" id="copySnippetBtn">📋 Copy</button>
+        </div>
+        <pre class="snippet-code" id="snippetCode"></pre>
+      </div>
+    </aside>
+
+    <!-- Right Live Viewport Area -->
+    <main class="preview-area">
+      <div class="viewport-toolbar">
+        <div class="component-meta">
+          <span class="component-name" id="compName">Bento Spotlight Glow</span>
+        </div>
+        
+        <div class="device-toggles">
+          <button class="device-btn active" data-device="desktop">🖥 Desktop</button>
+          <button class="device-btn" data-device="tablet">📱 Tablet</button>
+          <button class="device-btn" data-device="mobile">📱 Mobile</button>
+        </div>
+
+        <a href="../../23_interactive_bento_grids/01_mouse_spotlight_glow/index.html" id="openExternalBtn" target="_blank" class="open-external">↗ Open Tab</a>
+      </div>
+
+      <div class="iframe-container-frame" id="iframeFrame">
+        <iframe id="sandboxIframe" src="../../23_interactive_bento_grids/01_mouse_spotlight_glow/index.html" title="Sandbox Preview"></iframe>
+      </div>
+    </main>
+
+  </div>
+
+  <div class="toast" id="toast">✨ Code copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

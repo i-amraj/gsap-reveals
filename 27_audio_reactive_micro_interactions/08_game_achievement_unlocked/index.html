@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievement Unlocked Fanfare | Module 27</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+  <div class="glow-bg"></div>
+  <a href="../index.html" class="back-link">&larr; Back to Module Hub</a>
+
+  <div class="container">
+    <div class="badge">CHIME FANFARE SYNTH &bull; PARTICLES</div>
+    <h1>Achievement Unlocked Audio</h1>
+    <p>Procedural 4-note major arpeggio chime fanfare with harmonic shimmer bells, celebratory particle fireworks, and XP counter tick.</p>
+
+    <!-- Trigger Button -->
+    <div class="trigger-zone">
+      <button class="unlock-btn" id="triggerBtn">
+        🏆 TRIGGER ACHIEVEMENT UNLOCKED
+      </button>
+    </div>
+
+    <!-- Achievement Toast Banner -->
+    <div class="achievement-toast" id="toast">
+      <div class="toast-shimmer"></div>
+      <div class="toast-icon-box">
+        <div class="trophy-glow"></div>
+        <span class="trophy-emoji">🏆</span>
+      </div>
+      <div class="toast-content">
+        <div class="toast-tag">ACHIEVEMENT UNLOCKED</div>
+        <div class="toast-title">MASTER OF GSAP MOTION</div>
+        <div class="toast-meta">
+          <span class="xp-gain">+1,000 XP</span>
+          <span class="rarity">ULTRA RARE &bull; 0.4%</span>
+        </div>
+      </div>
+      <div class="toast-close" id="closeToast">&times;</div>
+    </div>
+
+    <!-- Particle Anchor -->
+    <div class="confetti-anchor" id="confettiAnchor"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

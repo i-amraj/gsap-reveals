@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotionPath 04: Interactive Real-Time Bezier Path Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="editor-container">
+    <header class="header">
+      <div class="badge">Real-Time Kinematic Synthesis</div>
+      <h1>Interactive Real-Time Bezier Path Editor</h1>
+      <p>Drag the neon control handles (Start, Control 1, Control 2, End) to alter the Bezier curve live. The orbiting particle instantly updates its continuous flight trajectory in real time.</p>
+    </header>
+
+    <!-- Path Editor Stage -->
+    <div class="stage-wrapper" id="stage">
+      <svg class="canvas-svg" id="canvasSvg" viewBox="0 0 800 450">
+        <defs>
+          <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#8b5cf6"/>
+            <stop offset="50%" stop-color="#06b6d4"/>
+            <stop offset="100%" stop-color="#10b981"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Handle Helper Lines -->
+        <line id="handleLine1" class="handle-line" x1="0" y1="0" x2="0" y2="0"/>
+        <line id="handleLine2" class="handle-line" x1="0" y1="0" x2="0" y2="0"/>
+
+        <!-- Main Editable Bezier Path -->
+        <path id="bezierCurve" class="bezier-curve" d="" stroke="url(#curveGrad)" fill="none" stroke-width="4"/>
+      </svg>
+
+      <!-- Draggable Handles -->
+      <div class="drag-handle start-pt" id="p0" data-pt="0">
+        <span class="handle-tooltip">P0: Start</span>
+      </div>
+      <div class="drag-handle ctrl-pt" id="p1" data-pt="1">
+        <span class="handle-tooltip">C1: Handle</span>
+      </div>
+      <div class="drag-handle ctrl-pt" id="p2" data-pt="2">
+        <span class="handle-tooltip">C2: Handle</span>
+      </div>
+      <div class="drag-handle end-pt" id="p3" data-pt="3">
+        <span class="handle-tooltip">P3: End</span>
+      </div>
+
+      <!-- Traveling Orbit Vessel -->
+      <div class="traveling-orb" id="orb">
+        <div class="orb-dot"></div>
+      </div>
+    </div>
+
+    <!-- Live SVG Code Generator -->
+    <div class="code-preview">
+      <div class="preview-header">
+        <span>Generated SVG Path String:</span>
+        <button class="copy-btn" id="copyPathBtn">Copy Path</button>
+      </div>
+      <code id="pathCode">M ...</code>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to MotionPath Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

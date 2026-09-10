@@ -1,0 +1,203 @@
+:root {
+  --bg: #07090e;
+  --card-bg: rgba(18, 20, 31, 0.85);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.playground-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 999px;
+  color: #c4b5fd;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Table Stage */
+.table-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: #0e111a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8);
+}
+
+.table-grid {
+  position: absolute;
+  inset: 0;
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  pointer-events: none;
+}
+
+/* Draggable Stickers */
+.sticker {
+  position: absolute;
+  padding: 0.75rem 1.4rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: grab;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  will-change: transform;
+  transition: box-shadow 0.2s ease;
+  z-index: 10;
+}
+
+.sticker:active {
+  cursor: grabbing;
+  box-shadow: 0 25px 50px -5px rgba(0, 0, 0, 0.9);
+  z-index: 100;
+}
+
+.sticker-emoji {
+  font-size: 1.5rem;
+}
+
+.sticker-text {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.sticker-purple {
+  background: linear-gradient(135deg, #7c3aed, #4c1d95);
+  box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.5);
+}
+
+.sticker-cyan {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+  box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.5);
+}
+
+.sticker-pink {
+  background: linear-gradient(135deg, #db2777, #9d174d);
+  box-shadow: 0 10px 25px -5px rgba(219, 39, 119, 0.5);
+}
+
+.sticker-emerald {
+  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.5);
+}
+
+.sticker-amber {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  box-shadow: 0 10px 25px -5px rgba(217, 119, 6, 0.5);
+}
+
+.hint-pill {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Controls */
+.controls-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.reset-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Footer Link */
+.footer-action {
+  text-align: center;
+}
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #fff;
+}

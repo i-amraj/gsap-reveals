@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition 02: Coordinate Circular Mask Curtain Reveal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Page 1: Dark Obsidian Horizon -->
+  <main class="page-view view-dark active" id="view1">
+    <div class="view-content">
+      <span class="view-badge">View 01: Deep Space</span>
+      <h1>Obsidian Horizon Matrix</h1>
+      <p>Click any trigger button below. The destination viewport expands as a concentric circular ripple originating precisely from your cursor's click coordinate.</p>
+      
+      <div class="buttons-cluster">
+        <button class="transition-trigger" data-target="view2">✦ Launch Neon Matrix (Trigger A)</button>
+        <button class="transition-trigger trigger-alt" data-target="view2">✦ Portal Origin (Trigger B)</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Page 2: Vibrant Neon Cyber View -->
+  <section class="page-view view-cyber" id="view2">
+    <div class="view-content">
+      <span class="view-badge">View 02: Cyber Radiance</span>
+      <h1>Prismatic Energy Core</h1>
+      <p>You have transitioned into the illuminated layer. Notice how the circular wave expanded with zero frame stutter or layout shift.</p>
+
+      <div class="buttons-cluster">
+        <button class="transition-trigger back-trigger" data-target="view1">← Reverse Circular Portal</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-action">
+    <a href="../index.html" class="back-link">← Back to Transitions Hub</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

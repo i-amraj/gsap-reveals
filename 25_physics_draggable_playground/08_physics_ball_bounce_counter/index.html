@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics 08: Multi-Ball Gravitational Bounce Chamber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">Coefficient of Restitution</div>
+      <h1>Multi-Ball Gravitational Bounce Chamber</h1>
+      <p>Click anywhere in the chamber to spawn energetic physics balls. Each ball calculates gravitational acceleration, wall rebounds, floor restitution damping, and real-time collision counts.</p>
+    </header>
+
+    <div class="chamber-stage" id="chamber">
+      <div class="stats-hud">
+        <span>TOTAL BALLS: <strong id="ballCount">0</strong></span>
+        <span>TOTAL BOUNCES: <strong id="bounceCount">0</strong></span>
+      </div>
+      <div class="click-prompt">✦ Click anywhere inside to spawn bouncing balls</div>
+    </div>
+
+    <div class="controls-bar">
+      <button class="clear-btn" id="clearBtn">Clear Chamber</button>
+      <button class="spawn-burst-btn" id="burstBtn">⚡ Spawn 10x Ball Burst</button>
+    </div>
+
+    <footer class="footer-action">
+      <a href="../index.html" class="back-link">← Back to Physics Hub</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
