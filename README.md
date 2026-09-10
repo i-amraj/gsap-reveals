@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <b>A comprehensive, production-ready library of 22 high-performance interactive GSAP & Canvas animation modules.</b><br/>
+  <b>A comprehensive, production-ready library of 28+ high-performance interactive GSAP & Canvas animation modules, plus 4 Master Design Systems (Color, Typography, Backgrounds, and UI Components).</b><br/>
   This repository is designed to showcase modern, award-winning Awwwards-style web animations. Every module includes a dedicated <code>README.md</code> guide and an AI <code>prompt.md</code> to help you instantly generate or integrate these effects using AI agents.
 </p>
 
@@ -93,7 +93,7 @@
 ---
 
 ## 🛠️ Folder Structure & Rules
-For every style folder across all 22 modules, you'll find:
+For every style folder across all 28 modules, you'll find:
 1. `README.md` ➔ Visual breakdown, how it works, when to use, and production copy-paste code.
 2. `prompt.md` ➔ Dedicated copy-pasteable AI prompt for direct use with Antigravity, ChatGPT, or Claude.
 3. `index.html` ➔ Standalone testable demo webpage.
